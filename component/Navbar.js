@@ -5,7 +5,7 @@ function Navbar() {
         <div>
             <nav className={styles.nav}>
                 <ul className={styles.ul}>
-                    <li className={styles.navItem}>Home</li>
+                    <li className={`${styles.navItem} ${styles.active}`}>Home</li>
                     <li className={styles.navItem}>Features</li>
                     <li className={styles.navItem}>About</li>
                     <li className={styles.navItem}>Pages</li>

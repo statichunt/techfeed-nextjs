@@ -1,3 +1,9 @@
+
+.banner{
+  color:#f6f6f6;
+  font-style:italic;
+  position:relative
+}
 .bannerImage{
   position:relative;
   height:600px
@@ -9,8 +15,47 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 300px;
-  width: 60%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index:1;
 }
+.logo{
+  margin-bottom: 24px;
+}
+.subHEading{
+  font-size:20px;
+ 
+  text-align:center;
+}
+.socialIcon{
+  display:flex;
+  justify-content:center;
+  width:100%;
+  margin-top:40px;
+}
+.mediaIcon{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  border:1px solid #f6f6f6;
+  position:relative;
+  margin:0px 10px;
+}
+.icon{
+position:absolute;
+top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:20px;
+}
+.overlay{
+  background:rgba(0, 0, 0, 0.5);
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+}
+

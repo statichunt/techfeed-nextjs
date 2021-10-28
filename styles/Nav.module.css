@@ -1,0 +1,25 @@
+.nav{
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:1px solid #f6f6f6;
+    
+}
+.ul{
+    display:flex;
+    justify-content:center;
+
+}
+.navItem{
+   margin-left:40px;
+    position:relative
+}
+.navItem::after{
+    content:"";
+    height:5px;
+    width:5px;
+    background:#ddd;
+    position:absolute;
+
+}

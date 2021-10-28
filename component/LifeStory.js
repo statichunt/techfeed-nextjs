@@ -18,6 +18,9 @@ const  LifeStory=()=> {
                 height={400}
                 width={300}
                 ></Image>
+                <p>{data.details1}</p>
+                <p>{data.details2}</p>
+                <p>{data.details3}</p>
                 </div>))
             }
             <h1>hi hello</h1>

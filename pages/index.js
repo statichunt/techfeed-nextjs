@@ -1,24 +1,15 @@
 
 import fs from 'fs'
 import path from 'path'
-
-
-
+import Post from '../component/Post'
 const matter=require('gray-matter')
 
 
-
-
-
 const Home=({posts})=> {
-  console.log(posts)
+ 
   return (
     <div>
-     {
-       posts.map(data=><div key={data.slag}>
-         
-       </div>)
-     }
+   <Post data={posts}></Post>
     </div>
   )
 }
@@ -28,11 +19,13 @@ export async function getStaticProps(){
   
   const posts=files.map((filename)=>{
     const slug=filename.replace('.md','')
+    
 
     const metaDataWithFrontMatter= fs.readFileSync(path.join('posts',filename),'utf-8')
+ 
     const {data:frontmatter,content}=matter(metaDataWithFrontMatter)
-    
-    
+
+    console.log(content);
 
     return{
       slug,

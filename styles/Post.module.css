@@ -1,0 +1,17 @@
+.post{
+    width:60%;
+    margin:30px,auto;
+    display:flex;
+    flex-direction:colunm;
+    justify-content:center;
+    align-items:center
+    
+
+    
+}
+.dataPost{
+    text-align:center;
+    width:40%;
+    margin:0px auto
+
+}

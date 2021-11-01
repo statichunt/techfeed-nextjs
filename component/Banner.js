@@ -16,7 +16,7 @@ const Banner=()=> {
         <div className={styles.bannerImage}>
         <Image
           alt=""
-          src='/banner.jpg'
+          src='/image/banner.jpg'
           layout='fill'
           objectFit='cover'
           />

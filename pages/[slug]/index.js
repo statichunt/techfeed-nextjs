@@ -5,11 +5,7 @@ import styles from '../../styles/Post.module.css'
 
 const matter=require('gray-matter')
 
-const SinglePost=({
-    frontmatter,
-    content,
-    slug
-})=> {
+const SinglePost=({frontmatter,content,slug})=> {
     console.log(frontmatter,slug,content);
     return (
         <div className={styles.post}>

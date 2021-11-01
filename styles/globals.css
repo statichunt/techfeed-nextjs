@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+::selection {
+    color: #ffffff;
+    background-color: #c1a065;
+    text-shadow: none;
+}

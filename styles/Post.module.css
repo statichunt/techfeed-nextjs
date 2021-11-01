@@ -1,17 +1,120 @@
-.post{
-    width:60%;
-    margin:30px,auto;
-    display:flex;
-    flex-direction:colunm;
-    justify-content:center;
-    align-items:center
-    
 
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.post{
     
+    margin:90px auto;   
+
 }
+
 .dataPost{
     text-align:center;
-    width:40%;
-    margin:0px auto
+    width:70%;
+    margin:100px auto;
+    position:relative;
 
+
+}
+.dataImage{
+    margin:40px 0px
+}
+.dataTitle{
+    margin:50px 0px;
+}
+.title{
+  
+    font-size:25px;
+   font-family: "Oswald", sans-serif;
+   border-bottom: 4px solid #c8ab77;
+   cursor:pointer;
+}
+.dataSubHeading{
+margin:25px 0px;
+font-size:18px;
+color:#aaa;
+font-family: "Lora", serif;
+font-style:italic
+}
+.author{
+color:#c8ab77
+}
+.heading{
+    font-size:40px;
+    font-family: "Oswald", sans-serif;
+    cursor:pointer;
+}
+.heading:hover{
+    opacity:0.7;
+    color:inherit
+}
+.content{
+    text-align:left;
+    font-size:25px;
+    font-family: "Lora", serif;
+    width:90%;
+    margin:20px auto
+}
+
+.link{
+    width: 40%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.continue{
+    display:flex;
+    justify-content:center;
+    cursor:pointer;
+    color: #c8ab77;
+    margin:30px
+}
+.continueLink{
+font-size:25px;
+
+font-family: "Lora", serif;
+}
+.continue:hover{
+    color: #9b7a3e
+}
+.arrow{
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.socialLink{
+    display:flex;
+    margin:15px 0px
+
+}
+.mediaIcon{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    border:1px solid #f6f6f6;
+    position:relative;
+    margin:0px 10px;
+    background:#f6f6f6;
+    transition:all 0.3s
+  }
+  .icon{
+  position:absolute;
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:20px;
+  }
+  .facebook:hover{
+      background:#3B5999;
+      color:white
+  }
+  .pinterest:hover{
+    background:#BD081C;
+    color:white
+}
+.twitter:hover{
+    background:#55ACEE;
+    color:white
 }

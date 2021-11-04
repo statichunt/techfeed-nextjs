@@ -6,15 +6,18 @@ import marked from 'marked'
 import { BsArrowRight } from 'react-icons/bs'
 // import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
 import { IconData } from './IconData'
+import { useContext } from 'react'
+import UserContext from './context'
 
-const Post = ({ data }) => {
+const Post = () => {
+    const [value]=useContext(UserContext)
     const router = useRouter()
-    console.log(data)
+    console.log(value)
     return (
         <>
             <div className={styles.post} >
                 {
-                    data.map(data => <div key={data.slug} className={styles.dataPost}>
+                    value.map(data => <div key={data.slug} className={styles.dataPost}>
 
 
 
@@ -48,7 +51,23 @@ const Post = ({ data }) => {
                         <p>Posted on {data.frontmatter.date} by <span className={styles.author}>{data.frontmatter.author}</span></p>
                         </div>
 
-                        <div dangerouslySetInnerHTML={{ __html: marked(data.content).slice(0, 850) }} className={styles.content}></div>
+                        <div className={styles.content}><p>{data.frontmatter.content}</p></div>
+
+                        
+                <div className={styles.link}>
+
+                    <div className={styles.continue}>
+                        <div ><p className={styles.continueLink}>continue <span className={styles.arrow}><BsArrowRight/></span></p></div>
+                    </div>
+                    
+
+                    <div className={styles.socialLink}>
+                        {
+                            IconData.slice(0,3).map(data=><div key={data.class} className={`${styles.mediaIcon} ${styles[data.class]}`}><a href="#" className={styles.icon} >{data.icon}</a></div>)
+                        }
+                       
+                    </div>
+                </div>
 
                         
 

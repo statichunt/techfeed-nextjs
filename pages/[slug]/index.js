@@ -4,6 +4,7 @@ import path from 'path'
 import styles from '../../styles/Post.module.css'
 import marked from 'marked'
 import { IconData } from '../../component/IconData'
+import FilterData from '../../component/FilterData'
 
 
 const matter=require('gray-matter')
@@ -49,7 +50,7 @@ const SinglePost=({frontmatter,content,slug})=> {
 
                 <div dangerouslySetInnerHTML={{ __html: marked(content) }} className={styles.content}></div>
 
-                {/* <div className={styles.link}>
+                <div className={styles.link}>
                     
 
                     <div className={styles.socialLink}>
@@ -58,11 +59,15 @@ const SinglePost=({frontmatter,content,slug})=> {
                         }
                        
                     </div>
-                </div> */}
+                </div>
+
+                <FilterData></FilterData>
 
 
 
             </div>
+
+            
         
     </div>
     )

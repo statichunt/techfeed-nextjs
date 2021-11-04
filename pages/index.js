@@ -1,17 +1,27 @@
 
 import fs from 'fs'
 import path from 'path'
+import { useContext, useEffect } from 'react'
 import Author from '../component/Author'
+import UserContext from '../component/context'
 import Post from '../component/Post'
+
+
 const matter=require('gray-matter')
 
 
 const Home=({posts})=> {
- 
+  const post = posts.sort((a,b)=>{ new Date(b.frontmatter.date)-new Date(a.frontmatter.date)})
+console.log(post)
+ const [value,setValue]=useContext(UserContext)
+ console.log(value);
+useEffect(()=>{
+  setValue(post)
+},[value])
   return (
     <div>
       <Author/>
-   <Post data={posts}></Post>
+   <Post></Post>
     </div>
   )
 }

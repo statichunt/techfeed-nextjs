@@ -1,0 +1,15 @@
+.SimilarPostContainer{
+    width: 100%;
+    display: flex;
+    justify-content: SPACE-AROUND
+    
+}
+.similarBlog{
+    width:30%;
+}
+.similarBlogImage{
+    position: relative;
+    width: 100%;
+    height: 300px
+;
+}

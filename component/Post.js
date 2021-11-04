@@ -50,26 +50,7 @@ const Post = ({ data }) => {
 
                         <div dangerouslySetInnerHTML={{ __html: marked(data.content).slice(0, 850) }} className={styles.content}></div>
 
-                        <div className={styles.link}>
-                            <div className={styles.continue}
-
-                                onClick={() => {
-                                    router.push(
-                                        {
-                                            pathname: '/[slug]',
-                                            query: { slug: data.slug }
-                                        }
-                                    )
-                                }}
-                            > <p className={styles.continueLink} >Continue Reading  </p><span className={styles.arrow}><BsArrowRight /></span></div>
-
-                            <div className={styles.socialLink}>
-                                {
-                                    IconData.map(data=><div key={data.class} className={`${styles.mediaIcon} ${styles[data.class]}`}><a href="#" className={styles.icon} >{data.icon}</a></div>)
-                                }
-                               
-                            </div>
-                        </div>
+                        
 
 
 

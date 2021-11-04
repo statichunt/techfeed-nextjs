@@ -1,6 +1,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import Author from '../component/Author'
 import Post from '../component/Post'
 const matter=require('gray-matter')
 
@@ -9,6 +10,7 @@ const Home=({posts})=> {
  
   return (
     <div>
+      <Author/>
    <Post data={posts}></Post>
     </div>
   )

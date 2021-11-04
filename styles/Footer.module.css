@@ -1,0 +1,51 @@
+.footer{
+    padding:30px 0px;
+    border-top:1px solid #dee2e6
+}
+.footerContent{
+    width:30%;
+    margin:100px auto;
+
+}
+.socialLink{
+    display:flex;
+    margin:15px 0px;
+    justify-content:center
+
+}
+.mediaIcon{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    border:1px solid #f6f6f6;
+    position:relative;
+    margin:0px 10px;
+    background:#f6f6f6;
+    transition:all 0.3s
+  }
+  .mediaIcon:hover{
+      background:#000;
+      color:#ffff
+  }
+  .icon{
+  position:absolute;
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:20px;
+    color:black
+  }
+  .copyRight{
+    font-size:20px;
+    text-align:center;
+    font-family: "Lora", serif;
+    margin:20px;
+  }
+  .hugo{
+    color:#c8ab77;
+    cursor:pointer
+    
+    }
+    .hugo:hover{
+        color: #9b7a3e
+    }

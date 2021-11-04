@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaPinterest,FaInstagram } from 'react-icons/fa'
 export const IconData=[
     {
         icon:<FaFacebookF/>,
@@ -11,5 +11,10 @@ export const IconData=[
     {
         icon:<FaPinterest/>,
         class:'pinterest' 
-    }
+    },
+    {
+        icon:<FaInstagram/>,
+        class:'instagram' 
+    },
+
 ]

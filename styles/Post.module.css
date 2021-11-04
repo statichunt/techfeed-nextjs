@@ -2,6 +2,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+
+/*author*/
+.authorContainer{
+    margin: 100px 0px;
+}
+.authorItem{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0px auto;
+}
+.authorImage{
+width:200px;
+height:200px;
+position:relative;
+
+}
+.imageSize{
+    border-radius:50%;
+}
+.authorHeader{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    margin: 30px;
+}
+.authorDetails{
+    font-size: 22px;
+    font-family: "Lora", serif;
+    font-style: italic;
+    text-align: center;
+}
+
+/*author end*/
+
 .post{
     
     margin:90px auto;   
@@ -37,7 +74,11 @@ font-family: "Lora", serif;
 font-style:italic
 }
 .author{
-color:#c8ab77
+color:#c8ab77;
+cursor:pointer
+}
+.author:hover{
+    color: #9b7a3e
 }
 .heading{
     font-size:40px;
@@ -105,6 +146,7 @@ font-family: "Lora", serif;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size:20px;
+    color:black
   }
   .facebook:hover{
       background:#3B5999;

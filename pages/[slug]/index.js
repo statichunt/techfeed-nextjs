@@ -5,11 +5,17 @@ import styles from '../../styles/Post.module.css'
 import marked from 'marked'
 import { IconData } from '../../component/IconData'
 import FilterData from '../../component/FilterData'
+import { useContext } from 'react'
+import UserContext from '../../component/context'
 
 
 const matter=require('gray-matter')
 
+
 const SinglePost=({frontmatter,content,slug})=> {
+    const [value]=useContext(UserContext)
+    const filter= value.filter(data=>data.frontmatter.category== frontmatter.category)
+    console.log('filter',filter);
     console.log(frontmatter,slug,content);
     return (
         <div className={styles.post} >
@@ -61,7 +67,7 @@ const SinglePost=({frontmatter,content,slug})=> {
                     </div>
                 </div>
 
-                <FilterData></FilterData>
+                <FilterData value={filter}></FilterData>
 
 
 

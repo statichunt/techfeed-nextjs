@@ -7,10 +7,15 @@ import UserContext from '../component/context'
 import Post from '../component/Post'
 
 
+
 const matter=require('gray-matter')
 
 
 const Home=({posts})=> {
+const array =['a','b','c','a','a','b','c']
+const sort = array.sort()
+console.log(sort);
+
   const post = posts.sort((a,b)=>{ new Date(b.frontmatter.date)-new Date(a.frontmatter.date)})
 console.log(post)
  const [value,setValue]=useContext(UserContext)
@@ -22,6 +27,7 @@ useEffect(()=>{
     <div>
       <Author/>
    <Post></Post>
+  
     </div>
   )
 }

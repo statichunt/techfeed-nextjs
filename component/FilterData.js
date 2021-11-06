@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import UserContext from './context'
+// import React, { useContext } from 'react'
+// import UserContext from './context'
 import styles from '../styles/Similar.module.css'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-export default function FilterData() {
+export default function FilterData({value}) {
     const router =useRouter()
-    const [value]=useContext(UserContext)
+    // const [value]=useContext(UserContext)
     console.log(value)
     return (
         <>

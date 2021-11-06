@@ -14,9 +14,13 @@ const matter=require('gray-matter')
 
 const SinglePost=({frontmatter,content,slug})=> {
     const [value]=useContext(UserContext)
+
     const filter= value.filter(data=>data.frontmatter.category== frontmatter.category)
-    console.log('filter',filter);
-    console.log(frontmatter,slug,content);
+    const remainData= value.filter(el=>!filter.includes(el))
+    console.log('remain',remainData)
+    const filterDataById=filter.filter(data=>data.frontmatter.id != frontmatter.id)
+
+    const sortBySlug=[...filterDataById,...remainData]
     return (
         <div className={styles.post} >
         
@@ -67,7 +71,7 @@ const SinglePost=({frontmatter,content,slug})=> {
                     </div>
                 </div>
 
-                <FilterData value={filter}></FilterData>
+                <FilterData value={sortBySlug.slice(0,3)}></FilterData>
 
 
 

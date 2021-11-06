@@ -13,18 +13,30 @@
 }
 .navItem{
    margin-left:60px;
-    position:relative
+    position:relative;
+    list-style:none;
+    font-size:20px;
+    cursor:pointer;
+    letter-spacing:3px
 }
 .navItem::after{
     content: "";
     height: 5px;
-    width: 5px;
+    width: 10px;
     background: #ddd;
     position: absolute;
     top: calc(50% - 2px);
     right: -50%;
+    border-radius: 50%;
+
 
 }
+.navItem:last-child::after {
+    margin-right: 0;
+    
+       display: none;
+    
+ }
 .active, .navItem:hover{
     color:#c8ab77;
    

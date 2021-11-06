@@ -57,7 +57,16 @@ const Post = () => {
                 <div className={styles.link}>
 
                     <div className={styles.continue}>
-                        <div ><p className={styles.continueLink}>continue <span className={styles.arrow}><BsArrowRight/></span></p></div>
+                        <div ><p className={styles.continueLink}
+                        onClick={() => {
+                            router.push(
+                                {
+                                    pathname: '/[slug]',
+                                    query: { slug: data.slug }
+                                }
+                            )
+                        }}
+                        >continue <span className={styles.arrow}><BsArrowRight/></span></p></div>
                     </div>
                     
 

@@ -1,11 +1,15 @@
 import styles from '../styles/Nav.module.css'
+import Link from 'next/link'
 
 function Navbar() {
     return (
         <div>
             <nav className={styles.nav}>
                 <ul className={styles.ul}>
-                    <li className={`${styles.navItem} ${styles.active} ${styles.dropDownContainer}`} >
+                 <Link href='/' passHref>
+                 <li className={`${styles.navItem} ${styles.active} ${styles.dropDownContainer}`} 
+                    
+                    >
                         
                         Home
                         <div className={styles.dropDown}>
@@ -18,6 +22,7 @@ function Navbar() {
                             </ul>
                         </div>
                         </li>
+                 </Link>
                     <li className={styles.navItem}>Features</li>
                     <li className={styles.navItem}>About</li>
                     <li className={`${styles.navItem} ${styles.dropDownContainer}`}>Pages

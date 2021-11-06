@@ -25,7 +25,10 @@
   }
   .mediaIcon:hover{
       background:#000;
-      color:#ffff
+     
+  }
+  .mediaIcon:hover .icon{
+    color:white
   }
   .icon{
   position:absolute;

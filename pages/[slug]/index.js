@@ -5,7 +5,7 @@ import styles from '../../styles/Post.module.css'
 import marked from 'marked'
 import { IconData } from '../../component/IconData'
 import FilterData from '../../component/FilterData'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import UserContext from '../../component/context'
 
 
@@ -14,9 +14,14 @@ const matter=require('gray-matter')
 
 const SinglePost=({frontmatter,content,slug})=> {
     const [value]=useContext(UserContext)
+    console.log('value',value)
+    const [singleBlog,setSingleBlog]=useState([])
+    useEffect(()=>{
+        setSingleBlog(value)
+    })
 
-    const filter= value.filter(data=>data.frontmatter.category== frontmatter.category)
-    const remainData= value.filter(el=>!filter.includes(el))
+    const filter= singleBlog.filter(data=>data.frontmatter.category== frontmatter.category)
+    const remainData= singleBlog.filter(el=>!filter.includes(el))
     console.log('remain',remainData)
     const filterDataById=filter.filter(data=>data.frontmatter.id != frontmatter.id)
 

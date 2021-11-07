@@ -1,4 +1,4 @@
-
+import React from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/Post.module.css'
 import Image from 'next/image'
@@ -6,11 +6,9 @@ import marked from 'marked'
 import { BsArrowRight } from 'react-icons/bs'
 // import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
 import { IconData } from './IconData'
-import { useContext } from 'react'
-import UserContext from './context'
 
-const Post = () => {
-    const [value]=useContext(UserContext)
+
+function Category({value}) {
     const router = useRouter()
     return (
         <>
@@ -96,4 +94,5 @@ const Post = () => {
         </>
     )
 }
-export default Post
+
+export default Category

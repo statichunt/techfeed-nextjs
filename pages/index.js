@@ -1,4 +1,5 @@
 
+import { data } from 'autoprefixer'
 import fs from 'fs'
 import path from 'path'
 import { useContext, useEffect } from 'react'
@@ -12,17 +13,17 @@ const matter=require('gray-matter')
 
 
 const Home=({posts})=> {
-const array =['a','b','c','a','a','b','c']
-const sort = array.sort()
-console.log(sort);
 
-  const post = posts.sort((a,b)=>{ new Date(b.frontmatter.date)-new Date(a.frontmatter.date)})
-console.log(post)
+
+  const post = posts.sort((a,b)=> new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+
+console.log('post',post)
  const [value,setValue]=useContext(UserContext)
- console.log(value);
+ 
 useEffect(()=>{
   setValue(post)
-},[value])
+},[])
+
   return (
     <div>
       <Author/>
@@ -43,7 +44,7 @@ export async function getStaticProps(){
  
     const {data:frontmatter,content}=matter(metaDataWithFrontMatter)
 
-    console.log(content);
+  
 
     return{
       slug,

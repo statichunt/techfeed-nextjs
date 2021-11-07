@@ -18,7 +18,7 @@ export default function FilterData({value}) {
                         router.push(
                             {
                                 pathname: '/[slug]',
-                                query: { slug: data.slug }
+                                query: { slug: blog.slug }
                             }
                         )
                     }}
@@ -35,7 +35,7 @@ export default function FilterData({value}) {
                         router.push(
                             {
                                 pathname: '/[slug]',
-                                query: { slug: data.slug }
+                                query: { slug: blog.slug }
                             }
                         )
                     }}

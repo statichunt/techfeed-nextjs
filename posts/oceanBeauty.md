@@ -1,6 +1,6 @@
 ---
 id : 6
-title : 'Arts and Culture'
+title : 'Natural Beauty'
 heading : 'The cure for anything is salt water: sweat, tears or the sea.'
 date : 'March 10, 2021'
 author: 'Mark Dinn'

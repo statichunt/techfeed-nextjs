@@ -1,6 +1,6 @@
 ---
 id : 3
-title : 'Arts and Culture'
+title : 'Love & Romance'
 heading : 'A SHORT TRIP TO NEBRASKA'
 date: 'March 7, 2021'
 author: 'Mark Dinn'

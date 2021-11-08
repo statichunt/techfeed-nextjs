@@ -1,6 +1,6 @@
 ---
 id : 5
-title : 'Arts and Culture'
+title : 'Travels and Tours'
 heading : 'Natural beauty takes at least two hours in front of a mirror.'
 date : 'March 17, 2021'
 author: 'Mark Dinn'

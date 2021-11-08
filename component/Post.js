@@ -4,13 +4,9 @@ import styles from '../styles/Post.module.css'
 import Image from 'next/image'
 import marked from 'marked'
 import { BsArrowRight } from 'react-icons/bs'
-// import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
 import { IconData } from './IconData'
-import { useContext } from 'react'
-import UserContext from './context'
-
-const Post = () => {
-    const [value]=useContext(UserContext)
+const Post = ({value}) => {
+  
     const router = useRouter()
     return (
         <>

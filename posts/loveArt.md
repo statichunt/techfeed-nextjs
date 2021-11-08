@@ -1,6 +1,6 @@
 ---
 id : 1
-title : 'Arts and Culture'
+title : 'Love & Romance'
 heading : 'FINDING LOVE AND ROMANCE ON THE ROAD'
 date : 'March 13, 2021'
 author: 'Mark Dinn'

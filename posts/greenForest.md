@@ -1,6 +1,6 @@
 ---
 id : 4
-title : 'Arts and Culture'
+title : 'Natural Beauty'
 heading : 'Well, to be frank I like natural beauty. Not artificial.'
 date : 'March 12, 2021'
 author: 'Mark Dinn'

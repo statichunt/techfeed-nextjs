@@ -1,6 +1,6 @@
 ---
 id : 2
-title : 'Arts and Culture'
+title : 'Love & Romance'
 heading : 'MEMORIES FROM LAST SUMMER'
 date : 'March 11, 2021'
 author: 'Mark Dinn'

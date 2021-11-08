@@ -1,6 +1,6 @@
 ---
 id : 7
-title : 'Arts and Culture'
+title : 'Tours and Travels'
 heading : 'Travel is the only thing you buy that makes you richer'
 date : 'March 27, 2021'
 author: 'Mark Dinn'

@@ -1,4 +1,4 @@
-import ContextWrapper from '../component/ContextWrapper'
+
 import Layout from '../component/Layout'
 import '../styles/globals.css'
 
@@ -6,9 +6,9 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   
-  return <ContextWrapper>
-    <Layout><Component {...pageProps} /></Layout>
-  </ContextWrapper>
+  return <Layout><Component {...pageProps} /></Layout>
+         
+  
 }
 
 export default MyApp

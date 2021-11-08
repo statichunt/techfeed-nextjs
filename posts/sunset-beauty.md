@@ -1,6 +1,6 @@
 ---
 id : 8
-title : 'Arts and Culture'
+title : 'Travels and Tours'
 heading : 'It feels good to be lost in the right direction'
 date : 'March 17, 2021'
 author: 'Mark Dinn'

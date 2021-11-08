@@ -7,7 +7,13 @@ const matter=require('gray-matter')
 
 
 function CategoryData({category}) {
-    const [value]=useContext(UserContext)
+  const [value,setValue]=useContext(UserContext)
+
+    useEffect(()=>{
+      const localData= localStorage.getItem('post')
+      const localValue=JSON.parse(localData)
+      setValue(localValue)
+      })
     
     const [blogByCategory,setBlogByCategory]=useState([])
     console.log(blogByCategory)

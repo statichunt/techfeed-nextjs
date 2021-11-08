@@ -2,9 +2,9 @@
 import { data } from 'autoprefixer'
 import fs from 'fs'
 import path from 'path'
-import { useContext, useEffect } from 'react'
+import { useEffect} from 'react'
 import Author from '../component/Author'
-import UserContext from '../component/context'
+
 import Post from '../component/Post'
 
 
@@ -18,11 +18,19 @@ const Home=({posts})=> {
   const post = posts.sort((a,b)=> new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
 
 console.log('post',post)
- const [value,setValue]=useContext(UserContext)
  
+
+
+ 
+// useEffect(()=>{
+//   setValue(post)
+// },[post])
+
 useEffect(()=>{
-  setValue(post)
-},[])
+  localStorage.setItem('post',JSON.stringify(post))
+},[post])
+
+
 
   return (
     <div>

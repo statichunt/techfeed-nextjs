@@ -13,8 +13,13 @@ const matter=require('gray-matter')
 
 
 const SinglePost=({frontmatter,content,slug})=> {
-    const [value]=useContext(UserContext)
-    console.log('value',value)
+    const [value,setValue]=useContext(UserContext)
+
+    useEffect(()=>{
+      const localData= localStorage.getItem('post')
+      const localValue=JSON.parse(localData)
+      setValue(localValue)
+      })
     const [singleBlog,setSingleBlog]=useState([])
     useEffect(()=>{
         setSingleBlog(value)

@@ -4,6 +4,9 @@
 
 
 /*author*/
+ /* a{
+    text-decoration:none;
+} */
 .authorContainer{
     margin: 100px 0px;
 }
@@ -47,11 +50,14 @@ position:relative;
 
 .dataPost{
     text-align:center;
-    width:90%;
+    width:70%;
     margin:100px auto;
     position:relative;
 
 
+}
+.postContent p img{
+    width:100%
 }
 .dataImage{
     margin:40px 0px

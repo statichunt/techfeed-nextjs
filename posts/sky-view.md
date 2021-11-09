@@ -23,7 +23,7 @@ We would walk through downtown Raleigh holding hands talking and laughing like w
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
 
-![Markdown Logo](image/travel-photography-career-sahara-morocco-camels-hillary-fox.jpg)
+![Markdown Logo](image/travel-photography-career-sahara-morocco-camels-hillary-fox.jpg) 
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
 

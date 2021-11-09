@@ -1,7 +1,16 @@
+
+.heading{
+    margin:50px 0px;
+    font-family: "Oswald", sans-serif;
+}
+.similar{
+    margin:100px 0px;
+}
 .SimilarPostContainer{
     width: 100%;
     display: flex;
-    justify-content: SPACE-AROUND
+    justify-content: SPACE-AROUND;
+    margin:30px 0px;
     
 }
 .similarBlog{
@@ -15,4 +24,5 @@
 }
 .similarBlogHeading{
     cursor:pointer;
+    font-family: "Oswald", sans-serif;
 }

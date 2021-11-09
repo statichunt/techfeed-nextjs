@@ -1,0 +1,14 @@
+.AboutAuthorContent{
+    display:flex;
+}
+.authorDetails{
+    text-align:left
+}
+.socialLink{
+    display:flex
+}
+.aboutLink{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: start;
+}

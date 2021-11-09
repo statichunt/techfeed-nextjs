@@ -39,7 +39,7 @@ const Post = ({value}) => {
                         </div>
 
 
-                        <h1
+                       <a> <h1
                             onClick={() => {
                                 router.push(
                                     {
@@ -49,7 +49,7 @@ const Post = ({value}) => {
                                 )
                             }}
                             className={styles.heading}
-                        >{data.frontmatter.heading}</h1>
+                        >{data.frontmatter.heading}</h1></a>
 
                         <div className={styles.dataSubHeading}>
                         <p>Posted on {data.frontmatter.date} by <span className={styles.author}>{data.frontmatter.author}</span></p>

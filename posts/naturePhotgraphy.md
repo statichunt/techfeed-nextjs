@@ -1,6 +1,6 @@
 ---
 id : 9
-title : 'Arts and Culture'
+title : 'Travels & Tour'
 heading : 'We take photos as a return ticket to a moment otherwise gone'
 date : 'March 23, 2021'
 author: 'Mark Dinn'

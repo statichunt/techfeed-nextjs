@@ -4,12 +4,13 @@ import path from 'path'
 import { useEffect} from 'react'
 import Author from '../component/Author'
 import Post from '../component/Post'
+
+
 const matter=require('gray-matter')
 
 
 const Home=({posts})=> {
  const post = posts.sort((a,b)=> new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
-console.log('post',post)
 useEffect(()=>{
   localStorage.setItem('post',JSON.stringify(post))
 },[post])
@@ -18,6 +19,7 @@ useEffect(()=>{
     <div>
       <Author/>
    <Post value={post}></Post>
+   
   
     </div>
   )
@@ -25,6 +27,8 @@ useEffect(()=>{
 
 export async function getStaticProps(){
   const files= fs.readdirSync(path.join('posts'))
+  // const filesz= fs.readdirSync(path.join('About'))
+  // console.log(filesz)
   
   const posts=files.map((filename)=>{
     const slug=filename.replace('.md','')

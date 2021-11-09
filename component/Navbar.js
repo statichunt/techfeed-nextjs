@@ -1,7 +1,10 @@
 import styles from '../styles/Nav.module.css'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 function Navbar() {
+    const router=useRouter()
     return (
         <div>
             <nav className={styles.nav}>
@@ -24,7 +27,18 @@ function Navbar() {
                         </li>
                  </Link>
                     <li className={styles.navItem}>Features</li>
-                    <li className={styles.navItem}>About</li>
+                   <li className={styles.navItem}
+                   onClick={
+                       ()=>{
+                           router.push(
+                               {
+                                   pathname:'/about'
+                               }
+                           )
+                       }
+                   }
+                   
+                   ><a>About</a></li>
                     <li className={`${styles.navItem} ${styles.dropDownContainer}`}>Pages
                     <div className={styles.dropDown}>
                             <ul className={styles.dropDownMenu} >

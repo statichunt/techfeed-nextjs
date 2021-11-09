@@ -1,16 +1,20 @@
-// import React, { useContext } from 'react'
-// import UserContext from './context'
+
 import styles from '../styles/Similar.module.css'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 export default function FilterData({value}) {
     const router =useRouter()
-    // const [value]=useContext(UserContext)
-    console.log(value)
+   
     return (
         <>
+         <div className={styles.similar}>
+         <div className={styles.heading}><h1>SIMILAR POST</h1></div>
           <div className={styles.SimilarPostContainer}>
+
+             
+
+
               {
                   value.map(blog=><div className={styles.similarBlog} key={blog.slug}>
                     <div className={styles.similarBlogImage}
@@ -47,6 +51,7 @@ export default function FilterData({value}) {
                 </div>)
               }
               </div>  
+         </div>
         </>
     )
 }

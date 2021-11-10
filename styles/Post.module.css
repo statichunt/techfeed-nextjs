@@ -50,11 +50,15 @@ position:relative;
 
 .dataPost{
     text-align:center;
-    width:70%;
+    width:80%;
     margin:100px auto;
     position:relative;
 
 
+}
+.dataContent{
+    width: 80%;
+    margin: 0px auto;
 }
 .postContent p img{
     width:100%
@@ -100,7 +104,6 @@ cursor:pointer
     text-align:left;
     font-size:25px;
     font-family: "Lora", serif;
-    width:90%;
     margin:20px auto
 }
 
@@ -115,15 +118,15 @@ cursor:pointer
     display:flex;
     justify-content:center;
     cursor:pointer;
-    color: #c8ab77;
-    margin:30px
+    margin:30px 0px
 }
 .continueLink{
 font-size:25px;
+color: #c8ab77;
 
 font-family: "Lora", serif;
 }
-.continue:hover{
+.continueLink:hover{
     color: #9b7a3e
 }
 .arrow{

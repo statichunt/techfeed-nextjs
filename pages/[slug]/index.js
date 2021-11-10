@@ -9,17 +9,18 @@ import AboutAuthor from '../../component/About/AboutAuthor'
 
 
 
+
 const matter = require('gray-matter')
 
 
-const SinglePost = ({ posts, frontmatter, content, slug,aboutFrontMatter }) => {
-    console.log('tuhin',aboutFrontMatter)
+const SinglePost = ({ posts, frontmatter, content, slug, aboutFrontMatter }) => {
+    console.log('tuhin', aboutFrontMatter)
     const filter = posts.filter(data => data.frontmatter.category == frontmatter.category)
     const remainData = posts.filter(el => !filter.includes(el))
     const filterDataById = filter.filter(data => data.frontmatter.id != frontmatter.id)
 
     const sortBySlug = [...filterDataById, ...remainData]
-    const x="ssss"
+    const x = "ssss"
     return (
         <div className={styles.post} >
 
@@ -37,7 +38,7 @@ const SinglePost = ({ posts, frontmatter, content, slug,aboutFrontMatter }) => {
                     <a className={styles.title}>{frontmatter.title}</a>
                 </div>
                 <h1
-                   
+
                     className={styles.heading}
                 >{frontmatter.heading}</h1>
 
@@ -45,19 +46,29 @@ const SinglePost = ({ posts, frontmatter, content, slug,aboutFrontMatter }) => {
                     <p>Posted on {frontmatter.date} by <span className={styles.author}>{frontmatter.author}</span></p>
                 </div>
 
-                <div dangerouslySetInnerHTML={{ __html: marked(content) }} className={styles.content}></div>
-
-                <div className={styles.link}>
-                    <div className={styles.socialLink}>
-                        {
-                            IconData.slice(0, 3).map(data => <div key={data.class} className={`${styles.mediaIcon} ${styles[data.class]}`}><a href="#" className={styles.icon} >{data.icon}</a></div>)
-                        }
+                <div className={styles.dataContent}>
+                    <div dangerouslySetInnerHTML={{ __html: marked(content) }} className={styles.content}>
 
                     </div>
-                </div>
-                <AboutAuthor data={aboutFrontMatter} x={x} ></AboutAuthor>
 
+                    <div className={styles.link}>
+                        <div className={styles.socialLink}>
+                            {
+                                IconData.slice(0, 3).map(data => <div key={data.class} className={`${styles.mediaIcon} ${styles[data.class]}`}><a href="#" className={styles.icon} >{data.icon}</a></div>)
+                            }
+
+                        </div>
+
+
+                    </div>
+
+                    <AboutAuthor data={aboutFrontMatter} x={x} ></AboutAuthor>
+
+
+                    
+                </div>
                 <FilterData value={sortBySlug.slice(0, 3)}></FilterData>
+
             </div>
         </div>
     )
@@ -67,14 +78,14 @@ export default SinglePost
 
 export const getStaticPaths = async () => {
     const files = fs.readdirSync(path.join('posts'))
-    
+
 
     const paths = files.map((path) => ({
         params: {
             slug: path.replace('.md', '')
         }
     }))
-    
+
     return {
         paths,
         fallback: false
@@ -103,10 +114,10 @@ export const getStaticProps = async ({ params }) => {
         }
     })
 
-    const aboutFile= fs.readdirSync(path.join('About'))
-      const metaDataWithFrontMatter= fs.readFileSync(path.join('About',aboutFile[0]),'utf-8') 
-      const {data:aboutFrontMatter}=matter(metaDataWithFrontMatter)
-      console.log(aboutFrontMatter)
+    const aboutFile = fs.readdirSync(path.join('About'))
+    const metaDataWithFrontMatter = fs.readFileSync(path.join('About', aboutFile[0]), 'utf-8')
+    const { data: aboutFrontMatter } = matter(metaDataWithFrontMatter)
+    console.log(aboutFrontMatter)
 
 
     return {

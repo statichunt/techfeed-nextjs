@@ -2,6 +2,7 @@
 import styles from '../styles/Similar.module.css'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import Link from 'next/dist/client/link'
 
 export default function FilterData({value}) {
     const router =useRouter()
@@ -17,15 +18,8 @@ export default function FilterData({value}) {
 
               {
                   value.map(blog=><div className={styles.similarBlog} key={blog.slug}>
-                    <div className={styles.similarBlogImage}
-                    onClick={() => {
-                        router.push(
-                            {
-                                pathname: '/[slug]',
-                                query: { slug: blog.slug }
-                            }
-                        )
-                    }}
+                   <Link href={`/${blog.slug}`}>
+                   <div className={styles.similarBlogImage}
                     >
                         <Image
                         alt='abc'
@@ -34,18 +28,11 @@ export default function FilterData({value}) {
                         ></Image>
                         
                     </div>
+                   </Link>
                     <div className={styles.similarBlogHeading}
-                    onClick={() => {
-                        router.push(
-                            {
-                                pathname: '/[slug]',
-                                query: { slug: blog.slug }
-                            }
-                        )
-                    }}
                     >
   
-                        <h1>{blog.frontmatter.heading}</h1>
+                        <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
   
                     </div>
                 </div>)

@@ -10,8 +10,7 @@ function AboutData({data}) {
                 <Image
                 alt=""
                 src={data.frontmatter.aboutImage}
-                width={300}
-                height={300}
+                layout='fill'
                 ></Image>
             </div>
             <div className={styles.aboutName}>

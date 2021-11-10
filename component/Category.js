@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/Post.module.css'
 import Image from 'next/image'
-import marked from 'marked'
+import Link from 'next/dist/client/link'
 import { BsArrowRight } from 'react-icons/bs'
 // import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
 import { IconData } from './IconData'
@@ -28,30 +28,12 @@ function Category({value}) {
                         />
                         </div>
                         <div className={styles.dataTitle}
-                        onClick={()=>{
-                            router.push(
-                                {
-                                    pathname:'/category/[category]',
-                                    query: { category:data.frontmatter.category }
-                                }
-                            )
-                        }}
                         >
-                        <a className={styles.title}>{data.frontmatter.title}</a>
+                        <Link href= {`/category/${data.frontmatter.category}`}><a className={styles.title}>{data.frontmatter.title}</a></Link>
                         </div>
 
 
-                        <h1
-                            onClick={() => {
-                                router.push(
-                                    {
-                                        pathname: '/[slug]',
-                                        query: { slug: data.slug }
-                                    }
-                                )
-                            }}
-                            className={styles.heading}
-                        >{data.frontmatter.heading}</h1>
+                        <h1 className={styles.heading}> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
 
                         <div className={styles.dataSubHeading}>
                         <p>Posted on {data.frontmatter.date} by <span className={styles.author}>{data.frontmatter.author}</span></p>
@@ -62,18 +44,9 @@ function Category({value}) {
                         
                 <div className={styles.link}>
 
-                    <div className={styles.continue}>
-                        <div ><p className={styles.continueLink}
-                        onClick={() => {
-                            router.push(
-                                {
-                                    pathname: '/[slug]',
-                                    query: { slug: data.slug }
-                                }
-                            )
-                        }}
-                        >continue <span className={styles.arrow}><BsArrowRight/></span></p></div>
-                    </div>
+                <div className={styles.continue}>
+                                <Link href={`/${data.slug}`} ><a className={styles.continueLink}>continue <span className={styles.arrow}><BsArrowRight /></span></a></Link>
+                            </div>
                     
 
                     <div className={styles.socialLink}>

@@ -1,5 +1,5 @@
 import styles from '../styles/Nav.module.css'
-import Link from 'next/link'
+import Link from 'next/dist/client/link'
 import { useRouter } from 'next/router'
 
 
@@ -9,12 +9,12 @@ function Navbar() {
         <div>
             <nav className={styles.nav}>
                 <ul className={styles.ul}>
-                 <Link href='/' passHref>
-                 <li className={`${styles.navItem} ${styles.active} ${styles.dropDownContainer}`} 
+                 
+                 <li className={`${styles.navItem} ${styles.dropDownContainer}`} 
                     
                     >
                         
-                        Home
+                        <Link href='/'><a className={styles.active} >Home</a></Link>
                         <div className={styles.dropDown}>
                             <ul className={styles.dropDownMenu} >
                                 <li className={styles.dropDownItem}>Home 0</li>
@@ -25,21 +25,15 @@ function Navbar() {
                             </ul>
                         </div>
                         </li>
-                 </Link>
-                    <li className={styles.navItem}>Features</li>
-                   <li className={styles.navItem}
-                   onClick={
-                       ()=>{
-                           router.push(
-                               {
-                                   pathname:'/about'
-                               }
-                           )
-                       }
-                   }
+                 
+                    <li className={styles.navItem}><a>Features</a></li>
+                    <li className={styles.navItem}
+                  
                    
-                   ><a>About</a></li>
-                    <li className={`${styles.navItem} ${styles.dropDownContainer}`}>Pages
+                  >
+                      <Link href='/about'><a >About</a></Link>
+                  </li>
+                    <li className={`${styles.navItem} ${styles.dropDownContainer}`}><a>Pages</a>
                     <div className={styles.dropDown}>
                             <ul className={styles.dropDownMenu} >
                                 <li className={styles.dropDownItem}>Page 0</li>
@@ -50,7 +44,7 @@ function Navbar() {
                             </ul>
                         </div>
                     </li>
-                    <li className={styles.navItem}>Contact</li>
+                    <li className={styles.navItem}><a>Contact</a></li>
                 </ul>
             </nav>
         </div>

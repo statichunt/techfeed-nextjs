@@ -1,3 +1,4 @@
+import Link from 'next/dist/client/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from '../../styles/about.module.css'
@@ -11,28 +12,26 @@ function AboutAuthor({data,x}) {
     const router = useRouter()
     console.log(data)
     return (
-        <div>
+        <div className={styles.aboutContainer} >
+              <p className={styles.aboutHeading}>PUBLISHED BY JOHN WOOD</p>
             <div className={styles.AboutAuthorContent}>
-                <div className={styles.aboutImage}>
-                   <Image
-                   src={data.aboutImage}
-                   alt='image'
-                   width={100}
-                   height={100}
-                   ></Image>
+            <div className={styles.aboutImage}>
+                    <Image className={styles.imageResize}
+                    alt=""
+                    src={data.aboutImage}
+                    layout='fill'
+                    >
+
+                    </Image>
                 </div>
                 
                 <div className={styles.authorDetails}>
+                  
                     <p>{data.details}</p>
                     <div className={`${styles.aboutLink} ${styles1.continue} `}>
-                        <a className={styles1.continueLink} 
-                        onClick={()=>{
-                            router.push({
-                                pathname: '/about',
-                                // query: { slug: data.slug }
-                            })
-                        }}
-                        > know more..</a>
+                        <Link href='/about'><a className={styles1.continueLink} 
+                     
+                     > know more..</a></Link>
                     </div>
                     <div className={styles.socialLink }>
                         {

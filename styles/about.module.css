@@ -12,3 +12,25 @@
     display: flex;
     justify-content: start;
 }
+.aboutImage{
+    height: 150px;
+    position: relative;
+    flex: 0 0 150px;
+}
+.imageResize{
+border-radius:50%
+}
+.AboutDataImage{
+    position:relative;
+    height:300px;
+    width:300px
+}
+.authorDetails{
+    padding: 10px 30px;
+    font-size: 18px;
+    
+}
+.aboutHeading{
+    text-align:left;
+    font-family: "Oswald", sans-serif;
+}

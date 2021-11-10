@@ -37,7 +37,7 @@
        display: none;
     
  }
-.active, .navItem:hover{
+.active, .navItem:hover a{
     color:#c8ab77;
    
 }

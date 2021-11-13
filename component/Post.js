@@ -1,8 +1,7 @@
 
 import { useRouter } from 'next/router'
-import styles from '../styles/Post.module.css'
+// import styles from '../styles/Post.module.css'
 import Image from 'next/image'
-import marked from 'marked'
 import { BsArrowRight } from 'react-icons/bs'
 import { IconData } from './IconData'
 import Link from 'next/dist/client/link'
@@ -11,13 +10,13 @@ const Post = ({ value }) => {
     const router = useRouter()
     return (
         <>
-            <div className={styles.post} >
+            <div className="w-4/5 flex justify-center flex-wrap mx-auto items-center my-20 " >
                 {
-                    value.map(data => <div key={data.slug} className={styles.dataPost}>
+                    value.map(data => <div key={data.slug} className="w-full" >
 
 
 
-                        <div className={styles.dataImage}>
+                        <div className="block">
                             <Image
                                 alt="abc"
                                 src={data.frontmatter.image}
@@ -26,37 +25,41 @@ const Post = ({ value }) => {
                                 layout="responsive"
                             />
                         </div>
-                        <div className={styles.dataTitle}
+                       <div className="w-4/5 mx-auto">
+                       <div className="text-center my-10"
                         
                         >
-                            <Link href= {`/category/${data.frontmatter.category}`}><a className={styles.title}>{data.frontmatter.title}</a></Link>
+                           <div className="mb-1.5"> <Link href= {`/category/${data.frontmatter.category}`}><a className="font-display text-xl">{data.frontmatter.title}</a></Link></div>
+                       
+
+
+                        <h1 className="heading my-3"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
+
+                        <div className="">
+                            <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {data.frontmatter.date} by <span className="hover">{data.frontmatter.author}</span></p>
+                        </div>
                         </div>
 
-
-                        <h1 className={styles.heading}> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
-
-                        <div className={styles.dataSubHeading}>
-                            <p>Posted on {data.frontmatter.date} by <span className={styles.author}>{data.frontmatter.author}</span></p>
-                        </div>
-
-                        <div className={styles.content}><p>{data.frontmatter.content}</p></div>
+                        <div className="font-lora text-xl"><p >{data.frontmatter.content}</p></div>
 
 
-                        <div className={styles.link}>
+                        <div className="my-10">
 
-                            <div className={styles.continue}>
-                                <Link href={`/${data.slug}`} ><a className={styles.continueLink}>continue <span className={styles.arrow}><BsArrowRight /></span></a></Link>
+                            <div className="hover  flex justify-center items-center my-10">
+                                <Link href={`/${data.slug}`} ><a className="flex items-center text-xl justify-center capitalize">continue reading<span className="mx-1"><BsArrowRight /></span></a></Link>
                             </div>
 
 
-                            <div className={styles.socialLink}>
+                            <div className="flex justify-center">
                                 {
-                                    IconData.slice(0, 3).map(data => <div key={data.class} className={`${styles.mediaIcon} ${styles[data.class]}`}><a href="#" className={styles.icon} >{data.icon}</a></div>)
+                                    IconData.slice(0, 3).map(data => <div key={data.class} className={`mx-7 w-12 h-12 rounded-full bg-gray-300 flex justify-center items-center ${data.class}`}><a href="#" className=""
+                                     >{data.icon}</a></div>)
                                 }
 
                             </div>
                         </div>
 
+                       </div>
 
 
 

@@ -3,7 +3,24 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   
   variants: {
-    extend: {},
+    extend: {
+      variantOrder: [
+        'first',
+        'last',
+        'odd',
+        'even',
+        'visited',
+        'checked',
+        'group-hover',
+        'group-focus',
+        'focus-within',
+        'hover',
+        'focus',
+        'focus-visible',
+        'active',
+        'disabled',
+      ]
+    },
   },
   plugins: [],
 
@@ -32,6 +49,15 @@ module.exports = {
       'commonColorHover':'#9b7a3e',
       'nameColor':'#aaa',
       'linkHoverColor':'#f7f8fa'
+    },
+    borderColor:{
+      'commonColor':'#c8ab77'
+    },
+    screens: {
+      'mobile': '480px',
+      // => @media (min-width: 640px) { ... }
+
+      
     },
    
   }

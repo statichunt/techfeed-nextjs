@@ -29,11 +29,11 @@ const Post = ({ value }) => {
                        <div className="text-center my-10"
                         
                         >
-                           <div className="mb-1.5"> <Link href= {`/category/${data.frontmatter.category}`}><a className="font-display text-xl">{data.frontmatter.title}</a></Link></div>
+                           <div className="mb-1.5"> <Link href= {`/category/${data.frontmatter.category}`}><a className="title">{data.frontmatter.title}</a></Link></div>
                        
 
 
-                        <h1 className="heading my-3"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
+                        <h1 className="heading"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
 
                         <div className="">
                             <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {data.frontmatter.date} by <span className="hover">{data.frontmatter.author}</span></p>
@@ -52,7 +52,7 @@ const Post = ({ value }) => {
 
                             <div className="flex justify-center">
                                 {
-                                    IconData.slice(0, 3).map(data => <div key={data.class} className={`mx-7 w-12 h-12 rounded-full bg-gray-300 flex justify-center items-center ${data.class}`}><a href="#" className=""
+                                    IconData.slice(0, 3).map(data => <div key={data.class} className={`socialLink ${data.class}`}><a href="#" className=""
                                      >{data.icon}</a></div>)
                                 }
 

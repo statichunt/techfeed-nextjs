@@ -5,9 +5,11 @@
 @layer components{
     .heading{
     @apply
-     text-4xl 
+     text-2xl 
      font-display
      text-headingColor
+     my-3
+     mobile:text-4xl
 
 }
 .hover{
@@ -36,5 +38,43 @@
     hover:text-linkHoverColor
     
     
+}
+.menuButton{
+    @apply
+    flex
+    
+    justify-center
+      items-center
+      text-3xl
+      cursor-pointer
+      hover:text-commonColor
+}
+
+.navItem{
+    @apply
+    text-lg
+    mx-5
+    hover:text-commonColor
+    font-lora
+
+},
+.title{
+    @apply
+    font-display
+     text-xl
+     relative
+     border-b-4
+     border-commonColor
+},
+.socialLink{
+    @apply
+    mx-2
+     w-12
+     h-12
+     rounded-full
+     bg-gray-300
+     flex
+     justify-center
+     items-center
 }
 }

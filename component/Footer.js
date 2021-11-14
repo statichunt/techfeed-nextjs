@@ -11,7 +11,7 @@ function Footer() {
                 <div className={styles.socialLink}>
                     {
                         IconData.map(data => <div key={data.class}
-                            className={styles.mediaIcon}
+                            className="socialLink"
                             
 
 

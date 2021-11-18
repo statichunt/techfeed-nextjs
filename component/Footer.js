@@ -11,11 +11,11 @@ function Footer() {
                 <div className={styles.socialLink}>
                     {
                         IconData.map(data => <div key={data.class}
-                            className="socialLink"
+                            className="socialLink hover:bg-black hover:text-linkHoverColor"
                             
 
 
-                        ><a  href="#" className={styles.icon} >{data.icon}</a></div>)
+                        ><a  href="#" className='' >{data.icon}</a></div>)
                     }
 
                 </div>

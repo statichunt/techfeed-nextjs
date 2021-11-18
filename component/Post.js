@@ -1,18 +1,29 @@
 
 import { useRouter } from 'next/router'
-// import styles from '../styles/Post.module.css'
 import Image from 'next/image'
 import { BsArrowRight } from 'react-icons/bs'
 import { IconData } from './IconData'
 import Link from 'next/dist/client/link'
-const Post = ({ value }) => {
 
+
+
+const Post = ({value,page}) => {
+   const postsPerPage=4
+
+  
+    const indexOfLastPost = page * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = value.slice(indexOfFirstPost, indexOfLastPost);
+    console.log(currentPosts)
+
+    const hasNextPage = Math.ceil(value.length / postsPerPage) > page;
+    const hasPreviousPage = page > 1;
     const router = useRouter()
     return (
         <>
             <div className="w-4/5 flex justify-center flex-wrap mx-auto items-center my-20 " >
                 {
-                    value.map(data => <div key={data.slug} className="w-full" >
+                currentPosts.map(data => <div key={data.slug} className="w-full" >
 
 
 
@@ -52,20 +63,52 @@ const Post = ({ value }) => {
 
                             <div className="flex justify-center">
                                 {
-                                    IconData.slice(0, 3).map(data => <div key={data.class} className={`socialLink ${data.class}`}><a href="#" className=""
+                                    IconData.slice(0, 3).map(data => <div key={data.class} className={`socialLink 
+                                    ${data.class}`}><a href="#" className=""
                                      >{data.icon}</a></div>)
                                 }
 
                             </div>
                         </div>
+                     
+
 
                        </div>
+
+                       
 
 
 
 
                     </div>)
                 }
+               <div className="flex justify-between w-4/5">
+              {
+                  hasPreviousPage &&  <button 
+                  className="buttonClass"
+                    onClick={
+                      ()=>router.push(`/?page=${page-1}`)
+                      
+                      
+                      }
+                      
+
+              >prev</button>
+              }
+
+              {
+                  hasNextPage &&  <button  className="buttonClass"
+                  onClick={
+                   ()=>router.push(`/?page=${page+1}`)
+                   
+                   
+                   }
+
+               >next</button>
+              }
+              
+
+               </div>
             </div>
         </>
     )

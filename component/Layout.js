@@ -4,6 +4,7 @@ import DropDownMenu from './DropDownMenu'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
+
 function Layout({children}) {
     const [isOpen,setIsOpen]=useState(false)
     const toggle=()=>{

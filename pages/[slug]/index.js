@@ -10,6 +10,7 @@ import AboutAuthor from '../../component/About/AboutAuthor'
 
 
 
+
 const matter = require('gray-matter')
 
 
@@ -68,6 +69,7 @@ const SinglePost = ({ posts, frontmatter, content, slug, aboutFrontMatter }) => 
                     
                 </div>
                 <FilterData value={sortBySlug.slice(0, 3)}></FilterData>
+               
 
             </div>
         </div>

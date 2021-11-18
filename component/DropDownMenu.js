@@ -5,7 +5,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 
 const DropDownMenu = ({isOpen, toggle}) => {
     return (
-        <div className={isOpen ? " text-center block transition duration-700 delay-700  ease-in-out h-auto" : 'hidden top-0 h-0'}>
+        <div className={isOpen ?"text-center block" : 'hidden top-0 h-0'}>
                <div className="flex justify-center items-center  pt-5 ">
                <h1 className= "menuButton" onClick={toggle}><AiOutlineClose/> Close</h1>
                </div>

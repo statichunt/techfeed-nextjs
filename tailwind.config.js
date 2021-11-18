@@ -48,17 +48,23 @@ module.exports = {
       'commonColor':'#c8ab77',
       'commonColorHover':'#9b7a3e',
       'nameColor':'#aaa',
-      'linkHoverColor':'#f7f8fa'
+      'linkHoverColor':'#f7f8fa',
+      'white':'#ffff'
     },
     borderColor:{
       'commonColor':'#c8ab77'
     },
-    screens: {
-      'mobile': '480px',
-      // => @media (min-width: 640px) { ... }
+    // backgroundColor:{
+
+    //   'commonColor':'#c8ab77'
+
+    // }
+    // screens: {
+    //   'mobile': '480px',
+    //   // => @media (min-width: 640px) { ... }
 
       
-    },
+    // },
    
   }
 

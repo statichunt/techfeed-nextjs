@@ -9,7 +9,7 @@
      font-display
      text-headingColor
      my-3
-     mobile:text-4xl
+     /* mobile:text-4xl */
 
 }
 .hover{
@@ -77,4 +77,13 @@
      justify-center
      items-center
 }
+}
+.buttonClass{
+    @apply
+    w-32
+    h-16
+    rounded-full
+    bg-black
+    hover:bg-yellow-600
+    text-white
 }

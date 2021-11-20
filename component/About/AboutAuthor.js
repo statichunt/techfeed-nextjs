@@ -28,7 +28,7 @@ function AboutAuthor({data,x}) {
                 <div className={styles.authorDetails}>
                   
                     <p>{data.details}</p>
-                    <div className={`${styles.aboutLink} ${styles1.continue} `}>
+                    <div className={`${styles.aboutLink} `}>
                         <Link href='/about'><a className={styles1.continueLink} 
                      
                      > know more..</a></Link>

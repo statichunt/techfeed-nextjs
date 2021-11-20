@@ -3,7 +3,7 @@ import Link from 'next/dist/client/link'
 import { useRouter } from 'next/router'
 import {CgMenuGridR} from 'react-icons/cg'
 
-// isOpen ? "hidden" :
+
 function Navbar({toggle,isOpen}) {
     const router=useRouter()
     return (

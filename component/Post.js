@@ -84,8 +84,8 @@ const Post = ({value,page}) => {
                 }
                <div className="flex justify-between w-4/5">
               {
-                  hasPreviousPage &&  <button 
-                  className="buttonClass"
+                  hasPreviousPage ?  <button 
+                  className="buttonClass " 
                     onClick={
                       ()=>router.push(`/?page=${page-1}`)
                       
@@ -93,11 +93,29 @@ const Post = ({value,page}) => {
                       }
                       
 
-              >prev</button>
+              >prev</button> : <button 
+              className="buttonClass bg-gray-400 hover:bg-gray-400" disabled
+                onClick={
+                  ()=>router.push(`/?page=${page-1}`)
+                  
+                  
+                  }
+                  
+
+          >prev</button>
               }
 
-              {
-                  hasNextPage &&  <button  className="buttonClass"
+              
+                  {
+                      hasNextPage ? <button  className="buttonClass "  
+                      onClick={
+                       ()=>router.push(`/?page=${page+1}`)
+                       
+                       
+                       }
+    
+                   >next</button>:
+                   <button  className="buttonClass bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                   onClick={
                    ()=>router.push(`/?page=${page+1}`)
                    
@@ -105,7 +123,8 @@ const Post = ({value,page}) => {
                    }
 
                >next</button>
-              }
+                  }
+              
               
 
                </div>

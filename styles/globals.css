@@ -76,8 +76,7 @@
      flex
      justify-center
      items-center
-}
-}
+},
 .buttonClass{
     @apply
     w-32
@@ -87,3 +86,5 @@
     hover:bg-yellow-600
     text-white
 }
+}
+

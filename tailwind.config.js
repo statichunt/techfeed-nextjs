@@ -19,7 +19,8 @@ module.exports = {
         'focus-visible',
         'active',
         'disabled',
-      ]
+      ],
+      opacity: ['disabled'],
     },
   },
   plugins: [],

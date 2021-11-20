@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from '../../styles/about.module.css'
-import marked from 'marked'
+import * as marked from 'marked'
 
 function AboutData({data}) {
     

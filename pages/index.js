@@ -1,11 +1,11 @@
 
-import * as fs from 'fs';
+
 // import  {join} from 'path'
 import { useEffect} from 'react'
 import Author from '../component/Author'
 import Post from '../component/Post'
 const matter=require('gray-matter')
-const path = require('path');
+
 
 const Home=({posts,page})=> {
  const post = posts.sort((a,b)=> new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
@@ -22,8 +22,9 @@ const Home=({posts,page})=> {
 }
 
 export const getServerSideProps=async ({query:{page=1}})=>{
+  const path = require('path');
 
-   
+   const fs =require('fs')
     // const files = fs.readdirSync(path.join('posts'))
     
     const directoryPath = path.join(process.cwd(), "posts");

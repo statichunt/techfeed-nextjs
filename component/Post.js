@@ -94,7 +94,7 @@ const Post = ({value,page}) => {
                       
 
               >prev</button> : <button 
-              className="buttonClass bg-gray-400 hover:bg-gray-400" disabled
+              className="buttonClass bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                 onClick={
                   ()=>router.push(`/?page=${page-1}`)
                   
@@ -104,26 +104,14 @@ const Post = ({value,page}) => {
 
           >prev</button>
               }
-
-              
                   {
                       hasNextPage ? <button  className="buttonClass "  
                       onClick={
-                       ()=>router.push(`/?page=${page+1}`)
-                       
-                       
-                       }
-    
-                   >next</button>:
+                       ()=>router.push(`/?page=${page+1}`)}>next</button>:
                    <button  className="buttonClass bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                   onClick={
                    ()=>router.push(`/?page=${page+1}`)
-                   
-                   
-                   }
-
-               >next</button>
-                  }
+                   }>next</button>}
               
               
 

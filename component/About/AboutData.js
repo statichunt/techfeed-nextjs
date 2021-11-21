@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from '../../styles/about.module.css'
-import * as marked from 'marked'
+import {marked} from "marked";
 
 function AboutData({data}) {
     
@@ -16,7 +16,7 @@ function AboutData({data}) {
             <div className={styles.aboutName}>
                 <h3>{data.frontmatter.name}</h3>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: marked(data.content) }} className={styles.content}>
+            <div dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }} className={styles.content}>
 
             </div>
             

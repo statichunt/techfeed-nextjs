@@ -3,7 +3,8 @@
 // import  {join} from 'path'
 import Author from '../component/Author'
 import Post from '../component/Post'
-const matter=require('gray-matter')
+import matter from 'gray-matter'
+// const matter=require('gray-matter')
 // const path = require('path');
 
 

@@ -8,6 +8,8 @@ import Link from 'next/dist/client/link'
 
 
 const Post = ({value,page}) => {
+    const slug=value.map(s=>s.slug)
+    console.log('slug',slug)
    const postsPerPage=4
 
   

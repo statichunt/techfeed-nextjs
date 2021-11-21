@@ -6,11 +6,11 @@ import styles1 from '../../styles/Post.module.css'
 import { IconData } from '../IconData'
 
 
-function AboutAuthor({data,x}) {
-    console.log(x)
+function AboutAuthor({data}) {
+   
 
     const router = useRouter()
-    console.log(data)
+   
     return (
         <div className={styles.aboutContainer} >
               <p className={styles.aboutHeading}>PUBLISHED BY JOHN WOOD</p>

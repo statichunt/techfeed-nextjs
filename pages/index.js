@@ -1,11 +1,8 @@
 
-// import * as fs from 'fs';
-// import  {join} from 'path'
 import Author from '../component/Author'
 import Post from '../component/Post'
 import matter from 'gray-matter'
-// const matter=require('gray-matter')
-// const path = require('path');
+
 
 
 const Home = ({ posts, page }) => {
@@ -23,19 +20,6 @@ const Home = ({ posts, page }) => {
 }
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
-  // const files = fs.readdirSync(path.join(process.cwd(),'posts'))
-  // const posts=files.map((filename)=>{
-  //     const slug=filename.replace('.md','')
-
-  //     const metaDataWithFrontMatter = fs.readFileSync(path.join('posts', filename), 'utf-8')
-  //     const {data:frontmatter,content}=matter(metaDataWithFrontMatter)
-  //     return{
-  //       slug,
-  //       content,
-  //       frontmatter
-  //     }
-  //   })
-
   const fs = require("fs");
   const path = require("path");
   const directoryPath = path.join(process.cwd(), "posts");

@@ -9,8 +9,34 @@
      font-display
      text-headingColor
      my-3
+     font-semibold
      /* mobile:text-4xl */
 
+}
+
+.bannerContent{
+    @apply
+
+    flex
+    justify-center
+    items-center
+    md:w-1/3
+   sm:w-2/3
+    flex-col
+    absolute
+      h-bannerHeight
+     top-1/2
+     left-1/2
+     transform
+     -translate-x-1/2
+     -translate-y-1/2
+    /*paragraph*/
+     text-center
+     font-lora
+     italic
+     md:text-xl
+     text-xs
+     sm:text-sm
 }
 .hover{
     @apply 
@@ -70,7 +96,7 @@
     @apply
     mx-2
      w-12
-     h-12
+     h-h12
      rounded-full
      bg-gray-300
      flex
@@ -80,7 +106,7 @@
 .buttonClass{
     @apply
     w-32
-    h-16
+    h-h16
     rounded-full
     bg-black
     hover:bg-yellow-600

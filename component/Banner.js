@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import {AiOutlineInstagram,AiOutlineDribbble}from 'react-icons/ai'
-import {FaFacebookF} from 'react-icons/fa'
-import {FiTwitter} from 'react-icons/fi'
+
+import { IconData } from './IconData'
+
 
 
 
@@ -11,9 +10,9 @@ const Banner=()=> {
   
     return (
         <>
-        <div className={styles.banner}>
+        <div className="text-white h-bannerHeight relative">
   
-        <div className={styles.bannerImage}>
+        <div className="h-bannerHeight relative">
         <Image
           alt=""
           src='/image/banner.jpg'
@@ -22,33 +21,32 @@ const Banner=()=> {
           />
         </div>
 
-      <div className={styles.bannerContent}>
-      <div className={styles.logo}>
+      
+      <div className="absolute top-0 h-bannerHeight bg-black opacity-50 w-full "></div>
+          
+      <div className="bannerContent">
+      <div className="w-3/4 h-logoHeight relative ">
         <Image
           alt=""
           src='/logo.png'
-         height={160}
-         width={310}
+         layout="fill"
         
           
           />
         </div>
         
-          <p className={styles.subHEading}>Beautiful, Elegant and Vintage-inspired premium blog and portfolio theme.</p>
+          <p className="my-10 ">Beautiful, Elegant and Vintage-inspired premium blog and portfolio theme.</p>
         
-        <div className={styles.socialIcon}>
+        <div className="flex justify-center">
 
-          <div className={styles.mediaIcon}><a href="#" className={styles.icon}><FaFacebookF></FaFacebookF></a></div>
-          <div className={styles.mediaIcon}><a href="#" className={styles.icon}><FiTwitter></FiTwitter></a></div>
-          <div className={styles.mediaIcon}><a href="#" className={styles.icon}><AiOutlineInstagram></AiOutlineInstagram></a></div>
-          <div className={styles.mediaIcon}><a href="#" className={styles.icon}><AiOutlineDribbble></AiOutlineDribbble></a></div>
+          {
+            IconData.map(icon=><div className="socialLink bg-transparent border-bannerIconBorder border-solid border-2 " key={icon.class}><a href="#" >{icon.icon}</a></div>)
+          }
+          
           
 
         </div>
       </div>
-      <div className={styles.overlay}></div>
-          
-
         </div>
 
      

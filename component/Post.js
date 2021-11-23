@@ -23,7 +23,7 @@ const Post = ({value,page}) => {
     const router = useRouter()
     return (
         <>
-            <div className="w-4/5 flex justify-center flex-wrap mx-auto items-center my-20 " >
+            <div className="px-10 md:w-11/12  sm:w-full lg:w-4/5 flex justify-center flex-wrap mx-auto items-center my-20 " >
                 {
                 currentPosts.map(data => <div key={data.slug} className="w-full" >
 
@@ -38,7 +38,7 @@ const Post = ({value,page}) => {
                                 layout="responsive"
                             />
                         </div>
-                       <div className="w-4/5 mx-auto">
+                       <div className=" lg:w-4/5 md:full mx-auto">
                        <div className="text-center my-10"
                         
                         >

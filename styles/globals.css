@@ -38,6 +38,19 @@
      text-xs
      sm:text-sm
 }
+.allPost{
+    @apply
+    px-5
+     md:w-11/12
+      sm:w-full
+     lg:w-4/5
+     flex
+     justify-center
+     flex-wrap
+     mx-auto
+     items-center
+     my-20
+}
 .hover{
     @apply 
     text-commonColor
@@ -105,12 +118,15 @@
 },
 .buttonClass{
     @apply
-    w-32
-    h-h16
+    w-40
+    h-h12
     rounded-full
     bg-black
     hover:bg-yellow-600
     text-white
+    block
+    
+    my-5
 }
 }
 

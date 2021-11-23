@@ -56,7 +56,8 @@ module.exports = {
     },
     borderColor:{
       'commonColor':'#c8ab77',
-      'bannerIconBorder':'#ddd'
+      'bannerIconBorder':'#ddd',
+      'footerBorder':'#dee2e6'
     },
     height: {
       bannerHeight:"600px",

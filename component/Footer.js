@@ -1,27 +1,20 @@
-import { useState } from 'react'
-import styles from '../styles/Footer.module.css'
 import { IconData } from './IconData'
-
-
 function Footer() {
 
     return (
-        <div className={styles.footer}>
-            <div className={styles.footerContent}>
-                <div className={styles.socialLink}>
+        <div className="py-20 border-t-2 border-footerBorder">
+            <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
+                <div className="flex ">
                     {
                         IconData.map(data => <div key={data.class}
-                            className="socialLink hover:bg-black hover:text-linkHoverColor"
-                            
-
-
-                        ><a  href="#" className='' >{data.icon}</a></div>)
+                            className="socialLink hover:bg-black hover:text-linkHoverColor">
+                                <a  href="#" className="" >{data.icon}</a></div>)
                     }
 
                 </div>
-                <div className={styles.copyRight}>
-                    <p>© 2020, All rights reserved.</p>
-                    <p>Design & Develop by <span className={styles.hugo}>GetHugoThemes</span></p>
+                <div className="text-center mt-8 font-lora text-lg sm:text-xl">
+                    <p >© 2020, All rights reserved.</p>
+                    <p>Design & Develop by <span className="text-commonColor">GetHugoThemes</span></p>
                 </div>
             </div>
 

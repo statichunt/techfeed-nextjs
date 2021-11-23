@@ -4,20 +4,27 @@ import Image from 'next/image'
 import { BsArrowRight } from 'react-icons/bs'
 import { IconData } from './IconData'
 import Link from 'next/dist/client/link'
+import { useEffect } from 'react'
 const Post = ({ value, page }) => {
-    const slug = value.map(s => s.slug)
-    console.log('slug', slug)
+   
+    console.log('slug', page)
     const postsPerPage = 4
+
+    const currentDate = new Date
 
 
     const indexOfLastPost = page * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = value.slice(indexOfFirstPost, indexOfLastPost);
-    console.log(currentPosts)
-
-    const hasNextPage = Math.ceil(value.length / postsPerPage) > page;
+    const pageNumber= Math.ceil(value.length / postsPerPage)
+    const hasNextPage = pageNumber > page;
     const hasPreviousPage = page > 1;
     const router = useRouter()
+    useEffect(()=>{
+        if (page>pageNumber) {
+            router.push('/')
+          }
+    })
     return (
         <>
             <div className="allPost" >
@@ -46,10 +53,16 @@ const Post = ({ value, page }) => {
                                 <h1 className="heading"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
 
                                 <div className="">
-                                    <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {data.frontmatter.date} by <span className="hover">{data.frontmatter.author}</span></p>
+                                    <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(data.frontmatter.date).getFullYear() ? data.frontmatter.date:
+                                        currentDate.getMonth() > new Date(data.frontmatter.date).getMonth() ? data.frontmatter.date :
+                                        currentDate.getDate() == new Date(data.frontmatter.date).getDate()?<span>Today</span>
+                                            
+                                            :
+                                            currentDate.getDate() - new Date(data.frontmatter.date).getDate() <= 3 ? <span>{currentDate.getDate() - new Date(data.frontmatter.date).getDate()} day ago </span> :
+                                            data.frontmatter.date} by <Link href='/about'><a><span className="hover">{data.frontmatter.author}</span></a></Link></p>
                                 </div>
                             </div>
-
+                            
                             <div className="font-lora text-xl"><p >{data.frontmatter.content}</p></div>
 
 
@@ -62,8 +75,8 @@ const Post = ({ value, page }) => {
 
                                 <div className="flex justify-center">
                                     {
-                                        IconData.slice(0, 3).map(data =><a href="#" key={data.class} className=""
-                                        > <div  className={`socialLink 
+                                        IconData.slice(0, 3).map(data => <a href="#" key={data.class} className=""
+                                        > <div className={`socialLink 
                                     ${data.class}`}>{data.icon}</div></a>)
                                     }
 

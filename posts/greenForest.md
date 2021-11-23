@@ -2,7 +2,7 @@
 id : 4
 title : 'Natural Beauty'
 heading : 'Well, to be frank I like natural beauty. Not artificial.'
-date : 'March 12, 2021'
+date : 'November 22, 2021'
 author: 'Mark Dinn'
 image : '/image/nature.jpg' 
 content : 'My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame and curves of a finely chiseled piece of clay. Everybody knew her government name, but, eventually they knew her by the name I affectionately called her by, “Blue”.'

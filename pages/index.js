@@ -35,7 +35,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
       frontmatter
     }
   });
-
+ 
   return {
 
     props: {

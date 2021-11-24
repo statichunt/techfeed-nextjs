@@ -20,6 +20,8 @@ const Post = ({ value, page }) => {
     const hasNextPage = pageNumber > page;
     const hasPreviousPage = page > 1;
     const router = useRouter()
+    const check=currentDate-new Date('November 25, 2021')
+    console.log(check);
     useEffect(()=>{
         if (page>pageNumber) {
             router.push('/')
@@ -29,7 +31,7 @@ const Post = ({ value, page }) => {
         <>
             <div className="allPost" >
                 {
-                    currentPosts.map(data => <div key={data.slug} className="w-full my-10" >
+                    currentPosts.map(data => <div key={data.slug} className="w-full my-10 block" >
 
 
 

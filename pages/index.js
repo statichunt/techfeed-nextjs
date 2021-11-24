@@ -6,13 +6,16 @@ import matter from 'gray-matter'
 
 
 const Home = ({ posts, page }) => {
+  const currentDate=new Date()
   const post = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+  const filterByDate=post.filter(post=>new Date(post.frontmatter.date)<=currentDate)
+  
 
 
   return (
     <div>
       <Author />
-      <Post value={post} page={page}></Post>
+      <Post value={filterByDate} page={page}></Post>
 
 
     </div>

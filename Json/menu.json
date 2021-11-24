@@ -1,0 +1,16 @@
+[{
+    "menu": "Home",
+    "link": "/"
+  }, {
+    "menu": "Features",
+    "link": "#"
+  }, {
+    "menu": "About",
+    "link": "/about"
+  }, {
+    "menu": "Pages",
+    "link": "#"
+  }, {
+    "menu": "Contact",
+    "link": "#"
+  }]

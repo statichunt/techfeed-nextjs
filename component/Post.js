@@ -76,9 +76,13 @@ const Post = ({ value, page }) => {
 
                                 <div className="flex justify-center">
                                     {
-                                        IconData.slice(0, 3).map(d => <a  key={d.class} className=""
-                                        > <div className={`socialLink 
-                                    ${d.class}`}><Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>{d.icon}</Link></div></a>)
+                                        IconData.slice(0, 3).map(d => <div  key={d.class} className=""
+                                        >
+                                        <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}> 
+                                        <a className={`socialLink 
+                                        ${d.class}`}>{d.icon}</a>
+                                        
+                                        </Link></div>)
                                     }
 
                                 </div>
@@ -87,26 +91,18 @@ const Post = ({ value, page }) => {
 
 
                         </div>
-
-
-
-
-
-
                     </div>)
                 }
                 <div className="w-full mx-auto md:flex md:justify-between">
                     {
-                        hasPreviousPage ? <button
+                        hasPreviousPage ? <a>
+                            <button
                             className="buttonClass  "
                             onClick={
                                 () => router.push(`/?page=${page - 1}`)
-
-
-                            }
-
-
-                        >prev</button> : <button
+                            }>prev</button>
+                        </a> : <a>
+                        <button
                             className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                             onClick={
                                 () => router.push(`/?page=${page - 1}`)
@@ -116,15 +112,19 @@ const Post = ({ value, page }) => {
 
 
                         >prev</button>
+                        </a>
                     }
                     {
-                        hasNextPage ? <button className="buttonClass  "
+                        hasNextPage ? <a>
+                            <button className="buttonClass  "
                             onClick={
-                                () => router.push(`/?page=${page + 1}`)}>next</button> :
-                            <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                                () => router.push(`/?page=${page + 1}`)}>next</button>
+                        </a> :
+                            <a>
+                                <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                 onClick={
                                     () => router.push(`/?page=${page + 1}`)
-                                }>next</button>}
+                                }>next</button></a>}
 
 
 

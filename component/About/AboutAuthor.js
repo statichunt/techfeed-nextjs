@@ -1,8 +1,7 @@
 import Link from 'next/dist/client/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import styles from '../../styles/about.module.css'
-import styles1 from '../../styles/Post.module.css'
+
 import { IconData } from '../IconData'
 
 
@@ -12,11 +11,11 @@ function AboutAuthor({data}) {
     const router = useRouter()
    
     return (
-        <div className={styles.aboutContainer} >
-              <p className={styles.aboutHeading}>PUBLISHED BY JOHN WOOD</p>
-            <div className={styles.AboutAuthorContent}>
-            <div className={styles.aboutImage}>
-                    <Image className={styles.imageResize}
+        <div className="" >
+              <p className="">PUBLISHED BY JOHN WOOD</p>
+            <div className="">
+            <div className="">
+                    <Image className=""
                     alt=""
                     src={data.aboutImage}
                     layout='fill'
@@ -25,18 +24,18 @@ function AboutAuthor({data}) {
                     </Image>
                 </div>
                 
-                <div className={styles.authorDetails}>
+                <div className="">
                   
                     <p>{data.details}</p>
-                    <div className={`${styles.aboutLink} `}>
-                        <Link href='/about'><a className={styles1.continueLink} 
+                    <div className="">
+                        <Link href='/about'><a className=""
                      
                      > know more..</a></Link>
                     </div>
-                    <div className={styles.socialLink }>
+                    <div className="">
                         {
 
-                            IconData.map(icon=><div key={icon.class}><a className={styles.authorIcon}>{icon.icon}</a></div>)
+                            IconData.map(icon=><div key={icon.class}><a className="">{icon.icon}</a></div>)
 
                         }
 

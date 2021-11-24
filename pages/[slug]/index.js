@@ -1,7 +1,7 @@
 import fs from "fs";
 import Image from "next/image";
 import path from "path";
-import styles from "../../styles/Post.module.css";
+
 import {marked} from "marked";
 import { IconData } from "../../component/IconData";
 import FilterData from "../../component/FilterData";
@@ -29,9 +29,9 @@ const SinglePost = ({
   const sortBySlug = [...filterDataById, ...remainData];
   const x = "ssss";
   return (
-    <div className={styles.post}>
-      <div key={slug} className={styles.dataPost}>
-        <div className={styles.dataImage}>
+    <div className="">
+      <div key={slug} className="">
+        <div className="">
           <Image
             alt="abc"
             src={frontmatter.image}
@@ -40,32 +40,32 @@ const SinglePost = ({
             layout="responsive"
           />
         </div>
-        <div className={styles.dataTitle}>
-          <a className={styles.title}>{frontmatter.title}</a>
+        <div className="">
+          <a className="">{frontmatter.title}</a>
         </div>
-        <h1 className={styles.heading}>{frontmatter.heading}</h1>
+        <h1 className="">{frontmatter.heading}</h1>
 
-        <div className={styles.dataSubHeading}>
+        <div className="">
           <p>
             Posted on {frontmatter.date} by{" "}
-            <span className={styles.author}>{frontmatter.author}</span>
+            <span className="">{frontmatter.author}</span>
           </p>
         </div>
 
-        <div className={styles.dataContent}>
+        <div className="">
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-            className={styles.content}
+            className=""
           ></div>
 
-          <div className={styles.link}>
-            <div className={styles.socialLink}>
+          <div className="">
+            <div className="">
               {IconData.slice(0, 3).map((data) => (
                 <div
                   key={data.class}
-                  className={`${styles.mediaIcon} ${styles[data.class]}`}
+                  className=""
                 >
-                  <a href="#" className={styles.icon}>
+                  <a href="#" className="">
                     {data.icon}
                   </a>
                 </div>

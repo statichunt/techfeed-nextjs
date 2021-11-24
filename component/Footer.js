@@ -6,9 +6,9 @@ function Footer() {
             <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
                 <div className="flex ">
                     {
-                        IconData.map(data => <div key={data.class}
+                        IconData.map(data =><a  href="#" className="" key={data.class}> <div 
                             className="socialLink hover:bg-black hover:text-linkHoverColor">
-                                <a  href="#" className="" >{data.icon}</a></div>)
+                                {data.icon}</div></a>)
                     }
 
                 </div>

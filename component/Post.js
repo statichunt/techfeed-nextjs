@@ -20,8 +20,7 @@ const Post = ({ value, page }) => {
     const hasNextPage = pageNumber > page;
     const hasPreviousPage = page > 1;
     const router = useRouter()
-    const check=currentDate-new Date('November 25, 2021')
-    console.log(check);
+    
     useEffect(()=>{
         if (page>pageNumber) {
             router.push('/')
@@ -77,9 +76,9 @@ const Post = ({ value, page }) => {
 
                                 <div className="flex justify-center">
                                     {
-                                        IconData.slice(0, 3).map(data => <a href="#" key={data.class} className=""
+                                        IconData.slice(0, 3).map(d => <a  key={d.class} className=""
                                         > <div className={`socialLink 
-                                    ${data.class}`}>{data.icon}</div></a>)
+                                    ${d.class}`}><Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>{d.icon}</Link></div></a>)
                                     }
 
                                 </div>

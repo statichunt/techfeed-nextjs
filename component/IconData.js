@@ -2,19 +2,23 @@ import { FaFacebookF, FaTwitter, FaPinterest,FaInstagram } from 'react-icons/fa'
 export const IconData=[
     {
         icon:<FaFacebookF/>,
-        class:'facebook'
+        class:'facebook',
+        shareLink:"https://www.facebook.com/sharer/sharer.php?u="
     },
     {
         icon:<FaTwitter/>,
-        class:'twitter' 
+        class:'twitter',
+        shareLink:"https://www.facebook.com/sharer/sharer.php?u="
     },
     {
         icon:<FaPinterest/>,
-        class:'pinterest' 
+        class:'pinterest',
+        shareLink:"https://www.facebook.com/sharer/sharer.php?u="
     },
     {
         icon:<FaInstagram/>,
-        class:'instagram' 
+        class:'instagram',
+        shareLink:"https://www.facebook.com/sharer/sharer.php?u="
     },
 
 ]

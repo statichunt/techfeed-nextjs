@@ -3,12 +3,12 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
 import Link from 'next/dist/client/link';
-import { data } from 'autoprefixer';
+
 
 const Categories = ({posts}) => {
     
 
-    const catagories= posts.map(o => o.frontmatter.category)
+    const catagories= posts.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]
 

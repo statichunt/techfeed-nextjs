@@ -10,6 +10,7 @@
      text-headingColor
      my-3
      font-semibold
+     cursor-pointer
      /* mobile:text-4xl */
 
 }
@@ -104,6 +105,7 @@
      relative
      border-b-4
      border-commonColor
+     cursor-pointer
 },
 .socialLink{
     @apply
@@ -115,6 +117,7 @@
      flex
      justify-center
      items-center
+     cursor-pointer
 },
 .buttonClass{
     @apply

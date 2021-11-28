@@ -1,7 +1,7 @@
 import fs from "fs";
 import Image from "next/image";
 import path from "path";
-
+import Link from "next/dist/client/link";
 import {marked} from "marked";
 import { IconData } from "../../component/IconData";
 import FilterData from "../../component/FilterData";
@@ -25,13 +25,13 @@ const SinglePost = ({
   const filterDataById = filter.filter(
     (data) => data.frontmatter.id != frontmatter.id
   );
-
+  const currentDate= new Date()
   const sortBySlug = [...filterDataById, ...remainData];
-  const x = "ssss";
+ 
   return (
-    <div className="">
-      <div key={slug} className="">
-        <div className="">
+    <div className="flex justify-center items-center">
+      <div key={slug} className="sm:w-11/12 px-10 w-full mt-20">
+        <div className="block">
           <Image
             alt="abc"
             src={frontmatter.image}
@@ -40,41 +40,46 @@ const SinglePost = ({
             layout="responsive"
           />
         </div>
-        <div className="">
-          <a className="">{frontmatter.title}</a>
+       <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto">
+       <div className="my-10">
+          <a className="title">{frontmatter.title}</a>
         </div>
-        <h1 className="">{frontmatter.heading}</h1>
+        <h1 className="heading font-lora">{frontmatter.heading}</h1>
 
         <div className="">
-          <p>
-            Posted on {frontmatter.date} by{" "}
-            <span className="">{frontmatter.author}</span>
-          </p>
+        <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(frontmatter.date).getFullYear() ? frontmatter.date:
+                                        currentDate.getMonth() > new Date(frontmatter.date).getMonth() ? data.frontmatter.date :
+                                        currentDate.getDate() == new Date(frontmatter.date).getDate()?<span>Today</span>
+                                            
+                                            :
+                                            currentDate.getDate() - new Date(frontmatter.date).getDate() <= 3 ? <span>{currentDate.getDate() - new Date(frontmatter.date).getDate()} day ago </span> :
+                                            frontmatter.date} by <Link href='/about'><a><span className="hover">{frontmatter.author}</span></a></Link></p>
         </div>
 
         <div className="">
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-            className=""
+            className="font-lora text-xl"
           ></div>
 
-          <div className="">
-            <div className="">
-              {IconData.slice(0, 3).map((data) => (
-                <div
-                  key={data.class}
-                  className=""
-                >
-                  <a href="#" className="">
-                    {data.icon}
-                  </a>
-                </div>
-              ))}
-            </div>
+          <div className="my-10">
+          <div className="flex justify-start">
+                                    {
+                                        IconData.slice(0, 3).map(d => <div  key={d.class} className=""
+                                        >
+                                        <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}> 
+                                        <a className={`socialLink 
+                                        ${d.class} mx-0 mr-2`}>{d.icon}</a>
+                                        
+                                        </Link></div>)
+                                    }
+
+                                </div>
           </div>
 
-          <AboutAuthor data={aboutFrontMatter} x={x}></AboutAuthor>
+          <AboutAuthor data={aboutFrontMatter}></AboutAuthor>
         </div>
+       </div>
         <FilterData value={sortBySlug.slice(0, 3)}></FilterData>
       </div>
     </div>
@@ -129,8 +134,8 @@ export const getStaticProps = async ({ params }) => {
     path.join("About", aboutFile[0]),
     "utf-8"
   );
-  const { data: aboutFrontMatter } = matter(metaDataWithFrontMatter);
-  console.log(aboutFrontMatter);
+  const { data: aboutFrontMatter,aboutContent } = matter(metaDataWithFrontMatter);
+  console.log(aboutFrontMatter, aboutContent);
 
   return {
     props: {
@@ -139,6 +144,7 @@ export const getStaticProps = async ({ params }) => {
       slug,
       content,
       aboutFrontMatter,
+      aboutContent
     },
   };
 };

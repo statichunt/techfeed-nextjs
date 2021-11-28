@@ -52,7 +52,8 @@ module.exports = {
       'commonColorHover':'#9b7a3e',
       'nameColor':'#aaa',
       'linkHoverColor':'#f7f8fa',
-      'white':'#ffff'
+      'white':'#ffff',
+      'black':'#000'
     },
     borderColor:{
       'commonColor':'#c8ab77',
@@ -63,8 +64,10 @@ module.exports = {
       bannerHeight:"600px",
       h12:"3rem",
       h16:"4rem",
+      h32:"8rem",
       logoHeight:"160px",
-      authorImage:"13rem"
+      authorImage:"13rem",
+      h300:"300px"
      }
     // backgroundColor:{
 

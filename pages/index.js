@@ -4,18 +4,18 @@ import Post from '../component/Post'
 import matter from 'gray-matter'
 
 
-
+const currentDate=new Date()
 const Home = ({ posts, page }) => {
-  const currentDate=new Date()
+  
   const post = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
-  const filterByDate=post.filter(post=>new Date(post.frontmatter.date)<=currentDate)
+  
   
 
 
   return (
     <div>
       <Author />
-      <Post value={filterByDate} page={page}></Post>
+      <Post value={post} page={page}></Post>
 
 
     </div>
@@ -39,10 +39,14 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
     }
   });
  
+  
+  const filterByDate=posts.filter(post=>new Date(post.frontmatter.date)<=currentDate)
+  
+  
   return {
 
     props: {
-      posts: posts,
+      posts:filterByDate,
       page: +page
     }
 

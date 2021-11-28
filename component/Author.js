@@ -4,7 +4,7 @@ import Image from 'next//image'
 
 export default function Author() {
     return (
-        <div className="my-6">
+        <div className="mt-24">
             <div className="flex justify-center items-center flex-col w-4/5 mx-auto">
                 <div className="w-52 h-authorImage relative">
                     <Image className="rounded-full"

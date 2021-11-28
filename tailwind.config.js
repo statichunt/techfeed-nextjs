@@ -23,6 +23,7 @@ module.exports = {
         'disabled',
       ],
       opacity: ['disabled'],
+      display: ['group-hover'],
     },
   },
   plugins: [],

@@ -78,42 +78,7 @@ function Category({value}) {
                         </div>
                     </div>)
                 }
-                {/* <div className="w-full mx-auto md:flex md:justify-between">
-                    {
-                        hasPreviousPage ? <a>
-                            <button
-                            className="buttonClass  "
-                            onClick={
-                                () => router.push(`/?page=${page - 1}`)
-                            }>prev</button>
-                        </a> : <a>
-                        <button
-                            className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
-                            onClick={
-                                () => router.push(`/?page=${page - 1}`)
-
-
-                            }
-
-
-                        >prev</button>
-                        </a>
-                    }
-                    {
-                        hasNextPage ? <a>
-                            <button className="buttonClass  "
-                            onClick={
-                                () => router.push(`/?page=${page + 1}`)}>next</button>
-                        </a> :
-                            <a>
-                                <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
-                                onClick={
-                                    () => router.push(`/?page=${page + 1}`)
-                                }>next</button></a>}
-
-
-
-                </div> */}
+              
             </div>
         </>
     )

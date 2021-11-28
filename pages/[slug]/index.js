@@ -48,7 +48,7 @@ const SinglePost = ({
 
         <div className="">
         <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(frontmatter.date).getFullYear() ? frontmatter.date:
-                                        currentDate.getMonth() > new Date(frontmatter.date).getMonth() ? data.frontmatter.date :
+                                        currentDate.getMonth() > new Date(frontmatter.date).getMonth() ? frontmatter.date :
                                         currentDate.getDate() == new Date(frontmatter.date).getDate()?<span>Today</span>
                                             
                                             :
@@ -134,7 +134,7 @@ export const getStaticProps = async ({ params }) => {
     path.join("About", aboutFile[0]),
     "utf-8"
   );
-  const { data: aboutFrontMatter,aboutContent } = matter(metaDataWithFrontMatter);
+  const { data: aboutFrontMatter,content:aboutContent } = matter(metaDataWithFrontMatter);
   console.log(aboutFrontMatter, aboutContent);
 
   return {

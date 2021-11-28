@@ -50,7 +50,8 @@
      flex-wrap
      mx-auto
      items-center
-     my-20
+     my-10
+     font-lora
 }
 .hover{
     @apply 
@@ -93,7 +94,7 @@
 .navItem{
     @apply
     text-lg
-    mx-5
+    mx-10
     hover:text-commonColor
     font-lora
 

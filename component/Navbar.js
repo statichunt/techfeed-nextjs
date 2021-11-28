@@ -7,10 +7,11 @@ import { NavElement } from './MenuData/Menu'
 
 
 function Navbar({ toggle, isOpen, post }) {
+    const postLength=post.props.posts.length
     const page = 0
     const router = useRouter()
     const postsPerPage = 4
-    const pageNumber = Math.ceil(post / postsPerPage)
+    const pageNumber = Math.ceil(postLength / postsPerPage)
 
 
     const pages = []

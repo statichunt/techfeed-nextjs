@@ -28,7 +28,7 @@ function Layout({children}) {
     return (
         <>
         <Banner></Banner>
-        <Navbar toggle={toggle} isOpen={isOpen} post={children.props.posts.length} page={children.props.page}></Navbar>
+        <Navbar toggle={toggle} isOpen={isOpen} post={children} page={children.props.page}></Navbar>
         <DropDownMenu isOpen={isOpen} toggle={toggle}></DropDownMenu>
         <main>{children}</main>
         <Footer></Footer>

@@ -1,11 +1,13 @@
-import React from 'react'
+
 import Link from 'next/dist/client/link';
 import Image from 'next/dist/client/image';
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
 
+
 const Blogs = ({posts}) => {
+ 
     return (
         <div className="allPost">
             {

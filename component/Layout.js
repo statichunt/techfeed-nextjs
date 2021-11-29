@@ -5,8 +5,8 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 
 
-function Layout({children}) {
-    console.log()
+function Layout({children,posts}) {
+    console.log(posts)
     const [isOpen,setIsOpen]=useState(false)
     const toggle=()=>{
         setIsOpen(!isOpen)
@@ -28,7 +28,7 @@ function Layout({children}) {
     return (
         <>
         <Banner></Banner>
-        <Navbar toggle={toggle} isOpen={isOpen} post={children} page={children.props.page}></Navbar>
+        <Navbar toggle={toggle} isOpen={isOpen}  ></Navbar>
         <DropDownMenu isOpen={isOpen} toggle={toggle}></DropDownMenu>
         <main>{children}</main>
         <Footer></Footer>

@@ -25,7 +25,7 @@ export const NavElement=[{
   },
   {
     menu: "Blog",
-    link: "#",
+    link: "/blog",
     submenu:[{
         page:"",
         pageLink:""

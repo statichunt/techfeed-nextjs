@@ -1,15 +1,18 @@
 // import styles from '../styles/Nav.module.css'
 import Link from 'next/dist/client/link'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
+
+import { useContext, useState } from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
+import { AppContext } from './AppContext'
 import { NavElement } from './MenuData/Menu'
 
 
-function Navbar({ toggle, isOpen, post }) {
-    const postLength=post.props.posts.length
+function Navbar({ toggle,isOpen }) {
+
+const [postLength]=useContext(AppContext)
+   
     const page = 0
-    const router = useRouter()
+    
     const postsPerPage = 4
     const pageNumber = Math.ceil(postLength / postsPerPage)
 
@@ -79,3 +82,30 @@ function Navbar({ toggle, isOpen, post }) {
 }
 
 export default Navbar
+export async function getStaticProps(){
+    
+    const files = fs.readdirSync(path.join("posts"));
+
+    const posts = files.map((filename) => {
+      const slug = filename.replace(".md", "");
+  
+      const metaDataWithFrontMatter = fs.readFileSync(
+        path.join("posts", filename),
+        "utf-8"
+      );
+  
+      const { data: frontmatter, content } = matter(metaDataWithFrontMatter);
+      return {
+        slug,
+        content,
+        frontmatter,
+      };
+    });
+     
+    
+    return{
+      props:{
+        posts
+      }
+    }
+  }

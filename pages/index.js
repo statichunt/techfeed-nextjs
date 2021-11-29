@@ -1,11 +1,16 @@
-
+import React, { useContext, useEffect } from 'react'
 import Author from '../component/Author'
 import Post from '../component/Post'
 import matter from 'gray-matter'
-
+import { AppContext } from '../component/AppContext';
 
 const currentDate=new Date()
 const Home = ({ posts, page }) => {
+  const [postLength,setPostLength]=useContext(AppContext)
+  console.log(postLength)
+  useEffect(()=>{
+    setPostLength(posts.length)
+  })
   
   const post = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
   

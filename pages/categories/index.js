@@ -23,11 +23,10 @@ const Categories = ({posts}) => {
     )
 }
 
-export default Categories
 export async function getStaticProps(){
     
     const files = fs.readdirSync(path.join("posts"));
-
+  
     const posts = files.map((filename) => {
       const slug = filename.replace(".md", "");
   
@@ -51,3 +50,4 @@ export async function getStaticProps(){
       }
     }
   }
+export default Categories

@@ -41,7 +41,7 @@ export const NavElement=[{
 
   }, {
     menu: "Contact",
-    link: "#",
+    link: "/contact",
     submenu:[{
         page:"",
         pageLink:""

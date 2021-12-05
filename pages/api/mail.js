@@ -19,7 +19,10 @@ export default async function handler(req, res) {
       from:email,
       to:"rakibur74@gmail.com",
       subject:"contact",
-      html:`<p>${message}</p>`
+      html:`<p>You have a new contact form submission</p><br>
+      <p><strong>Name: </strong> ${name} </p><br>
+      
+      <p><strong>Message: </strong> ${message} </p><br>`
     })
     console.log('message',emailTransport.messageId)
   } catch (error) {

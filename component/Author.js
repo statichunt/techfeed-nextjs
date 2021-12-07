@@ -28,10 +28,10 @@ export default function Author() {
                 text-xs
                 sm:text-sm
                 text-center
-                px-10
+               w-9/12
                 
                 ">
-                    <p>My name is Linda Smith. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples.</p>
+                    <p className="px-12">My name is Linda Smith. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples.</p>
 
                 </div>
             </div>

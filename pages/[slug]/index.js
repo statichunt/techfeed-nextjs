@@ -64,14 +64,15 @@ const SinglePost = ({
 
           <div className="my-10">
           <div className="flex justify-start">
-                                    {
-                                        IconData.slice(0, 3).map(d => <div  key={d.class} className=""
-                                        >
-                                        <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}> 
-                                        <a className={`socialLink 
-                                        ${d.class} mx-0 mr-2`}>{d.icon}</a>
+                                     {
+                                        IconData.slice(0, 3).map(d => <div key={d.class} className=""
                                         
-                                        </Link></div>)
+                                        >
+                                          
+                                                <a onClick={()=>router.push(`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`)} className={`socialLink 
+                                        ${d.class}`}>{d.icon}</a>
+
+                                           </div>)
                                     }
 
                                 </div>

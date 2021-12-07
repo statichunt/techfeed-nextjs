@@ -134,14 +134,27 @@
 }
 .inputField{
     @apply
-    w-11/12
+    w-8/12
     border-2 
     p-4 
     border-footerBorder
     outline-none
     my-4
    block
+   mx-auto
+   font-lora
  
+}
+.submit{
+    @apply
+    mx-auto
+     py-3
+     px-8
+     bg-yellow-500
+     rounded-full
+     hover:bg-black
+     text-white
+     font-lora
 }
 }
 

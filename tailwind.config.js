@@ -69,7 +69,8 @@ module.exports = {
       logoHeight:"160px",
       authorImage:"13rem",
       h300:"300px"
-     }
+     },
+     
     // backgroundColor:{
 
     //   'commonColor':'#c8ab77'

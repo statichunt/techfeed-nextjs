@@ -1,32 +1,52 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import nodemailer from 'nodemailer'
+import sanitize from 'sanitize-html'
 
-export default async function handler(req, res) {
-  console.log(req.body)
-  const {name,email,message}=req.body
- const transporter= nodemailer.createTransport({
-    pool: true,
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true, // use TLS
-    auth: {
-      user: 'faruk.themefisher@gmail.com',
-      pass: 'czjprbvbxuazgnkw',
-    },
-  });
-  try {
-    const emailTransport= await transporter.sendMail({
-      from:email,
-      to:"rakibur74@gmail.com",
-      subject:"contact",
-      html:`<p>You have a new contact form submission</p><br>
-      <p><strong>Name: </strong> ${name} </p><br>
-      
-      <p><strong>Message: </strong> ${message} </p><br>`
-    })
-    console.log('message',emailTransport.messageId)
-  } catch (error) {
-    console.log(error)
-  }
-  res.status(200).json({ name: name })
+export default async (req, res)=> {
+  
+const body=JSON.parse(req.body)
+ 
+ console.log(body,'body')
+
+ emailTransport(JSON.parse(req.body))
+  
+
+
+ 
+ 
+  res.status(200).json(req.body);
 }
+const user=process.env.USER
+ const pass=process.env.PASSWORD
+ const host=process.env.HOST
+const transporter = nodemailer.createTransport({
+  
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: user,
+    pass: pass,
+  },
+});
+
+const emailTransport= async({name,email,message,subject})=>{
+  
+  const output = `
+  <p>Hello,<p>
+  <p>You got a new contact request.</p>
+  <h3>Contact Details</h3>
+  <ul><li>Name: ${name}</li><li>Email: ${email}</li></ul>
+  <h3>Message:</h3>
+  <p>${message}</p>
+
+`
+
+const sendData={
+  from:email,
+  to:'themefisher.dev@gmail.com',
+  subject:'contact ' + subject,
+  html:sanitize(output)
+}
+return await transporter.sendMail(sendData)
+ }

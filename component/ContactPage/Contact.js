@@ -1,31 +1,55 @@
 
-import { data } from "autoprefixer";
+
 import { useForm } from "react-hook-form";
 
 
 const Contact = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data,e) => {
-        fetch("http://localhost:3000/api/mail",{
+
+
+        const event={
+            name:data.firstName + ' ' + data.lastName,
+            email:data.email,
+            subject:data.subject,
+            message:data.message
+        }
+       fetch("http://localhost:3000/api/mail",{
             method:'POST',
             header:{'content-type':'application/json'},
-            body:JSON.stringify(data)
+            body:JSON.stringify(event)
         })
-        console.log(data)
-        e.target.reset()
+       
+     e.target.reset()
+    console.log(event)
     } 
   
   
     return (
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input className="block p-3 border-2"  {...register("name")} />
+     <>
+     <div className="flex justify-center items-center my-8">
+      
+     <div className="w-4/6 mx-auto">
+     <h1 className="heading text-center text-5xl font-lora font-medium">Get In Touch</h1>
+     <form onSubmit={handleSubmit(onSubmit)}  className="mx-auto">
     
-        <input  className="block p-3 border-2"  {...register("email", { required: true })} />
+    <input className="inputField"  {...register("firstName", { required: true })} placeholder="First Name" />
+        <input className="inputField"  {...register("lastName", { required: true })} placeholder="Last Name" />
+   
+    
+       
+       <input  className="inputField"  {...register("email", { required: true })} placeholder="Email" />
         {errors.exampleRequired && <span>This field is required</span>}
-        <textarea className="block border-2" {...register("message", { required: true })}></textarea>
+        <input  className="inputField"  {...register("subject", { required: true })} placeholder="Subject" />
+        {errors.exampleRequired && <span>This field is required</span>}
+      
+        <textarea className="inputField" rows='7' {...register("message", { required: true })} placeholder="Message"></textarea>
         
-        <input type="submit" />
+        <div className="flex justify-center items-center " ><input type="submit" className="" /></div>
       </form>
+     </div>
+     </div>
+     </>
     );
 }
 

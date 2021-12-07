@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "dayjs": "^1.10.7",
-    "emailjs-com": "^3.2.0",
     "gray-matter": "^4.0.3",
     "marked": "^4.0.4",
     "next": "12.0.4",
@@ -20,7 +19,8 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "remark": "^14.0.2",
-    "remark-excerpt": "^1.0.0-beta.1"
+    "remark-excerpt": "^1.0.0-beta.1",
+    "sanitize-html": "^2.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

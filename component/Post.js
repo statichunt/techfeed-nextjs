@@ -41,10 +41,11 @@ const Post = ({ value, page }) => {
                                 width={1200}
                                 height={700}
                                 layout="responsive"
+                                objectFit="cover"
                             />
                         </div>
                         <div className=" lg:w-4/5 md:full mx-auto">
-                            <div className="text-center my-10"
+                            <div className="text-center my-14"
 
                             >
                                 <div className="mb-1.5"> <Link href={`/category/${data.frontmatter.category}`}><a className="title">{data.frontmatter.title}</a></Link></div>

@@ -62,6 +62,7 @@ module.exports = {
       'footerBorder':'#dee2e6'
     },
     height: {
+      h1:"0.25rem",
       bannerHeight:"600px",
       h12:"3rem",
       h16:"4rem",

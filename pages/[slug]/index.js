@@ -29,8 +29,8 @@ const SinglePost = ({
   const sortBySlug = [...filterDataById, ...remainData];
  
   return (
-    <div className="flex justify-center items-center">
-      <div key={slug} className="sm:w-11/12 px-10 w-full mt-20">
+    <div className="flex justify-center items-center allPost">
+      <div key={slug} className=" px-10 w-full mt-20">
         <div className="block">
           <Image
             alt="abc"
@@ -38,15 +38,16 @@ const SinglePost = ({
             width={1200}
             height={700}
             layout="responsive"
+            objectFit="cover"
           />
         </div>
        <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto">
        <div className="my-10">
           <a className="title">{frontmatter.title}</a>
         </div>
-        <h1 className="heading font-lora">{frontmatter.heading}</h1>
+        <h1 className="heading font-lora text-center">{frontmatter.heading}</h1>
 
-        <div className="">
+        <div className=" my-4">
         <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(frontmatter.date).getFullYear() ? frontmatter.date:
                                         currentDate.getMonth() > new Date(frontmatter.date).getMonth() ? frontmatter.date :
                                         currentDate.getDate() == new Date(frontmatter.date).getDate()?<span>Today</span>

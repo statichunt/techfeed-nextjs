@@ -23,7 +23,7 @@ const BlogPage = ({posts,page}) => {
 
     useEffect(() => {
         if (page > pageNumber) {
-            router.push('/')
+            router.push('/blog')
         }
     })
     return (
@@ -41,7 +41,7 @@ const BlogPage = ({posts,page}) => {
                      
                  </div>
                 </Link>
-                 <div className="heading text-center"
+                 <div className="heading text-center text-2xl"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

@@ -10,7 +10,7 @@ export default function FilterData({value}) {
     return (
         <>
          <div className="my-20">
-         <div className="heading text-center text-5xl my-5 font-normal cursor-default"><h1>SIMILAR POST</h1></div>
+         <div className="heading text-center text-4xl tracking-tight my-5 font-normal cursor-default"><h1>SIMILAR POST</h1></div>
           <div className="sm:flex sm:flex-wrap">
 
              
@@ -25,11 +25,12 @@ export default function FilterData({value}) {
                         alt='abc'
                         src={blog.frontmatter.image}
                         layout='fill'
+                        objectFit="cover"
                         ></Image>
                         
                     </div>
                    </Link>
-                    <div className="heading text-center"
+                    <div className="heading text-center text-2xl"
                     >
   
                         <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

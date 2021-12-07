@@ -6,11 +6,12 @@ export default function Author() {
     return (
         <div className="mt-24">
             <div className="flex justify-center items-center flex-col w-4/5 mx-auto">
-                <div className="w-52 h-authorImage relative">
+                <div className="w-52 h-authorImage relative ">
                     <Image className="rounded-full"
                     alt=""
-                    src='/image/author.jpg'
+                    src='/image/01.jpg'
                     layout='fill'
+                    objectFit="cover"
                     >
 
                     </Image>

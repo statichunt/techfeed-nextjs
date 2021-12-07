@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import Banner from './Banner'
+// import Banner from './Banner'
 import DropDownMenu from './DropDownMenu'
 import Footer from './Footer'
 import Navbar from './Navbar'
@@ -27,7 +27,7 @@ function Layout({children,posts}) {
     })
     return (
         <>
-        <Banner></Banner>
+        
         <Navbar toggle={toggle} isOpen={isOpen}  ></Navbar>
         <DropDownMenu isOpen={isOpen} toggle={toggle}></DropDownMenu>
         <main>{children}</main>

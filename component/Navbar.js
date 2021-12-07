@@ -48,21 +48,22 @@ const [postLength]=useContext(AppContext)
 
                         {
 
-                            NavElement.map(data =>
+                            NavElement.map(data =><>
+                            <div className={data.menu=="Home"?"hidden":"w-2 rounded-full h-h1 bg-gray-400"}></div>
 
-                                <li key={data.menu} className="navItem relative group" 
+                                <li key={data.menu} className="navItem " 
 
 
                                 >
 
                                     <Link href={`${data.link}`}><a className="" >{data.menu}</a></Link>
-                                    <ul  className={data.submenu[0].page != "" ?"hidden group-hover:block mt-4 absolute w-32 bg-gray-400 z-10" :"hidden"}>
+                                    <ul  className={data.submenu[0].page != "" ?"hidden group-hover:block mt-3 py-2 px-3 absolute w-40 bg-gray-100 z-10 -left-5" :"hidden"}>
                                         {
-                                            data.submenu[0].page != "" && pages.map(p => <li className="p-1" key={p.list}><Link href={`/?page=${page + p.link}`}><a>{p.list}</a></Link></li>)
+                                            data.submenu[0].page != "" && pages.map(p => <li className="px-2 py-1 w-36 hover:bg-gray-300" key={p.list}><Link href={`/?page=${page + p.link}`}><a className="text-black">{p.list}</a></Link></li>)
                                         }
 
                                     </ul>
-                                </li>)
+                                </li></>)
                         }
 
                         {/* <li className="navItem"><a>Features</a></li>

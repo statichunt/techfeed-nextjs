@@ -5,7 +5,7 @@
 @layer components{
     .heading{
     @apply
-     text-2xl 
+     text-5xl 
      font-display
      text-headingColor
      my-3
@@ -44,7 +44,7 @@
     px-5
      md:w-11/12
       sm:w-full
-     lg:w-4/5
+     lg:w-3/4
      flex
      justify-center
      flex-wrap
@@ -97,6 +97,9 @@
     mx-10
     hover:text-commonColor
     font-lora
+    relative
+     group
+     p-3
 
 },
 .title{

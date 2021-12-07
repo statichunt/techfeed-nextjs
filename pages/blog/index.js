@@ -1,8 +1,5 @@
 
-import Link from 'next/dist/client/link';
-import Image from 'next/dist/client/image';
-import fs from 'fs'
-import path from 'path'
+
 import matter from 'gray-matter';
 import BlogPage from '../../component/Blog/BlogPage';
 

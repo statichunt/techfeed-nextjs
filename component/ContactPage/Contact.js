@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { formType } from "../../config/contacVlidation";
-import Airform from 'react-airform'
 
 
 const Contact = () => {
@@ -58,11 +57,10 @@ const Contact = () => {
         <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/><div className="mx-4"><h2 className="text-green font-lora cursor-pointer" onClick={handleAirForm}>Email with airform</h2></div></div>
         
       </form>}
-      {formType.type=="airform" &&<form  method="post" className="mx-auto">
+      {formType.type=="airform" &&<form action="https://airform.io/faruk.themefisher@gmail.com" method="post" className="mx-auto">
     
     
-     <Airform email="faruk.themefisher@gmail.com">
-     <input className="inputField"  {...register("firstName", { required: true })} placeholder="First Name" />
+      <input className="inputField"  {...register("firstName", { required: true })} placeholder="First Name" />
           <input className="inputField"  {...register("lastName", { required: true })} placeholder="Last Name" />
      
       
@@ -76,8 +74,6 @@ const Contact = () => {
           
          
           <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/> <div className="mx-4 text-red italic font-lora cursor-pointer"><h2  onClick={handleAirForm}>Email Request with nodemailer</h2></div></div>
-
-     </Airform>
         </form>
 
       }

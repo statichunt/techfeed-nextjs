@@ -3,9 +3,9 @@ import { useRouter } from 'next/router'
 
 import Image from 'next/image'
 import Link from 'next/dist/client/link'
-import { BsArrowRight } from 'react-icons/bs'
+
 // import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
-import { IconData } from './IconData'
+
 
 
 function Category({value}) {

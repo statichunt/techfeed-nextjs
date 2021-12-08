@@ -4,7 +4,7 @@ import Link from 'next/dist/client/link'
 import { useContext, useState } from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
 import { AppContext } from './AppContext'
-import { NavElement } from './MenuData/Menu'
+import { NavElement } from '../config/Menu'
 
 
 function Navbar({ toggle,isOpen }) {

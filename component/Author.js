@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Image from 'next//image'
+import { author } from '../config/author'
 
 export default function Author() {
     return (
@@ -9,7 +10,7 @@ export default function Author() {
                 <div className="w-52 h-authorImage relative ">
                     <Image className="rounded-full"
                     alt=""
-                    src='/image/01.jpg'
+                    src={author.image}
                     layout='fill'
                     objectFit="cover"
                     >
@@ -18,7 +19,7 @@ export default function Author() {
                 </div>
 
                 <div className="heading sm:2xl xl ">
-                    <h1>WELCOME TO MY BLOG</h1>
+                    <h1>{author.heading}</h1>
 
                 </div>
                 <div className="
@@ -32,7 +33,7 @@ export default function Author() {
               w-full
                 
                 ">
-                    <p className="md:px-12">My name is Linda Smith. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples.</p>
+                    <p className="md:px-12">{author.details}</p>
 
                 </div>
             </div>

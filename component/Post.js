@@ -2,7 +2,7 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { BsArrowRight } from 'react-icons/bs'
-import { IconData } from './IconData'
+import { IconData } from '../config/IconData'
 import Link from 'next/dist/client/link'
 import { useEffect } from 'react'
 const Post = ({ value, page }) => {

@@ -3,7 +3,7 @@ import Image from "next/image";
 import path from "path";
 import Link from "next/dist/client/link";
 import {marked} from "marked";
-import { IconData } from "../../component/IconData";
+import { IconData } from "../../config/IconData";
 import FilterData from "../../component/FilterData";
 import AboutAuthor from "../../component/About/AboutAuthor";
 import matter from 'gray-matter';

@@ -54,7 +54,10 @@ module.exports = {
       'nameColor':'#aaa',
       'linkHoverColor':'#f7f8fa',
       'white':'#ffff',
-      'black':'#000'
+      'black':'#000',
+      'green':'green',
+      'red':'red'
+      
     },
     borderColor:{
       'commonColor':'#c8ab77',

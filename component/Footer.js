@@ -1,4 +1,5 @@
-import { IconData } from './IconData'
+import { IconData } from '../config/IconData'
+import { footerData } from '../config/footerData'
 function Footer() {
 
     return (
@@ -13,8 +14,8 @@ function Footer() {
 
                 </div>
                 <div className="text-center mt-8 font-lora text-lg sm:text-xl">
-                    <p >© 2020, All rights reserved.</p>
-                    <p>Design & Develop by <span className="text-commonColor">GetHugoThemes</span></p>
+                    <p >{footerData.coppy}</p>
+                    <p>{footerData.activity} <span className="text-commonColor">{footerData.name}</span></p>
                 </div>
             </div>
 

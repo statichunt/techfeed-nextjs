@@ -30,7 +30,7 @@ const SinglePost = ({
  
   return (
     <div className="flex justify-center items-center allPost">
-      <div key={slug} className=" px-10 w-full mt-20">
+      <div key={slug} className=" md:px-10 w-full mt-20">
         <div className="block">
           <Image
             alt="abc"

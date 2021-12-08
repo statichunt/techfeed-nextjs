@@ -1,3 +1,5 @@
+
+// welcome page data
 export const author={
     heading:"WELCOME TO MY BLOG",
     image:'/image/01.jpg',

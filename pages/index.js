@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import Author from '../component/Author'
+import Author from '../component/About/Author'
 import Post from '../component/Post'
 import matter from 'gray-matter'
 import { AppContext } from '../component/AppContext';

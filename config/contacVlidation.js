@@ -1,3 +1,3 @@
 export const formType={
-    type:"airform"
+    type:"airform" //available airform
 }

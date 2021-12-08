@@ -94,6 +94,8 @@ const Post = ({ value, page }) => {
                         </div>
                     </div>)
                 }
+
+                {/* pagination  */}
                 <div className="w-full mx-auto flex justify-between">
                     {
                         hasPreviousPage ? <a>

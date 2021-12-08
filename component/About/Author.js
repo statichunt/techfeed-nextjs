@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Image from 'next//image'
-import { author } from '../config/author'
+import { author } from '../../config/author'
 
 export default function Author() {
     return (

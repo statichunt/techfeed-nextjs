@@ -1,16 +1,17 @@
-// import styles from '../styles/Nav.module.css'
+
 import Link from 'next/dist/client/link'
 
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
-import { AppContext } from './AppContext'
-import { NavElement } from '../config/Menu'
+import { AppContext } from '../AppContext'
+import { NavElement } from '../../config/Menu'
+
 
 
 function Navbar({ toggle,isOpen }) {
 
 const [postLength]=useContext(AppContext)
-   
+//    create dropdown menu
     const page = 0
     
     const postsPerPage = 4
@@ -33,10 +34,6 @@ const [postLength]=useContext(AppContext)
             }
         }
     }
-     const [isDown, setDown]=useState(false)
-    // const dropDown=()=>{
-    //     setDown(!isDown)
-    // }
     return (
         <div className={isOpen ? 'hidden' : 'block'}>
             <nav className="flex justify-center items-center p-8 border-b-2 border-footerBorder">
@@ -65,15 +62,6 @@ const [postLength]=useContext(AppContext)
                                     </ul>
                                 </li></>)
                         }
-
-                        {/* <li className="navItem"><a>Features</a></li>
-                    <li className="navItem">
-                      <Link href='/about'><a >About</a></Link>
-                  </li>
-                    <li className="navItem"><a>Pages</a>
-                    
-                    </li>
-                    <li className="navItem"><a>Contact</a></li> */}
                     </ul>
                 </div>
 
@@ -83,6 +71,8 @@ const [postLength]=useContext(AppContext)
 }
 
 export default Navbar
+
+// get all datta from .mdx file
 export async function getStaticProps(){
     
     const files = fs.readdirSync(path.join("posts"));

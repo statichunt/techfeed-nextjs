@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react'
 // import Banner from './Banner'
-import DropDownMenu from './DropDownMenu'
+import DropDownMenu from './NavMenu/DropDownMenu'
 import Footer from './Footer'
-import Navbar from './Navbar'
+import Navbar from './NavMenu/Navbar'
 
 
 function Layout({children,posts}) {

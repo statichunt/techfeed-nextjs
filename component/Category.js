@@ -4,10 +4,6 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/dist/client/link'
 
-// import { FaFacebookF, FaTwitter, FaPinterest } from 'react-icons/fa'
-
-
-
 function Category({value}) {
     const currentDate=new Date()
     const router = useRouter()

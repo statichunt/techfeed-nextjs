@@ -1,10 +1,6 @@
 import Image from 'next/image'
 
 import { IconData } from './IconData'
-
-
-
-
 const Banner=()=> {
 
   
@@ -30,6 +26,7 @@ const Banner=()=> {
           alt=""
           src='/logo.png'
          layout="fill"
+         objectFit="cover"
         
           
           />

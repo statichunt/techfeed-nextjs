@@ -16,7 +16,7 @@ function Category({value}) {
          
                <div className="allPost">
             {
-                value.map(blog=><div className="w-full sm:w-1/2 md:w-1/3 pr-5 box-border  "  key={blog.slug}>
+                value.map(blog=><div className="w-full sm:w-1/2 md:w-1/3 md:pr-5 box-border  my-12 "  key={blog.slug}>
                 <Link href={`/${blog.slug}`}>
                 <div className="w-full h-h300 relative"
                  >

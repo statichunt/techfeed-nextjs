@@ -27,9 +27,9 @@ const Contact = () => {
   
     return (
      <>
-     <div className="flex justify-center items-center my-8">
+     <div className="flex justify-center items-center my-8 px-4">
       
-     <div className="w-4/6 mx-auto">
+     <div className="w-full md:w-4/6 mx-auto">
      <h1 className="heading text-center text-5xl font-lora font-medium">Get In Touch</h1>
      <form onSubmit={handleSubmit(onSubmit)}  className="mx-auto">
     
@@ -45,7 +45,7 @@ const Contact = () => {
       
         <textarea className="inputField" rows='7' {...register("message", { required: true })} placeholder="Message"></textarea>
         
-        <div className="flex justify-center items-center " ><input type="submit" className="" /></div>
+        <div className="flex justify-center items-center  " ><input type="submit" className="submit"/></div>
       </form>
      </div>
      </div>

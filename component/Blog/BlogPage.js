@@ -29,7 +29,7 @@ const BlogPage = ({posts,page}) => {
     return (
         <div className="allPost">
                   {
-                currentPosts.map(blog=><div className="w-full sm:w-1/2 md:w-1/3 pr-5 box-border  my-12 "  key={blog.slug}>
+                currentPosts.map(blog=><div className="blog "  key={blog.slug}>
                 <Link href={`/${blog.slug}`}>
                 <div className="w-full h-h300 relative"
                  >
@@ -52,7 +52,7 @@ const BlogPage = ({posts,page}) => {
                  </div>
              </div>)
             }
-             <div className="w-full mx-auto md:flex md:justify-between">
+             <div className="w-full mx-auto flex justify-between">
                     {
                         hasPreviousPage ? <a>
                             <button

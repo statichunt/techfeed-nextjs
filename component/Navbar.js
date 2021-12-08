@@ -57,7 +57,7 @@ const [postLength]=useContext(AppContext)
                                 >
 
                                     <Link href={`${data.link}`}><a className="" >{data.menu}</a></Link>
-                                    <ul  className={data.submenu[0].page != "" ?"hidden group-hover:block mt-3 py-2 px-3 absolute w-40 bg-gray-100 z-10 -left-5" :"hidden"}>
+                                    <ul  className={data.submenu[0].page != "" ?"subMenu" :"hidden"}>
                                         {
                                             data.submenu[0].page != "" && pages.map(p => <li className="px-2 py-1 w-36 hover:bg-gray-300" key={p.list}><Link href={`/?page=${page + p.link}`}><a className="text-black">{p.list}</a></Link></li>)
                                         }

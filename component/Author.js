@@ -31,7 +31,7 @@ export default function Author() {
                w-9/12
                 
                 ">
-                    <p className="px-12">My name is Linda Smith. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples.</p>
+                    <p className="md:px-12">My name is Linda Smith. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples.</p>
 
                 </div>
             </div>

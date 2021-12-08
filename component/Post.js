@@ -94,7 +94,7 @@ const Post = ({ value, page }) => {
                         </div>
                     </div>)
                 }
-                <div className="w-full mx-auto md:flex md:justify-between">
+                <div className="w-full mx-auto flex justify-between">
                     {
                         hasPreviousPage ? <a>
                             <button

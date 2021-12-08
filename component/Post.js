@@ -55,7 +55,7 @@ const Post = ({ value, page }) => {
                                 <h1 className="heading"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
 
                                 <div className="">
-                                    <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(data.frontmatter.date).getFullYear() ? data.frontmatter.date :
+                                    <p className="italic font-lora md:text-lg text-sm font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(data.frontmatter.date).getFullYear() ? data.frontmatter.date :
                                         currentDate.getMonth() > new Date(data.frontmatter.date).getMonth() ? data.frontmatter.date :
                                             currentDate.getDate() == new Date(data.frontmatter.date).getDate() ? <span>Today</span>
 

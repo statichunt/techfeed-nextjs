@@ -16,9 +16,9 @@ const Categories = ({posts}) => {
     
     return (
         <div>
-           <div className="allPost flex justify-around items-center heading">
+           <div className="allPost md:flex md:justify-around md:items-center heading block mx-auto text-center ">
            {
-                filterCategory.map(data=><div key={data}><Link href={`/category/${data}`}><a >{data}</a></Link></div>)
+                filterCategory.map(data=><div key={data} className="my-24"><Link href={`/category/${data}`}><a >{data}</a></Link></div>)
             }
            </div>
         </div>

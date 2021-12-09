@@ -1,11 +1,15 @@
 import Image from 'next/image'
 
 import {marked} from "marked";
+import Header from "next/head"
 
 function AboutData({data}) {
     
     return (
         <div className="w-1/2  mx-auto my-32">
+            <Header>
+                <title>{data.frontmatter.title}</title>
+            </Header>
             <div className="w-full h-h300  relative mx-auto">
                 <Image
                 alt=""

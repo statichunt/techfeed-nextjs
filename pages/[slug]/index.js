@@ -7,6 +7,8 @@ import { IconData } from "../../config/IconData";
 import FilterData from "../../component/FilterData";
 import AboutAuthor from "../../component/About/AboutAuthor";
 import matter from 'gray-matter';
+import Header from "next/head";
+
 
 // const matter = require("gray-matter");
 
@@ -21,15 +23,22 @@ const SinglePost = ({
   const filter = posts.filter(
     (data) => data.frontmatter.category == frontmatter.category
   );
+  
+ 
   const remainData = posts.filter((el) => !filter.includes(el));
   const filterDataById = filter.filter(
     (data) => data.frontmatter.id != frontmatter.id
   );
   const currentDate= new Date()
   const sortBySlug = [...filterDataById, ...remainData];
+  
  
   return (
     <div className="flex justify-center items-center allPost">
+      <Header>
+        <title>{slug}</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Header>
       <div key={slug} className=" md:px-10 w-full mt-20">
         <div className="block">
           <Image

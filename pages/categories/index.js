@@ -3,6 +3,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
 import Link from 'next/dist/client/link';
+import Header from 'next/head'
+import { useRouter } from 'next/router';
 
 
 const Categories = ({posts}) => {
@@ -12,13 +14,16 @@ const Categories = ({posts}) => {
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]
 
-   
+  
     
     return (
         <div>
+          <Header>
+            <title>Category</title>
+          </Header>
            <div className="allPost md:flex md:justify-around md:items-center heading block mx-auto text-center ">
            {
-                filterCategory.map(data=><div key={data} className="my-24"><Link href={`/category/${data}`}><a >{data}</a></Link></div>)
+                filterCategory.map(data=><div key={data} className="my-24"><Link href={`/category/${data}`}><a className="capitalize">{data}</a></Link></div>)
             }
            </div>
         </div>

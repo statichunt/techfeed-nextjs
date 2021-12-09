@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import Image from 'next/dist/client/image'
 import Link from 'next/dist/client/link'
 import { useRouter } from 'next/router'
+import Header from 'next/head'
 
 
 const BlogPage = ({posts,page}) => {
@@ -28,6 +29,9 @@ const BlogPage = ({posts,page}) => {
     })
     return (
         <div className="allPost">
+            <Header>
+            <title>Blog</title>
+          </Header>
                   {
                 currentPosts.map(blog=><div className="blog "  key={blog.slug}>
                 <Link href={`/${blog.slug}`}>

@@ -37,7 +37,7 @@ export const getStaticPaths = async () => {
       category: category.frontmatter.category
     }
   }))
-  console.log(paths)
+  
   
   return {
     paths,

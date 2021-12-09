@@ -132,7 +132,7 @@
     h-h12
     rounded-full
     bg-black
-    hover:bg-yellow-600
+    hover:bg-buttonColor
     text-white
     block
     
@@ -156,7 +156,7 @@
     @apply
     px-8 
     py-4 
-    bg-yellow-600 
+    bg-buttonColor 
     hover:bg-black 
     text-white 
     font-lora 

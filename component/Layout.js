@@ -6,7 +6,7 @@ import Navbar from './NavMenu/Navbar'
 
 
 function Layout({children,posts}) {
-    console.log(posts)
+    
     const [isOpen,setIsOpen]=useState(false)
     const toggle=()=>{
         setIsOpen(!isOpen)

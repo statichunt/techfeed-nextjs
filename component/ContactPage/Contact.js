@@ -9,7 +9,7 @@ const Contact = () => {
     const [airForm,setAirForm]=useState(true)
     const handleAirForm=()=>{
         setAirForm(!airForm)
-        console.log(airForm)
+        
     }
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data,e) => {
@@ -28,7 +28,7 @@ const Contact = () => {
         })
        
      e.target.reset()
-    console.log(event)
+    
     } 
   
   
@@ -54,7 +54,7 @@ const Contact = () => {
       
         <textarea className="inputField" rows='7' {...register("message", { required: true })} placeholder="Message"></textarea>
         
-        <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/><div className="mx-4"><h2 className="text-green font-lora cursor-pointer" onClick={handleAirForm}>Email with airform</h2></div></div>
+        <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/></div>
         
       </form>}
       {formType.type=="airform" &&<form action="https://airform.io/faruk.themefisher@gmail.com" method="post" className="mx-auto">
@@ -73,7 +73,7 @@ const Contact = () => {
           <textarea className="inputField" rows='7' {...register("message", { required: true })} placeholder="Message"></textarea>
           
          
-          <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/> <div className="mx-4 text-red italic font-lora cursor-pointer"><h2  onClick={handleAirForm}>Email Request with nodemailer</h2></div></div>
+          <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/></div>
         </form>
 
       }

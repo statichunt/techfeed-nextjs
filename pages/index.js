@@ -7,7 +7,7 @@ import { AppContext } from '../component/AppContext';
 const currentDate=new Date()
 const Home = ({ posts, page }) => {
   const [postLength,setPostLength]=useContext(AppContext)
-  console.log(postLength)
+  
   useEffect(()=>{
     setPostLength(posts.length)
   })

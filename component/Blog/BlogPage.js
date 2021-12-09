@@ -18,7 +18,7 @@ const BlogPage = ({posts,page}) => {
         
         
     }
-    console.log(pageList)
+    
     const router = useRouter()
 
     useEffect(() => {
@@ -37,11 +37,12 @@ const BlogPage = ({posts,page}) => {
                      alt='abc'
                      src={blog.frontmatter.image}
                      layout='fill'
+                     objectFit="cover"
                      ></Image>
                      
                  </div>
                 </Link>
-                 <div className="heading text-center text-2xl"
+                 <div className="heading text-center text-2xl h-28"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
@@ -74,9 +75,9 @@ const BlogPage = ({posts,page}) => {
                         </a>
                     }
                     <ul className="flex items-center">
-                        <li className="list-none">page</li>
+                        <li className="list-none mx-2">page</li>
                         {
-                            pageList.map(num=><li  key="num" className="mx-2 cursor-pointer text-xl hover:text-commonColorHover" onClick={
+                            pageList.map(num=><li  key={num} className={page==num? "text-buttonColor" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a>{num}</a></li>)
                         }
                     </ul>

@@ -3,7 +3,7 @@ import Image from "next/image"
 
 
 const  LifeStory=()=> {
-    console.log(Data)
+    
 
     return (
         <div>

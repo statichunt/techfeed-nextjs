@@ -20,11 +20,12 @@ function Category({value}) {
                      alt='abc'
                      src={blog.frontmatter.image}
                      layout='fill'
+                     objectFit="cover"
                      ></Image>
                      
                  </div>
                 </Link>
-                 <div className="heading text-center"
+                 <div className="heading text-center text-2xl h-28"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

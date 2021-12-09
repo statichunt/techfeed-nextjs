@@ -1,7 +1,7 @@
 
 import Link from 'next/dist/client/link'
 
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
 import { AppContext } from '../AppContext'
 import { NavElement } from '../../config/Menu'
@@ -45,10 +45,10 @@ const [postLength]=useContext(AppContext)
 
                         {
 
-                            NavElement.map(data =><>
-                            <div className={data.menu=="Home"?"hidden":"w-2 rounded-full h-h1 bg-gray-400"}></div>
+                            NavElement.map(data =><React.Fragment key={data.menu}>
+                            <div key={data.menu} className={data.menu=="Home"?"hidden":"w-2 rounded-full h-h1 bg-gray-400"}></div>
 
-                                <li key={data.menu} className="navItem " 
+                                <li  className="navItem " 
 
 
                                 >
@@ -56,11 +56,11 @@ const [postLength]=useContext(AppContext)
                                     <Link href={`${data.link}`}><a className="" >{data.menu}</a></Link>
                                     <ul  className={data.submenu[0].page != "" ?"  hidden group-hover:block subMenu" :"hidden"}>
                                         {
-                                            data.submenu[0].page != "" && pages.map(p => <li className="px-2 py-1 w-36 hover:bg-gray-300" key={p.list}><Link href={`/?page=${page + p.link}`}><a className="text-black">{p.list}</a></Link></li>)
+                                            data.submenu[0].page != "" && pages.map(p => <li className="px-2 py-1 rounded-sm  hover:bg-gray-300" key={p.list}><Link href={`/?page=${page + p.link}`}><a className="text-black">{p.list}</a></Link></li>)
                                         }
 
                                     </ul>
-                                </li></>)
+                                </li></React.Fragment>)
                         }
                     </ul>
                 </div>
@@ -76,6 +76,7 @@ export default Navbar
 export async function getStaticProps(){
     
     const files = fs.readdirSync(path.join("posts"));
+    console.log(files)
 
     const posts = files.map((filename) => {
       const slug = filename.replace(".md", "");

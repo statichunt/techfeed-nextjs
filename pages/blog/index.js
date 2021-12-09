@@ -5,7 +5,7 @@ import BlogPage from '../../component/Blog/BlogPage';
 
 const currentDate=new Date()
 const Blogs = ({posts,page}) => {
-  console.log(posts)
+  
  
     return (
         <>

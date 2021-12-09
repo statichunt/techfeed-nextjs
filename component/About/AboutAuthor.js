@@ -1,6 +1,5 @@
 import Link from 'next/dist/client/link'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 import { IconData } from '../../config/IconData'
 
@@ -8,7 +7,7 @@ import { IconData } from '../../config/IconData'
 function AboutAuthor({data}) {
    
 
-    const router = useRouter()
+   
    
     return (
         <div className="my-20 " >

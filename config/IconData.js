@@ -1,4 +1,5 @@
 import { FaFacebookF, FaTwitter, FaPinterest,FaInstagram } from 'react-icons/fa'
+// all social Icon is here
 export const IconData=[
     {
         icon:<FaFacebookF/>,

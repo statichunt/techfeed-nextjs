@@ -6,8 +6,7 @@ import { IconData } from '../config/IconData'
 import Link from 'next/dist/client/link'
 import { useEffect } from 'react'
 const Post = ({ value, page }) => {
-    console.log(IconData.slice(0, 3))
-    console.log('slug', page)
+   
     const postsPerPage = 4
 
     const currentDate = new Date

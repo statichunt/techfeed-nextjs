@@ -1,7 +1,11 @@
 import { IconData } from '../config/IconData'
 import { footerData } from '../config/footerData'
 import Link from 'next/dist/client/link'
+
+
+
 function Footer() {
+  
 
     return (
         <div className="py-20 border-t-2 border-footerBorder">
@@ -25,3 +29,4 @@ function Footer() {
 }
 
 export default Footer
+

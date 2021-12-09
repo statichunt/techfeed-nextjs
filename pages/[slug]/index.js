@@ -17,7 +17,7 @@ const SinglePost = ({
   slug,
   aboutFrontMatter,
 }) => {
-  // console.log("tuhin", aboutFrontMatter);
+  
   const filter = posts.filter(
     (data) => data.frontmatter.category == frontmatter.category
   );
@@ -137,7 +137,7 @@ export const getStaticProps = async ({ params }) => {
     "utf-8"
   );
   const { data: aboutFrontMatter,content:aboutContent } = matter(metaDataWithFrontMatter);
-  console.log(aboutFrontMatter, aboutContent);
+ 
 
   return {
     props: {

@@ -10,7 +10,7 @@ import { title } from '../config/title'
 
 function MyApp({ Component, pageProps }) {
   const [postLength,setPostLength]=useState("")
-  console.log(title)
+  
   
   return (
     

@@ -1,5 +1,6 @@
 export const footerData={
-    coppy:"© 2020, All rights reserved.",
-    activity:"Design & Develop by",
-    name:"GetHugoThemes"
+    coppy: "© 2020, All rights reserved.",
+activity: "Design & Develop by",
+name: "GetHugoThemes",
+link: "https://gethugothemes.com/"
 }

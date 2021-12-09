@@ -73,31 +73,3 @@ const [postLength]=useContext(AppContext)
 export default Navbar
 
 // get all datta from .mdx file
-export async function getStaticProps(){
-    
-    const files = fs.readdirSync(path.join("posts"));
-    console.log(files)
-
-    const posts = files.map((filename) => {
-      const slug = filename.replace(".md", "");
-  
-      const metaDataWithFrontMatter = fs.readFileSync(
-        path.join("posts", filename),
-        "utf-8"
-      );
-  
-      const { data: frontmatter, content } = matter(metaDataWithFrontMatter);
-      return {
-        slug,
-        content,
-        frontmatter,
-      };
-    });
-     
-    
-    return{
-      props:{
-        posts
-      }
-    }
-  }

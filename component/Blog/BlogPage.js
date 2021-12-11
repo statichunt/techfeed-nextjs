@@ -28,7 +28,7 @@ const BlogPage = ({posts,page}) => {
         }
     })
     return (
-        <div className="allPost">
+        <div className="allPost mx-auto">
             <Header>
             <title>Blog</title>
           </Header>
@@ -52,8 +52,8 @@ const BlogPage = ({posts,page}) => {
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
 
                  </div>
-                 <div className="text-center font-lora">
-                     <p>{blog.frontmatter.content}</p>
+                 <div className="text-center font-lora text-2xl">
+                     <p >{blog.frontmatter.content.slice(0,100)}</p>
                  </div>
              </div>)
             }
@@ -64,7 +64,8 @@ const BlogPage = ({posts,page}) => {
                                 className="buttonClass  "
                                 onClick={
                                     () => router.push(`/blog/?page=${page - 1}`)
-                                }>prev</button>
+                                }>
+                                    prev</button>
                         </a> : <a>
                             <button
                                 className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
@@ -79,7 +80,7 @@ const BlogPage = ({posts,page}) => {
                         </a>
                     }
                     <ul className="flex items-center">
-                        <li className="list-none mx-2">page</li>
+                        <li className="list-none mx-2">Page</li>
                         {
                             pageList.map(num=><li  key={num} className={page==num? "text-buttonColor" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a>{num}</a></li>)
@@ -89,13 +90,13 @@ const BlogPage = ({posts,page}) => {
                         hasNextPage ? <a>
                             <button className="buttonClass  "
                                 onClick={
-                                    () => router.push(`/blog/?page=${page + 1}`)}>next</button>
+                                    () => router.push(`/blog/?page=${page + 1}`)}>Next</button>
                         </a> :
                             <a>
                                 <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                     onClick={
                                         () => router.push(`/blog/?page=${page + 1}`)
-                                    }>next</button></a>}
+                                    }>Next</button></a>}
 
 
 

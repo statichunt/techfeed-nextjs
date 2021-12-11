@@ -43,7 +43,7 @@ const Post = ({ value, page }) => {
                                 objectFit="cover"
                             />
                         </div>
-                        <div className=" lg:w-4/5 md:full mx-auto">
+                        <div className=" lg:w-4/5 w-full mx-auto">
                             <div className="text-center my-14"
 
                             >
@@ -95,14 +95,14 @@ const Post = ({ value, page }) => {
                 }
 
                 {/* pagination  */}
-                <div className="w-full mx-auto flex justify-between">
+                <div className="w-full lg:w-4/5 mx-auto flex justify-between">
                     {
                         hasPreviousPage ? <a>
                             <button
                                 className="buttonClass  "
                                 onClick={
                                     () => router.push(`/?page=${page - 1}`)
-                                }>prev</button>
+                                }>Prev</button>
                         </a> : <a>
                             <button
                                 className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
@@ -113,20 +113,20 @@ const Post = ({ value, page }) => {
                                 }
 
 
-                            >prev</button>
+                            >Prev</button>
                         </a>
                     }
                     {
                         hasNextPage ? <a>
                             <button className="buttonClass  "
                                 onClick={
-                                    () => router.push(`/?page=${page + 1}`)}>next</button>
+                                    () => router.push(`/?page=${page + 1}`)}>Next</button>
                         </a> :
                             <a>
                                 <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                     onClick={
                                         () => router.push(`/?page=${page + 1}`)
-                                    }>next</button></a>}
+                                    }>Next</button></a>}
 
 
 

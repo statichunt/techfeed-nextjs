@@ -8,9 +8,9 @@ const Blogs = ({posts,page}) => {
   
  
     return (
-        <>
+         <div className='mx-auto'>
      <BlogPage posts={posts} page={page}></BlogPage>
-        </>
+     </div>
     )
 }
 export const getServerSideProps = async ({ query: { page = 1 } }) => {

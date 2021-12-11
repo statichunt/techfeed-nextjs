@@ -43,10 +43,9 @@
 }
 .allPost{
     @apply
-    px-5
-     md:w-11/12
-      sm:w-full
-     lg:w-3/4
+    px-10
+     w-full
+     xl:w-3/4
      flex
      justify-center
      flex-wrap
@@ -96,12 +95,12 @@
 .navItem{
     @apply
     text-lg
-    mx-10
+    mx-4
     hover:text-commonColor
     font-lora
     relative
      group
-     p-3
+     p-4
 
 },
 .title{
@@ -127,8 +126,8 @@
 },
 .buttonClass{
     @apply
-   md:w-40
-   w-24
+   md:w-24
+   w-16
     h-h12
     rounded-full
     bg-black
@@ -166,10 +165,13 @@
 .blog{
     @apply
     w-full
-     sm:w-1/2 md:w-1/3
+     sm:w-1/2 
+     md:w-1/3
      md:pr-5
-     box-border
+    sm:box-border
       my-12
+     sm:px-2
+    
 }
 .subMenu{
     @apply

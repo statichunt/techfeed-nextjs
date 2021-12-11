@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/dist/client/link'
 
 function Category({value}) {
-    const currentDate=new Date()
+  
     const router = useRouter()
     const catagories= value.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
@@ -36,15 +36,17 @@ function Category({value}) {
                      
                  </div>
                 </Link>
-                 <div className="heading text-center text-2xl h-28"
+              <div className='py-4 h-h400'>
+              <div className="heading text-center text-2xl"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
 
                  </div>
-                 <div className="text-center font-lora">
-                     <p>{blog.frontmatter.content}</p>
+                 <div className="text-center font-lora text-2xl">
+                     <p>{blog.frontmatter.content.slice(0,200)}</p>
                  </div>
+              </div>
              </div>
                 </React.Fragment>)
             }

@@ -39,7 +39,7 @@ const SinglePost = ({
         <title>{slug}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Header>
-      <div key={slug} className=" md:px-10 w-full mt-20">
+      <div key={slug} className=" w-full mt-20">
         <div className="block">
           <Image
             alt="abc"

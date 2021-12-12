@@ -46,7 +46,8 @@ const BlogPage = ({posts,page}) => {
                      
                  </div>
                 </Link>
-                 <div className="heading text-center text-2xl h-28"
+              <div className='h-h400 py-4'>
+              <div className="heading text-center text-2xl h-28"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
@@ -55,6 +56,7 @@ const BlogPage = ({posts,page}) => {
                  <div className="text-center font-lora text-2xl">
                      <p >{blog.frontmatter.content.slice(0,100)}</p>
                  </div>
+              </div>
              </div>)
             }
              <div className="w-full mx-auto flex justify-between">

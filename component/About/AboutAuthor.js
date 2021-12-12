@@ -24,7 +24,7 @@ function AboutAuthor({data}) {
                     </Image>
                 </div>
                 
-                <div className="ml-10  w-4/5">
+                <div className="sm:ml-10 w-full sm:w-4/5">
                   
                     <p>{data.details}</p>
                     <div className="hover my-5 cursor-pointer">
@@ -32,7 +32,7 @@ function AboutAuthor({data}) {
                      
                      > know more..</a></Link>
                     </div>
-                    <div className="flex  ">
+                    <div className="flex  justify-center">
                         {
 
                             IconData.map(icon=><div key={icon.class} className="mr-2"><a className="hover text-black ">{icon.icon}</a></div>)

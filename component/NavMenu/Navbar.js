@@ -48,15 +48,15 @@ const [postLength]=useContext(AppContext)
                             NavElement.map(data =><React.Fragment key={data.menu}>
                             <div key={data.menu} className={data.menu=="Home"?"hidden":"w-2 rounded-full h-h1 bg-gray-400"}></div>
 
-                                <li  className="navItem " 
+                                <li  className="group relative " 
 
 
                                 >
 
-                                    <Link href={`${data.link}`}><a className="" >{data.menu}</a></Link>
+                                    <Link href={`${data.link}`}><a className="navItem" >{data.menu}</a></Link>
                                     <ul  className={data.submenu[0].page != "" ?"  hidden group-hover:block subMenu" :"hidden"}>
                                         {
-                                            data.submenu[0].page != "" && pages.map(p => <li className="px-2 py-1 rounded-sm  hover:bg-gray-300" key={p.list}><Link href={`/?page=${page + p.link}`}><a className="text-black">{p.list}</a></Link></li>)
+                                            data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  "><li className="rounded-sm  hover:bg-gray-300 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
                                         }
 
                                     </ul>

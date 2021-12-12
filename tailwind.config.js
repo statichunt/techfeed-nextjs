@@ -76,7 +76,7 @@ module.exports = {
        h32:"8rem",
        logoHeight:"160px",
        authorImage:"13rem",
-       h300:"300px",
+       h200:"200px",
        h400:"400px"
 
 

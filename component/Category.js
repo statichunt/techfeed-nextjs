@@ -25,7 +25,7 @@ function Category({value}) {
                    
                 <div className="blog"  >
                 <Link href={`/${blog.slug}`}>
-                <div className="w-full h-h300 relative"
+                <div className="w-full h-h200 relative"
                  >
                      <Image
                      alt='abc'
@@ -37,13 +37,13 @@ function Category({value}) {
                  </div>
                 </Link>
               <div className='py-4 h-h400'>
-              <div className="heading text-center text-2xl"
+              <div className="heading  text-2xl text-center  mb-4 font-thin"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
 
                  </div>
-                 <div className="text-center font-lora text-2xl">
+                 <div className=" font-lora text-xl text-center">
                      <p>{blog.frontmatter.content.slice(0,200)}</p>
                  </div>
               </div>

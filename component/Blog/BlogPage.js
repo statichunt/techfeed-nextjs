@@ -33,9 +33,9 @@ const BlogPage = ({posts,page}) => {
             <title>Blog</title>
           </Header>
                   {
-                currentPosts.map(blog=><div className="blog "  key={blog.slug}>
+                currentPosts.map(blog=><div className="blog h-h600"  key={blog.slug}>
                 <Link href={`/${blog.slug}`}>
-                <div className="w-full h-h300 relative"
+                <div className="w-full h-h200  relative"
                  >
                      <Image
                      alt='abc'
@@ -46,15 +46,15 @@ const BlogPage = ({posts,page}) => {
                      
                  </div>
                 </Link>
-              <div className='h-h400 py-4'>
-              <div className="heading text-center text-2xl h-28"
+              <div className='h-auto mt-4 sm:h-h400 py-4'>
+              <div className="heading  text-2xl text-center  mb-4 font-thin"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
 
                  </div>
-                 <div className="text-center font-lora text-2xl">
-                     <p >{blog.frontmatter.content.slice(0,100)}</p>
+                 <div className=" font-lora text-center text-xl sm:text-2xl leading-7">
+                     <p >{blog.frontmatter.content.slice(0,200)}</p>
                  </div>
               </div>
              </div>)

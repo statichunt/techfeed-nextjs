@@ -69,7 +69,7 @@ const SinglePost = ({
         <div className="">
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-            className="font-lora text-xl"
+            className="font-lora text-xl "
           ></div>
 
           <div className="my-10">

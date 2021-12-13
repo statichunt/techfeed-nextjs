@@ -63,7 +63,7 @@
 }
 .facebook{
     @apply
-    hover:bg-blue-700
+    hover:bg-blue-600
     hover:text-linkHoverColor
     
     

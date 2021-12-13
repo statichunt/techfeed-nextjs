@@ -10,11 +10,12 @@ function AboutData({data}) {
             <Header>
                 <title>{data.frontmatter.title}</title>
             </Header>
-            <div className="w-full h-h300  relative mx-auto">
+            <div className="w-full h-h200  relative mx-auto">
                 <Image
                 alt=""
                 src={data.frontmatter.aboutImage}
                 layout='fill'
+                objectFit='cover'
                 ></Image>
             </div>
             <div className="text-center ">

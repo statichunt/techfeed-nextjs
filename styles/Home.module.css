@@ -1,66 +1,31 @@
-
-.banner{
-  color:#f6f6f6;
-  font-style:italic;
-  position:relative
+.content{
+  color: #333;
+    background-color: #fff;
+    
+    font-weight: 400;
+    font-size: 20px;
 }
-.bannerImage{
-  position:relative;
-  height:600px
+.content p{
+
+margin-bottom: 30px;
+line-height: 30px;
+}
+.content li{
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
   
 }
-.bannerContent{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 300px;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index:1;
+.content blockquote{
+  border-left: 5px solid rgb(202, 194, 194);
 }
-.logo{
-  margin-bottom: 24px;
+.content blockquote p{
+  margin-left: 20px;
 }
-.subHEading{
-  font-size:20px;
- 
-  text-align:center;
+.content h2{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
-.socialIcon{
-  display:flex;
-  justify-content:center;
-  width:100%;
-  margin-top:40px;
-}
-.mediaIcon{
-  height:50px;
-  width:50px;
-  border-radius:50%;
-  border:1px solid #f6f6f6;
-  position:relative;
-  margin:0px 10px;
-}
-.mediaIcon:hover{
-  background-color: rgba(255, 255, 255, 0.2);
-    border-color: #ffffff;
-}
-.icon{
-position:absolute;
-top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size:20px;
-  color:white
-}
-.overlay{
-  background:rgba(0, 0, 0, 0.5);
-  position:absolute;
-  top:0;
-  left:0;
-  height:100%;
-  width:100%;
-}
-

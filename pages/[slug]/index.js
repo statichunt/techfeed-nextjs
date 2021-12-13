@@ -8,6 +8,7 @@ import FilterData from "../../component/FilterData";
 import AboutAuthor from "../../component/About/AboutAuthor";
 import matter from 'gray-matter';
 import Header from "next/head";
+import styles from "../../styles/Home.module.css"
 
 
 // const matter = require("gray-matter");
@@ -69,7 +70,7 @@ const SinglePost = ({
         <div className="">
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-            className="font-lora text-xl"
+            className={`font-lora text-xl ${styles.content}`}
           ></div>
 
           <div className="my-10">

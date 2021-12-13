@@ -1,6 +1,7 @@
 module.exports = {
+  
   purge: [
-    
+    ,
   ],
   darkMode: false,
   

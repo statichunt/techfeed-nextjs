@@ -1,9 +1,9 @@
-@tailwind base;
-@tailwind components;
 
-@tailwind utilities;
-@layer components{
-    .heading{
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ @layer components{
+ .heading{
     @apply
      md:text-5xl 
      sm:text-3xl
@@ -14,10 +14,14 @@
      font-semibold
      cursor-pointer
      uppercase
-     /* mobile:text-4xl */
+     
 
-}
-
+ }
+ }
+/* */
+/* @layer components{ */
+    
+/* 
 .bannerContent{
     @apply
 
@@ -34,15 +38,15 @@
      transform
      -translate-x-1/2
      -translate-y-1/2
-    /*paragraph*/
+   
      text-center
      font-lora
      italic
      md:text-xl
      text-xs
      sm:text-sm
-}
-.allPost{
+} */
+/* .allPost{
     @apply
     px-4
     sm:px-10
@@ -55,8 +59,8 @@
      items-center
      my-10
      font-lora
-}
-.hover{
+}  */
+/* .hover{
     @apply 
     text-commonColor
      hover:text-commonColorHover
@@ -92,9 +96,9 @@
       text-3xl
       cursor-pointer
       hover:text-commonColor
-}
+} */
 
-.navItem{
+/* .navItem{
     @apply
     text-lg
     mx-4
@@ -125,8 +129,8 @@
      justify-center
      items-center
      cursor-pointer
-},
-.buttonClass{
+}, */
+/* .buttonClass{
     @apply
    md:w-24
    w-16
@@ -152,8 +156,8 @@
    mx-auto
    font-lora
  
-}
-.submit{
+} */
+/* .submit{
     @apply
     px-8 
     py-4 
@@ -163,8 +167,8 @@
     font-lora 
     text-xl 
     rounded-sm
-}
-.blog{
+} */
+/* .blog{
     @apply
     w-full
      sm:w-1/2 
@@ -176,8 +180,8 @@
      mt-4
      
     
-}
-.subMenu{
+} */
+/* .subMenu{
     @apply
   
      mt-3
@@ -189,6 +193,6 @@
      z-10
      -left-5
 
-}
-}
+} */
+/* } */
 

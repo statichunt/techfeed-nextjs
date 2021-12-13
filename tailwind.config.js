@@ -1,9 +1,8 @@
 module.exports = {
-  
-  purge: [
-    ,
-  ],
-  darkMode: false,
+  content:["./pages/**/*.{js,ts,jsx,tsx}",
+  "./components/**/*.{js,ts,jsx,tsx}"],
+
+  darkMode: 'media',
   
   variants: {
     extend: {

@@ -103,7 +103,18 @@
 },
 .socialLink{
     @apply
-    mx-2
+     w-12
+     h-12
+     rounded-full
+     mx-2
+     bg-gray-300
+     flex
+     justify-center
+     items-center
+     cursor-pointer
+
+}
+ /* mx-2
      w-12
      h-h12
      rounded-full
@@ -111,8 +122,7 @@
      flex
      justify-center
      items-center
-     cursor-pointer
-}
+     cursor-pointer */
 .buttonClass{
     @apply
    md:w-24

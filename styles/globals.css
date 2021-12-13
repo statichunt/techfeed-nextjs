@@ -164,6 +164,16 @@
    font-lora
  
 }
+.welcomeContent{
+    @apply
+    w-52
+    h-52
+    relative
+}
+.welcomeImage{
+    @apply
+    rounded-full
+}
  }
  
 /* .bannerContent{

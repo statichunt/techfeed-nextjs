@@ -1,5 +1,5 @@
 import Link from 'next/dist/client/link'
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import { NavElement } from '../../config/Menu'
 import { AppContext } from '../AppContext'
@@ -7,7 +7,12 @@ import { AppContext } from '../AppContext'
 
 
 
+
 const DropDownMenu = ({isOpen, toggle}) => {
+    const [isDropdown,setDropDown]=useState(true)
+    const handleDropDown=()=>{
+        setDropDown(!isDropdown)
+    }
 
     //    create dropdown menu
     const [postLength]=useContext(AppContext)
@@ -42,10 +47,10 @@ const DropDownMenu = ({isOpen, toggle}) => {
                </div>
                  <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
-             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300 group relative" onClick={toggle}  key={data.menu}><Link href={data.link}><a className="" >{data.menu}</a></Link> 
+             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative" onClick={toggle,handleDropDown}  key={data.menu}><Link href={data.link}><a className="" >{data.menu}</a></Link> 
              
            
-                                    <ul  className={data.submenu[0].page != "" ?"  hidden group-hover:block subMenu  static bg-gray-300 w-full " :"hidden"}>
+                                    <ul  className={data.submenu[0].page != "page" || isDropdown? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
                                         {
                                             data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  "><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
                                         }

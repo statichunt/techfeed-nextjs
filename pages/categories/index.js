@@ -22,9 +22,9 @@ const Categories = ({posts}) => {
           <Header>
             <title>Category</title>
           </Header>
-           <div className="allPost md:flex md:justify-around md:items-center heading block mx-auto text-center  ">
+           <div className="categoryContainer  ">
            {
-                filterCategory.map(data=><div key={data} className="my-24 hover:shadow-sm hover:shadow-gray-400"><Link href={`/category/${data}`}><a className="capitalize ">{data}</a></Link></div>)
+                filterCategory.map(data=><div key={data} className="categoryTitle"><Link href={`/category/${data}`}><a className="capitalize ">{data}</a></Link></div>)
             }
            </div>
         </div>

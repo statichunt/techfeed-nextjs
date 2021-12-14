@@ -54,7 +54,7 @@ const DropDownMenu = ({isOpen, toggle}) => {
            
                                     <ul  className={data.submenu[0].page != "" && isDropdown ? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
                                         {
-                                            data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  " onClick={toggle}><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
+                                            data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  " onClick={handleDropdown}><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
                                         }
 
                                     </ul>

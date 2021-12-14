@@ -184,6 +184,14 @@
     @apply
     rounded-full
 }
+.pageTitle{
+    @apply
+    text-5xl
+     uppercase
+     text-center
+     my-8
+     italic
+}
  }
  
 /* .bannerContent{

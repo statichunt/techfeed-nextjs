@@ -18,12 +18,13 @@ const Categories = ({posts}) => {
     
     return (
         <div>
+          <h1 className='pageTitle'>All Categories </h1>
           <Header>
             <title>Category</title>
           </Header>
-           <div className="allPost md:flex md:justify-around md:items-center heading block mx-auto text-center ">
+           <div className="allPost md:flex md:justify-around md:items-center heading block mx-auto text-center  ">
            {
-                filterCategory.map(data=><div key={data} className="my-24"><Link href={`/category/${data}`}><a className="capitalize">{data}</a></Link></div>)
+                filterCategory.map(data=><div key={data} className="my-24 hover:shadow-sm hover:shadow-gray-400"><Link href={`/category/${data}`}><a className="capitalize ">{data}</a></Link></div>)
             }
            </div>
         </div>

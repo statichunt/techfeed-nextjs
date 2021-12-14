@@ -28,10 +28,11 @@ const BlogPage = ({posts,page}) => {
         }
     })
     return (
+        <>
+        <h1 className='pageTitle'>All Blogs is Here</h1>
         <div className="allPost mx-auto">
-            <Header>
-            <title>Blog</title>
-          </Header>
+            
+
                   {
                 currentPosts.map(blog=><div className="blog h-h600"  key={blog.slug}>
                 <Link href={`/${blog.slug}`}>
@@ -104,6 +105,7 @@ const BlogPage = ({posts,page}) => {
 
                 </div>
         </div>
+        </>
     )
 }
 

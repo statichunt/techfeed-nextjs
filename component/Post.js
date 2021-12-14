@@ -80,9 +80,10 @@ const Post = ({ value, page }) => {
                                         IconData.slice(0, 3).map(d => <div key={d.class} className=""
                                         
                                         >
-                                          
-                                                <a onClick={()=>router.push(`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`)} className={`socialLink 
+                                          <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
+                                                <a target="_blank" rel='noflow'  className={`socialLink 
                                         ${d.class}`}>{d.icon}</a>
+                                        </Link>
 
                                            </div>)
                                     }

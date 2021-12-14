@@ -9,7 +9,7 @@ import { AppContext } from '../AppContext'
 
 
 const DropDownMenu = ({isOpen, toggle}) => {
-    const [isDropdown,setDropDown]=useState(true)
+    const [isDropdown,setDropDown]=useState(false)
     const handleDropDown=()=>{
         setDropDown(!isDropdown)
     }
@@ -47,10 +47,10 @@ const DropDownMenu = ({isOpen, toggle}) => {
                </div>
                  <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
-             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative" onClick={toggle,handleDropDown}  key={data.menu}><Link href={data.link}><a className="" >{data.menu}</a></Link> 
+             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative"  onClick={ ()=>{data.menu!="Pages" && toggle}}  key={data.menu}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
              
            
-                                    <ul  className={data.submenu[0].page != "page" || isDropdown? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
+                                    <ul  className={data.submenu[0].page != "" && isDropdown ? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
                                         {
                                             data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  "><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
                                         }

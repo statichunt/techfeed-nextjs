@@ -10,7 +10,11 @@ import { AppContext } from '../AppContext'
 
 const DropDownMenu = ({isOpen, toggle}) => {
     const [isDropdown,setDropDown]=useState(false)
-   
+   const handleDropdown=()=>{
+    toggle()
+       setDropDown(!isDropdown)
+      
+   }
 
     //    create dropdown menu
     const [postLength]=useContext(AppContext)
@@ -41,11 +45,11 @@ const DropDownMenu = ({isOpen, toggle}) => {
     return (
         <div className={isOpen ?"text-center block" : 'hidden top-0 h-0'}>
                <div className="flex justify-center items-center  pt-5 ">
-               <h1 className= "menuButton" onClick={ toggle  }><AiOutlineClose/> Close</h1>
+               <h1 className= "menuButton" onClick={ handleDropdown }><AiOutlineClose/> Close</h1>
                </div>
                  <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
-             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative"  onClick={ ()=>{data.menu!="Pages" && toggle}}  key={data.menu}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
+             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative"  onClick={data.menu!="Pages"? toggle:undefined}  key={data.menu}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
              
            
                                     <ul  className={data.submenu[0].page != "" && isDropdown ? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>

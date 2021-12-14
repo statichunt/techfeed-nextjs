@@ -19,7 +19,7 @@ function Category({value}) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
          </Header>
 
-         <h1 className='text-5xl uppercase text-center'>{filterCategory[0]}</h1>
+         <h1 className='text-5xl uppercase text-center my-8'>{filterCategory[0]}</h1>
          
                <div className="allPost">
                    

@@ -32,7 +32,7 @@ function AboutAuthor({data}) {
                      
                      > know more..</a></Link>
                     </div>
-                    <div className="flex  justify-center">
+                    <div className="flex  justify-center sm:justify-start">
                         {
 
                             IconData.map(icon=><div key={icon.class} className="mr-2"><a className="hover text-black ">{icon.icon}</a></div>)

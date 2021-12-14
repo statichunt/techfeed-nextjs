@@ -1,3 +1,4 @@
 export  const title={
-    title:"LifeStyle"
+    title:"LifeStyle",
+    icon:"/image/icon.png"
 }

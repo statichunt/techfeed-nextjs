@@ -18,8 +18,11 @@ function Category({value}) {
          <title>{filterCategory[0]}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
          </Header>
+
+         <h1 className='text-5xl uppercase text-center'>{filterCategory[0]}</h1>
          
                <div className="allPost">
+                   
             {
                 value.map(blog=><React.Fragment key={blog.slug}>
                    

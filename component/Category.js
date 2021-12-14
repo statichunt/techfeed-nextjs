@@ -39,8 +39,8 @@ function Category({value}) {
                      
                  </div>
                 </Link>
-              <div className='py-4 h-h400'>
-              <div className="heading  text-2xl text-center  mb-4 font-thin"
+              <div className='py-4 md:h-60'>
+              <div className="heading  text-2xl font-light text-center  mb-4 sm:text-xl "
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

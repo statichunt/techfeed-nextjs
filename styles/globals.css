@@ -186,7 +186,9 @@
 }
 .pageTitle{
     @apply
-    text-5xl
+    lg:text-5xl
+    sm:text-3xl
+    text-2xl
      uppercase
      text-center
      my-8

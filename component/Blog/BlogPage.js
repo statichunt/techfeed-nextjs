@@ -82,9 +82,9 @@ const BlogPage = ({posts,page}) => {
                         </a>
                     }
                     <ul className="flex items-center">
-                        <li className="list-none mx-2">Page</li>
+                        
                         {
-                            pageList.map(num=><li  key={num} className={page==num? "text-buttonColor" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
+                            pageList.map(num=><li  key={num} className={page==num? "text-buttonColor mx-2 cursor-pointer text-xl" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a>{num}</a></li>)
                         }
                     </ul>

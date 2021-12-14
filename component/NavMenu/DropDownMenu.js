@@ -10,9 +10,7 @@ import { AppContext } from '../AppContext'
 
 const DropDownMenu = ({isOpen, toggle}) => {
     const [isDropdown,setDropDown]=useState(false)
-    const handleDropDown=()=>{
-        setDropDown(!isDropdown)
-    }
+   
 
     //    create dropdown menu
     const [postLength]=useContext(AppContext)
@@ -43,7 +41,7 @@ const DropDownMenu = ({isOpen, toggle}) => {
     return (
         <div className={isOpen ?"text-center block" : 'hidden top-0 h-0'}>
                <div className="flex justify-center items-center  pt-5 ">
-               <h1 className= "menuButton" onClick={toggle}><AiOutlineClose/> Close</h1>
+               <h1 className= "menuButton" onClick={ toggle  }><AiOutlineClose/> Close</h1>
                </div>
                  <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
@@ -52,7 +50,7 @@ const DropDownMenu = ({isOpen, toggle}) => {
            
                                     <ul  className={data.submenu[0].page != "" && isDropdown ? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
                                         {
-                                            data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  "><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
+                                            data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`}><a className="text-black  " onClick={toggle}><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
                                         }
 
                                     </ul>

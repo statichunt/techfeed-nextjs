@@ -1,12 +1,12 @@
 import React from 'react'
-import { useRouter } from 'next/router'
+
 import  Header  from 'next/head'
 import Image from 'next/image'
 import Link from 'next/dist/client/link'
 
 function Category({value}) {
   
-    const router = useRouter()
+
     const catagories= value.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]

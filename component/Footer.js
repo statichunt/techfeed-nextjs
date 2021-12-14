@@ -1,12 +1,13 @@
 import { IconData } from '../config/IconData'
 import { footerData } from '../config/footerData'
-import Link from 'next/dist/client/link'
+import { useRouter } from 'next/dist/client/router'
+import Link from 'next/link'
 
 
 
 function Footer() {
   
-
+const router=useRouter()
     return (
         <div className="py-20 border-t-2 border-footerBorder">
             <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
@@ -20,7 +21,14 @@ function Footer() {
                 </div>
                 <div className="text-center mt-8 font-lora text-lg sm:text-xl">
                     <p >{footerData.coppy}</p>
-                    <Link href={`${footerData.link}`}><a>{footerData.activity} <span className="text-commonColor">{footerData.name}</span></a></Link>
+                    <p>{footerData.activity} 
+
+                     <Link href={footerData.link}> 
+                    <a className="text-commonColor" 
+                    target="_blank" rel='noflow'>{footerData.name}</a>
+                    </Link>
+                    
+                    </p>
                 </div>
             </div>
 

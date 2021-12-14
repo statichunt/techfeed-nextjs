@@ -1,10 +1,50 @@
 import Link from 'next/dist/client/link'
+import { useContext,useState } from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import { NavElement } from '../../config/Menu'
+import { AppContext } from '../AppContext'
+
+
 
 
 
 const DropDownMenu = ({isOpen, toggle}) => {
+    const [isDropdown,setDropDown]=useState(false)
+    const handleDropDown=()=>{
+        setDropDown(!isDropdown)
+        console.log('clig',isDropdown);
+    }
+
+    //    create dropdown menu
+    const [postLength]=useContext(AppContext)
+    console.log(postLength)
+    const page = 0
+    
+    const postsPerPage = 4
+    const pageNumber = Math.ceil(postLength / postsPerPage)
+
+
+    const pages = []
+
+    for (let i = 0; i < NavElement.length; i++) {
+
+        if (NavElement[i].submenu[0].page != "") {
+            for (let j = 1; j <= pageNumber; j++) {
+                pages.push({
+                    list: NavElement[i].submenu[0].page + j,
+
+                    link: Number(NavElement[i].submenu[0].pageLink + j)
+
+                })
+
+            }
+        }
+    }
+
+    const pageMenu=NavElement.find(data=>data.submenu[0].page!="")
+     
+   const dropDownPage= pageMenu.submenu[0].page
+    console.log(pages)
     return (
         <div className={isOpen ?"text-center block" : 'hidden top-0 h-0'}>
                <div className="flex justify-center items-center  pt-5 ">
@@ -12,7 +52,17 @@ const DropDownMenu = ({isOpen, toggle}) => {
                </div>
                  <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
-             { NavElement.map(menu=>   <li className="p-3 hover:bg-gray-300"  key={menu.menu}><Link href={menu.link}><a className="" >{menu.menu}</a></Link> </li>)}
+             { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative" 
+             onClick={data.menu!="Pages"&& toggle}  key={data.menu}><Link href={data.link}><a className="" onClick={data.submenu[0].page != "" && handleDropDown} >{data.menu}</a></Link> 
+             
+           
+                                    <ul  className={data.submenu[0].page != "" && isDropdown?  " block  subMenu  static bg-gray-300 w-full ":"  hidden "}>
+                                        {
+                                            data.submenu[0].page != "" && pages.map(p => <Link href={`/?page=${page + p.link}`} key={p.link}><a className="text-black  " ><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.list}</li></a></Link>)
+                                        }
+
+                                    </ul>
+             </li>)}
                     
             
                 </ul>

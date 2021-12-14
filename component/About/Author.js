@@ -7,13 +7,22 @@ export default function Author() {
     return (
         <div className="mt-24">
             <div className="flex justify-center items-center flex-col w-4/5 mx-auto">
-                <div className="w-52 h-authorImage relative ">
+                {/* <div className=" ">
                     <Image className="rounded-full"
                     alt=""
                     src={author.image}
                     layout='fill'
                     objectFit="cover"
                     >
+
+                    </Image>
+                </div> */}
+                <div className="welcomeContent">
+                    <Image className="welcomeImage"
+                    alt=""
+                    src={author.image}
+                    layout='fill'
+                    objectFit="cover">
 
                     </Image>
                 </div>

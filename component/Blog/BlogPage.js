@@ -28,10 +28,11 @@ const BlogPage = ({posts,page}) => {
         }
     })
     return (
+        <>
+        <h1 className='pageTitle'>All Blogs is Here</h1>
         <div className="allPost mx-auto">
-            <Header>
-            <title>Blog</title>
-          </Header>
+            
+
                   {
                 currentPosts.map(blog=><div className="blog h-h600"  key={blog.slug}>
                 <Link href={`/${blog.slug}`}>
@@ -53,7 +54,7 @@ const BlogPage = ({posts,page}) => {
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
 
                  </div>
-                 <div className=" font-lora text-center text-xl sm:text-2xl leading-7">
+                 <div className=" font-lora text-center text-sm sm:text-xl leading-7">
                      <p >{blog.frontmatter.content.slice(0,200)}</p>
                  </div>
               </div>
@@ -82,9 +83,9 @@ const BlogPage = ({posts,page}) => {
                         </a>
                     }
                     <ul className="flex items-center">
-                        <li className="list-none mx-2">Page</li>
+                        
                         {
-                            pageList.map(num=><li  key={num} className={page==num? "text-buttonColor" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
+                            pageList.map(num=><li  key={num} className={page==num? "text-buttonColor mx-2 cursor-pointer text-xl" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a>{num}</a></li>)
                         }
                     </ul>
@@ -104,6 +105,7 @@ const BlogPage = ({posts,page}) => {
 
                 </div>
         </div>
+        </>
     )
 }
 

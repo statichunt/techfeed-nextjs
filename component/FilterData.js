@@ -18,7 +18,7 @@ export default function FilterData({value}) {
 
               {
                   value.map(blog=><div className="w-full md:w-1/2 lg:w-1/3 md:px-3 box-border mt-8  "  key={blog.slug}>
-                   <Link href={`/${blog.slug}`}>
+                 
                    <div className="w-full h-h200 relative"
                     >
                         <Image
@@ -29,7 +29,7 @@ export default function FilterData({value}) {
                         ></Image>
                         
                     </div>
-                   </Link>
+                   
                     <div className="heading text-center text-2xl"
                     >
   

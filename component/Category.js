@@ -1,12 +1,12 @@
 import React from 'react'
-import { useRouter } from 'next/router'
+
 import  Header  from 'next/head'
 import Image from 'next/image'
 import Link from 'next/dist/client/link'
 
 function Category({value}) {
   
-    const router = useRouter()
+
     const catagories= value.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]
@@ -18,8 +18,11 @@ function Category({value}) {
          <title>{filterCategory[0]}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
          </Header>
+
+         <h1 className='pageTitle'>All Blog From <span >{filterCategory[0]}</span> Category</h1>
          
                <div className="allPost">
+                   
             {
                 value.map(blog=><React.Fragment key={blog.slug}>
                    
@@ -36,8 +39,8 @@ function Category({value}) {
                      
                  </div>
                 </Link>
-              <div className='py-4 h-h400'>
-              <div className="heading  text-2xl text-center  mb-4 font-thin"
+              <div className='py-4 md:h-60'>
+              <div className="heading  text-2xl text-center  mb-4 sm:text-xl "
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
      <Head>
         <title>{title.title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel='icon' href={title.icon}></link>
       </Head>
     <AppContext.Provider value={[postLength,setPostLength]}><Layout ><Component {...pageProps} /></Layout></AppContext.Provider>
    

@@ -7,16 +7,7 @@ export default function Author() {
     return (
         <div className="mt-24">
             <div className="flex justify-center items-center flex-col w-4/5 mx-auto">
-                {/* <div className=" ">
-                    <Image className="rounded-full"
-                    alt=""
-                    src={author.image}
-                    layout='fill'
-                    objectFit="cover"
-                    >
-
-                    </Image>
-                </div> */}
+               
                 <div className="welcomeContent">
                     <Image className="welcomeImage"
                     alt=""
@@ -27,16 +18,15 @@ export default function Author() {
                     </Image>
                 </div>
 
-                <div className="heading sm:2xl xl ">
+                <div className="heading sm:text-30px font-medium leading-5 my-8 ">
                     <h1>{author.heading}</h1>
 
                 </div>
                 <div className="
                 font-lora
                 italic
-                md:text-xl
                 text-lg
-                sm:text-sm
+                sm:text-xl
                 text-center
               md:w-9/12
               w-full

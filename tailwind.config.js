@@ -27,7 +27,7 @@ module.exports = {
       display: ['group-hover'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 
   theme: {
     extend: {
@@ -47,6 +47,7 @@ module.exports = {
         '5xl': '3rem',
         '6xl': '4rem',
         '7xl': '5rem',
+        '30px':'30px'
       },
       fontFamily: {
         'display': ['"Oswald"', 'sans-serif'],

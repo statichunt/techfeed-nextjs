@@ -11,8 +11,8 @@
      font-display
      text-headingColor
      my-3
-     font-semibold
-     cursor-pointer
+     font-medium
+    
      uppercase
      
 
@@ -176,13 +176,47 @@
 }
 .welcomeContent{
     @apply
-    w-52
-    h-52
+    w-40
+    h-40
     relative
 }
 .welcomeImage{
     @apply
     rounded-full
+}
+.pageTitle{
+    @apply
+    lg:text-5xl
+    sm:text-3xl
+    text-2xl
+     uppercase
+     text-center
+     my-8
+     font-medium
+     font-display
+}
+.categoryContainer{
+    @apply
+    allPost
+     md:flex
+     md:justify-around
+     md:items-center
+     heading
+     block
+     mx-auto
+     text-center
+}
+.categoryTitle{
+    @apply
+    my-24
+     hover:shadow-sm
+     hover:shadow-gray-400
+     p-4
+     transition-all
+     duration-500
+     ease-in-out
+     rounded-sm
+    
 }
  }
  

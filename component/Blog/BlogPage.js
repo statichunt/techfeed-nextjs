@@ -35,7 +35,7 @@ const BlogPage = ({posts,page}) => {
 
                   {
                 currentPosts.map(blog=><div className="blog h-h600"  key={blog.slug}>
-                <Link href={`/${blog.slug}`}>
+                
                 <div className="w-full h-h200  relative"
                  >
                      <Image
@@ -46,7 +46,7 @@ const BlogPage = ({posts,page}) => {
                      ></Image>
                      
                  </div>
-                </Link>
+                
               <div className='h-auto mt-4 sm:h-h400 py-4'>
               <div className="heading  text-2xl text-center  mb-4 font-thin"
                  >

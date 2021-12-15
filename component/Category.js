@@ -10,7 +10,7 @@ function Category({value}) {
     const catagories= value.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]
-    console.log(filterCategory)
+    
    
     return (
         <>
@@ -27,7 +27,7 @@ function Category({value}) {
                 value.map(blog=><React.Fragment key={blog.slug}>
                    
                 <div className="blog"  >
-                <Link href={`/${blog.slug}`}>
+                
                 <div className="w-full h-h200 relative"
                  >
                      <Image
@@ -38,7 +38,7 @@ function Category({value}) {
                      ></Image>
                      
                  </div>
-                </Link>
+               
               <div className='py-4 md:h-60'>
               <div className="heading  text-2xl text-center  mb-4 sm:text-xl "
                  >

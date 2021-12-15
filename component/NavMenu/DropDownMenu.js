@@ -20,42 +20,42 @@ const DropDownMenu = ({isOpen, toggle}) => {
    }
 
 
-    //    create dropdown menu
-    const [postLength]=useContext(AppContext)
-    console.log(postLength)
-    const page = 0
+    // //    create dropdown menu
+    // const [postLength]=useContext(AppContext)
+   
+    // const page = 0
     
-    const postsPerPage = 4
-    const pageNumber = Math.ceil(postLength / postsPerPage)
+    // const postsPerPage = 4
+    // const pageNumber = Math.ceil(postLength / postsPerPage)
 
 
-    const pages = []
+    // const pages = []
 
-    for (let i = 0; i < NavElement.length; i++) {
+    // for (let i = 0; i < NavElement.length; i++) {
 
-        if (NavElement[i].submenu[0].page != "") {
-            for (let j = 1; j <= pageNumber; j++) {
-                pages.push({
-                    list: NavElement[i].submenu[0].page + j,
+    //     if (NavElement[i].submenu[0].page != "") {
+    //         for (let j = 1; j <= pageNumber; j++) {
+    //             pages.push({
+    //                 list: NavElement[i].submenu[0].page + j,
 
-                    link: Number(NavElement[i].submenu[0].pageLink + j)
+    //                 link: Number(NavElement[i].submenu[0].pageLink + j)
 
-                })
+    //             })
 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
     const pageMenu=NavElement.find(data=>data.submenu[0].page!="")
      
-   const dropDownPage= pageMenu.submenu[0].page
-    console.log(pages)
+ 
+  
     return (
         <div className={isOpen ?"text-center block" : 'hidden top-0 h-0'}>
                <div className="flex justify-center items-center  pt-5 ">
                <h1 className= "menuButton" onClick={ handleDropdown }><AiOutlineClose/> Close</h1>
                </div>
-                 <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
+                 {/* <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
              { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative"  onClick={data.menu!="Pages"? toggle:undefined}  key={data.menu}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
              
@@ -69,7 +69,24 @@ const DropDownMenu = ({isOpen, toggle}) => {
              </li>)}
                     
             
-                </ul>
+                </ul> */}
+
+
+<ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
+                 
+                 { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative"  onClick={data.menu!="Pages"? toggle:undefined}  key={data.menu}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
+                 
+               
+                                        <ul  className={data.submenu[0].page != "" && isDropdown ? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
+                                            {
+                                                data.submenu[0].page != "" && data.submenu.map(p => <Link href={`/${p.pageLink}`} key={p.link}><a className="text-black  " onClick={handleDropdown}><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.page}</li></a></Link>)
+                                            }
+    
+                                        </ul>
+                 </li>)}
+                        
+                
+                    </ul>
         </div>
     )
 }

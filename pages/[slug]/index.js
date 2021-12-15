@@ -73,8 +73,8 @@ const SinglePost = ({
 
            
 
-            className="prose"
-            // {`font-lora text-xl ${styles.content}`}
+            className={`font-lora text-xl ${styles.content}`}
+            // 
           ></div>
 
           <div className="my-10">

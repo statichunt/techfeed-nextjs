@@ -25,6 +25,9 @@ const Post = ({ value, page }) => {
             router.push('/')
         }
     })
+
+ 
+    
     return (
         <>
             <div className="allPost" >

@@ -2,7 +2,7 @@ import fs from "fs";
 import Image from "next/image";
 import path from "path";
 import Link from "next/dist/client/link";
-import {marked} from "marked";
+import { marked } from "marked";
 import { IconData } from "../../config/IconData";
 import FilterData from "../../component/FilterData";
 import AboutAuthor from "../../component/About/AboutAuthor";
@@ -20,25 +20,25 @@ const SinglePost = ({
   slug,
   aboutFrontMatter,
 }) => {
-  
+
   const filter = posts.filter(
     (data) => data.frontmatter.category == frontmatter.category
   );
-  
- 
+
+
   const remainData = posts.filter((el) => !filter.includes(el));
   const filterDataById = filter.filter(
     (data) => data.frontmatter.id != frontmatter.id
   );
-  const currentDate= new Date()
+  const currentDate = new Date()
   const sortBySlug = [...filterDataById, ...remainData];
-  
- 
+
+
   return (
     <div className="flex justify-center items-center allPost">
       <Header>
         <title>{slug}</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Header>
       <div key={slug} className=" w-full mt-20">
         <div className="block">
@@ -51,51 +51,52 @@ const SinglePost = ({
             objectFit="cover"
           />
         </div>
-       <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto">
-       <div className="my-10">
-          <Link href={`/category/${frontmatter.category}`}><a className="title">{frontmatter.title}</a></Link>
-        </div>
-        <h1 className="heading font-lora text-center">{frontmatter.heading}</h1>
-
-        <div className=" my-4">
-        <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(frontmatter.date).getFullYear() ? frontmatter.date:
-                                        currentDate.getMonth() > new Date(frontmatter.date).getMonth() ? frontmatter.date :
-                                        currentDate.getDate() == new Date(frontmatter.date).getDate()?<span>Today</span>
-                                            
-                                            :
-                                            currentDate.getDate() - new Date(frontmatter.date).getDate() <= 3 ? <span>{currentDate.getDate() - new Date(frontmatter.date).getDate()} day ago </span> :
-                                            frontmatter.date} by <Link href='/about'><a><span className="hover">{frontmatter.author}</span></a></Link></p>
-        </div>
-
-        <div className="">
-          <div
-            dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-
-           
-
-            className={`font-lora text-xl ${styles.content}`}
-            // 
-          ></div>
-
+        <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto">
           <div className="my-10">
-          <div className="flex justify-start">
-                                     {
-                                        IconData.slice(0, 3).map(d => <div key={d.class} className=""
-                                        
-                                        >
-                                          
-                                                <a onClick={()=>router.push(`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`)} className={`socialLink 
-                                        ${d.class}`}>{d.icon}</a>
+            <Link href={`/category/${frontmatter.category}`}><a className="title">{frontmatter.title}</a></Link>
+          </div>
+          <h1 className="heading font-lora text-center">{frontmatter.heading}</h1>
 
-                                           </div>)
-                                    }
+          <div className=" my-4">
+            <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(frontmatter.date).getFullYear() ? frontmatter.date :
+              currentDate.getMonth() > new Date(frontmatter.date).getMonth() ? frontmatter.date :
+                currentDate.getDate() == new Date(frontmatter.date).getDate() ? <span>Today</span>
 
-                                </div>
+                  :
+                  currentDate.getDate() - new Date(frontmatter.date).getDate() <= 3 ? <span>{currentDate.getDate() - new Date(frontmatter.date).getDate()} day ago </span> :
+                    frontmatter.date} by <Link href='/about'><a><span className="hover">{frontmatter.author}</span></a></Link></p>
           </div>
 
-          <AboutAuthor data={aboutFrontMatter}></AboutAuthor>
+          <div className="">
+            <div
+              dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
+
+
+
+              className={`font-lora text-xl ${styles.content}`}
+            // 
+            ></div>
+
+            <div className="my-10">
+              <div className="flex justify-start">
+                {
+                  IconData.slice(0, 3).map(d => <div key={d.class} className=""
+
+                  >
+
+                    <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}>
+                      <a className={`socialLink ${d.class}`}>{d.icon}</a>
+                    </Link>
+
+                  </div>)
+                }
+
+              </div>
+            </div>
+
+            <AboutAuthor data={aboutFrontMatter}></AboutAuthor>
+          </div>
         </div>
-       </div>
         <FilterData value={sortBySlug.slice(0, 3)}></FilterData>
       </div>
     </div>
@@ -150,8 +151,8 @@ export const getStaticProps = async ({ params }) => {
     path.join("About", aboutFile[0]),
     "utf-8"
   );
-  const { data: aboutFrontMatter,content:aboutContent } = matter(metaDataWithFrontMatter);
- 
+  const { data: aboutFrontMatter, content: aboutContent } = matter(metaDataWithFrontMatter);
+
 
   return {
     props: {

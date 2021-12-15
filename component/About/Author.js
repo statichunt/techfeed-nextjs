@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next//image'
 import { author } from '../../config/author'
 
-export default function Author() {
+export default function Author({aboutData}) {
     return (
         <div className="mt-24">
             <div className="flex justify-center items-center flex-col w-4/5 mx-auto">
@@ -11,7 +11,7 @@ export default function Author() {
                 <div className="welcomeContent">
                     <Image className="welcomeImage"
                     alt=""
-                    src={author.image}
+                    src={aboutData.aboutImage}
                     layout='fill'
                     objectFit="cover">
 
@@ -19,7 +19,7 @@ export default function Author() {
                 </div>
 
                 <div className="heading sm:text-30px font-medium leading-5 my-8 ">
-                    <h1>{author.heading}</h1>
+                    <h1>{aboutData.greetings}</h1>
 
                 </div>
                 <div className="
@@ -32,7 +32,7 @@ export default function Author() {
               w-full
                 
                 ">
-                    <p className="md:px-12">{author.details}</p>
+                    <p className="md:px-12">{aboutData.about}</p>
 
                 </div>
             </div>

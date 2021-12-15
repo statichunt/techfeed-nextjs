@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import { AppContext } from '../component/AppContext';
 
 const currentDate=new Date()
-const Home = ({ posts, page }) => {
+const Home = ({ posts, page,aboutFrontMatter }) => {
   const [postLength,setPostLength]=useContext(AppContext)
   
   useEffect(()=>{
@@ -19,7 +19,7 @@ const Home = ({ posts, page }) => {
 
   return (
     <div>
-      <Author />
+      <Author aboutData={aboutFrontMatter}></Author >
       <Post value={post} page={page}></Post>
 
 
@@ -46,13 +46,24 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
  
   
   const filterByDate=posts.filter(post=>new Date(post.frontmatter.date)<=currentDate)
+
+
+  // about page data
+
+  const aboutFile = fs.readdirSync(path.join("About"));
+  const metaDataWithFrontMatter = fs.readFileSync(
+    path.join("About", aboutFile[0]),
+    "utf-8"
+  );
+  const { data: aboutFrontMatter, content: aboutContent } = matter(metaDataWithFrontMatter);
   
   
   return {
 
     props: {
       posts:filterByDate,
-      page: +page
+      page: +page,
+      aboutFrontMatter:aboutFrontMatter
     }
 
   }

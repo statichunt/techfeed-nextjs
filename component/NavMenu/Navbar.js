@@ -5,6 +5,7 @@ import React from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
 // import { AppContext } from '../AppContext'
 import { NavElement } from '../../config/Menu'
+import {RiArrowDropDownLine} from 'react-icons/ri'
 
 
 
@@ -36,7 +37,7 @@ function Navbar({ toggle,isOpen }) {
 //     }
     return (
         <div className={isOpen ? 'hidden' : 'block'}>
-            <nav className="flex justify-center items-center p-8 border-b-2 border-footerBorder">
+            <nav className="nav">
                 <div className="md:hidden ">
                     <h1 className="menuButton" onClick={toggle}><CgMenuGridR /> Menu</h1>
                 </div>
@@ -78,7 +79,10 @@ function Navbar({ toggle,isOpen }) {
 
         >
 
-            <Link href={`${data.link}`}><a className="navItem" >{data.menu}</a></Link>
+            <Link href={`${data.link}`}><a className="navItem relative flex" >{data.menu}<i className={data.menu=="Pages" ? "block mt-1 text-xl":"hidden"}><RiArrowDropDownLine/></i></a>
+            
+            </Link>
+           
             <ul  className={data.submenu[0].page != "" ?"  hidden group-hover:block subMenu" :"hidden"}>
                 {
                     data.submenu[0].page != "" && data.submenu.map(p => <Link href={`/${ p.pageLink}`} key={p.page}><a className="text-black  " ><li className="rounded-sm 
@@ -86,7 +90,10 @@ function Navbar({ toggle,isOpen }) {
                 }
 
             </ul>
-        </li></React.Fragment>)
+            
+        </li>
+      
+        </React.Fragment>)
 }
 </ul> 
                 </div>

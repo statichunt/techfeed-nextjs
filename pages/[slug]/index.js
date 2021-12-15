@@ -94,7 +94,7 @@ const SinglePost = ({
               </div>
             </div>
 
-            <AboutAuthor data={aboutFrontMatter}></AboutAuthor>
+            <AboutAuthor data={aboutFrontMatter} author={frontmatter.author}></AboutAuthor>
           </div>
         </div>
         <FilterData value={sortBySlug.slice(0, 3)}></FilterData>

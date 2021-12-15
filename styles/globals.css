@@ -75,7 +75,7 @@
      py-2
      px-3
      absolute
-     w-40
+     w-60
      bg-gray-100
      z-10
      -left-5
@@ -91,6 +91,15 @@
     
      p-4
 
+}
+.nav{
+    @apply
+    flex 
+    justify-center
+     items-center
+     p-16 
+    border-b-2 
+    border-footerBorder
 }
 .title{
     @apply

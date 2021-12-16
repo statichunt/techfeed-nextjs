@@ -7,7 +7,7 @@ import { AppContext } from '../component/AppContext';
 const currentDate=new Date()
 const Home = ({ posts, page,aboutFrontMatter }) => {
   const [postLength,setPostLength]=useContext(AppContext)
-  console.log(aboutFrontMatter)
+  
   
   useEffect(()=>{
     setPostLength(posts.length)
@@ -51,12 +51,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
 
   // about page data
 
-  const aboutFile = fs.readdirSync(path.join("About"));
-  const metaDataWithFrontMatter = fs.readFileSync(
-    path.join("About", aboutFile[0]),
-    "utf-8"
-  );
-  const { data: aboutFrontMatter } = matter(metaDataWithFrontMatter);
+  
   
   
   
@@ -65,7 +60,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
     props: {
       posts:filterByDate,
       page: +page,
-      aboutFrontMatter:aboutFrontMatter,
+      
       
     }
 

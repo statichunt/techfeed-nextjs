@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import { AppContext } from '../component/AppContext';
 
 const currentDate=new Date()
-const Home = ({ posts, page,aboutFrontMatter }) => {
+const Home = ({ posts, page }) => {
   const [postLength,setPostLength]=useContext(AppContext)
   
   useEffect(()=>{
@@ -19,7 +19,7 @@ const Home = ({ posts, page,aboutFrontMatter }) => {
 
   return (
     <div>
-      <Author aboutData={aboutFrontMatter}></Author >
+      <Author ></Author >
       <Post value={post} page={page}></Post>
 
 
@@ -50,12 +50,12 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
 
   // about page data
 
-  const aboutFile = fs.readdirSync(path.join("About"));
-  const metaDataWithFrontMatter = fs.readFileSync(
-    path.join("About", aboutFile[0]),
-    "utf-8"
-  );
-  const { data: aboutFrontMatter, content: aboutContent } = matter(metaDataWithFrontMatter);
+  // const aboutFile = fs.readdirSync(path.join("About"));
+  // const metaDataWithFrontMatter = fs.readFileSync(
+  //   path.join("About", aboutFile[0]),
+  //   "utf-8"
+  // );
+  // const { data: aboutFrontMatter, content: aboutContent } = matter(metaDataWithFrontMatter);
   
   
   return {

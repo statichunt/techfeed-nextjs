@@ -11,7 +11,7 @@ export default function Author({aboutData}) {
                 <div className="welcomeContent">
                     <Image className="welcomeImage"
                     alt=""
-                    src={aboutData.aboutImage}
+                    src={author.image}
                     layout='fill'
                     objectFit="cover">
 
@@ -19,7 +19,7 @@ export default function Author({aboutData}) {
                 </div>
 
                 <div className="heading sm:text-30px font-medium leading-5 my-8 ">
-                    <h1>{aboutData.greetings}</h1>
+                    <h1>{author.heading}</h1>
 
                 </div>
                 <div className="
@@ -32,7 +32,7 @@ export default function Author({aboutData}) {
               w-full
                 
                 ">
-                    <p className="md:px-12">{aboutData.about}</p>
+                    <p className="md:px-12">{author.details}</p>
 
                 </div>
             </div>

@@ -55,7 +55,7 @@ const SinglePost = ({
           <div className="my-10">
             <Link href={`/category/${frontmatter.category}`}><a className="title">{frontmatter.title}</a></Link>
           </div>
-          <h1 className="heading font-lora text-center">{frontmatter.heading}</h1>
+          <h1 className="heading font-display text-center">{frontmatter.heading}</h1>
 
           <div className=" my-4">
             <p className="italic font-lora text-lg font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(frontmatter.date).getFullYear() ? frontmatter.date :

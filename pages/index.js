@@ -63,7 +63,8 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
     props: {
       posts:filterByDate,
       page: +page,
-      aboutFrontMatter:aboutFrontMatter
+      aboutFrontMatter:aboutFrontMatter,
+      aboutContent:aboutContent
     }
 
   }

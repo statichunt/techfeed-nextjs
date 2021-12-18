@@ -46,6 +46,7 @@ const Post = ({ value, page }) => {
                                 height={700}
                                 layout="responsive"
                                 objectFit="cover"
+                                priority
                             />
                         </div>
                         <div className=" lg:w-4/5 w-full mx-auto">

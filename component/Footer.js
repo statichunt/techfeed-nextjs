@@ -18,7 +18,14 @@ const router=useRouter()
                         <a className="" target="_blank" rel='noflow' >
                             
                              <div 
-                            className="socialLink hover:bg-black hover:text-linkHoverColor">
+                            className="w-12
+                            h-12
+                            rounded-full
+                            mx-2
+                            bg-gray-300
+                            flex
+                            justify-center
+                            items-center hover:bg-black hover:text-linkHoverColor">
                                 {data.icon}
                                 </div>
                                 

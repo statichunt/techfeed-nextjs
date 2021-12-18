@@ -81,12 +81,27 @@ const SinglePost = ({
             <div className="my-10">
               <div className="flex justify-start">
                 {
-                  IconData.slice(0, 3).map(d => <div key={d.class} className=""
+                  IconData.slice(0, 3).map(i => <div key={i.class} className=""
 
                   >
 
-                    <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}>
-                      <a className={`socialLink ${d.class}`}>{d.icon}</a>
+                    <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}>
+                      <a className={` w-12
+                                                                    h-12
+                                                                    rounded-full
+                                                                    mx-2
+                                                                    bg-gray-300
+                                                                    flex
+                                                                    justify-center
+                                                                    items-center
+                                                                    cursor-pointer ${i.class=="facebook" ? 
+                                                                    "hover:bg-blue-600 hover:text-linkHoverColor" :
+                                                                    i.class=="twitter"?
+                                                                    "hover:bg-blue-400 hover:text-linkHoverColor" :
+                                                                    i.class=="pinterest"?
+                                                                    "hover:bg-red-800 hover:text-linkHoverColor":undefined
+                                                                    
+                                                                    }`}>{i.icon}</a>
                     </Link>
 
                   </div>)

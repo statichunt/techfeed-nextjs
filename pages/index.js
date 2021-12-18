@@ -37,7 +37,6 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const pageSlugs = fs.readdirSync(directoryPath);
   const posts = pageSlugs.map((filename) => {
     const slugWspace=filename.replace('.md','')
-    console.log(slugWspace)
    const slug =slugWspace.replace(/ /g,"-")
 
   

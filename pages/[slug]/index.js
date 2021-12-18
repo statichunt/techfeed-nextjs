@@ -119,7 +119,7 @@ export const getStaticPaths = async () => {
     },
   }));
 
-console.log(paths)
+
   return {
     paths,
     fallback: false,
@@ -141,7 +141,7 @@ export const getStaticProps = async ({params}) => {
   const posts = files.map((filename) => {
 
     const slug = filename.replace(".md","").replace(/ /g,"-");
-    console.log(slug)
+   
     
 
     const metaDataWithFrontMatter = fs.readFileSync(
@@ -156,7 +156,7 @@ export const getStaticProps = async ({params}) => {
       frontmatter,
     };
   });
-  console.log(posts)
+  
 
   const aboutFile = fs.readdirSync(path.join("About"));
   const metaDataWithFrontMatter = fs.readFileSync(

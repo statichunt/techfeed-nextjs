@@ -81,16 +81,42 @@ const Post = ({ value, page }) => {
 
                                 <div className="flex justify-center">
 
-                                    {
+                                    {/* {
                                         IconData.slice(0, 3).map(d => <div key={d.class} className=""
                                         
                                         >
-                                          <Link href={`${d.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
+                                          <Link >
                                                 <a target="_blank" rel='noflow'  className={`socialLink 
                                         ${d.class}`}>{d.icon}</a>
                                         </Link>
 
                                            </div>)
+                                    } */}
+
+                                    {
+                                        IconData.slice(0,3).map(i=><div key={i.shareLink} className=''>
+                                            <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
+                                                <a className={` w-12
+                                                                    h-12
+                                                                    rounded-full
+                                                                    mx-2
+                                                                    bg-gray-300
+                                                                    flex
+                                                                    justify-center
+                                                                    items-center
+                                                                    cursor-pointer ${i.class=="facebook" ? 
+                                                                    "hover:bg-blue-600 hover:text-linkHoverColor" :
+                                                                    i.class=="twitter"?
+                                                                    "hover:bg-blue-400 hover:text-linkHoverColor" :
+                                                                    i.class=="pinterest"?
+                                                                    "hover:bg-red-800 hover:text-linkHoverColor":undefined
+                                                                    
+                                                                    }`}>
+                                                                    {i.icon}
+                                                                </a>
+                                            </Link>
+
+                                        </div>)
                                     }
                                 </div>
                             </div>

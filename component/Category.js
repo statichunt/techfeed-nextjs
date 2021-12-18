@@ -5,9 +5,6 @@ import Image from 'next/image'
 import Link from 'next/dist/client/link'
 
 function Category({value}) {
-    console.log(value)
-  
-
     const catagories= value.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]

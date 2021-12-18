@@ -6,12 +6,11 @@ const matter = require('gray-matter')
 
 
 function CategoryData({ category,posts }) {
-  console.log(posts)
  
 
   const filterByCategory = posts.filter(data => data.category == category)
 
-console.log(filterByCategory)
+
   return (
     <>
 

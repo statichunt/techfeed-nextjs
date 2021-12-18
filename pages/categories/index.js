@@ -13,6 +13,8 @@ const Categories = ({posts}) => {
     const catagories= posts.map(category => category.frontmatter.category)
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]
+    // const category=filterCategory.map(ctg=>ctg.replace(/ /g,"-"))
+    // console.log(category)
 
   
     
@@ -24,7 +26,7 @@ const Categories = ({posts}) => {
           </Header>
            <div className="categoryContainer  ">
            {
-                filterCategory.map(data=><div key={data} className="categoryTitle"><Link href={`/category/${data}`}><a className="capitalize ">{data}</a></Link></div>)
+                filterCategory.map(data=><div key={data} className="categoryTitle"><Link href={`/category/${data.replace(/ /g,"-")}`}><a className="capitalize ">{data}</a></Link></div>)
             }
            </div>
         </div>

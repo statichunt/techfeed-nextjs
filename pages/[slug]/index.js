@@ -21,6 +21,7 @@ const SinglePost = ({
   aboutFrontMatter,
 }) => {
 
+
   const filter = posts.filter(
     (data) => data.frontmatter.category == frontmatter.category
   );
@@ -114,7 +115,7 @@ export const getStaticPaths = async () => {
     
     {
     params: {
-      slug: path.replaceAll(" ","-"),
+      slug: path.replace(/ /g,"-"),
     },
   }));
 
@@ -128,8 +129,9 @@ console.log(paths)
 export const getStaticProps = async ({params}) => {
   const { slug } = params;
  
+ 
   const singleMetaDataWithFrontMatter = fs.readFileSync(
-    path.join("posts", slug.replaceAll("-"," ") + ".md"),
+    path.join("posts", slug.replace(/-/g," ") + ".md"),
     "utf-8"
   );
   const { data: frontmatter, content } = matter(singleMetaDataWithFrontMatter);
@@ -137,7 +139,9 @@ export const getStaticProps = async ({params}) => {
   const files = fs.readdirSync(path.join("posts"));
 
   const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
+
+    const slug = filename.replace(".md","").replace(/ /g,"-");
+    console.log(slug)
     
 
     const metaDataWithFrontMatter = fs.readFileSync(
@@ -152,6 +156,7 @@ export const getStaticProps = async ({params}) => {
       frontmatter,
     };
   });
+  console.log(posts)
 
   const aboutFile = fs.readdirSync(path.join("About"));
   const metaDataWithFrontMatter = fs.readFileSync(
@@ -165,7 +170,6 @@ export const getStaticProps = async ({params}) => {
     props: {
       posts,
       frontmatter,
-      slug,
       content,
       aboutFrontMatter,
       aboutContent

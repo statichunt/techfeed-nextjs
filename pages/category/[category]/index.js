@@ -6,10 +6,12 @@ const matter = require('gray-matter')
 
 
 function CategoryData({ category,posts }) {
+  console.log(posts)
+ 
 
-  const filterByCategory = posts.filter(data => data.frontmatter.category == category)
+  const filterByCategory = posts.filter(data => data.category == category)
 
-
+console.log(filterByCategory)
   return (
     <>
 
@@ -34,7 +36,7 @@ export const getStaticPaths = async () => {
   })
   const paths = posts.map((category) => ({
     params: {
-      category: category.frontmatter.category
+      category: category.frontmatter.category.replaceAll(" ","-")
     }
   }))
   
@@ -50,21 +52,24 @@ export const getStaticProps = async ({ params }) => {
   const files = fs.readdirSync(path.join('posts'))
 
   const posts = files.map((filename) => {
-    const slug = filename.replace('.md', '')
+    const slug = filename.replace('.md', '').replace(/ /g,"-")
 
 
     const metaDataWithFrontMatter = fs.readFileSync(path.join('posts', filename), 'utf-8')
 
     const { data: frontmatter, content } = matter(metaDataWithFrontMatter)
+    const category=frontmatter.category.replace(/ /g,"-")
 
 
 
     return {
       slug,
       content,
-      frontmatter
+      frontmatter,
+      category
     }
   })
+  
 
   return {
     props: {

@@ -21,7 +21,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const directoryPath = path.join(process.cwd(), "posts");
   const pageSlugs = fs.readdirSync(directoryPath);
   const posts = pageSlugs.map((filename) => {
-    const slug=filename.replace('.md','')
+    const slug=filename.replace('.md','').replace(/ /g,"-")
     const fullPath = path.join(directoryPath, filename);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data: frontmatter, content } = matter(fileContents);

@@ -38,13 +38,13 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const posts = pageSlugs.map((filename) => {
     const slugWspace=filename.replace('.md','')
     console.log(slugWspace)
-   const slug =slugWspace.replaceAll(" ","-")
+   const slug =slugWspace.replace(/ /g,"-")
 
   
     const fullPath = path.join(directoryPath, filename);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data: frontmatter, content } = matter(fileContents);
-    const category=frontmatter.category.replace(" ",'-')
+    const category=frontmatter.category.replace(/ /g,"-")
     
    
     return {
@@ -54,7 +54,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
       category
     }
   });
- 
+ console.log(posts)
   
   const filterByDate=posts.filter(post=>new Date(post.frontmatter.date)<=currentDate)
   // about page data 

@@ -1,12 +1,14 @@
 
 
 import matter from 'gray-matter';
+
 import BlogPage from '../../component/Blog/BlogPage';
 
 const currentDate=new Date()
 const Blogs = ({posts,page}) => {
   
  
+   
     return (
          <div className='mx-auto'>
      <BlogPage posts={posts} page={page}></BlogPage>

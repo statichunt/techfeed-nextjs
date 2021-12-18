@@ -35,7 +35,11 @@ function AboutAuthor({data,author}) {
                     <div className="flex  justify-center sm:justify-start">
                         {
 
-                            IconData.map(icon=><div key={icon.class} className="mr-2"><a className="hover text-black ">{icon.icon}</a></div>)
+                            IconData.map(icon=><div key={icon.class} className="mr-2">
+                            <Link href={icon.profileLink} >  
+                             <a className="hover text-black " target="_blank" rel='noflow'>{icon.icon}</a>
+                             </Link>
+                                </div>)
 
                         }
 

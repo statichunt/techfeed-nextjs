@@ -7,7 +7,8 @@ import { AppContext } from '../component/AppContext';
 const currentDate=new Date()
 const Home = ({ posts, page,aboutFrontMatter }) => {
   const [postLength,setPostLength]=useContext(AppContext)
-  
+ 
+ 
   
   useEffect(()=>{
     setPostLength(posts.length)
@@ -35,6 +36,8 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const pageSlugs = fs.readdirSync(directoryPath);
   const posts = pageSlugs.map((filename) => {
     const slug=filename.replace('.md','')
+   const slugWspace=slug.replace(" ","-")
+   console.log(slugWspace)
     const fullPath = path.join(directoryPath, filename);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data: frontmatter, content } = matter(fileContents);
@@ -47,14 +50,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
  
   
   const filterByDate=posts.filter(post=>new Date(post.frontmatter.date)<=currentDate)
-
-
-  // about page data
-
-  
-  
-  
-  
+  // about page data 
   return {
 
     props: {

@@ -13,9 +13,17 @@ const router=useRouter()
             <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
                 <div className="flex ">
                     {
-                        IconData.map(data =><a  href="#" className="" key={data.class}> <div 
+                        IconData.map(data =>
+                            <Link href={data.profileLink} key={data.class}>
+                        <a className="" target="_blank" rel='noflow' >
+                            
+                             <div 
                             className="socialLink hover:bg-black hover:text-linkHoverColor">
-                                {data.icon}</div></a>)
+                                {data.icon}
+                                </div>
+                                
+                                </a>
+                                </Link>)
                     }
 
                 </div>

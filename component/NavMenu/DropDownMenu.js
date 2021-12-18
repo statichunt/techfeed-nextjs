@@ -46,7 +46,7 @@ const DropDownMenu = ({isOpen, toggle}) => {
     //     }
     // }
 
-    const pageMenu=NavElement.find(data=>data.submenu[0].page!="")
+    
      
  
   
@@ -74,12 +74,14 @@ const DropDownMenu = ({isOpen, toggle}) => {
 
 <ul className="block  bg-gray-100 transition-transform duration-500 ease-in-out">
                  
-                 { NavElement.map(data=>   <li className="p-3 hover:bg-gray-300  relative"  onClick={data.menu!="Pages"? toggle:undefined}  key={data.menu}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
+                 { NavElement.map(data=><li className="p-3 hover:bg-gray-300  relative"  onClick={data.menu!="Pages"? toggle:undefined}
+                   key={data.link}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 
                  
                
                                         <ul  className={data.submenu[0].page != "" && isDropdown ? " block  subMenu  static bg-gray-300 w-full " :"  hidden "}>
                                             {
-                                                data.submenu[0].page != "" && data.submenu.map(p => <Link href={`/${p.pageLink}`} key={p.link}><a className="text-black  " onClick={handleDropdown}><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize" key={p.list}>{p.page}</li></a></Link>)
+                                                data.submenu[0].page != "" && data.submenu.map(p => <Link href={`/${p.pageLink}`}
+                                                 key={p.link}><a className="text-black  " onClick={handleDropdown}><li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize">{p.page}</li></a></Link>)
                                             }
     
                                         </ul>

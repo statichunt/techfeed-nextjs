@@ -43,6 +43,8 @@ const BlogPage = ({posts,page}) => {
                      src={blog.frontmatter.image}
                      layout='fill'
                      objectFit="cover"
+                     fit="crop"
+                    
                      ></Image>
                      
                  </div>

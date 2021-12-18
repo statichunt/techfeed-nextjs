@@ -36,7 +36,7 @@ export const getStaticPaths = async () => {
   })
   const paths = posts.map((category) => ({
     params: {
-      category: category.frontmatter.category.replaceAll(" ","-")
+      category: category.frontmatter.category.replace(/ /g,"-")
     }
   }))
   

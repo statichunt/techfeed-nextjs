@@ -6,6 +6,7 @@ import { IconData } from '../config/IconData'
 import Link from 'next/dist/client/link'
 import { useEffect } from 'react'
 const Post = ({ value, page }) => {
+    
    
     const postsPerPage = 4
 
@@ -19,6 +20,7 @@ const Post = ({ value, page }) => {
     const hasNextPage = pageNumber > page;
     const hasPreviousPage = page > 1;
     const router = useRouter()
+ 
 
     useEffect(() => {
         if (page > pageNumber) {
@@ -50,7 +52,7 @@ const Post = ({ value, page }) => {
                             <div className="text-center my-14"
 
                             >
-                                <div className="mb-1.5"> <Link href={`/category/${data.frontmatter.category}`}><a className="title">{data.frontmatter.title}</a></Link></div>
+                                <div className="mb-1.5"> <Link href={`/category/${data.category}`}><a className="title">{data.frontmatter.title}</a></Link></div>
 
 
 

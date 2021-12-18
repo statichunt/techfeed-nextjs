@@ -107,23 +107,29 @@ export default SinglePost;
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join("posts"));
+  const slugPost=files.map(slug=>slug.replace(".md",""))
 
-  const paths = files.map((path) => ({
+
+  const paths = slugPost.map((path) => (
+    
+    {
     params: {
-      slug: path.replace(".md", ""),
+      slug: path.replaceAll(" ","-"),
     },
   }));
 
+console.log(paths)
   return {
     paths,
     fallback: false,
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({params}) => {
   const { slug } = params;
+ 
   const singleMetaDataWithFrontMatter = fs.readFileSync(
-    path.join("posts", slug + ".md"),
+    path.join("posts", slug.replaceAll("-"," ") + ".md"),
     "utf-8"
   );
   const { data: frontmatter, content } = matter(singleMetaDataWithFrontMatter);
@@ -132,6 +138,7 @@ export const getStaticProps = async ({ params }) => {
 
   const posts = files.map((filename) => {
     const slug = filename.replace(".md", "");
+    
 
     const metaDataWithFrontMatter = fs.readFileSync(
       path.join("posts", filename),

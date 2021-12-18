@@ -8,6 +8,7 @@ const currentDate=new Date()
 const Home = ({ posts, page,aboutFrontMatter }) => {
   const [postLength,setPostLength]=useContext(AppContext)
  
+
  
   
   useEffect(()=>{
@@ -35,16 +36,22 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const directoryPath = path.join(process.cwd(), "posts");
   const pageSlugs = fs.readdirSync(directoryPath);
   const posts = pageSlugs.map((filename) => {
-    const slug=filename.replace('.md','')
-   const slugWspace=slug.replace(" ","-")
-   console.log(slugWspace)
+    const slugWspace=filename.replace('.md','')
+    console.log(slugWspace)
+   const slug =slugWspace.replaceAll(" ","-")
+
+  
     const fullPath = path.join(directoryPath, filename);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data: frontmatter, content } = matter(fileContents);
+    const category=frontmatter.category.replace(" ",'-')
+    
+   
     return {
       slug,
       content,
-      frontmatter
+      frontmatter,
+      category
     }
   });
  

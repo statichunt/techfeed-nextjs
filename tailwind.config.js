@@ -35,26 +35,16 @@ module.exports = {
         buttonColor: "#c8ab77"
       },
       fontSize: {
-        'xs': '.75rem',
-        'sm': '.875rem',
-        'tiny': '.875rem',
-        'base': '1rem',
-        'lg': '1.125rem',
-        'xl': '1.25rem',
-        '2xl': '1.5rem',
-        '3xl': '1.875rem',
-        '4xl': '2.25rem',
-        '5xl': '3rem',
-        '6xl': '4rem',
-        '7xl': '5rem',
-        '30px':'30px'
+        '30px':'30px',
+        "nav":"15px",
+        "authorText":"20px"
       },
       fontFamily: {
-        'display': ['"Oswald"', 'sans-serif'],
+        'oswald': ['"Oswald"', 'sans-serif'], 
         'lora': ['"Lora"', 'serif']
       },
       textColor: {
-        'headingColor': '#333333',
+        'headingColor': '#333',
         'commonColor': '#c8ab77',
         'commonColorHover': '#9b7a3e',
         'nameColor': '#aaa',
@@ -68,7 +58,7 @@ module.exports = {
       borderColor: {
         'commonColor': '#c8ab77',
         'bannerIconBorder': '#ddd',
-        'footerBorder': '#dee2e6'
+        'footerBorder': '#f6f6f6'
       },
       height: {
         h1: "0.25rem",
@@ -79,12 +69,22 @@ module.exports = {
         logoHeight: "160px",
         authorImage: "13rem",
         h200: "200px",
-        h400: "400px"
+        h400: "400px",
+        navBarHeight:"100px"
 
 
       },
+      letterSpacing: {
+      primary:"2px"
+      },
+      transitionDuration: {
+        '0': '0ms',
+        'primary-duration': '1000ms',
+      }
 
-    }
+    },
+
+// transition
 
 
 

@@ -3,16 +3,17 @@
  @tailwind components;
  @tailwind utilities;
  @layer components{
+
+    /* common class */
  .heading{
     @apply
      md:text-5xl 
      sm:text-3xl
      text-2xl
-     font-display
+     font-oswald
      text-headingColor
      my-3
      font-medium
-    
      uppercase
      
 
@@ -22,7 +23,8 @@
     px-4
     sm:px-10
      w-full
-     xl:w-3/4
+     xl:w-4/6
+     
      flex
      justify-center
      flex-wrap
@@ -31,33 +33,19 @@
      my-10
      font-lora
 } 
+.transition{
+@apply
+transition-all
+duration-primary-duration
+ease-in-out
+}
 .hover{
     @apply 
     text-commonColor
+    transition
      hover:text-commonColorHover
 }
-.facebook{
-    @apply
-    hover:bg-blue-600
-    hover:text-linkHoverColor
-    
-    
-}
-.twitter{
-    @apply
-    hover:bg-blue-400
-    hover:text-linkHoverColor
-  
-    
-}
-.pinterest{
 
-    @apply
-    hover:bg-red-800
-    hover:text-linkHoverColor
-    
-    
-}
 .menuButton{
     @apply
     flex
@@ -65,8 +53,10 @@
     justify-center
       items-center
       text-3xl
+      text-headingColor
       cursor-pointer
       hover:text-commonColor
+      transition
 }
 .subMenu{
     @apply
@@ -83,13 +73,15 @@
 }
 .navItem{
     @apply
-    text-lg
+    text-nav
     mx-4
+    transition
     hover:text-commonColor
     font-lora
     relative
-    
+    font-normal
      p-4
+     tracking-primary
 
 }
 .nav{
@@ -97,13 +89,27 @@
     flex 
     justify-center
      items-center
-     p-16 
-    border-b-2 
+     h-navBarHeight 
+    
+    border-b-2
     border-footerBorder
 }
+.authorDetails{
+    @apply
+    font-lora
+    italic
+   text-authorText
+   
+    text-center
+  md:w-1/2
+  w-full
+  mb-4
+  leading-8
+}
+
 .title{
     @apply
-    font-display
+    font-oswald
      text-xl
      relative
      border-b-4
@@ -132,6 +138,7 @@
      justify-center
      items-center
      cursor-pointer */
+     
 .buttonClass{
     @apply
    md:w-24
@@ -142,7 +149,7 @@
     hover:bg-buttonColor
     text-white
     block
-    
+    transition
     my-5
 }
 .blog{
@@ -162,12 +169,14 @@
     @apply
     px-8 
     py-4 
+   
     bg-buttonColor 
     hover:bg-black 
     text-white 
     font-lora 
     text-xl 
     rounded-sm
+    transition
 }
 .inputField{
     @apply
@@ -202,29 +211,32 @@
      text-center
      my-8
      font-medium
-     font-display
+     font-oswald
+     text-headingColor
 }
 .categoryContainer{
     @apply
-    allPost
+   text-headingColor
      md:flex
      md:justify-around
      md:items-center
-     heading
+    allPost
      block
      mx-auto
      text-center
 }
 .categoryTitle{
     @apply
-    my-24
+   md:my-24
+   my-12
+   transition
      hover:shadow-sm
      hover:shadow-gray-400
      p-4
-     transition-all
-     duration-500
-     ease-in-out
+    transition
      rounded-sm
+     font-oswald
+     text-2xl
     
 }
  }

@@ -37,7 +37,7 @@ const Contact = () => {
      <div className="flex justify-center items-center my-8 px-4">
       
      <div className="w-full md:w-4/6 mx-auto">
-     <h1 className="heading text-center text-5xl font-lora font-medium">Get In Touch</h1>
+     <h1 className="pageTitle">Get In Touch</h1>
      {
      formType.type=="nodemailer" && <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
     

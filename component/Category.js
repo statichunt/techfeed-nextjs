@@ -17,7 +17,7 @@ function Category({value}) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
          </Header>
 
-         <h1 className='pageTitle'>All Blog From <span >{filterCategory[0]}</span> Category</h1>
+         <h1 className='pageTitle'>Showing Blog From <span className='text-commonColor' >{filterCategory[0]}</span></h1>
          
                <div className="allPost">
                    

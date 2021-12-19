@@ -49,7 +49,7 @@ const Post = ({ value, page }) => {
                                 priority
                             />
                         </div>
-                        <div className=" lg:w-4/5 w-full mx-auto">
+                        <div className=" lg:w-4/6 leading-8 w-full mx-auto">
                             <div className="text-center my-14"
 
                             >
@@ -57,7 +57,7 @@ const Post = ({ value, page }) => {
 
 
 
-                                <h1 className="heading"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
+                                <h1 className="heading transition hover:opacity-70 my-8 leading-normal"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
 
                                 <div className="">
                                     <p className="italic font-lora md:text-lg text-sm font-normal text-nameColor">Posted on {currentDate.getFullYear() > new Date(data.frontmatter.date).getFullYear() ? data.frontmatter.date :
@@ -70,7 +70,7 @@ const Post = ({ value, page }) => {
                                 </div>
                             </div>
 
-                            <div className="font-lora text-xl font-normal"><p >{data.frontmatter.content}</p></div>
+                            <div className="font-lora text-xl font-normal leading-8"><p >{data.frontmatter.content}</p></div>
 
 
                             <div className="my-10">
@@ -97,7 +97,7 @@ const Post = ({ value, page }) => {
                                     {
                                         IconData.slice(0,3).map(i=><div key={i.shareLink} className=''>
                                             <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
-                                                <a className={` w-12
+                                                <a target="_blank" rel='noflow' className={` w-12
                                                                     h-12
                                                                     rounded-full
                                                                     mx-2
@@ -105,6 +105,7 @@ const Post = ({ value, page }) => {
                                                                     flex
                                                                     justify-center
                                                                     items-center
+                                                                    transition
                                                                     cursor-pointer ${i.class=="facebook" ? 
                                                                     "hover:bg-blue-600 hover:text-linkHoverColor" :
                                                                     i.class=="twitter"?

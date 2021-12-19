@@ -11,7 +11,7 @@ function AboutAuthor({data,author}) {
    
     return (
         <div className="my-20 " >
-              <p className="text-lg font-display my-5">PUBLISHED BY <strong className="text-commonColor">{author}</strong></p>
+              <p className="text-lg font-oswald my-5">PUBLISHED BY <strong className="text-commonColor">{author}</strong></p>
             <div className="flex flex-col text-center sm:text-left sm:flex-row ">
             <div className="w-32 h-h32  rounded-full relative mx-auto">
                     <Image className="rounded-full"

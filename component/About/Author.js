@@ -18,21 +18,12 @@ export default function Author({aboutData}) {
                     </Image>
                 </div>
 
-                <div className="heading sm:text-30px font-medium leading-5 my-8 ">
-                    <h1>{author.heading}</h1>
+                <div className="heading sm:text-30px font-medium leading-5 my-12 ">
+                    <h3>{author.heading}</h3>
 
                 </div>
-                <div className="
-                font-lora
-                italic
-                text-lg
-                sm:text-xl
-                text-center
-              md:w-9/12
-              w-full
-                
-                ">
-                    <p className="md:px-12">{author.details}</p>
+                <div className="authorDetails">
+                    <p className="">{author.details}</p>
 
                 </div>
             </div>

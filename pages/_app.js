@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel='icon' href={title.icon}></link>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oswald&display=swap" rel="stylesheet"/>
       </Head>
     <AppContext.Provider value={[postLength,setPostLength]}><Layout ><Component {...pageProps} /></Layout></AppContext.Provider>

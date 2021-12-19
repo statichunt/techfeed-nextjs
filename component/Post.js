@@ -98,10 +98,11 @@ const Post = ({ value, page }) => {
                                         IconData.slice(0,3).map(i=><div key={i.shareLink} className=''>
                                             <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
                                                 <a target="_blank" rel='noflow' className={`
-                                                                     w-16
-                                                                    h-16
+                                                                     w-14
+                                                                    h-14
                                                                     rounded-full
                                                                     mx-2
+                                                                    text-xl
                                                                     bg-gray-300
                                                                     flex
                                                                     justify-center

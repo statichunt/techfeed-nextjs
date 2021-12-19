@@ -37,7 +37,7 @@ module.exports = {
       },
       fontSize: {
         '30px':'30px',
-        "nav":"15px",
+        "nav":"17px",
         "authorText":"20px"
       },
       fontFamily: {

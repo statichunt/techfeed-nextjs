@@ -32,7 +32,7 @@ const Post = ({ value, page }) => {
     
     return (
         <>
-            <div className="allPost" >
+            <div className="container" >
                 {
                     currentPosts.map(data => <div key={data.slug} className="w-full my-10 block" >
 
@@ -97,8 +97,9 @@ const Post = ({ value, page }) => {
                                     {
                                         IconData.slice(0,3).map(i=><div key={i.shareLink} className=''>
                                             <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
-                                                <a target="_blank" rel='noflow' className={` w-12
-                                                                    h-12
+                                                <a target="_blank" rel='noflow' className={`
+                                                                     w-16
+                                                                    h-16
                                                                     rounded-full
                                                                     mx-2
                                                                     bg-gray-300

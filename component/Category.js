@@ -19,7 +19,7 @@ function Category({value}) {
 
          <h1 className='pageTitle'>Showing Blog From <span className='text-commonColor' >{filterCategory[0]}</span></h1>
          
-               <div className="allPost">
+               <div className="container">
                    
             {
                 value.map(blog=><React.Fragment key={blog.slug}>
@@ -38,7 +38,7 @@ function Category({value}) {
                  </div>
                
               <div className='py-4 md:h-60'>
-              <div className="heading  text-2xl text-center  mb-4 sm:text-xl "
+              <div className="heading  text-2xl text-center  mb-4 font-thin hover:opacity-70 transition "
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

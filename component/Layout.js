@@ -14,7 +14,7 @@ function Layout({children,posts}) {
     }
     useEffect(()=>{
         const hiddenMenu=()=>{
-            if(window.innerWidth>768 && isOpen){
+            if(window.innerWidth>1024 && isOpen){
                 setIsOpen(false)
 
             }

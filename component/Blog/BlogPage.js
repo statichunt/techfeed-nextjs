@@ -30,7 +30,7 @@ const BlogPage = ({posts,page}) => {
     return (
         <>
         <h1 className='pageTitle'>All Blogs is Here</h1>
-        <div className="allPost mx-auto">
+        <div className="container mx-auto">
             
 
                   {
@@ -49,8 +49,8 @@ const BlogPage = ({posts,page}) => {
                      
                  </div>
                 
-              <div className='h-auto mt-4 sm:h-h400 py-4'>
-              <div className="heading  text-2xl text-center  mb-4 font-thin"
+              <div className='h-auto my-4 sm:h-60 py-4'>
+              <div className="heading  text-2xl text-center  mb-4 font-thin hover:opacity-70"
                  >
 
                      <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>
@@ -62,7 +62,7 @@ const BlogPage = ({posts,page}) => {
               </div>
              </div>)
             }
-             <div className="w-full mx-auto flex justify-between">
+             <div className="w-full mx-auto flex justify-between my-8 transition">
                     {
                         hasPreviousPage ? <a>
                             <button

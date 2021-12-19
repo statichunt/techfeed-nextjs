@@ -1,4 +1,5 @@
 module.exports = {
+
   content: ["./pages/**/*.{js,ts,jsx,tsx}",
     "./component/**/*.{js,ts,jsx,tsx}",
   ],
@@ -77,9 +78,13 @@ module.exports = {
       letterSpacing: {
       primary:"2px"
       },
+
       transitionDuration: {
         '0': '0ms',
         'primary-duration': '1000ms',
+      },
+      width: {
+        'w48': '48%',
       }
 
     },

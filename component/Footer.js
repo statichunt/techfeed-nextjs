@@ -18,8 +18,9 @@ const router=useRouter()
                         <a className="" target="_blank" rel='noflow' >
                             
                              <div 
-                            className="w-12
-                            h-12
+                            className="w-16
+                            transition
+                            h-16
                             rounded-full
                             mx-2
                             bg-gray-300

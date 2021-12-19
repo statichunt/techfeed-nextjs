@@ -6,11 +6,12 @@ import Header from "next/head"
 function AboutData({data}) {
     
     return (
-        <div className="w-1/2  mx-auto my-32">
+        <div className="container my-16">
             <Header>
-                <title>{data.frontmatter.title}</title>
+                <title>{data.frontmatter.about}</title>
             </Header>
-            <div className="w-full h-h200  relative mx-auto">
+           <div className='xl:w-4/6 lg:w-3/4 md:w-4/5 sm:w-11/12'>
+           <div className="w-full  h-h400  relative mx-auto">
                 <Image
                 alt=""
                 src={data.frontmatter.aboutImage}
@@ -19,13 +20,16 @@ function AboutData({data}) {
                 ></Image>
             </div>
             <div className="text-center ">
-            <div className="font-lora text-5xl">
+            <div className="font-lora text-4xl my-8 leading-normal ">
                 <h1>{data.frontmatter.about}</h1>
             </div>
-            <div className="font-lora text-xl" dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}>
+            <div className="font-lora text-xl I am Emma, A content writer based in LDN, currently at Bookworm.
+" dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}>
 
             </div>
             </div>
+
+           </div>
             
         </div>
     )

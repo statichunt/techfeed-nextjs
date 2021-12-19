@@ -36,7 +36,7 @@ const SinglePost = ({
 
 
   return (
-    <div className="flex justify-center items-center allPost">
+    <div className="flex justify-center items-center container">
       <Header>
         <title>{slug}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -86,8 +86,8 @@ const SinglePost = ({
                   >
 
                     <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}>
-                      <a target="_blank" rel='noflow' className={` w-12
-                                                                    h-12
+                      <a target="_blank" rel='noflow' className={` w-16
+                                                                    h-16
                                                                     rounded-full
                                                                     mx-2
                                                                     bg-gray-300

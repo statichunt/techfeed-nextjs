@@ -79,7 +79,7 @@ function Navbar({ toggle,isOpen }) {
 
         >
 
-            <Link href={`${data.link}`}><a className="navItem relative flex" >{data.menu}<i className={data.menu=="Pages" ? "block mt-1 text-xl":"hidden"}><RiArrowDropDownLine/></i></a>
+            <Link href={`${data.link}`}><a className="navItem relative flex w-full" >{data.menu}<i className={data.menu=="Pages" ? "block mt-1 text-xl":"hidden"}><RiArrowDropDownLine/></i></a>
             
             </Link>
            

@@ -131,7 +131,7 @@ const Post = ({ value, page }) => {
                 }
 
                 {/* pagination  */}
-                <div className="w-full lg:w-4/5 mx-auto flex justify-between">
+                <div className="w-full lg:w-4/6 mx-auto flex justify-between">
                     {
                         hasPreviousPage ? <a>
                             <button

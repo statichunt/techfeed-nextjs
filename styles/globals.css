@@ -24,9 +24,9 @@
     sm:px-10
      w-full
      md:w-5/6
-     lg:w-10/12
+     lg:w-full
      sm:w-10/12
-     xl:w-4/6
+     xl:w-full
      
      flex
      justify-center
@@ -106,7 +106,7 @@ ease-in-out
    text-authorText
    
     text-center
-  md:w-1/2
+  lg:w-about-content
   w-full
   mb-4
   leading-8
@@ -146,8 +146,8 @@ ease-in-out
      
 .buttonClass{
     @apply
-   md:w-24
-   w-16
+   w-24
+   
     h-h12
     rounded-full
     bg-black
@@ -161,14 +161,21 @@ ease-in-out
     @apply
     w-full
      md:w-1/2 
-     lg:w-1/3
+     lg:w-blog-width
      md:pr-5
     sm:box-border
       md:my-12
      sm:px-2
-     mt-4
+     mt-16
      
     
+}
+.blogImage{
+    @apply
+    w-full
+     md:h-h200 
+    h-h300
+     relative
 }
 .submit{
     @apply
@@ -186,7 +193,7 @@ ease-in-out
 .inputField{
     @apply
   
-   md:w-w48
+   md:w-input-field
    w-full
     border-2 
     p-4 
@@ -244,6 +251,19 @@ ease-in-out
      font-oswald
      text-2xl
     
+}
+
+.pagination-list{
+    @apply
+    h-8
+     w-8 
+    rounded-full
+    flex
+     justify-center
+     items-center
+     mx-2
+      cursor-pointer 
+     text-xl
 }
  }
  

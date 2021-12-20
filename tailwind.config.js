@@ -70,6 +70,7 @@ module.exports = {
         logoHeight: "160px",
         authorImage: "13rem",
         h200: "200px",
+        h300:"300px",
         h400: "400px",
         navBarHeight:"100px"
 
@@ -83,8 +84,11 @@ module.exports = {
         '0': '0ms',
         'primary-duration': '1000ms',
       },
+      // custom width
       width: {
-        'w48': '48%',
+        'input-field': '48%',
+        'about-content':'60%',
+        'blog-width':'28%'
       }
 
     },

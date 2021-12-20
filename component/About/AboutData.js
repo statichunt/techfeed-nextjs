@@ -10,9 +10,10 @@ function AboutData({data}) {
             <Header>
                 <title>{data.frontmatter.about}</title>
             </Header>
-           <div className='xl:w-4/6 lg:w-3/4 md:w-4/5 sm:w-11/12'>
-           <div className="w-full  h-h400  relative mx-auto">
+           <div className='xl:w-about-content lg:w-3/4 md:w-4/5 sm:w-11/12 '>
+           <div className="w-full  md:h-h300 h-60  relative mx-auto">
                 <Image
+                className='rounded-sm'
                 alt=""
                 src={data.frontmatter.aboutImage}
                 layout='fill'

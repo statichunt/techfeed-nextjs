@@ -29,14 +29,19 @@ const BlogPage = ({posts,page}) => {
     })
     return (
         <>
-        <h1 className='pageTitle'>All Blogs is Here</h1>
+        <Header>
+            <title>
+                Blog
+            </title>
+        </Header>
+        <h1 className='pageTitle'>All Blogs</h1>
         <div className="container mx-auto">
             
 
                   {
                 currentPosts.map(blog=><div className="blog h-h600"  key={blog.slug}>
                 
-                <div className="w-full h-h200  relative"
+                <div className="blogImage"
                  >
                      <Image
                      alt='abc'
@@ -62,7 +67,7 @@ const BlogPage = ({posts,page}) => {
               </div>
              </div>)
             }
-             <div className="w-full mx-auto flex justify-between my-8 transition">
+             <div className="w-full mx-auto flex justify-between mt-20 transition">
                     {
                         hasPreviousPage ? <a>
                             <button
@@ -87,8 +92,9 @@ const BlogPage = ({posts,page}) => {
                     <ul className="flex items-center">
                         
                         {
-                            pageList.map(num=><li  key={num} className={page==num? "text-buttonColor mx-2 cursor-pointer text-xl" : "mx-2 cursor-pointer text-xl hover:text-commonColorHover"} onClick={
-                                () => router.push(`/blog/?page=${num}`)}><a>{num}</a></li>)
+                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-buttonColor pagination-list" :
+                             "  hover:bg-buttonColor hover:text-white  pagination-list "} onClick={
+                                () => router.push(`/blog/?page=${num}`)}><a className=''>{num}</a></li>)
                         }
                     </ul>
                     {

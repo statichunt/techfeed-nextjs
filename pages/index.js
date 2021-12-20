@@ -53,7 +53,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
       category
     }
   });
- console.log(posts)
+ 
   
   const filterByDate=posts.filter(post=>new Date(post.frontmatter.date)<=currentDate)
   // about page data 

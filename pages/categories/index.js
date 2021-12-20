@@ -14,7 +14,7 @@ const Categories = ({posts}) => {
     // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
     const filterCategory = [...new Set(catagories)]
     // const category=filterCategory.map(ctg=>ctg.replace(/ /g,"-"))
-    // console.log(category)
+    
 
   
     

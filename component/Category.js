@@ -24,9 +24,9 @@ function Category({value}) {
             {
                 value.map(blog=><React.Fragment key={blog.slug}>
                    
-                <div className="blog"  >
+                <div className="blog h-h600"  >
                 
-                <div className="w-full h-h200 relative"
+                <div className="blogImage"
                  >
                      <Image
                      alt='abc'

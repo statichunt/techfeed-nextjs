@@ -5,8 +5,8 @@ import { author } from '../../config/author'
 
 export default function Author({aboutData}) {
     return (
-        <div className="mt-24">
-            <div className="flex justify-center items-center flex-col w-4/5 mx-auto">
+        <div className="mt-24 container">
+            <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
                
                 <div className="welcomeContent">
                     <Image className="welcomeImage"

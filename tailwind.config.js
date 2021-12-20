@@ -88,7 +88,14 @@ module.exports = {
       width: {
         'input-field': '48%',
         'about-content':'60%',
-        'blog-width':'28%'
+        'blog-width':'33.33%'
+      },
+      maxWidth: {
+        "620":"620px",
+        "720":"720px",
+        "980":"980px",
+        "1220":"1220px"
+
       }
 
     },

@@ -67,7 +67,7 @@ const BlogPage = ({posts,page}) => {
               </div>
              </div>)
             }
-             <div className="w-full px-16 mx-auto flex justify-between mt-10 md:mt-20 transition">
+             <div className="w-full sm:px-16 mx-auto flex justify-between mt-10 md:mt-20 transition">
                     {
                         hasPreviousPage ? <a>
                             <button

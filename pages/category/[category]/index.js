@@ -33,6 +33,7 @@ export const getStaticPaths = async () => {
       frontmatter
     }
   })
+  console.log(posts)
   const paths = posts.map((category) => ({
     params: {
       category: category.frontmatter.category.replace(/ /g,"-")

@@ -44,20 +44,21 @@ module.exports = {
         'oswald': ['"Oswald"', 'sans-serif'], 
         'lora': ['"Lora"', 'serif']
       },
-      textColor: {
-        'headingColor': '#333',
-        'commonColor': '#c8ab77',
-        'commonColorHover': '#9b7a3e',
-        'nameColor': '#aaa',
-        'linkHoverColor': '#f7f8fa',
-        'white': '#ffff',
-        'black': '#000',
-        'green': 'green',
-        'red': 'red'
+      // textColor: {
+      //   'headingColor': '#333',
+      //   'primary-color': '#c8ab77',
+      //   'primary-colorHover': '#9b7a3e',
+      //   'nameColor': '#aaa',
+      //   'linkHoverColor': '#f7f8fa',
+      //   'white': '#ffff',
+      //   'black': '#000',
+      //   'green': 'green',
+      //   'red': 'red',
+      //   'secoundary-color':'#ddd'
 
-      },
+      // },
       borderColor: {
-        'commonColor': '#c8ab77',
+        'primary-color': '#c8ab77',
         'bannerIconBorder': '#ddd',
         'footerBorder': '#f6f6f6'
       },
@@ -72,12 +73,14 @@ module.exports = {
         h200: "200px",
         h300:"300px",
         h400: "400px",
+        h500:"500px",
         navBarHeight:"100px"
 
 
       },
       letterSpacing: {
-      primary:"2px"
+      primary:"2px",
+      secoundary:"3px"
       },
 
       transitionDuration: {
@@ -95,6 +98,21 @@ module.exports = {
         "720":"720px",
         "980":"980px",
         "1200":"1200px"
+
+      },
+
+      colors: {
+
+        'headingColor': '#333',
+        'primary-color': '#c8ab77',
+        'primary-colorHover': '#9b7a3e',
+        'nameColor': '#aaa',
+        'linkHoverColor': '#f7f8fa',
+        'white': '#ffff',
+        'black': '#000',
+        'green': 'green',
+        'red': 'red',
+        'secoundary-color':'#ddd'
 
       },
       animation: {

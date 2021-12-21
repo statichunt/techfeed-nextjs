@@ -53,7 +53,7 @@ const Post = ({ value, page }) => {
                             <div className="text-center my-14"
 
                             >
-                                <div className="mb-1.5"> <Link href={`/category/${data.category}`}><a className="title">{data.frontmatter.title}</a></Link></div>
+                                <div className="mb-1.5"> <Link href={`/category/${data.category}`}><a className="title">{data.frontmatter.category}</a></Link></div>
 
 
 
@@ -106,7 +106,7 @@ const Post = ({ value, page }) => {
                                                                     mx-2
                                                                     md:text-xl
                                                                     text-sm
-                                                                    bg-gray-300
+                                                                    bg-secoundary-color
                                                                     flex
                                                                     justify-center
                                                                     items-center

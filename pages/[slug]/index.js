@@ -54,7 +54,7 @@ const SinglePost = ({
         </div>
         <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto">
           <div className="my-10">
-            <Link href={`/category/${frontmatter.category}`}><a className="title">{frontmatter.title}</a></Link>
+            <Link href={`/category/${frontmatter.category}`}><a className="title">{frontmatter.category}</a></Link>
           </div>
           <h1 className="heading font-oswald text-center">{frontmatter.heading}</h1>
 
@@ -91,7 +91,7 @@ const SinglePost = ({
                                                                     rounded-full
                                                                     mx-2
                                                                     text-xl
-                                                                    bg-gray-300
+                                                                    bg-secoundary-color
                                                                     flex
                                                                     justify-center
                                                                     items-center

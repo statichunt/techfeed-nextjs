@@ -26,7 +26,12 @@ const Categories = ({posts}) => {
           </Header>
            <div className="categoryContainer  ">
            {
-                filterCategory.map(data=><div key={data} className="categoryTitle"><Link href={`/category/${data.replace(/ /g,"-")}`}><a className="capitalize ">{data}</a></Link></div>)
+                filterCategory.map(data=><Link key={data} href={`/category/${data.replace(/ /g,"-")}`}>
+                  <a className="capitalize ">
+                  <div  className="categoryTitle">{data}
+                  </div>
+                  </a>
+                  </Link>)
             }
            </div>
         </div>

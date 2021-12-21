@@ -18,13 +18,16 @@ const router=useRouter()
                         <a className="" target="_blank" rel='noflow' >
                             
                              <div 
-                            className="w-14
+                            className="sm:w-14
                             transition
-                            h-14
+                            sm:h-14
+                            w-12
+                            h-12
                             rounded-full
                             text-xl
+                            sm:text-sm
                             mx-2
-                            bg-gray-300
+                            bg-secoundary-color
                             flex
                             justify-center
                             items-center hover:bg-black hover:text-linkHoverColor">
@@ -41,7 +44,7 @@ const router=useRouter()
                     <p>{footerData.activity} 
 
                      <Link href={footerData.link}> 
-                    <a className="text-commonColor" 
+                    <a className="text-primary-color" 
                     target="_blank" rel='noflow'>{footerData.name}</a>
                     </Link>
                     

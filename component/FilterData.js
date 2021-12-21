@@ -30,7 +30,7 @@ export default function FilterData({value}) {
                         
                     </div>
                    
-                    <div className="heading text-center text-2xl"
+                    <div className="heading text-center text-2xl hover:opacity-70"
                     >
   
                         <h1><Link href={`/${blog.slug}`}><a>{blog.frontmatter.heading}</a></Link></h1>

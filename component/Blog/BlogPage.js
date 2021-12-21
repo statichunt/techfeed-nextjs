@@ -39,7 +39,7 @@ const BlogPage = ({posts,page}) => {
             
 
                   {
-                currentPosts.map(blog=><div className="blog h-h600"  key={blog.slug}>
+                currentPosts.map(blog=><div className="blog  md:h-h500"  key={blog.slug}>
                 
                 <div className="blogImage"
                  >
@@ -67,7 +67,7 @@ const BlogPage = ({posts,page}) => {
               </div>
              </div>)
             }
-             <div className="w-full mx-auto flex justify-between mt-20 transition">
+             <div className="w-full px-16 mx-auto flex justify-between mt-10 md:mt-20 transition">
                     {
                         hasPreviousPage ? <a>
                             <button
@@ -86,14 +86,14 @@ const BlogPage = ({posts,page}) => {
                                 }
 
 
-                            >prev</button>
+                            >Prev</button>
                         </a>
                     }
                     <ul className="flex items-center">
                         
                         {
-                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-buttonColor pagination-list" :
-                             "  hover:bg-buttonColor hover:text-white  pagination-list "} onClick={
+                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-primary-color pagination-list" :
+                             "  hover:bg-primary-color hover:text-white  pagination-list "} onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a className=''>{num}</a></li>)
                         }
                     </ul>

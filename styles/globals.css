@@ -22,7 +22,7 @@
     @apply
     px-4
     sm:px-10
-     w-full
+     max-w-full
      md:max-w-720
      lg:max-w-980
      sm:max-w-600
@@ -44,23 +44,25 @@ ease-in-out
 }
 .hover{
     @apply 
-    text-commonColor
+    text-primary-color
     transition
-     hover:text-commonColorHover
+     hover:text-primary-colorHover
 }
  
 
 .navItem{
     @apply
     text-nav
-    mx-4
+    mx-3
     transition
-    hover:text-commonColor
+    hover:text-primary-color
     font-lora
     relative
     font-normal
      p-4
      tracking-primary
+     uppercase
+    
 
 }
 /* nav-mnubar */
@@ -70,9 +72,10 @@ ease-in-out
     justify-center
      items-center
      h-navBarHeight 
-    
+     md:px-6
     border-b
     border-footerBorder
+    box-border
 }
 .menuButton{
     @apply
@@ -83,13 +86,13 @@ ease-in-out
       text-3xl
       text-headingColor
       cursor-pointer
-      hover:text-commonColor
+      hover:text-primary-color
       transition
 }
 .subMenu{
     @apply
   
-    
+    uppercase
      py-2
      px-3
      absolute
@@ -118,8 +121,11 @@ ease-in-out
      text-xl
      relative
      border-b-4
-     border-commonColor
+     border-primary-color
      cursor-pointer
+     tracking-secoundary
+     font-normal
+     uppercase
 },
 .sociallink{
     @apply
@@ -146,28 +152,35 @@ ease-in-out
      
 .buttonClass{
     @apply
-   w-24
-   
-    h-h12
+  sm:w-24
+
+   w-12
+   h-8
+   sm:h-h12
     rounded-full
     bg-black
-    hover:bg-buttonColor
+    hover:bg-primary-color
     text-white
     block
     transition
     my-5
+    sm:text-base
+    text-sm
 }
 .blog{
     @apply
     w-full
-     md:w-1/2 
-     lg:w-blog-width
-     md:pr-5
+    md:w-1/2 
+    lg:w-blog-width
+    md:pr-5
     sm:box-border
-      md:my-12
-     sm:px-2
-     mt-16
-     
+    md:mt-20
+    md:mb-12
+    
+    clear-both
+    sm:px-2
+    mt-16
+    px-16
     
 }
 .blogImage{
@@ -182,7 +195,7 @@ ease-in-out
     px-8 
     py-4 
    
-    bg-buttonColor 
+    bg-primary-color 
     hover:bg-black 
     text-white 
     font-lora 

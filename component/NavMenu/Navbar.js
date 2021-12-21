@@ -11,6 +11,8 @@ import {RiArrowDropDownLine} from 'react-icons/ri'
 
 function Navbar({ toggle,isOpen }) {
 
+   
+
 // const [postLength]=useContext(AppContext)
 // //    create dropdown menu
 //     const page = 0
@@ -72,14 +74,14 @@ function Navbar({ toggle,isOpen }) {
 {
 
     NavElement.map(data =><React.Fragment key={data.menu}>
-    <div key={data.menu} className={data.menu=="Home"?"hidden":"w-2 rounded-full h-h1 bg-gray-400"}></div>
+    <div key={data.menu} className={data.menu=="Home"?"hidden":"w-2 rounded-full h-h1 bg-secoundary-color"}></div>
 
         <li  className="group relative " 
 
 
         >
 
-            <Link href={`${data.link}`}><a className="navItem relative flex w-full" >{data.menu}<i className={data.menu=="Pages" ? "block mt-1 text-xl":"hidden"}><RiArrowDropDownLine/></i></a>
+            <Link href={`${data.link}`}><a className="navItem relative flex w-full" >{data.menu}<i className={data.menu=="Pages" ? "block text-headingColor text-2xl":"hidden"}><RiArrowDropDownLine/></i></a>
             
             </Link>
            

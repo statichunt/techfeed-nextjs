@@ -1,12 +1,12 @@
 ---
 id : 7
-title : 'Travels and Tours'
+category : 'Travels and Tours'
 heading : 'Natural beauty takes at least two hours in front of a mirror.'
 date : 'June 17, 2021'
 author: 'Mark Dinn'
 image : '/image/tezos.jpg' 
 content : 'My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame .'
-category : 'nature'
+
 ---
 
 

@@ -91,11 +91,14 @@ module.exports = {
         'blog-width':'33.33%'
       },
       maxWidth: {
-        "620":"620px",
+        "600":"600px",
         "720":"720px",
         "980":"980px",
-        "1220":"1220px"
+        "1200":"1200px"
 
+      },
+      animation: {
+        'nav-animate': 'al 1s ease-out',
       }
 
     },

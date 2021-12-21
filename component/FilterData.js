@@ -9,7 +9,7 @@ export default function FilterData({value}) {
    
     return (
         <>
-         <div className="my-20">
+         <div className="sm:my-20 my-10">
          <div className="heading text-center text-4xl tracking-tight my-5 font-normal cursor-default"><h1>SIMILAR POST</h1></div>
           <div className="sm:flex sm:flex-wrap">
 

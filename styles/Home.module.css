@@ -20,6 +20,7 @@ line-height: 30px;
 }
 .content blockquote{
   border-left: 5px solid rgb(202, 194, 194);
+  font-size: 22px;
 }
 .content blockquote p{
   margin-left: 20px;

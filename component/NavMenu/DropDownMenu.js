@@ -76,7 +76,7 @@ const DropDownMenu = ({isOpen, toggle}) => {
                 </ul> */}
 
 
-<ul className="block  py-4 transition-transform duration-500 ease-in-out">
+<ul className="block  py-4 animate-nav-animate">
                  
                  { NavElement.map(data=><li className="p-3 navItem relative"  onClick={data.menu!="Pages"? toggle:undefined}
                    key={data.link}><Link href={data.link}><a className=" block" onClick={()=>{data.submenu[0].page!="" && setDropDown(!isDropdown) }} >{data.menu}</a></Link> 

@@ -18,21 +18,19 @@
      
 
  }
+
  .container{
     @apply
     px-4
     sm:px-10
      max-w-full
-     md:max-w-720
-     lg:max-w-980
-     sm:max-w-600
-     xl:max-w-1200
-     
-     flex
-     justify-center
+     md:max-w-medium-device-container
+     lg:max-w-large-device-container
+     sm:max-w-small-device-container
+     xl:max-w-extralarge-device-container
+     flex-order
      flex-wrap
      mx-auto
-     items-center
      my-10
      font-lora
 } 
@@ -48,8 +46,14 @@ ease-in-out
     transition
      hover:text-primary-colorHover
 }
+.flex-order{
+    @apply
+    flex
+    justify-center
+    items-center
+}
  
-
+/* nav menu start */
 .navItem{
     @apply
     text-nav
@@ -65,12 +69,10 @@ ease-in-out
     
 
 }
-/* nav-mnubar */
+
 .nav{
     @apply
-    flex 
-    justify-center
-     items-center
+    flex-order
      h-navBarHeight 
      md:px-6
     border-b
@@ -79,10 +81,7 @@ ease-in-out
 }
 .menuButton{
     @apply
-    flex
-    
-    justify-center
-      items-center
+   flex-order
       text-3xl
       text-headingColor
       cursor-pointer
@@ -102,6 +101,7 @@ ease-in-out
      -left-5
 
 }
+/* author start */
 .authorDetails{
     @apply
     font-lora
@@ -115,6 +115,7 @@ ease-in-out
   leading-8
 }
 
+/* post start */
 .title{
     @apply
     font-oswald
@@ -127,19 +128,34 @@ ease-in-out
      font-normal
      uppercase
 },
-.sociallink{
+
+.posted-date-name{
     @apply
+    italic
+     font-lora 
+    md:text-lg
+     text-sm
+     font-normal
+     text-nameColor
+}
+/* .sociallink{
+    @apply
+   md:w-14
+    md:h-14
     w-12
     h-12
     rounded-full
     mx-2
-    bg-gray-300
+    md:text-xl
+    text-sm
+    bg-secoundary-color
     flex
     justify-center
-    items-center
-    cursor-pointer
+    items-center    
+    
+    transition
 
-}
+} */
  /* mx-2
      w-12
      h-h12
@@ -149,7 +165,7 @@ ease-in-out
      justify-center
      items-center
      cursor-pointer */
-     
+     /*pagination button  */
 .buttonClass{
     @apply
   sm:w-24
@@ -167,6 +183,7 @@ ease-in-out
     sm:text-base
     text-sm
 }
+/* blog and category page  */
 .blog{
     @apply
     w-full
@@ -190,11 +207,26 @@ ease-in-out
     h-h300
      relative
 }
+
+.pagination-list{
+    @apply
+    h-8
+     w-8 
+    rounded-full
+    flex
+     justify-center
+     items-center
+     mx-2
+      cursor-pointer 
+     text-xl
+}
+ }
+
+/* form  */
 .submit{
     @apply
     px-8 
     py-4 
-   
     bg-primary-color 
     hover:bg-black 
     text-white 
@@ -205,7 +237,6 @@ ease-in-out
 }
 .inputField{
     @apply
-  
    md:w-input-field
    w-full
     border-2 
@@ -265,20 +296,8 @@ ease-in-out
      text-2xl
     
 }
+ 
 
-.pagination-list{
-    @apply
-    h-8
-     w-8 
-    rounded-full
-    flex
-     justify-center
-     items-center
-     mx-2
-      cursor-pointer 
-     text-xl
-}
- }
  
 /* .bannerContent{
     @apply

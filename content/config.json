@@ -1,0 +1,78 @@
+{
+    "header":{
+     "navMenu":  [ {
+  "menu": "Home",
+  "link": "/",
+  "submenu":[{
+      "page":"",
+      "pagelink":""
+  }]
+},
+ {
+  "menu": "About",
+  "link": "/about",
+  "submenu":[{
+      "page":"",
+      "pagelink":""
+  }]
+}, 
+
+ {
+  "menu": "Category",
+  "link": "/categories",
+  "submenu":[{
+      "page":"",
+      "pagelink":""
+  }]
+},
+{
+  "menu": "Blog",
+  "link": "/blog",
+  "submenu":[{
+      "page":"",
+      "pagelink":""
+  }]
+},
+{
+  "menu": "pages",
+  "link": "#",
+  "submenu":[{
+      "page":"Privacy & Policy",
+      "pagelink":"privacy-page"
+  },
+  {
+    "page":"Terms & Condition",
+    "pagelink":"terms-condition"
+}
+]
+
+}, {
+  "menu": "Contact",
+  "link": "/contact",
+  "submenu":[{
+      "page":"",
+      "pagelink":""
+  }]
+
+}]
+    },
+
+    "paremeter":{
+        
+            "title":"LifeStyle",
+            "icon":"/image/icon.png"
+        
+    },
+
+"footer":{
+    
+    "coppy": "© '2020' , All rights reserved.",
+    "activity": "Copyright by your company | Theme by ",
+    "name": "GetHugoThemes",
+    "link": "https://gethugothemes.com/"
+},
+"contact-form":{
+    "type":"airform"
+}
+    
+}

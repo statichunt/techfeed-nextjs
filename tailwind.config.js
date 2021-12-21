@@ -94,10 +94,10 @@ module.exports = {
         'blog-width':'33.33%'
       },
       maxWidth: {
-        "600":"600px",
-        "720":"720px",
-        "980":"980px",
-        "1200":"1200px"
+        "small-device-container":"600px",
+        "medium-device-container":"720px",
+        "large-device-container":"980px",
+        "extralarge-device-container":"1200px"
 
       },
 
@@ -112,7 +112,8 @@ module.exports = {
         'black': '#000',
         'green': 'green',
         'red': 'red',
-        'secoundary-color':'#ddd'
+        'secoundary-color':'#ddd',
+        'red-400':'rgb(127 29 29)'
 
       },
       animation: {

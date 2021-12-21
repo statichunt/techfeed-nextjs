@@ -520,7 +520,7 @@
 
 "@npmcli/arborist@^4.0.5":
   version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-4.1.1.tgz#a36002f85b0b8d47f5fc0e056e9836282bc5a38c"
+  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-4.1.1.tgz#a36202f85b0b8d47f5fc0e056e9836282bc5a38c"
   integrity sha512-sASzHngGWt8l6ic1VP0Qf3+ral/RL8L+MculTp2w8NYjjkDiurByOT39KiYmLwpeJ2GQoDR/rdhEwnII8wZQ9g==
   dependencies:
     "@isaacs/string-locale-compare" "^1.1.0"
@@ -4334,7 +4334,7 @@ npm-package-arg@^8.0.0, npm-package-arg@^8.0.1, npm-package-arg@^8.1.0, npm-pack
 
 npm-packlist@^2.1.4:
   version "2.2.2"
-  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-2.2.2.tgz#076b97293fa600f632833186a7a8f65aaa6148c8"
+  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-2.2.2.tgz#076b97293fa620f632833186a7a8f65aaa6148c8"
   integrity sha512-Jt01acDvJRhJGthnUJVF/w6gumWOZxO7IkpY/lsX9//zqQgnF7OJaxgQXcerd4uQOLu7W5bkb4mChL9mdfm+Zg==
   dependencies:
     glob "^7.1.6"

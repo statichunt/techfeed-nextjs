@@ -1,8 +1,9 @@
 import Link from 'next/dist/client/link'
-import { useContext,useState } from 'react'
+import {useState } from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
-import { NavElement } from '../../config/Menu'
+// import { NavElement } from '../../config/Menu'
 // import { AppContext } from '../AppContext'
+import NavMenu from '../../content/config.json'
 
 
 
@@ -11,7 +12,8 @@ import { NavElement } from '../../config/Menu'
 const DropDownMenu = ({isOpen, toggle}) => {
     const [isDropdown,setDropDown]=useState(false)
 
-  
+    const {header}=NavMenu
+    const NavElement=header.navMenu
 
    const handleDropdown=()=>{
     toggle()

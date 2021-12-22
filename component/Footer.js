@@ -1,13 +1,11 @@
 import { IconData } from '../config/IconData'
-import { footerData } from '../config/footerData'
-import { useRouter } from 'next/dist/client/router'
+import footerData  from '../content/config.json'
 import Link from 'next/link'
 
 
 
 function Footer() {
-  
-const router=useRouter()
+  const {footer}=footerData
     return (
         <div className="py-20 border-t-2 border-footerBorder">
             <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
@@ -30,7 +28,7 @@ const router=useRouter()
                             bg-secoundary-color
                             flex
                             justify-center
-                            items-center hover:bg-black hover:text-linkHoverColor">
+                            items-center hover:bg-black hover:text-text-secoundary">
                                 {data.icon}
                                 </div>
                                 
@@ -40,12 +38,12 @@ const router=useRouter()
 
                 </div>
                 <div className="text-center mt-8 font-lora text-lg sm:text-xl">
-                    <p >{footerData.coppy}</p>
-                    <p>{footerData.activity} 
+                    <p >{footer.coppy}</p>
+                    <p>{footer.activity} 
 
-                     <Link href={footerData.link}> 
+                     <Link href={footer.link}> 
                     <a className="text-primary-color" 
-                    target="_blank" rel='noflow'>{footerData.name}</a>
+                    target="_blank" rel='noflow'>{footer.name}</a>
                     </Link>
                     
                     </p>

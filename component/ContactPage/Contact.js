@@ -1,20 +1,20 @@
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { formType } from "../../config/contacVlidation";
+import  formType  from "../../content/config.json";
 import Head from "next/head"
+import { useRouter } from "next/router";
+
 
 
 const Contact = () => {
-    const [airForm,setAirForm]=useState(true)
-    const handleAirForm=()=>{
-        setAirForm(!airForm)
-        
-    }
+const [redirect,setRedirect]=useState(false)
+    const router=useRouter()
+ const {contactForm}=formType
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data,e) => {
-
+         setRedirect(!redirect)
 
         const event={
             name:data.firstName + ' ' + data.lastName,
@@ -31,7 +31,11 @@ const Contact = () => {
      e.target.reset()
     
     } 
-  
+   useEffect(()=>{
+     if(redirect==true){
+       router.push('/contact')
+     }
+   })
   
     return (
      <>
@@ -43,7 +47,7 @@ const Contact = () => {
      <div className="w-full md:w-4/6 mx-auto">
      <h1 className="pageTitle">Get In Touch</h1>
      {
-     formType.type=="nodemailer" && <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
+     contactForm.type=="nodemailer" && <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
     
    <div className="flex justify-between flex-wrap">
              
@@ -63,7 +67,7 @@ const Contact = () => {
         <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/></div>
         
       </form>}
-      {formType.type=="airform" &&<form action="https://airform.io/faruk.themefisher@gmail.com" method="post" className="mx-auto">
+      {contactForm.type=="airform" &&<form action="https://airform.io/faruk.themefisher@gmail.com" method="post" className="mx-auto">
     
     
       <div className="flex justify-between flex-wrap">
@@ -82,7 +86,7 @@ const Contact = () => {
           <textarea className="inputField sm:w-full" rows='7' {...register("message", { required: true })} placeholder="Message"></textarea>
           
          
-          <div className="flex justify-center items-center  " ><input type="submit" className="submit mx-4"/></div>
+          <div className="flex justify-center items-center  " ><a target='_blank' rel="noflow"><input type="submit" target='_blank' className="submit mx-4"/></a></div>
         </form>
 
       }

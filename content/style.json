@@ -1,0 +1,33 @@
+{
+    "color":{
+        "heeading":{
+            "primary":"#333",
+            "opecity":"70"
+        },
+        "linkHover":{
+            "primary":"#c8ab77",
+            "secoundary":"#9b7a3e"
+        },
+        "backgroundColor":{
+            "primary":"#ddd",
+            "secoundary":"#333"
+        },
+        "socialMedia":{
+            "facebookHover":"#3b5999",
+            "twitterHover":"#55acee",
+            "pinterestHover":"#bd081c"
+        },
+        "text":{
+            "primary":"#333",
+            "secoundary":"white"
+        }
+
+    },
+    "fontFamily":{
+        "heading":"['Oswald', 'sans-serif']",
+        "text":"['Lora', 'serif']"
+    }
+   
+        
+    
+}

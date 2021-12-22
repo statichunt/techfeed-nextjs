@@ -1,11 +1,9 @@
 
 
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import Link from 'next/dist/client/link'
 
 export default function FilterData({value}) {
-    const router =useRouter()
    
     return (
         <>

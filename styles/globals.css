@@ -34,16 +34,11 @@
      my-10
      font-lora
 } 
- .transition{
-@apply
-transition-all
- duration-primary-duration
-ease-in-out
-}
+
 .hover{
     @apply 
     text-primary-color
-    transition
+     
      hover:text-primary-colorHover
 }
 .flex-order{
@@ -58,7 +53,7 @@ ease-in-out
     @apply
     text-nav
     mx-3
-    transition
+   
     hover:text-primary-color
     font-lora
     relative
@@ -86,7 +81,7 @@ ease-in-out
       text-headingColor
       cursor-pointer
       hover:text-primary-color
-      transition
+    
 }
 .subMenu{
     @apply
@@ -153,7 +148,7 @@ ease-in-out
     justify-center
     items-center    
     
-    transition
+     
 
 } */
  /* mx-2
@@ -178,10 +173,16 @@ ease-in-out
     hover:bg-primary-color
     text-white
     block
-    transition
+     
     my-5
     sm:text-base
     text-sm
+}
+.buttonDisable{
+    @apply
+    bg-secoundary-color
+     hover:bg-secoundary-color
+     cursor-default
 }
 /* blog and category page  */
 .blog{
@@ -233,7 +234,7 @@ ease-in-out
     font-lora 
     text-xl 
     rounded-full
-    transition
+     
 }
 .inputField{
     @apply
@@ -286,7 +287,7 @@ ease-in-out
     @apply
    md:my-24
    my-12
-   transition
+    
      hover:shadow-sm
      hover:shadow-gray-400
      p-4

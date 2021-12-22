@@ -96,11 +96,11 @@ const SinglePost = ({
                                                                     justify-center
                                                                     items-center
                                                                     cursor-pointer ${i.class=="facebook" ? 
-                                                                    "hover:bg-blue-600 hover:text-linkHoverColor" :
+                                                                    "hover:bg-blue-600 hover:text-text-secoundary" :
                                                                     i.class=="twitter"?
-                                                                    "hover:bg-blue-400 hover:text-linkHoverColor" :
+                                                                    "hover:bg-blue-400 hover:text-text-secoundary" :
                                                                     i.class=="pinterest"?
-                                                                    "hover:bg-red-800 hover:text-linkHoverColor":undefined
+                                                                    "hover:bg-red-800 hover:text-text-secoundary":undefined
                                                                     
                                                                     }`}>{i.icon}</a>
                     </Link>

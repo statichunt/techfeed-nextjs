@@ -22,6 +22,7 @@ const Home = ({ posts, page,aboutFrontMatter }) => {
 
   return (
     <div>
+      <p><i className="fab fa-facebook-f"></i></p>
       <Author ></Author >
       <Post value={post} page={page}></Post>
 

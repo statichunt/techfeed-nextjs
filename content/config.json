@@ -34,7 +34,7 @@
   }]
 },
 {
-  "menu": "pages",
+  "menu": "Pages",
   "link": "#",
   "submenu":[{
       "page":"Privacy & Policy",
@@ -57,7 +57,7 @@
 }]
     },
 
-    "paremeter":{
+    "perameter":{
         
             "title":"LifeStyle",
             "icon":"/image/icon.png"
@@ -71,8 +71,16 @@
     "name": "GetHugoThemes",
     "link": "https://gethugothemes.com/"
 },
-"contact-form":{
+"contactForm":{
     "type":"airform"
+},
+"postsPerPage":"4",  
+
+"welcomeContent":{
+    "heading":"WELCOME TO MY BLOG",
+   "image":"/image/author.jpg",
+    "details":"My name is Mark Dinn. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples."
 }
+
     
 }

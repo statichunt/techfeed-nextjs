@@ -1,9 +1,10 @@
 import React from 'react'
 
 import Image from 'next//image'
-import { author } from '../../config/author'
+import config from '../../content/config.json'
 
-export default function Author({aboutData}) {
+export default function Author() {
+    const {welcomeContent}=config
     return (
         <div className="mt-24 container">
             <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
@@ -11,7 +12,7 @@ export default function Author({aboutData}) {
                 <div className="welcomeContent">
                     <Image className="welcomeImage"
                     alt=""
-                    src={author.image}
+                    src={welcomeContent.image}
                     layout='fill'
                     objectFit="cover">
 
@@ -19,11 +20,11 @@ export default function Author({aboutData}) {
                 </div>
 
                 <div className="heading sm:text-30px font-medium leading-5 my-12 ">
-                    <h3>{author.heading}</h3>
+                    <h3>{welcomeContent.heading}</h3>
 
                 </div>
                 <div className="authorDetails">
-                    <p className="">{author.details}</p>
+                    <p className="">{welcomeContent.details}</p>
 
                 </div>
             </div>

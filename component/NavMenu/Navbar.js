@@ -4,14 +4,16 @@ import React from 'react'
 // import React, { useContext } from 'react'
 import { CgMenuGridR } from 'react-icons/cg'
 // import { AppContext } from '../AppContext'
-import { NavElement } from '../../config/Menu'
+// import { NavElement } from '../../config/Menu'
+import NavMenu from '../../content/config.json'
 import {RiArrowDropDownLine} from 'react-icons/ri'
 
 
 
 function Navbar({ toggle,isOpen }) {
 
-   
+   const {header}=NavMenu
+   const NavElement=header.navMenu
 
 // const [postLength]=useContext(AppContext)
 // //    create dropdown menu

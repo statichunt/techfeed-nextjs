@@ -10,7 +10,7 @@ const Post = ({ value, page }) => {
 
 const postsPerPage = 4
 
-const currentDate = new Date
+const currentDate = new Date()
 
 
 const indexOfLastPost = page * postsPerPage;
@@ -60,7 +60,9 @@ return (
                             <h1 className="heading transition hover:opacity-70 my-8 leading-normal"> <Link href={`/${data.slug}`}><a>{data.frontmatter.heading}</a></Link></h1>
 
                             <div className="">
-                                <p className="posted-date-name">Posted on {currentDate.getFullYear() > new Date(data.frontmatter.date).getFullYear() ? data.frontmatter.date :
+                                <p className="  italic  font-lora 
+                                            md:text-lg text-sm font-normal text-nameColor"
+                                      >Posted on {currentDate.getFullYear() > new Date(data.frontmatter.date).getFullYear() ? data.frontmatter.date :
                                     currentDate.getMonth() > new Date(data.frontmatter.date).getMonth() ? data.frontmatter.date :
                                         currentDate.getDate() == new Date(data.frontmatter.date).getDate() ? <span>Today</span>
 
@@ -75,8 +77,8 @@ return (
 
                         <div className="my-10">
 
-                            <div className="hover  flex justify-center items-center my-10">
-                                <Link href={`/${data.slug}`} ><a className="flex items-center text-xl justify-center capitalize">continue reading<span className="mx-1"><BsArrowRight /></span></a></Link>
+                            <div className="hover  flex-order my-10">
+                                <Link href={`/${data.slug}`} ><a className="flex-order text-xl  capitalize">continue reading<span className="mx-1"><BsArrowRight /></span></a></Link>
                             </div>
 
 
@@ -113,11 +115,11 @@ return (
                                             
                                             transition
                                         cursor-pointer ${i.class=="facebook" ? 
-                                        "hover:bg-blue-600 hover:text-linkHoverColor" :
+                                        "hover:bg-facebook hover:text-text-secoundary" :
                                         i.class=="twitter"?
-                                        "hover:bg-blue-400 hover:text-linkHoverColor" :
+                                        "hover:bg-twitter hover:text-text-secoundary" :
                                         i.class=="pinterest"?
-                                        "hover:bg-red-400 hover:text-linkHoverColor":undefined
+                                        "hover:bg-pinterest hover:text-text-secoundary":undefined
                                         
                                         }`}>
                                         {i.icon}
@@ -145,7 +147,7 @@ return (
                             }>Prev</button>
                     </a> : <a>
                         <button
-                            className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                            className="buttonClass  buttonDisable" disabled
                             onClick={
                                 () => router.push(`/?page=${page - 1}`)
 

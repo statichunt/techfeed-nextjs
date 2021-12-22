@@ -3,10 +3,12 @@ import Image from 'next/dist/client/image'
 import Link from 'next/dist/client/link'
 import { useRouter } from 'next/router'
 import Header from 'next/head'
+import  config from '../../content/config.json'
 
 
 const BlogPage = ({posts,page}) => {
-    const postsPerPage=6
+    const {postsPerPage}=config
+    console.log(postsPerPage)
     const indexOfLastPost = page * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);

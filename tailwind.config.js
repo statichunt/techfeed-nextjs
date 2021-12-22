@@ -1,5 +1,7 @@
-module.exports = {
 
+const themeStyle=require('./content/style.json')
+module.exports = {
+  
   content: ["./pages/**/*.{js,ts,jsx,tsx}",
     "./component/**/*.{js,ts,jsx,tsx}",
   ],
@@ -41,8 +43,8 @@ module.exports = {
         "authorText":"20px"
       },
       fontFamily: {
-        'oswald': ['"Oswald"', 'sans-serif'], 
-        'lora': ['"Lora"', 'serif']
+        'oswald': ['Oswald', 'sans-serif'], 
+        'lora': ['Lora', 'serif']
       },
       // textColor: {
       //   'headingColor': '#333',
@@ -83,10 +85,7 @@ module.exports = {
       secoundary:"3px"
       },
 
-      transitionDuration: {
-        '0': '0ms',
-        'primary-duration': '1000ms',
-      },
+    
       // custom width
       width: {
         'input-field': '48%',
@@ -103,21 +102,22 @@ module.exports = {
 
       colors: {
 
-        'headingColor': '#333',
-        'primary-color': '#c8ab77',
-        'primary-colorHover': '#9b7a3e',
+        'headingColor': themeStyle.color.heeading.primary,
+        'primary-color': themeStyle.color.linkHover.primary,
+        'primary-colorHover': themeStyle.color.linkHover.secoundary,
         'nameColor': '#aaa',
-        'linkHoverColor': '#f7f8fa',
-        'white': '#ffff',
-        'black': '#000',
-        'green': 'green',
-        'red': 'red',
-        'secoundary-color':'#ddd',
-        'red-400':'rgb(127 29 29)'
+        'secoundary-color':themeStyle.color.backgroundColor.primary,
+        'facebook':themeStyle.color.socialMedia.facebookHover,
+        'twitter':themeStyle.color.socialMedia.twitterHover,
+        'pinterest':themeStyle.color.socialMedia.pinterestHover,
+        'text-secoundary':themeStyle.color.text.secoundary
+
+
+
 
       },
-      animation: {
-        'nav-animate': 'al 1s ease-out',
+      opacity: {
+        'headingOpecity':themeStyle.color.heeading.opecity ,
       }
 
     },

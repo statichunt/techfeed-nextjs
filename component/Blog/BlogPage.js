@@ -41,9 +41,23 @@ const BlogPage = ({posts,page}) => {
             
 
                   {
-                currentPosts.map(blog=><div className="blog  md:h-h500"  key={blog.slug}>
+                currentPosts.map(blog=><div className=" w-full
+                md:w-1/2 
+                lg:w-1/3
+                md:pr-5
+                sm:box-border
+                md:mt-20
+                md:mb-12
                 
-                <div className="blogImage"
+                clear-both
+                sm:px-2
+                mt-16 
+                 md:h-h500"  key={blog.slug}>
+                
+                <div className="  w-full
+                                md:h-h200 
+                                h-h300
+                                relative"
                  >
                      <Image
                      alt='abc'
@@ -118,8 +132,9 @@ const BlogPage = ({posts,page}) => {
                     <ul className="flex items-center">
                         
                         {
-                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-primary-color pagination-list" :
-                             "  hover:bg-primary-color hover:text-white  pagination-list "} onClick={
+                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-primary-color   h-8 w-8  rounded-fullflex justify-centeritems-centermx-2cursor-pointer text-xl" :
+                             "  hover:bg-primary-color hover:text-white  h-8   w-8 rounded-full  flex justify-center  items-center mx-2 cursor-pointer  text-xl"} 
+                             onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a className=''>{num}</a></li>)
                         }
                     </ul>

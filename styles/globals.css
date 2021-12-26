@@ -122,7 +122,7 @@
      tracking-secoundary
      font-normal
      uppercase
-},
+}
 
 /* .posted-date{
     @apply
@@ -155,31 +155,18 @@
     
 } */
 /* blog and category page  */
-.blog{
+/* .blog{
     @apply
-    w-full
-    md:w-1/2 
-    lg:w-blog-width
-    md:pr-5
-    sm:box-border
-    md:mt-20
-    md:mb-12
-    
-    clear-both
-    sm:px-2
-    mt-16
+   
     
     
-}
-.blogImage{
+} */
+/* .blogImage{
     @apply
-    w-full
-     md:h-h200 
-    h-h300
-     relative
-}
+  
+} */
 
-.pagination-list{
+/* .pagination-list{
     @apply
     h-8
      w-8 
@@ -190,8 +177,8 @@
      mx-2
       cursor-pointer 
      text-xl
-}
- }
+} */
+ 
 
 /* form  */
 .submit{
@@ -268,7 +255,7 @@
     
 }
  
-
+}
  
 /* .bannerContent{
     @apply

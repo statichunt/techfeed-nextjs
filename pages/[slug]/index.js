@@ -3,23 +3,20 @@ import Image from "next/image";
 import path from "path";
 import Link from "next/dist/client/link";
 import { marked } from "marked";
-import { IconData } from "../../config/IconData";
 import FilterData from "../../component/FilterData";
 import AboutAuthor from "../../component/About/AboutAuthor";
 import matter from 'gray-matter';
 import Header from "next/head";
 import styles from "../../styles/Home.module.css"
+import socialIcon from '../../content/config.json'
 
 
 // const matter = require("gray-matter");
 
-const SinglePost = ({
-  posts,
-  frontmatter,
-  content,
-  slug,
-  aboutFrontMatter,
-}) => {
+const SinglePost = ({posts,frontmatter,content,slug, aboutFrontMatter,}) =>
+{
+
+  const {socialMedia}=socialIcon
 
 
   const filter = posts.filter(
@@ -36,7 +33,7 @@ const SinglePost = ({
 
 
   return (
-    <div className="flex justify-center items-center container">
+    <div className="flex justify-center items-center PostContainer">
       <Header>
         <title>{slug}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -81,28 +78,20 @@ const SinglePost = ({
             <div className="my-10">
               <div className="flex justify-start">
                 {
-                  IconData.slice(0, 3).map(i => <div key={i.class} className=""
+                  socialMedia.slice(0, 3).map(i => <div key={i.class} className=""
 
                   >
 
                     <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}>
-                      <a target="_blank" rel='noflow' className={` w-14
-                                                                    h-14
-                                                                    rounded-full
-                                                                    mx-2
-                                                                    text-xl
-                                                                    bg-secoundary-color
-                                                                    flex
-                                                                    justify-center
-                                                                    items-center
-                                                                    cursor-pointer ${i.class=="facebook" ? 
+                      <a target="_blank" rel='noflow' className={`  socialMedia
+                                                                     ${i.class=="facebook" ? 
                                                                     "hover:bg-blue-600 hover:text-text-secoundary" :
                                                                     i.class=="twitter"?
                                                                     "hover:bg-blue-400 hover:text-text-secoundary" :
                                                                     i.class=="pinterest"?
                                                                     "hover:bg-red-800 hover:text-text-secoundary":undefined
                                                                     
-                                                                    }`}>{i.icon}</a>
+                                                                    }`}><i className={`${i.icon} not-italic`}></i></a>
                     </Link>
 
                   </div>)

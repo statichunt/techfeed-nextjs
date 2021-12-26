@@ -1,142 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
- @tailwind base;
- @tailwind components;
- @tailwind utilities;
- @layer components{
+@layer components {
 
     /* common class */
- .heading{
-    @apply
-     md:text-5xl 
-     sm:text-3xl
-     text-2xl
-     font-oswald
-     text-headingColor
-     my-3
-     font-medium
-     uppercase
-     
+    .heading {
+        @apply  md:text-5xl sm:text-3xl text-2xl font-oswald text-headingColor my-3 font-medium uppercase;
+    }
 
- }
+    .PostContainer {
+        @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-lora;
+    }
 
- .PostContainer{
-    @apply
-    px-4
-    sm:px-10
-     max-w-full
-     md:max-w-medium-device-container
-     lg:max-w-large-device-container
-     sm:max-w-small-device-container
-     xl:max-w-extralarge-device-container
-     flex-order
-     flex-wrap
-     mx-auto
-     my-10
-     font-lora
-} 
+    .hover {
+        @apply text-primary-color hover:text-primary-colorHover;
+    }
 
-.hover{
-    @apply 
-    text-primary-color
-     
-     hover:text-primary-colorHover
-}
-.flex-order{
-    @apply
-    flex
-    justify-center
-    items-center
-}
- 
-/* nav menu start */
-.navItem{
-    @apply
-    text-nav
-    mx-3
-   
-    hover:text-primary-color
-    font-lora
-    relative
-    font-normal
-     p-4
-     tracking-primary
-     uppercase
-    
+    .flex-order {
+        @apply flex justify-center items-center;
+    }
 
-}
+    /* nav menu start */
+    .navItem {
+        @apply text-nav mx-3 hover:text-primary-color font-lora relative font-normal p-4 tracking-primary uppercase;
+    }
 
-.nav{
-    @apply
-    flex-order
-     h-navBarHeight 
-     md:px-6
-    border-b
-    border-footerBorder
-    box-border
-}
-.menuButton{
-    @apply
-   flex-order
-      text-3xl
-      text-headingColor
-      cursor-pointer
-      hover:text-primary-color
-    
-}
-.subMenu{
-    @apply
-  
-    uppercase
-     py-2
-     px-3
-     absolute
-     w-60
-     bg-gray-100
-     z-10
-     -left-5
+    .nav {
+        @apply flex-order h-navBarHeight md:px-6 border-b border-footerBorder box-border;
+    }
 
-}
-/* author start */
-.authorDetails{
-    @apply
-    font-lora
-    italic
-   text-authorText
-   
-    text-center
-  lg:w-about-content
-  w-full
-  mb-4
-  leading-8
-}
+    .menuButton {
+        @apply flex-order text-3xl text-headingColor cursor-pointer hover:text-primary-color
+    }
 
-/* post start */
-.title{
-    @apply
-    font-oswald
-     text-xl
-     relative
-     border-b-4
-     border-primary-color
-     cursor-pointer
-     tracking-secoundary
-     font-normal
-     uppercase
-}
+    /* post start */
 
-/* .posted-date{
-    @apply
-    italic  font-lora 
-    md:text-lg text-sm font-normal text-nameColor
-} */
-/* .sociallink{
-    @apply
-   
-    
-     
+    .authorDetails {
+        @apply font-lora italic text-authorText text-center lg:w-about-content w-full mb-4 leading-8
+    }
 
-} */
- /* mx-2
+    .title {
+        @apply font-oswald text-xl relative border-b-4 border-primary-color cursor-pointer tracking-secoundary font-normal uppercase;
+    }
+
+    .subMenu {
+        @apply uppercase py-2 px-3 absolute w-60 bg-gray-100 z-10 -left-5;
+    }
+   .socialMedia{
+       @apply w-14 h-14 rounded-full mx-2 text-xl bg-secoundary-color flex justify-center items-center cursor-pointer
+   }
+    /* mx-2
      w-12
      h-h12
      rounded-full
@@ -145,151 +59,62 @@
      justify-center
      items-center
      cursor-pointer */
-     /*pagination button  */
-/* .paginationButton{
+    /*pagination button  */
+    /* .paginationButton{
     @apply
  
 } */
-/* .buttonDisable{
-    @apply
-    
-} */
-/* blog and category page  */
-/* .blog{
-    @apply
-   
-    
-    
-} */
-/* .blogImage{
-    @apply
-  
-} */
+    .buttonClass {
+        @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full bg-black hover:bg-primary-color text-white block my-5 sm:text-base text-sm
+    }
 
-/* .pagination-list{
-    @apply
-    h-8
-     w-8 
-    rounded-full
-    flex
-     justify-center
-     items-center
-     mx-2
-      cursor-pointer 
-     text-xl
-} */
- 
+    .buttonDisable {
+        @apply
+    }
 
-/* form  */
-.submit{
-    @apply
-    px-8 
-    py-4 
-    bg-primary-color 
-    hover:bg-black 
-    text-white 
-    font-lora 
-    text-xl 
-    rounded-full
-     
-}
-.inputField{
-    @apply
-   md:w-input-field
-   w-full
-    border-2 
-    p-4 
-    border-footerBorder
-    outline-none
-    my-4
-   block
-  
-   font-lora
- 
-}
-.welcomeContent{
-    @apply
-    w-40
-    h-40
-    relative
-}
-.welcomeImage{
-    @apply
-    rounded-full
-}
-.pageTitle{
-    @apply
-    lg:text-5xl
-    sm:text-3xl
-    text-2xl
-     uppercase
-     text-center
-     my-8
-     font-medium
-     font-oswald
-     text-headingColor
-}
-.categoryContainer{
-    @apply
-   text-headingColor
-     md:flex
-     md:justify-around
-     md:items-center
-    container
-     block
-     mx-auto
-     text-center
-}
-.categoryTitle{
-    @apply
-   md:my-24
-   my-12
-    
-     hover:shadow-sm
-     hover:shadow-gray-400
-     p-4
-  
-     rounded-sm
-     font-oswald
-     text-2xl
-    
-}
- 
-}
- 
-/* .bannerContent{
-    @apply
 
-    flex
-    justify-center
-    items-center
-    md:w-1/3
-   sm:w-2/3
-    flex-col
-    absolute
-      h-bannerHeight
-     top-1/2
-     left-1/2
-     transform
-     -translate-x-1/2
-     -translate-y-1/2
-   
-     text-center
-     font-lora
-     italic
-     md:text-xl
-     text-xs
-     sm:text-sm
-}  */
+    .pagination-list {
+        @apply h-8 w-8 rounded-full flex justify-center items-center mx-2 cursor-pointer text-xl
+    }
 
-/* 
- */
+    /* form  */
+    .submit {
+        @apply px-8 py-4 bg-primary-color hover:bg-black text-white font-lora text-xl rounded-full;
+    }
 
-/*  */
-/* 
- */
-/*  */
-/*  */
-/*  */
-/* } */
+    .inputField {
+        @apply md:w-input-field w-full border-2 p-4 border-footerBorder outline-none my-4 block font-lora;
+    }
 
+    .welcomeContent {
+        @apply w-40 h-40 relative;
+    }
+
+    .welcomeImage {
+        @apply rounded-full;
+    }
+
+    .pageTitle {
+        @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-oswald text-headingColor;
+    }
+
+    .categoryContainer {
+        @apply text-headingColor md:flex md:justify-around md:items-center container block mx-auto text-center;
+    }
+
+    .categoryTitle {
+        @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-oswald text-2xl;
+    }
+
+
+    .blog {
+        @apply w-full md:w-1/2 lg:w-blog-width md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16
+    }
+
+    .blogImage {
+        @apply w-full md:h-h200 h-h300 relative
+    }
+
+
+
+}

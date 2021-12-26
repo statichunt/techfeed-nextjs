@@ -41,23 +41,9 @@ const BlogPage = ({posts,page}) => {
             
 
                   {
-                currentPosts.map(blog=><div className=" w-full
-                md:w-1/2 
-                lg:w-1/3
-                md:pr-5
-                sm:box-border
-                md:mt-20
-                md:mb-12
+                currentPosts.map(blog=><div className=" blog"  key={blog.slug}>
                 
-                clear-both
-                sm:px-2
-                mt-16 
-                 md:h-h500"  key={blog.slug}>
-                
-                <div className="  w-full
-                                md:h-h200 
-                                h-h300
-                                relative"
+                <div className=" blogImage"
                  >
                      <Image
                      alt='abc'
@@ -87,38 +73,14 @@ const BlogPage = ({posts,page}) => {
                     {
                         hasPreviousPage ? <a>
                             <button
-                                className="sm:w-24
-
-                                w-12
-                                h-8
-                                sm:h-h12
-                                rounded-full
-                                bg-black
-                                hover:bg-primary-color
-                                text-white
-                                block
-                                
-                                my-5
-                                sm:text-base
-                                text-sm"
+                                className="buttonClass"
                                 onClick={
                                     () => router.push(`/blog/?page=${page - 1}`)
                                 }>
                                     prev</button>
                         </a> : <a>
                             <button
-                                className=" sm:w-24
-
-                                w-12
-                                h-8
-                                sm:h-h12
-                                rounded-full
-                                text-white
-                                block
-                                
-                                my-5
-                                sm:text-base
-                                text-sm  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                                className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                 onClick={
                                     () => router.push(`/blog/?page=${page - 1}`)
 
@@ -132,33 +94,20 @@ const BlogPage = ({posts,page}) => {
                     <ul className="flex items-center">
                         
                         {
-                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-primary-color   h-8 w-8  rounded-fullflex justify-centeritems-centermx-2cursor-pointer text-xl" :
-                             "  hover:bg-primary-color hover:text-white  h-8   w-8 rounded-full  flex justify-center  items-center mx-2 cursor-pointer  text-xl"} 
+                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-primary-color   pagination-list" :
+                             "  hover:bg-primary-color hover:text-white pagination-list"} 
                              onClick={
                                 () => router.push(`/blog/?page=${num}`)}><a className=''>{num}</a></li>)
                         }
                     </ul>
                     {
                         hasNextPage ? <a>
-                            <button className=" sm:w-24
-
-                                                w-12
-                                                h-8
-                                                sm:h-h12
-                                                rounded-full
-                                                bg-black
-                                                hover:bg-primary-color
-                                                text-white
-                                                block
-
-                                                my-5
-                                                sm:text-base
-                                                text-sm"
+                            <button className=" buttonClass"
                                 onClick={
                                     () => router.push(`/blog/?page=${page + 1}`)}>Next</button>
                         </a> :
                             <a>
-                                <button className="   bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                                <button className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                     onClick={
                                         () => router.push(`/blog/?page=${page + 1}`)
                                     }>Next</button></a>}

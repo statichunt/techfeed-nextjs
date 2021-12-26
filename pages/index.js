@@ -5,24 +5,17 @@ import matter from 'gray-matter'
 import { AppContext } from '../component/AppContext';
 
 const currentDate=new Date()
-const Home = ({ posts, page,aboutFrontMatter }) => {
+const Home = ({ posts, page }) => {
   const [postLength,setPostLength]=useContext(AppContext)
- 
 
- 
-  
   useEffect(()=>{
     setPostLength(posts.length)
   })
   
   const post = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
-  
-  
-
-
   return (
     <div>
-      <p><i className="fab fa-facebook-f"></i></p>
+
       <Author ></Author >
       <Post value={post} page={page}></Post>
 
@@ -54,8 +47,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
       category
     }
   });
- 
-  
+
   const filterByDate=posts.filter(post=>new Date(post.frontmatter.date)<=currentDate)
   // about page data 
   return {

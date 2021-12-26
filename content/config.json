@@ -80,7 +80,33 @@
     "heading":"WELCOME TO MY BLOG",
    "image":"/image/author.jpg",
     "details":"My name is Mark Dinn. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples."
-}
+},
 
-    
+  "socialMedia":  [
+    {
+        "icon":"fab fa-facebook-f",
+       "class":"facebook",
+        "shareLink":"https://www.facebook.com/sharer/sharer.php?u=",
+        "profileLink":"https://www.facebook.com/userId"  
+    },
+    {
+        "icon":"fab fa-twitter",
+       "class":"twitter",
+        "shareLink":"https://twitter.com/intent/tweet/?text=What%20else%20do%20we%20need%20to%20make%20this%20a%20success%3f&url=",
+        "profileLink":"https://twitter.com/?lang=en"   
+    },
+    {
+        "icon":"fab fa-pinterest",
+       "class":"pinterest",
+        "shareLink":"https://www.pinterest.com/pin/?text=What%20else%20do%20we%20need%20to%20make%20this%20a%20success%3f&url=",
+        "profileLink":"https://www.pinterest.com/usierId/_saved/"  
+    },
+    {
+        "icon":"fab fa-instagram",
+       "class":"instgram",
+        "shareLink":"https://www.facebook.com/sharer/sharer.php?u=",
+        "profileLink":"https://www.instagram.com/userId"  
+    }
+   
+  ] 
 }

@@ -1,14 +1,13 @@
 import Link from 'next/dist/client/link'
 import Image from 'next/image'
-
-import { IconData } from '../../config/IconData'
+import socialIcon from '../../content/config.json'
 
 
 function AboutAuthor({data,author}) {
    
 
    
-   
+   const {socialMedia}=socialIcon
     return (
         <div className="my-20 " >
               <p className="text-lg font-oswald my-5">PUBLISHED BY <strong className="text-primary-color">{author}</strong></p>
@@ -35,9 +34,9 @@ function AboutAuthor({data,author}) {
                     <div className="flex  justify-center lg:justify-start">
                         {
 
-                            IconData.map(icon=><div key={icon.class} className="mr-2">
+                            socialMedia.map(icon=><div key={icon.class} className="mr-2">
                             <Link href={icon.profileLink} >  
-                             <a className="hover text-black " target="_blank" rel='noflow'>{icon.icon}</a>
+                             <a className="hover text-black " target="_blank" rel='noflow'><i className={`${icon.icon} not-italic`}></i></a>
                              </Link>
                                 </div>)
 

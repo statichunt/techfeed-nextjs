@@ -15,22 +15,19 @@ function MyApp({ Component, pageProps }) {
   const {perameter}=perameters
   
   return (
-    
     <>
-     <Head>
+      <Head>
         <title>{perameter.title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel='icon' href={perameter.icon}></link>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oswald&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oswald&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
       </Head>
-    <AppContext.Provider value={[postLength,setPostLength]}><Layout ><Component {...pageProps} /></Layout></AppContext.Provider>
-   
+      <AppContext.Provider value={[postLength,setPostLength]}><Layout ><Component {...pageProps} /></Layout></AppContext.Provider>
     </>
   )
-         
-  
 }
 
 export default MyApp

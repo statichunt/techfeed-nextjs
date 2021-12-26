@@ -19,7 +19,7 @@ function Category({value}) {
 
          <h1 className='pageTitle'>Showing Blog From <span className='text-primary-color' >{filterCategory[0]}</span></h1>
          
-               <div className="container">
+               <div className="PostContainer">
                    
             {
                 value.map(blog=><React.Fragment key={blog.slug}>

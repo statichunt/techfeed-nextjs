@@ -37,7 +37,7 @@ const BlogPage = ({posts,page}) => {
             </title>
         </Header>
         <h1 className='pageTitle'>All Blogs</h1>
-        <div className="container mx-auto">
+        <div className="PostContainer mx-auto">
             
 
                   {
@@ -73,14 +73,38 @@ const BlogPage = ({posts,page}) => {
                     {
                         hasPreviousPage ? <a>
                             <button
-                                className="buttonClass  "
+                                className="sm:w-24
+
+                                w-12
+                                h-8
+                                sm:h-h12
+                                rounded-full
+                                bg-black
+                                hover:bg-primary-color
+                                text-white
+                                block
+                                
+                                my-5
+                                sm:text-base
+                                text-sm"
                                 onClick={
                                     () => router.push(`/blog/?page=${page - 1}`)
                                 }>
                                     prev</button>
                         </a> : <a>
                             <button
-                                className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                                className=" sm:w-24
+
+                                w-12
+                                h-8
+                                sm:h-h12
+                                rounded-full
+                                text-white
+                                block
+                                
+                                my-5
+                                sm:text-base
+                                text-sm  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                 onClick={
                                     () => router.push(`/blog/?page=${page - 1}`)
 
@@ -101,12 +125,25 @@ const BlogPage = ({posts,page}) => {
                     </ul>
                     {
                         hasNextPage ? <a>
-                            <button className="buttonClass  "
+                            <button className=" sm:w-24
+
+                                                w-12
+                                                h-8
+                                                sm:h-h12
+                                                rounded-full
+                                                bg-black
+                                                hover:bg-primary-color
+                                                text-white
+                                                block
+
+                                                my-5
+                                                sm:text-base
+                                                text-sm"
                                 onClick={
                                     () => router.push(`/blog/?page=${page + 1}`)}>Next</button>
                         </a> :
                             <a>
-                                <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                                <button className="   bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                     onClick={
                                         () => router.push(`/blog/?page=${page + 1}`)
                                     }>Next</button></a>}

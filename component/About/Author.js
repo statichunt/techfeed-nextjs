@@ -6,7 +6,7 @@ import config from '../../content/config.json'
 export default function Author() {
     const {welcomeContent}=config
     return (
-        <div className="mt-24 container">
+        <div className="mt-24 PostContainer">
             <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
                
                 <div className="welcomeContent">

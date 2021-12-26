@@ -1,7 +1,7 @@
 
 const themeStyle=require('./content/style.json')
 module.exports = {
-  
+  mode:"jit",
   content: ["./pages/**/*.{js,ts,jsx,tsx}",
     "./component/**/*.{js,ts,jsx,tsx}",
   ],
@@ -43,8 +43,8 @@ module.exports = {
         "authorText":"20px"
       },
       fontFamily: {
-        'oswald': ['Oswald', 'sans-serif'], 
-        'lora': ['Lora', 'serif']
+        'oswald': ['"Oswald"', 'sans-serif'], 
+        'lora': ['"Lora"', 'serif']
       },
       // textColor: {
       //   'headingColor': '#333',

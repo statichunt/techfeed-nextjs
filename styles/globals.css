@@ -19,7 +19,7 @@
 
  }
 
- .container{
+ .PostContainer{
     @apply
     px-4
     sm:px-10
@@ -124,29 +124,14 @@
      uppercase
 },
 
-.posted-date-name{
+/* .posted-date{
     @apply
-    italic
-     font-lora 
-    md:text-lg
-     text-sm
-     font-normal
-     text-nameColor
-}
+    italic  font-lora 
+    md:text-lg text-sm font-normal text-nameColor
+} */
 /* .sociallink{
     @apply
-   md:w-14
-    md:h-14
-    w-12
-    h-12
-    rounded-full
-    mx-2
-    md:text-xl
-    text-sm
-    bg-secoundary-color
-    flex
-    justify-center
-    items-center    
+   
     
      
 
@@ -161,29 +146,14 @@
      items-center
      cursor-pointer */
      /*pagination button  */
-.buttonClass{
+/* .paginationButton{
     @apply
-  sm:w-24
-
-   w-12
-   h-8
-   sm:h-h12
-    rounded-full
-    bg-black
-    hover:bg-primary-color
-    text-white
-    block
-     
-    my-5
-    sm:text-base
-    text-sm
-}
-.buttonDisable{
+ 
+} */
+/* .buttonDisable{
     @apply
-    bg-secoundary-color
-     hover:bg-secoundary-color
-     cursor-default
-}
+    
+} */
 /* blog and category page  */
 .blog{
     @apply

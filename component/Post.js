@@ -32,7 +32,7 @@ useEffect(() => {
 
 return (
     <>
-        <div className="container" >
+        <div className="PostContainer" >
             {
                 currentPosts.map(data => <div key={data.slug} className="w-full my-10 block" >
 
@@ -100,20 +100,17 @@ return (
             IconData.slice(0,3).map(i=><div key={i.shareLink} className=''>
                 <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
                     <a target="_blank" rel='noflow' className={`
-                                            md:w-14
-                                            md:h-14
-                                            w-12
-                                            h-12
-                                            rounded-full
-                                            mx-2
-                                            md:text-xl
-                                            text-sm
-                                            bg-secoundary-color
-                                            flex
-                                            justify-center
-                                            items-center    
-                                            
-                                            transition
+                                           md:w-14
+                                           md:h-14
+                                           w-12
+                                           h-12
+                                           rounded-full
+                                           mx-2
+                                           md:text-xl
+                                           text-sm
+                                           bg-secoundary-color
+                                          flex-order   
+                                        transition
                                         cursor-pointer ${i.class=="facebook" ? 
                                         "hover:bg-facebook hover:text-text-secoundary" :
                                         i.class=="twitter"?
@@ -141,31 +138,71 @@ return (
                 {
                     hasPreviousPage ? <a>
                         <button
-                            className="buttonClass  "
+                            className="sm:w-24
+
+                            w-12
+                            h-8
+                            sm:h-h12
+                            rounded-full
+                            bg-black
+                            hover:bg-primary-color
+                            text-white
+                            block
+                            
+                            my-5
+                            sm:text-base
+                            text-sm"
                             onClick={
                                 () => router.push(`/?page=${page - 1}`)
                             }>Prev</button>
                     </a> : <a>
                         <button
-                            className="buttonClass  buttonDisable" disabled
+                            className=" sm:w-24
+
+                            w-12
+                            h-8
+                            sm:h-h12
+                            rounded-full
+    
+                            text-white
+                            block
+                            
+                            my-5
+                            sm:text-base
+                            text-sm   bg-secoundary-color
+                            hover:bg-secoundary-color
+                            cursor-default" disabled
                             onClick={
                                 () => router.push(`/?page=${page - 1}`)
 
 
                             }
-
+                            //  
 
                         >Prev</button>
                     </a>
                 }
                 {
                     hasNextPage ? <a>
-                        <button className="buttonClass  "
+                        <button className=" sm:w-24
+
+                                        w-12
+                                        h-8
+                                        sm:h-h12
+                                        rounded-full
+                                        bg-black
+                                        hover:bg-primary-color
+                                        text-white
+                                        block
+                                        
+                                        my-5
+                                        sm:text-base
+                                        text-sm"
                             onClick={
                                 () => router.push(`/?page=${page + 1}`)}>Next</button>
                     </a> :
                         <a>
-                            <button className="buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
+                            <button className="   bg-gray-400 hover:bg-gray-400 cursor-default" disabled
                                 onClick={
                                     () => router.push(`/?page=${page + 1}`)
                                 }>Next</button></a>}

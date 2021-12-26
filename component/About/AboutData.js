@@ -6,7 +6,7 @@ import Header from "next/head"
 function AboutData({data}) {
     
     return (
-        <div className="container my-16">
+        <div className="PostContainer my-16">
             <Header>
                 <title>{data.frontmatter.about}</title>
             </Header>

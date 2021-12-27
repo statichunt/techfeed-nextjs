@@ -1,85 +1,76 @@
+import fs from "fs";
+import path from "path";
+import Category from "../../../component/Category";
+const matter = require("gray-matter");
 
-import fs from 'fs'
-import path from 'path'
-import Category from '../../../component/Category';
-const matter = require('gray-matter')
-
-
-function CategoryData({ category,posts }) {
- 
-
-  const filterByCategory = posts.filter(data => data.category == category)
-
+function CategoryData({ category, posts }) {
+  const filterByCategory = posts.filter((data) => data.category == category);
 
   return (
     <>
-
       <div>
         <Category value={filterByCategory}></Category>
       </div>
-
     </>
-  )
+  );
 }
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join("posts"));
 
   const posts = files.map((filename) => {
-    const metaDataWithFrontMatter = fs.readFileSync(path.join('posts', filename), 'utf-8')
-    const { data: frontmatter, content } = matter(metaDataWithFrontMatter)
+    const metaDataWithFrontMatter = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
+    const { data: frontmatter, content } = matter(metaDataWithFrontMatter);
     return {
       content,
-      frontmatter
-    }
-  })
-  console.log(posts)
+      frontmatter,
+    };
+  });
+  console.log(posts);
   const paths = posts.map((category) => ({
     params: {
-      category: category.frontmatter.category.replace(/ /g,"-")
-    }
-  }))
-  
-  
+      category: category.frontmatter.category.replace(/ /g, "-"),
+    },
+  }));
+
   return {
     paths,
-    fallback: false
-  }
-}
+    fallback: false,
+  };
+};
 
 export const getStaticProps = async ({ params }) => {
   const { category } = params;
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join("posts"));
 
   const posts = files.map((filename) => {
-    const slug = filename.replace('.md', '').replace(/ /g,"-")
+    const slug = filename.replace(".md", "").replace(/ /g, "-");
 
+    const metaDataWithFrontMatter = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
 
-    const metaDataWithFrontMatter = fs.readFileSync(path.join('posts', filename), 'utf-8')
-
-    const { data: frontmatter, content } = matter(metaDataWithFrontMatter)
-    const category=frontmatter.category.replace(/ /g,"-")
-
-
+    const { data: frontmatter, content } = matter(metaDataWithFrontMatter);
+    const category = frontmatter.category.replace(/ /g, "-");
 
     return {
       slug,
       content,
       frontmatter,
-      category
-    }
-  })
-  
+      category,
+    };
+  });
 
   return {
     props: {
       category,
-      posts
-
-
-
-    }
-  }
-}
+      posts,
+    },
+  };
+};
 
 export default CategoryData;

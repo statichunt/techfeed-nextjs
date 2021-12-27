@@ -1,13 +1,12 @@
-import React from 'react'
-import Contact from '../../component/ContactPage/Contact'
+import React from "react";
+import Contact from "../../component/ContactPage/Contact";
 
 function index() {
-   
-    return (
-        <div>
-            <Contact></Contact>
-        </div>
-    )
+  return (
+    <div>
+      <Contact></Contact>
+    </div>
+  );
 }
 
-export default index
+export default index;

@@ -115,6 +115,14 @@
         @apply w-full md:h-h200 h-h300 relative
     }
 
-
+  .facebook{
+      @apply hover:bg-facebook hover:text-text-secoundary
+  }
+  .twitter{
+      @apply hover:bg-twitter hover:text-text-secoundary
+  }
+  .pinterest{
+      @apply hover:bg-pinterest hover:text-text-secoundary
+  }
 
 }

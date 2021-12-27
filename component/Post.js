@@ -5,6 +5,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import Link from 'next/dist/client/link'
 import { useEffect } from 'react'
 import socialIcon from '../content/config.json'
+import Pagination from './Pagination'
 const Post = ({ value, page }) => {
 
 const {socialMedia,postsPerPage}=socialIcon
@@ -17,8 +18,6 @@ const indexOfLastPost = page * postsPerPage;
 const indexOfFirstPost = indexOfLastPost - postsPerPage;
 const currentPosts = value.slice(indexOfFirstPost, indexOfLastPost);
 const pageNumber = Math.ceil(value.length / postsPerPage)
-const hasNextPage = pageNumber > page;
-const hasPreviousPage = page > 1;
 const router = useRouter()
 
 
@@ -84,14 +83,9 @@ return (
                 <Link href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}>
                     <a target="_blank" rel='noflow' className={`
                                           socialMedia
-                                           cursor-pointer ${i.class=="facebook" ? 
-                                        "hover:bg-facebook hover:text-text-secoundary" :
-                                        i.class=="twitter"?
-                                        "hover:bg-twitter hover:text-text-secoundary" :
-                                        i.class=="pinterest"?
-                                        "hover:bg-pinterest hover:text-text-secoundary":undefined
-                                        
-                                        }`}>
+                                           cursor-pointer
+                                           ${i.class}
+                                           `}>
                                        <i className={`${i.icon} not-italic`}></i>
                     </a>
                 </Link>
@@ -108,41 +102,7 @@ return (
 
             {/* pagination  */}
             <div className="w-full lg:w-4/6 mx-auto flex justify-between">
-                {
-                    hasPreviousPage ? <a>
-                        <button
-                            className="buttonClass"
-                            onClick={
-                                () => router.push(`/?page=${page - 1}`)
-                            }>Prev</button>
-                    </a> : <a>
-                        <button
-                            className=" buttonClass  bg-secoundary-color
-                            hover:bg-secoundary-color
-                            cursor-default" disabled
-                            onClick={
-                                () => router.push(`/?page=${page - 1}`)
-
-
-                            }
-                            //  
-
-                        >Prev</button>
-                    </a>
-                }
-                {
-                    hasNextPage ? <a>
-                        <button className="buttonClass"
-                            onClick={
-                                () => router.push(`/?page=${page + 1}`)}>Next</button>
-                    </a> :
-                        <a>
-                            <button className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
-                                onClick={
-                                    () => router.push(`/?page=${page + 1}`)
-                                }>Next</button></a>}
-
-
+               <Pagination pageNumber={pageNumber} page={page}></Pagination>
 
             </div>
         </div>

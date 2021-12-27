@@ -1,30 +1,26 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import Image from 'next/dist/client/image'
 import Link from 'next/dist/client/link'
 import { useRouter } from 'next/router'
 import Header from 'next/head'
 import  config from '../../content/config.json'
+import Pagination from '../Pagination'
 
 
 const BlogPage = ({posts,page}) => {
+    const [isBlog]=useState(true)
     const {postsPerPage}=config
-    console.log(postsPerPage)
+    
     const indexOfLastPost = page * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
     const pageNumber = Math.ceil(posts.length / postsPerPage)
-    const hasNextPage = pageNumber > page;
-    const hasPreviousPage = page > 1;
-    const pageList=[]
-    for (let i = 1; i <= pageNumber; i++) {
-        pageList.push(i)
-        
-        
-    }
     
     const router = useRouter()
 
     useEffect(() => {
+       
+        
         if (page > pageNumber) {
             router.push('/blog')
         }
@@ -70,49 +66,8 @@ const BlogPage = ({posts,page}) => {
              </div>)
             }
              <div className="w-full sm:px-16 mx-auto flex justify-between mt-10 md:mt-20 transition">
-                    {
-                        hasPreviousPage ? <a>
-                            <button
-                                className="buttonClass"
-                                onClick={
-                                    () => router.push(`/blog/?page=${page - 1}`)
-                                }>
-                                    prev</button>
-                        </a> : <a>
-                            <button
-                                className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
-                                onClick={
-                                    () => router.push(`/blog/?page=${page - 1}`)
 
-
-                                }
-
-
-                            >Prev</button>
-                        </a>
-                    }
-                    <ul className="flex items-center">
-                        
-                        {
-                            pageList.map(num=><li  key={num} className={page==num? "text-white  bg-primary-color   pagination-list" :
-                             "  hover:bg-primary-color hover:text-white pagination-list"} 
-                             onClick={
-                                () => router.push(`/blog/?page=${num}`)}><a className=''>{num}</a></li>)
-                        }
-                    </ul>
-                    {
-                        hasNextPage ? <a>
-                            <button className=" buttonClass"
-                                onClick={
-                                    () => router.push(`/blog/?page=${page + 1}`)}>Next</button>
-                        </a> :
-                            <a>
-                                <button className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default" disabled
-                                    onClick={
-                                        () => router.push(`/blog/?page=${page + 1}`)
-                                    }>Next</button></a>}
-
-
+                            <Pagination pageNumber={pageNumber} page={page} isBlog={isBlog}></Pagination>
 
                 </div>
         </div>

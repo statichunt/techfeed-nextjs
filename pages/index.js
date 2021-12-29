@@ -3,13 +3,13 @@ import Author from "../component/About/Author";
 import Post from "../component/Post";
 import matter from "gray-matter";
 import { AppContext } from "../component/AppContext";
-
+import  {getAboutData } from "../lib"
 
 
 const currentDate = new Date();
-const Home = ({ posts, page }) => {
+const Home = ({ posts, page,data }) => {
   const [postLength, setPostLength] = useContext(AppContext);
-
+console.log(data)
   useEffect(() => {
     setPostLength(posts.length);
   });
@@ -51,11 +51,13 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const filterByDate = posts.filter(
     (post) => new Date(post.frontmatter.date) <= currentDate
   );
+  const data=getAboutData()
   // about page data
   return {
     props: {
       posts: filterByDate,
       page: +page,
+      data:data
     },
   };
 };

@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 
 function Footer() {
+    const year=new Date().getFullYear()
     const {socialMedia}=socialIcon
   const {footer}=footerData
     return (
@@ -27,7 +28,7 @@ function Footer() {
 
                 </div>
                 <div className="text-center mt-8 font-lora text-lg sm:text-xl">
-                    <p >{footer.coppy}</p>
+                    {/* <p >{footer.coppy.replace("year",year)}</p> */}
                     <p>{footer.activity} 
 
                      <Link href={footer.link}> 

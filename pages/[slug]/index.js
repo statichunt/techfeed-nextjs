@@ -7,7 +7,6 @@ import FilterData from "../../component/FilterData";
 import AboutAuthor from "../../component/About/AboutAuthor";
 import matter from "gray-matter";
 import Header from "next/head";
-import styles from "../../styles/Home.module.css";
 import socialIcon from "../../content/config.json";
 import { getAboutData, getPost } from "../../lib";
 

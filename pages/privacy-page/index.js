@@ -1,11 +1,32 @@
 import React from 'react'
+import { getPrivacyPage } from '../../lib'
+import { marked } from 'marked'
 
-const PrivacyPage = () => {
+
+const PrivacyPage = ({posts}) => {
     return (
-        <div className='container'>
-            <h2 className='heading text-center my-8 leading-normal'>this privacy page</h2>
+        <div className='PostContainer'>
+            <h2 className='heading text-center my-8 leading-normal '>{posts.frontmatter.title}</h2>
+
+            <div>
+                <div className='content' dangerouslySetInnerHTML={{ __html: marked.parse(posts.content) }}>
+
+                </div>
+            </div>
         </div>
     )
 }
+
+export async function getStaticProps() {
+
+    const postsdata=getPrivacyPage()
+    
+  
+    return {
+      props: {
+        posts: postsdata
+      },
+    };
+  }
 
 export default PrivacyPage

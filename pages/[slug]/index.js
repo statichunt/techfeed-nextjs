@@ -94,7 +94,7 @@ const SinglePost = ({
           <div className="">
             <div
               dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-              className={`font-lora text-xl ${styles.content}`}
+              className="font-lora text-xl content"
               //
             ></div>
 

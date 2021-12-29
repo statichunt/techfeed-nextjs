@@ -24,8 +24,7 @@ function AboutData({ data }) {
             <h1>{data.frontmatter.about}</h1>
           </div>
           <div
-            className="font-lora text-xl I am Emma, A content writer based in LDN, currently at Bookworm.
-"
+            className="font-lora text-xl"
             dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}
           ></div>
         </div>

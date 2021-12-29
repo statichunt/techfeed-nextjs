@@ -4,6 +4,8 @@ import Post from "../component/Post";
 import matter from "gray-matter";
 import { AppContext } from "../component/AppContext";
 
+
+
 const currentDate = new Date();
 const Home = ({ posts, page }) => {
   const [postLength, setPostLength] = useContext(AppContext);
@@ -45,6 +47,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
     };
   });
 
+  
   const filterByDate = posts.filter(
     (post) => new Date(post.frontmatter.date) <= currentDate
   );

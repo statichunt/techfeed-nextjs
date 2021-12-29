@@ -126,3 +126,42 @@
   }
 
 }
+
+
+/* markdown style */
+.content{
+    color: #333;
+      background-color: #fff;
+      
+      font-weight: 400;
+      font-size: 20px;
+  }
+  .content p{
+  
+  margin-bottom: 30px;
+  line-height: 30px;
+  }
+  .content li{
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  
+    
+  }
+  .content blockquote{
+    border-left: 5px solid rgb(202, 194, 194);
+    font-size: 22px;
+  }
+  .content blockquote p{
+    margin-left: 20px;
+  }
+  .content h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .content h3{
+      font-size: 30px;
+      margin: 20px 0px;
+  }

@@ -9,7 +9,7 @@ import  {getAboutData } from "../lib"
 const currentDate = new Date();
 const Home = ({ posts, page,data }) => {
   const [postLength, setPostLength] = useContext(AppContext);
-console.log(data)
+
   useEffect(() => {
     setPostLength(posts.length);
   });
@@ -19,7 +19,7 @@ console.log(data)
   );
   return (
     <div>
-      <Author></Author>
+      <Author data={data}></Author>
       <Post value={post} page={page}></Post>
     </div>
   );

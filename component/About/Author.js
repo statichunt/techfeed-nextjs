@@ -1,10 +1,7 @@
 import React from "react";
-
 import Image from "next//image";
-import config from "../../content/config.json";
 
 export default function Author({data}) {
-  const { welcomeContent } = config;
   return (
     <div className="mt-24 PostContainer">
       <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">

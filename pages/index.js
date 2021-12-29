@@ -3,7 +3,7 @@ import Author from "../component/About/Author";
 import Post from "../component/Post";
 import matter from "gray-matter";
 import { AppContext } from "../component/AppContext";
-import  {getAboutData } from "../lib"
+import  {getAboutData,getPost } from "../lib"
 
 
 const currentDate = new Date();
@@ -26,28 +26,28 @@ const Home = ({ posts, page,data }) => {
 };
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
-  const fs = require("fs");
-  const path = require("path");
-  const directoryPath = path.join(process.cwd(), "posts");
-  const pageSlugs = fs.readdirSync(directoryPath);
-  const posts = pageSlugs.map((filename) => {
-    const slugWspace = filename.replace(".md", "");
-    const slug = slugWspace.replace(/ /g, "-");
+  // const fs = require("fs");
+  // const path = require("path");
+  // const directoryPath = path.join(process.cwd(), "posts");
+  // const pageSlugs = fs.readdirSync(directoryPath);
+  // const posts = pageSlugs.map((filename) => {
+  //   const slugWspace = filename.replace(".md", "");
+  //   const slug = slugWspace.replace(/ /g, "-");
 
-    const fullPath = path.join(directoryPath, filename);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data: frontmatter, content } = matter(fileContents);
-    const category = frontmatter.category.replace(/ /g, "-");
+  //   const fullPath = path.join(directoryPath, filename);
+  //   const fileContents = fs.readFileSync(fullPath, "utf8");
+  //   const { data: frontmatter, content } = matter(fileContents);
+  //   const category = frontmatter.category.replace(/ /g, "-");
 
-    return {
-      slug,
-      content,
-      frontmatter,
-      category,
-    };
-  });
+  //   return {
+  //     slug,
+  //     content,
+  //     frontmatter,
+  //     category,
+  //   };
+  // });
 
-  
+  const posts=getPost()
   const filterByDate = posts.filter(
     (post) => new Date(post.frontmatter.date) <= currentDate
   );

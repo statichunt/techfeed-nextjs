@@ -14,14 +14,14 @@ function AboutAuthor({ data, author }) {
           <Image
             className="rounded-full"
             alt=""
-            src={data.aboutImage}
+            src={data.frontmatter.aboutImage}
             layout="fill"
             objectFit="cover"
           ></Image>
         </div>
 
         <div className="sm:ml-10 w-full sm:w-4/5 lg:my-0 my-8 text-center lg:text-left">
-          <p>{data.details}</p>
+          <p>{data.frontmatter.details}</p>
           <div className="hover my-5 cursor-pointer">
             <Link href="/about">
               <a className=" text-lg font-lora  capitalize"> know more..</a>

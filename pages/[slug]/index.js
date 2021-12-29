@@ -9,6 +9,7 @@ import matter from "gray-matter";
 import Header from "next/head";
 import styles from "../../styles/Home.module.css";
 import socialIcon from "../../content/config.json";
+import { getAboutData } from "../../lib";
 
 // const matter = require("gray-matter");
 
@@ -17,7 +18,7 @@ const SinglePost = ({
   frontmatter,
   content,
   slug,
-  aboutFrontMatter,
+  aboutData
 }) => {
   const { socialMedia } = socialIcon;
 
@@ -130,7 +131,7 @@ const SinglePost = ({
             </div>
 
             <AboutAuthor
-              data={aboutFrontMatter}
+              data={aboutData}
               author={frontmatter.author}
             ></AboutAuthor>
           </div>
@@ -186,22 +187,14 @@ export const getStaticProps = async ({ params }) => {
     };
   });
 
-  const aboutFile = fs.readdirSync(path.join("About"));
-  const metaDataWithFrontMatter = fs.readFileSync(
-    path.join("About", aboutFile[0]),
-    "utf-8"
-  );
-  const { data: aboutFrontMatter, content: aboutContent } = matter(
-    metaDataWithFrontMatter
-  );
+ const aboutData=getAboutData()
 
   return {
     props: {
       posts,
       frontmatter,
       content,
-      aboutFrontMatter,
-      aboutContent,
+      aboutData
     },
   };
 };

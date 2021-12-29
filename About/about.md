@@ -4,7 +4,7 @@ name : Mark Din
 greetings : 'welcome'
 aboutImage : '/image/about1.jpg'
 details : 'I love traveling. Travel is my life, and not just the business that I do. This is part of me, part of my feelings, thoughts, my past and future, a source of new strength and inspiration. These are my friends, scattered all over the world, my favorite cities, favorite streets, houses, beaches, sunsets, snow, rains and everything from which the fabric of our life.'
-about: "I am Mark Dinn, A content writer based in LDN, currently at Bookworm.
+about: "My name is Mark Dinn. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples.
 "
 ---
 

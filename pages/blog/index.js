@@ -1,6 +1,6 @@
-import matter from "gray-matter";
 
 import BlogPage from "../../component/Blog/BlogPage";
+import { getPost } from "../../lib";
 
 const currentDate = new Date();
 const Blogs = ({ posts, page }) => {
@@ -11,21 +11,8 @@ const Blogs = ({ posts, page }) => {
   );
 };
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
-  const fs = require("fs");
-  const path = require("path");
-  const directoryPath = path.join(process.cwd(), "posts");
-  const pageSlugs = fs.readdirSync(directoryPath);
-  const posts = pageSlugs.map((filename) => {
-    const slug = filename.replace(".md", "").replace(/ /g, "-");
-    const fullPath = path.join(directoryPath, filename);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data: frontmatter, content } = matter(fileContents);
-    return {
-      slug,
-      content,
-      frontmatter,
-    };
-  });
+ 
+  const posts = getPost()
 
   const filterByDate = posts.filter(
     (post) => new Date(post.frontmatter.date) <= currentDate

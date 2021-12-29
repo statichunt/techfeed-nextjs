@@ -9,9 +9,8 @@ import matter from "gray-matter";
 import Header from "next/head";
 import styles from "../../styles/Home.module.css";
 import socialIcon from "../../content/config.json";
-import { getAboutData } from "../../lib";
+import { getAboutData, getPost } from "../../lib";
 
-// const matter = require("gray-matter");
 
 const SinglePost = ({
   posts,
@@ -145,12 +144,13 @@ const SinglePost = ({
 export default SinglePost;
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join("posts"));
-  const slugPost = files.map((slug) => slug.replace(".md", ""));
+ 
+  const slugPost = getPost()
 
   const paths = slugPost.map((path) => ({
     params: {
-      slug: path.replace(/ /g, "-"),
+     
+      slug: path.slug,
     },
   }));
 
@@ -169,24 +169,7 @@ export const getStaticProps = async ({ params }) => {
   );
   const { data: frontmatter, content } = matter(singleMetaDataWithFrontMatter);
 
-  const files = fs.readdirSync(path.join("posts"));
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "").replace(/ /g, "-");
-
-    const metaDataWithFrontMatter = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-
-    const { data: frontmatter, content } = matter(metaDataWithFrontMatter);
-    return {
-      slug,
-      content,
-      frontmatter,
-    };
-  });
-
+  const posts=getPost()
  const aboutData=getAboutData()
 
   return {

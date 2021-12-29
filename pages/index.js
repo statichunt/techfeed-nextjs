@@ -3,10 +3,9 @@ import Author from "../component/About/Author";
 import Post from "../component/Post";
 import matter from "gray-matter";
 import { AppContext } from "../component/AppContext";
-import { getAboutData } from "../lib";
 
 const currentDate = new Date();
-const Home = ({ posts, page,aboutData }) => {
+const Home = ({ posts, page }) => {
   const [postLength, setPostLength] = useContext(AppContext);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const Home = ({ posts, page,aboutData }) => {
   );
   return (
     <div>
-      <Author aboutData={aboutData}></Author>
+      <Author></Author>
       <Post value={post} page={page}></Post>
     </div>
   );
@@ -49,14 +48,11 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const filterByDate = posts.filter(
     (post) => new Date(post.frontmatter.date) <= currentDate
   );
-
-  const aboutData=getAboutData()
   // about page data
   return {
     props: {
       posts: filterByDate,
       page: +page,
-      aboutData:aboutData
     },
   };
 };

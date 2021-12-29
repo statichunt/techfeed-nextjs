@@ -18,7 +18,7 @@ const SinglePost = ({
   frontmatter,
   content,
   slug,
-  // aboutData
+  aboutData
 }) => {
   const { socialMedia } = socialIcon;
 
@@ -130,10 +130,10 @@ const SinglePost = ({
               </div>
             </div>
 
-            {/* <AboutAuthor
+            <AboutAuthor
               data={aboutData}
               author={frontmatter.author}
-            ></AboutAuthor> */}
+            ></AboutAuthor>
           </div>
         </div>
         <FilterData value={sortBySlug.slice(0, 3)}></FilterData>
@@ -187,14 +187,14 @@ export const getStaticProps = async ({ params }) => {
     };
   });
 
-//  const aboutData=getAboutData()
+ const aboutData=getAboutData()
 
   return {
     props: {
       posts,
       frontmatter,
       content,
-      // aboutData
+      aboutData
     },
   };
 };

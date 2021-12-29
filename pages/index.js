@@ -56,7 +56,7 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
     props: {
       posts: filterByDate,
       page: +page,
-      aboutData
+      // aboutData
     },
   };
 };

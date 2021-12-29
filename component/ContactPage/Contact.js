@@ -42,7 +42,7 @@ const [redirect,setRedirect]=useState(false)
      <Head>
          <title>Get In Touch </title>
      </Head>
-     <div className=" container flex justify-center items-center my-8 px-4">
+     <div className=" PostContainer flex justify-center items-center my-8 px-4">
       
      <div className="w-full md:w-4/6 mx-auto">
      <h1 className="pageTitle">Get In Touch</h1>

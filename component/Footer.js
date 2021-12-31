@@ -1,48 +1,44 @@
-import socialIcon from '../content/config.json'
-import footerData  from '../content/config.json'
-import Link from 'next/link'
-
-
+import socialIcon from "../content/config.json";
+import footerData from "../content/config.json";
+import Link from "next/link";
 
 function Footer() {
-    const year=new Date().getFullYear()
-    const {socialMedia}=socialIcon
-  const {footer}=footerData
-    return (
-        <div className="py-20 border-t-2 border-footerBorder">
-            <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
-                <div className="flex ">
-                    {
-                      socialMedia.map(data =>
-                            <Link href={data.profileLink} key={data.class}>
-                        <a className="" target="_blank" rel='noflow' >
-                            
-                             <div 
-                            className="socialMedia hover:bg-black hover:text-text-secoundary">
-                                <i className={`${data.icon} not-italic`}></i>
-                                </div>
-                                
-                                </a>
-                                </Link>)
-                    }
-
+  const year = new Date().getFullYear();
+  const { socialMedia } = socialIcon;
+  const { footer } = footerData;
+  return (
+    <div className="py-20 border-t-2 border-borderColor">
+      <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
+        <div className="flex ">
+          {socialMedia.map((data) => (
+            <Link href={data.profileLink} key={data.class}>
+              <a className="" target="_blank" rel="noflow">
+                <div className="socialMedia hover:bg-black">
+                  <i className={`${data.icon} not-italic`}></i>
                 </div>
-                <div className="text-center mt-8 font-lora text-lg sm:text-xl">
-                    {/* <p >{footer.coppy.replace("year",year)}</p> */}
-                    <p>{footer.activity} 
-
-                     <Link href={footer.link}> 
-                    <a className="text-primary-color" 
-                    target="_blank" rel='noflow'>{footer.name}</a>
-                    </Link>
-                    
-                    </p>
-                </div>
-            </div>
-
+              </a>
+            </Link>
+          ))}
         </div>
-    )
+        <div className="text-center mt-8 font-secondary text-lg sm:text-xl">
+          {/* <p >{footer.coppy.replace("year",year)}</p> */}
+          <p>
+            {footer.activity}
+
+            <Link href={footer.link}>
+              <a
+                className="text-primaryColor hover:opacity-80"
+                target="_blank"
+                rel="noflow"
+              >
+                {footer.name}
+              </a>
+            </Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Footer
-
+export default Footer;

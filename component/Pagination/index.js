@@ -27,7 +27,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
       ) : (
         <a>
           <button
-            className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default"
+            className=" buttonClass  buttonDisable"
             disabled
             onClick={() =>
               router.push(
@@ -45,8 +45,8 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             key={num}
             className={
               page == num
-                ? "text-white  bg-primary-color   pagination-list"
-                : "  hover:bg-primary-color hover:text-white pagination-list"
+                ? "text-white  bg-primaryColor   pagination-list"
+                : "  hover:bg-primaryColor hover:text-white pagination-list"
             }
             onClick={() => router.push(`/blog/?page=${num}`)}
           >
@@ -70,7 +70,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
       ) : (
         <a>
           <button
-            className=" buttonClass  bg-gray-400 hover:bg-gray-400 cursor-default"
+            className=" buttonClass  buttonDisable"
             disabled
             onClick={() =>
               router.push(

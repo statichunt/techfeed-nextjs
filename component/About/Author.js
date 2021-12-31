@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next//image";
 
-export default function Author({data}) {
+export default function Author({ data }) {
   return (
     <div className="mt-24 PostContainer">
       <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
@@ -18,7 +18,7 @@ export default function Author({data}) {
         <div className="heading sm:text-30px font-medium leading-5 my-12 ">
           <h3>{data.frontmatter.greetings}</h3>
         </div>
-        <div className="authorDetails">
+        <div className="authorDetails text-textColor">
           <p className="">{data.frontmatter.about}</p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Link from "next/dist/client/link";
-import Header from "next/head"
+import Layout from "../../component/Layout";
 import { getPost } from "../../lib";
 
 const Categories = ({ posts }) => {
@@ -9,11 +9,9 @@ const Categories = ({ posts }) => {
   const filterCategory = [...new Set(catagories)];
 
   return (
-    <div>
+    <Layout title="Category">
       <h1 className="pageTitle">All Categories </h1>
-      <Header>
-        <title>Category</title>
-      </Header>
+
       <div className="categoryContainer  ">
         {filterCategory.map((data) => (
           <Link key={data} href={`/category/${data.replace(/ /g, "-")}`}>
@@ -23,14 +21,12 @@ const Categories = ({ posts }) => {
           </Link>
         ))}
       </div>
-    </div>
+    </Layout>
   );
 };
 
 export async function getStaticProps() {
- 
-
-  const posts = getPost()
+  const posts = getPost();
 
   return {
     props: {

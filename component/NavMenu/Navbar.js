@@ -10,7 +10,7 @@ function Navbar({ toggle, isOpen }) {
 
   return (
     <div className={isOpen ? "hidden" : "block"}>
-      <nav className="nav">
+      <nav className="nav text-textColor">
         <div className="md:hidden ">
           <h1 className="menuButton" onClick={toggle}>
             <CgMenuGridR /> Menu
@@ -25,7 +25,7 @@ function Navbar({ toggle, isOpen }) {
                   className={
                     data.menu == "Home"
                       ? "hidden"
-                      : "w-2 rounded-full h-h1 bg-secoundary-color"
+                      : "w-2 rounded-full h-h1 bg-light"
                   }
                 ></div>
 
@@ -58,7 +58,7 @@ function Navbar({ toggle, isOpen }) {
                           <a className="text-black  ">
                             <li
                               className="rounded-sm 
-                     hover:bg-gray-300 px-2 py-1 capitalize"
+                     hover:bg-light px-2 py-1 capitalize"
                             >
                               {p.page}
                             </li>

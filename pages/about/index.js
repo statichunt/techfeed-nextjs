@@ -1,24 +1,24 @@
-
 import AboutData from "../../component/About/AboutData";
 import { getAboutData } from "../../lib";
-
+import Layout from "../../component/Layout";
 
 function About({ posts }) {
+  console.log(posts);
   return (
-    <div>
-      <AboutData data={posts}></AboutData>
-    </div>
+    <Layout title={posts.frontmatter.about}>
+      <div>
+        <AboutData data={posts}></AboutData>
+      </div>
+    </Layout>
   );
 }
 
 export async function getStaticProps() {
-
-  const postsdata=getAboutData()
-  
+  const postsdata = getAboutData();
 
   return {
     props: {
-      posts: postsdata
+      posts: postsdata,
     },
   };
 }

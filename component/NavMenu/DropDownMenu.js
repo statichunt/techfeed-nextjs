@@ -22,13 +22,13 @@ const DropDownMenu = ({ isOpen, toggle }) => {
     <div
       className={
         isOpen
-          ? "text-center block  border-b h-auto border-footerBorder "
+          ? "text-center block  border-b h-auto border-borderColor text-textColor"
           : "hidden h-0 "
       }
     >
       <header className=" flex justify-center items-center h-navBarHeight">
         <div className="text-center ">
-          <h1 className="menuButton" onClick={handleDropdown}>
+          <h1 className="menuButton text-textColor" onClick={handleDropdown}>
             <AiOutlineClose /> Close
           </h1>
         </div>
@@ -37,9 +37,9 @@ const DropDownMenu = ({ isOpen, toggle }) => {
       <ul className="block  py-4 animate-nav-animate">
         {NavElement.map((data) => (
           <li
+            key={data.menu}
             className="p-3 navItem relative"
             onClick={data.menu != "Pages" ? toggle : undefined}
-            key={data.link}
           >
             <Link href={data.link}>
               <a
@@ -61,9 +61,16 @@ const DropDownMenu = ({ isOpen, toggle }) => {
             >
               {data.submenu[0].page != "" &&
                 data.submenu.map((p) => (
-                  <Link href={`/${p.pageLink}`} key={p.link}>
-                    <a className="text-black  " onClick={handleDropdown}>
-                      <li className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize">
+                  <Link href={`/${p.pageLink}`} key={p.page}>
+                    <a
+                      className="text-black  "
+                      onClick={handleDropdown}
+                      key={p.page}
+                    >
+                      <li
+                        key={p.page}
+                        className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize"
+                      >
                         {p.page}
                       </li>
                     </a>

@@ -1,14 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import Author from "../component/About/Author";
 import Post from "../component/Post";
-import matter from "gray-matter";
+import perameters from "../content/config.json";
 import { AppContext } from "../component/AppContext";
-import  {getAboutData,getPost } from "../lib"
-
+import { getAboutData, getPost } from "../lib";
+import Layout from "../component/Layout";
 
 const currentDate = new Date();
-const Home = ({ posts, page,data }) => {
+const Home = ({ posts, page, data }) => {
   const [postLength, setPostLength] = useContext(AppContext);
+  const { perameter } = perameters;
 
   useEffect(() => {
     setPostLength(posts.length);
@@ -18,46 +19,25 @@ const Home = ({ posts, page,data }) => {
     (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   );
   return (
-    <div>
+    <Layout title={perameter.title} icon={perameter.icon}>
       <Author data={data}></Author>
       <Post value={post} page={page}></Post>
-    </div>
+    </Layout>
   );
 };
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
-  // const fs = require("fs");
-  // const path = require("path");
-  // const directoryPath = path.join(process.cwd(), "posts");
-  // const pageSlugs = fs.readdirSync(directoryPath);
-  // const posts = pageSlugs.map((filename) => {
-  //   const slugWspace = filename.replace(".md", "");
-  //   const slug = slugWspace.replace(/ /g, "-");
-
-  //   const fullPath = path.join(directoryPath, filename);
-  //   const fileContents = fs.readFileSync(fullPath, "utf8");
-  //   const { data: frontmatter, content } = matter(fileContents);
-  //   const category = frontmatter.category.replace(/ /g, "-");
-
-  //   return {
-  //     slug,
-  //     content,
-  //     frontmatter,
-  //     category,
-  //   };
-  // });
-
-  const posts=getPost()
+  const posts = getPost();
   const filterByDate = posts.filter(
     (post) => new Date(post.frontmatter.date) <= currentDate
   );
-  const data=getAboutData()
+  const data = getAboutData();
   // about page data
   return {
     props: {
       posts: filterByDate,
       page: +page,
-      data:data
+      data: data,
     },
   };
 };

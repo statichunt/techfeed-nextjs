@@ -24,9 +24,6 @@ const BlogPage = ({ posts, page }) => {
   });
   return (
     <>
-      <Header>
-        <title>Blog</title>
-      </Header>
       <h1 className="pageTitle">All Blogs</h1>
       <div className="PostContainer mx-auto">
         {currentPosts.map((blog) => (
@@ -42,14 +39,14 @@ const BlogPage = ({ posts, page }) => {
             </div>
 
             <div className="h-auto my-4 sm:h-60 py-4">
-              <div className="heading  text-2xl text-center  mb-4 font-thin hover:opacity-70">
-                <h1>
+              <div className="heading  text-heading text-center  mb-4 font-thin hover:opacity-70">
+                <h2>
                   <Link href={`/${blog.slug}`}>
                     <a>{blog.frontmatter.heading}</a>
                   </Link>
-                </h1>
+                </h2>
               </div>
-              <div className=" font-lora text-center text-sm sm:text-xl leading-7">
+              <div className=" font-secondary text-center text-sm sm:text-xl leading-7 text-textColor">
                 <p>{blog.frontmatter.content.slice(0, 200)}</p>
               </div>
             </div>

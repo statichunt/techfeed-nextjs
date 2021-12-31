@@ -6,9 +6,6 @@ import Header from "next/head";
 function AboutData({ data }) {
   return (
     <div className="PostContainer my-16">
-      <Header>
-        <title>{data.frontmatter.about}</title>
-      </Header>
       <div className="xl:w-about-content lg:w-3/4 md:w-4/5 sm:w-11/12 ">
         <div className="w-full  md:h-h300 h-60  relative mx-auto">
           <Image
@@ -20,11 +17,11 @@ function AboutData({ data }) {
           ></Image>
         </div>
         <div className="text-center ">
-          <div className="font-lora text-4xl my-8 leading-normal ">
+          <div className="font-secondary text-4xl my-8 leading-normal ">
             <h1>{data.frontmatter.about}</h1>
           </div>
           <div
-            className="font-lora text-xl"
+            className="font-secondary text-xl text-textColor"
             dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}
           ></div>
         </div>

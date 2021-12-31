@@ -41,13 +41,11 @@ const Post = ({ value, page }) => {
             <div className=" lg:w-4/6 leading-8 w-full mx-auto">
               <div className="text-center my-14">
                 <div className="mb-1.5">
-                  {" "}
                   <Link href={`/category/${data.category}`}>
                     <a className="title">{data.frontmatter.category}</a>
                   </Link>
                 </div>
-                <h1 className="heading transition hover:opacity-70 my-8 leading-normal">
-                  {" "}
+                <h1 className="heading transition hover:opacity-70 my-8 leading-normal ">
                   <Link href={`/${data.slug}`}>
                     <a>{data.frontmatter.heading}</a>
                   </Link>
@@ -55,10 +53,10 @@ const Post = ({ value, page }) => {
 
                 <div className="">
                   <p
-                    className="  italic  font-lora 
-                                            md:text-lg text-sm font-normal text-nameColor"
+                    className="  italic  font-secondary 
+                                            md:text-lg text-sm font-normal text-textLight"
                   >
-                    Posted on{" "}
+                    Posted on
                     {currentDate.getFullYear() >
                     new Date(data.frontmatter.date).getFullYear() ? (
                       data.frontmatter.date
@@ -89,7 +87,7 @@ const Post = ({ value, page }) => {
                 </div>
               </div>
 
-              <div className="font-lora text-xl font-normal leading-8">
+              <div className="font-secondary text-xl font-normal leading-8 text-textColor">
                 <p>{data.frontmatter.content}</p>
               </div>
 

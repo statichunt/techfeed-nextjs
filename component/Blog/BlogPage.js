@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/dist/client/image";
 import Link from "next/dist/client/link";
 import { useRouter } from "next/router";
-import Header from "next/head";
 import config from "../../content/config.json";
 import Pagination from "../Pagination";
 
@@ -41,7 +40,7 @@ const BlogPage = ({ posts, page }) => {
             <div className="h-auto my-4 sm:h-60 py-4">
               <div className="heading  text-heading text-center  mb-4 font-thin hover:opacity-70">
                 <h2>
-                  <Link href={`/${blog.slug}`}>
+                  <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.heading}</a>
                   </Link>
                 </h2>

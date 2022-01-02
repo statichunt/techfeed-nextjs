@@ -97,6 +97,7 @@ module.exports = {
         // 'pinterest':themeStyle.color.socialMedia.pinterestHover,
         // 'text-secoundary':themeStyle.color.text.secoundary
         light: themeStyle.color.basicColor.light,
+        dark: themeStyle.color.basicColor.dark,
         headingColor: themeStyle.color.textColor.dark,
         textColor: themeStyle.color.textColor.default,
         textLight: themeStyle.color.textColor.light,

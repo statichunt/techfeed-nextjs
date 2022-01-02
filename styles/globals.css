@@ -47,7 +47,7 @@
     }
 
     .subMenu {
-        @apply uppercase py-2 px-3 absolute w-60 bg-gray-100 z-10 -left-5;
+        @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-lora  z-10 -left-5 rounded-md;
     }
   
 

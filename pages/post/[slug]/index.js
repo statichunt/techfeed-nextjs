@@ -1,13 +1,12 @@
 import fs from "fs";
 import path from "path";
-import FilterData from "../../component/FilterData";
-import AboutAuthor from "../../component/About/AboutAuthor";
+import FilterData from "../../../component/FilterData";
+import AboutAuthor from "../../../component/About/AboutAuthor";
 import matter from "gray-matter";
-import Header from "next/head";
-import socialIcon from "../../content/config.json";
-import { getAboutData, getPost } from "../../lib";
-import SinglePosts from "../../component/SinglePost";
-import Layout from "../../component/Layout";
+import socialIcon from "../../../content/config.json";
+import { getAboutData, getDefaultPage, getPost } from "../../../lib";
+import SinglePosts from "../../../component/SinglePost";
+import Layout from "../../../component/Layout";
 
 const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
   const { socialMedia } = socialIcon;
@@ -68,6 +67,8 @@ export const getStaticProps = async ({ params }) => {
 
   const posts = getPost();
   const aboutData = getAboutData();
+  const defafult = getDefaultPage();
+  console.log(defafult);
 
   return {
     props: {

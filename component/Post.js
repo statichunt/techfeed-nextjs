@@ -7,7 +7,12 @@ import socialIcon from "../content/config.json";
 import Pagination from "./Pagination";
 const Post = ({ value, page }) => {
   const { socialMedia, postsPerPage } = socialIcon;
-
+  var options = { year: "numeric", month: "long", day: "numeric" };
+  const x = new Date("Fri Dec 31 2021 12:04:21 GMT+0600").toLocaleDateString(
+    "en-US",
+    options
+  );
+  console.log(x);
   const currentDate = new Date();
 
   const indexOfLastPost = page * postsPerPage;
@@ -15,6 +20,11 @@ const Post = ({ value, page }) => {
   const currentPosts = value.slice(indexOfFirstPost, indexOfLastPost);
   const pageNumber = Math.ceil(value.length / postsPerPage);
   const router = useRouter();
+
+  const y = currentPosts.map((d) =>
+    new Date(d.frontmatter.date).toLocaleDateString("en-US", options)
+  );
+  console.log("day", y);
 
   useEffect(() => {
     if (page > pageNumber) {
@@ -46,7 +56,7 @@ const Post = ({ value, page }) => {
                   </Link>
                 </div>
                 <h1 className="heading transition hover:opacity-70 my-8 leading-normal ">
-                  <Link href={`/${data.slug}`}>
+                  <Link href={`/post/${data.slug}`}>
                     <a>{data.frontmatter.heading}</a>
                   </Link>
                 </h1>
@@ -56,13 +66,19 @@ const Post = ({ value, page }) => {
                     className="  italic  font-secondary 
                                             md:text-lg text-sm font-normal text-textLight"
                   >
-                    Posted on
+                    Posted on{" "}
                     {currentDate.getFullYear() >
                     new Date(data.frontmatter.date).getFullYear() ? (
-                      data.frontmatter.date
+                      new Date(data.frontmatter.date).toLocaleDateString(
+                        "en-US",
+                        options
+                      )
                     ) : currentDate.getMonth() >
                       new Date(data.frontmatter.date).getMonth() ? (
-                      data.frontmatter.date
+                      new Date(data.frontmatter.date).toLocaleDateString(
+                        "en-US",
+                        options
+                      )
                     ) : currentDate.getDate() ==
                       new Date(data.frontmatter.date).getDate() ? (
                       <span>Today</span>
@@ -75,7 +91,10 @@ const Post = ({ value, page }) => {
                         day ago{" "}
                       </span>
                     ) : (
-                      data.frontmatter.date
+                      new Date(data.frontmatter.date).toLocaleDateString(
+                        "en-US",
+                        options
+                      )
                     )}{" "}
                     by{" "}
                     <Link href="/about">
@@ -93,7 +112,7 @@ const Post = ({ value, page }) => {
 
               <div className="my-10">
                 <div className="hover  flex-order my-10">
-                  <Link href={`/${data.slug}`}>
+                  <Link href={`/post/${data.slug}`}>
                     <a className="flex-order text-xl  capitalize">
                       continue reading
                       <span className="mx-1">

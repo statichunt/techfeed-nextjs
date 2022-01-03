@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from "react";
+
 import Author from "../component/About/Author";
 import Post from "../component/Post";
 import perameters from "../content/config.json";
-import { getAboutData, getDefaultPage, getPost } from "../lib";
+import { getAboutData, getPost } from "../lib";
 import Layout from "../component/Layout";
-import Link from "next/dist/client/link";
+
 
 const currentDate = new Date();
 const Home = ({ posts, page, data }) => {

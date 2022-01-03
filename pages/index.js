@@ -4,6 +4,7 @@ import Post from "../component/Post";
 import perameters from "../config/config.json";
 import { getAboutData, getPost } from "../lib";
 import Layout from "../component/Layout";
+import Default from "./[slug]";
 
 
 const currentDate = new Date();
@@ -14,7 +15,9 @@ const Home = ({ posts, page, data }) => {
     (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   );
   return (
+    
     <Layout title={perameter.title} icon={perameter.icon} >
+     
       <Author data={data}></Author>
       <Post value={post} page={page}></Post>
     </Layout>

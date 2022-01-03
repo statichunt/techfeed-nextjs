@@ -1,6 +1,8 @@
+
 import BlogPage from "../../component/Blog/BlogPage";
 import { getPost } from "../../lib";
 import Layout from "../../component/Layout";
+
 
 const currentDate = new Date();
 const Blogs = ({ posts, page }) => {
@@ -27,4 +29,6 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
   };
 };
 
+
 export default Blogs;
+

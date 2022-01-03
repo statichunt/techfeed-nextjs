@@ -3,8 +3,8 @@ import React from 'react'
 import Layout from '@/component/Layout'
 import { marked } from 'marked'
 
-const Default = ({post}) => {
- const {frontmatter,content,slug}=post[0]
+const Default = ({filterPost}) => {
+ const {slug,frontmatter,content}=filterPost[0]
     return (
        <Layout title={slug}>
           <div className='PostContainer'>
@@ -42,7 +42,9 @@ export async function getStaticPaths() {
 
   
     // Pass post data to the page via props
-    return { props: { post:filterPost } };
+    return { props:{
+      filterPost
+    } };
   }
 
 export default Default

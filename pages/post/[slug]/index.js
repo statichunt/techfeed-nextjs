@@ -1,12 +1,12 @@
 import fs from "fs";
 import path from "path";
-import FilterData from "../../../component/FilterData";
-import AboutAuthor from "../../../component/About/AboutAuthor";
+import FilterData from "@/component/FilterData";
+import AboutAuthor from "@/component/About/AboutAuthor";
 import matter from "gray-matter";
 import socialIcon from "../../../config/config.json";
-import { getAboutData, getDefaultPage, getPost } from "../../../lib";
-import SinglePosts from "../../../component/SinglePost";
-import Layout from "../../../component/Layout";
+import { getAboutData, getDefaultPage, getPost } from "@/lib/post";
+import SinglePosts from "@/component/SinglePost";
+import Layout from "@/component/Layout";
 
 const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
   const { socialMedia } = socialIcon;

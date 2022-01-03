@@ -1,8 +1,8 @@
 import React from "react";
 
 import Link from "next/dist/client/link";
-import Layout from "../../component/Layout";
-import { getPost } from "../../lib";
+import Layout from "@/component/Layout";
+import { getPost } from "@/lib/post";
 
 const Categories = ({ posts }) => {
   const catagories = posts.map((category) => category.frontmatter.category);

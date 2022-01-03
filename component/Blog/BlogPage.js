@@ -7,6 +7,7 @@ import Pagination from "../Pagination";
 
 const BlogPage = ({ posts, page }) => {
   const [isBlog] = useState(true);
+  console.log(posts)
   const { postsPerPage } = config;
 
   const indexOfLastPost = page * postsPerPage;

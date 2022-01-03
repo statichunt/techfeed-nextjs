@@ -17,7 +17,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             className="buttonClass"
             onClick={() =>
               router.push(
-                isBlog ? `/blog/?page=${page - 1}` : `/?page=${page - 1}`
+                isBlog ? `/blog/page/${page - 1}` : `/?page=${page - 1}`
               )
             }
           >
@@ -31,7 +31,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             disabled
             onClick={() =>
               router.push(
-                isBlog ? `/blog/?page=${page - 1}` : `/?page=${page - 1}`
+                isBlog ? `/blog/page/${page - 1}` : `/?page=${page - 1}`
               )
             }
           >
@@ -48,7 +48,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
                 ? "text-white  bg-primaryColor   pagination-list"
                 : "  hover:bg-primaryColor hover:text-white pagination-list"
             }
-            onClick={() => router.push(`/blog/?page=${num}`)}
+            onClick={() => router.push(`/blog/page/${num}`)}
           >
             <a className="">{num}</a>
           </li>
@@ -60,7 +60,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             className=" buttonClass"
             onClick={() =>
               router.push(
-                isBlog ? `/blog/?page=${page + 1}` : `/?page=${page + 1}`
+                isBlog ? `/blog/page/${page + 1}` : `/?page=${page + 1}`
               )
             }
           >
@@ -74,7 +74,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             disabled
             onClick={() =>
               router.push(
-                isBlog ? `/blog/?page=${page + 1}` : `/?page=${page + 1}`
+                isBlog ? `/blog/page/${page + 1}` : `/?page=${page + 1}`
               )
             }
           >

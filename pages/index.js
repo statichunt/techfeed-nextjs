@@ -1,9 +1,9 @@
 
-import Author from "../component/About/Author";
-import Post from "../component/Post";
+import Author from "@/component/About/Author";
+import Post from "@/component/Post";
 import perameters from "../config/config.json";
-import { getAboutData, getPost } from "../lib";
-import Layout from "../component/Layout";
+import { getAboutData, getPost } from "@/lib/post";
+import Layout from "@/component/Layout";
 import Default from "./[slug]";
 
 

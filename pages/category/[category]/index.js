@@ -1,6 +1,6 @@
-import Category from "../../../component/Category";
+import Category from "@/component/Category";
 
-import { getPost } from "../../../lib";
+import { getPost } from "@/lib/post";
 
 function CategoryData({ category, posts }) {
   const filterByCategory = posts.filter((data) => data.category == category);

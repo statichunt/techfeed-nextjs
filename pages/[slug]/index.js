@@ -1,4 +1,4 @@
-import { getDefaultPage } from '../../lib'
+import { getDefaultPage } from '@/lib/post'
 import React from 'react'
 import Layout from '@/component/Layout'
 import { marked } from 'marked'

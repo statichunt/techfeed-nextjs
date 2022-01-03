@@ -1,6 +1,6 @@
-import AboutData from "../../component/About/AboutData";
-import { getAboutData } from "../../lib";
-import Layout from "../../component/Layout";
+import AboutData from "@/component/About/AboutData";
+import { getAboutData } from "@/lib/post";
+import Layout from "@/component/Layout";
 
 function About({ posts }) {
   console.log(posts);

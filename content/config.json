@@ -38,11 +38,11 @@
   "link": "#",
   "submenu":[{
       "page":"Privacy & Policy",
-      "pagelink":"privacy-page"
+      "pagelink":"privacy"
   },
   {
     "page":"Terms & Condition",
-    "pagelink":"terms-condition"
+    "pagelink":"terms"
 }
 ]
 

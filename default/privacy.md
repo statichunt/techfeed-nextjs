@@ -1,5 +1,5 @@
 ---
-title: "Pervacy And Policy"
+title: "Privacy And Policy"
 path: "privacy-page"
 ---
 

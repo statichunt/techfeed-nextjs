@@ -6,14 +6,14 @@
 
     /* common class */
     .heading {
-        @apply  md:text-mdHeading sm:text-smHeading text-heading font-oswald text-headingColor my-3 font-medium uppercase;
+        @apply md:text-mdHeading sm:text-smHeading text-heading font-oswald text-headingColor my-3 font-medium uppercase;
     }
 
     .PostContainer {
-        @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10  font-lora;
+        @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-lora;
     }
-    
-    
+
+
 
     .hover {
         @apply text-primaryColor hover:opacity-80;
@@ -25,7 +25,7 @@
 
     /* nav menu start */
     .navItem {
-        @apply text-nav mx-3 hover:text-primaryColor  font-lora relative font-normal p-4 tracking-primary uppercase
+        @apply text-nav mx-3 hover:text-primaryColor font-lora relative font-normal p-4 tracking-primary uppercase
     }
 
     .nav {
@@ -39,7 +39,7 @@
     /* post start */
 
     .authorDetails {
-        @apply  font-lora italic text-authorText text-center lg:w-about-content w-full mb-4 leading-8
+        @apply font-lora italic text-authorText text-center lg:w-about-content w-full mb-4 leading-8
     }
 
     .title {
@@ -47,9 +47,9 @@
     }
 
     .subMenu {
-        @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-lora  z-10 -left-5 rounded-md;
+        @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-lora z-10 -left-5 rounded-md;
     }
-  
+
 
     .buttonClass {
         @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm
@@ -66,11 +66,11 @@
 
     /* form  */
     .submit {
-        @apply px-8 py-4 bg-primaryColor hover:bg-black text-white  font-lora text-xl rounded-full;
+        @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-lora text-xl rounded-full;
     }
 
     .inputField {
-        @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block  font-lora;
+        @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-lora;
     }
 
     .welcomeContent {
@@ -101,61 +101,79 @@
     .blogImage {
         @apply w-full md:h-h200 h-h300 relative
     }
-    .socialMedia{
+
+    .socialMedia {
         @apply w-14 h-14 rounded-full mx-2 text-socialIcon bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor
     }
 
-  .facebook{
-      @apply hover:bg-facebook 
-  }
-  .twitter{
-      @apply hover:bg-twitter
-  }
-  .pinterest{
-      @apply hover:bg-pinterest 
-  }
+    .facebook {
+        @apply hover:bg-facebook
+    }
+
+    .twitter {
+        @apply hover:bg-twitter
+    }
+
+    .pinterest {
+        @apply hover:bg-pinterest
+    }
 
 }
 
 
 /* markdown style */
-.content{
-    
+.content {
+
     color: #333;
-      background-color: #fff;
-      
-      font-weight: 400;
-      font-size: 20px;
-  }
-  .content p{
-  
-  margin-bottom: 30px;
-  line-height: 30px;
-  }
-  .content li{
+    background-color: #fff;
+
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.content p {
+
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.content li {
     list-style: disc;
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-  
-    
-  }
-  .content blockquote{
+
+
+}
+
+.content blockquote {
     border-left: 5px solid #ddd;
     font-size: 22px;
-  }
-  .content blockquote p{
+}
+
+.content blockquote p {
     margin-left: 20px;
-  }
-  .content h2{
+}
+
+.content h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-  }
-  .content h3{
-      font-size: 30px;
-      margin: 20px 0px;
-  }
-  /* .headinngs{
+}
+
+.content h3 {
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
+/* .headinngs{
       font-size:calc(48px/theme(3));
   } */
+@layer base {
+    h1 {
+        @apply text-mdHeading
+    }
+   
+
+
+}

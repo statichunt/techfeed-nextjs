@@ -17,7 +17,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             className="buttonClass"
             onClick={() =>
               router.push(
-                isBlog ? `/blog/page/${page - 1}` : `/?page=${page - 1}`
+                isBlog ? `/blog/page/${page - 1}` : `/page/${page - 1}`
               )
             }
           >
@@ -31,7 +31,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             disabled
             onClick={() =>
               router.push(
-                isBlog ? `/blog/page/${page - 1}` : `/?page=${page - 1}`
+                isBlog ? `/blog/page/${page - 1}` : `/page/${page - 1}`
               )
             }
           >
@@ -60,7 +60,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             className=" buttonClass"
             onClick={() =>
               router.push(
-                isBlog ? `/blog/page/${page + 1}` : `/?page=${page + 1}`
+                isBlog ? `/blog/page/${page + 1}` : `/page/${page + 1}`
               )
             }
           >
@@ -74,7 +74,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             disabled
             onClick={() =>
               router.push(
-                isBlog ? `/blog/page/${page + 1}` : `/?page=${page + 1}`
+                isBlog ? `/blog/page/${page + 1}` : `/page/${page + 1}`
               )
             }
           >

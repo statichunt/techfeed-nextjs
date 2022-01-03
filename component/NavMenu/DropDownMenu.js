@@ -61,7 +61,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
             >
               {data.submenu[0].page != "" &&
                 data.submenu.map((p) => (
-                  <Link href={`/${p.pageLink}`} key={p.page}>
+                  <Link href={`/${p.pagelink}`} key={p.page}>
                     <a
                       className="text-black  "
                       onClick={handleDropdown}

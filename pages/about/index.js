@@ -3,7 +3,6 @@ import { getAboutData } from "@/lib/post";
 import Layout from "@/component/Layout";
 
 function About({ posts }) {
-  console.log(posts);
   return (
     <Layout title={posts.frontmatter.about}>
       <div>

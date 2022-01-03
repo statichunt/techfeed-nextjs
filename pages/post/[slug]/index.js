@@ -21,7 +21,6 @@ const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
   );
 
   const sortBySlug = [...filterDataById, ...remainData];
-  console.log(slug);
 
   return (
     <Layout title={slug}>
@@ -68,7 +67,6 @@ export const getStaticProps = async ({ params }) => {
   const posts = getPost();
   const aboutData = getAboutData();
   const defafult = getDefaultPage();
-  console.log(defafult);
 
   return {
     props: {

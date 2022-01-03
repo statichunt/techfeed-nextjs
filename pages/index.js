@@ -1,7 +1,7 @@
 
 import Author from "../component/About/Author";
 import Post from "../component/Post";
-import perameters from "../content/config.json";
+import perameters from "../config/config.json";
 import { getAboutData, getPost } from "../lib";
 import Layout from "../component/Layout";
 
@@ -10,9 +10,6 @@ const currentDate = new Date();
 const Home = ({ posts, page, data }) => {
  
   const { perameter } = perameters;
-
-  
-
   const post = posts.sort(
     (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   );
@@ -30,8 +27,6 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
     (post) => new Date(post.frontmatter.date) <= currentDate
   );
   const data = getAboutData();
-  
-
   return {
     props: {
       posts: filterByDate,

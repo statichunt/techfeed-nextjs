@@ -1,6 +1,6 @@
 import Link from "next/dist/client/link";
 import Image from "next/image";
-import socialIcon from "../../content/config.json";
+import socialIcon from "../../config/config.json";
 
 function AboutAuthor({ data, author }) {
   const { socialMedia } = socialIcon;

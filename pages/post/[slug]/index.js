@@ -3,7 +3,7 @@ import path from "path";
 import FilterData from "../../../component/FilterData";
 import AboutAuthor from "../../../component/About/AboutAuthor";
 import matter from "gray-matter";
-import socialIcon from "../../../content/config.json";
+import socialIcon from "../../../config/config.json";
 import { getAboutData, getDefaultPage, getPost } from "../../../lib";
 import SinglePosts from "../../../component/SinglePost";
 import Layout from "../../../component/Layout";

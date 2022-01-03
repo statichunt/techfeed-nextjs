@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import formType from "../../content/config.json";
+import formType from "../../config/config.json";
 import Head from "next/head";
 import { useRouter } from "next/router";
 

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/dist/client/link";
 import { marked } from "marked";
-import Layout from "../Layout";
+
 const SinglePosts = ({ frontmatter, content, socialMedia, slug }) => {
   const currentDate = new Date();
   return (

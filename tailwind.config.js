@@ -1,5 +1,5 @@
 const { callbackPromise } = require("nodemailer/lib/shared");
-const themeStyle = require("./content/style.json");
+const themeStyle = require("./config/style.json");
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
 

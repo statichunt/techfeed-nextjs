@@ -1,7 +1,7 @@
 import Link from "next/dist/client/link";
 import React from "react";
 import { CgMenuGridR } from "react-icons/cg";
-import NavMenu from "../../content/config.json";
+import NavMenu from "../../config/config.json";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 function Navbar({ toggle, isOpen }) {

@@ -1,5 +1,5 @@
-import socialIcon from "../content/config.json";
-import footerData from "../content/config.json";
+import socialIcon from "../config/config.json";
+import footerData from "../config/config.json";
 import Link from "next/link";
 
 function Footer() {

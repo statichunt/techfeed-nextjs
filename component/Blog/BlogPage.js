@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/dist/client/image";
 import Link from "next/dist/client/link";
 import { useRouter } from "next/router";
-import config from "../../content/config.json";
+import config from "../../config/config.json";
 import Pagination from "../Pagination";
 
 const BlogPage = ({ posts, page }) => {

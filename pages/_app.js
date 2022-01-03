@@ -1,7 +1,7 @@
 
 import "../styles/globals.css";
 import Head from "next/head";
-import perameters from "../content/config.json";
+import perameters from "../config/config.json";
 
 function MyApp({ Component, pageProps }) {
   const { perameter } = perameters;

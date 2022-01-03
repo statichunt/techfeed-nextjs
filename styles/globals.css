@@ -169,11 +169,3 @@
 /* .headinngs{
       font-size:calc(48px/theme(3));
   } */
-@layer base {
-    h1 {
-        @apply text-mdHeading
-    }
-   
-
-
-}

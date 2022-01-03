@@ -3,10 +3,10 @@ import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/dist/client/link";
 import { useEffect } from "react";
-import socialIcon from "../content/config.json";
+import config from "../config/config.json";
 import Pagination from "./Pagination";
 const Post = ({ value, page }) => {
-  const { socialMedia, postsPerPage } = socialIcon;
+  const { socialMedia, postsPerPage } = config;
   var options = { year: "numeric", month: "long", day: "numeric" };
   const x = new Date("Fri Dec 31 2021 12:04:21 GMT+0600").toLocaleDateString(
     "en-US",

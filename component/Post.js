@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import config from "../config/config.json";
 import Pagination from "./Pagination";
 const Post = ({ value, page }) => {
-  const { socialMedia, postsPerPage } = config;
+  const { socialMedia } = config;
+  const { postsPerPage } = config.perameter;
   var options = { year: "numeric", month: "long", day: "numeric" };
   const x = new Date("Fri Dec 31 2021 12:04:21 GMT+0600").toLocaleDateString(
     "en-US",

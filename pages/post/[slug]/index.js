@@ -66,8 +66,6 @@ export const getStaticProps = async ({ params }) => {
 
   const posts = getPost();
   const aboutData = getAboutData();
-  const defafult = getDefaultPage();
-
   return {
     props: {
       posts,

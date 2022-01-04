@@ -16,7 +16,7 @@ const Blog = ({ posts, page }) => {
 
 export const getStaticPaths = () => {
   const posts = getPost();
-  const { postsPerPage } = config;
+  const { postsPerPage } = config.perameter;
   let paths = [];
   const numOfPage = Math.ceil(posts.length / postsPerPage);
   for (let i = 0; i <= numOfPage; i++) {

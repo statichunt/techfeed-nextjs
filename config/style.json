@@ -26,10 +26,12 @@
       }
     },
     "font":{
-      "fontFamily":{
-        "primary": "['Oswald', 'sans-serif']",
-        "secoundary": "[Lora, 'serif']",
-        "icon": "['FontAwesome']"
+      "fontFamily": {
+        "primary": "Oswald",
+        "primaryType": "sans-serif",
+        "secoundary": "Lora",
+        "secoundaryType": "serif",
+        "icon": "Font Awesome 5 Free"
       },
       "fontSize":{
         "default": "14px",

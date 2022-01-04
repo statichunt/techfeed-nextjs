@@ -4,8 +4,10 @@ import DropDownMenu from "./NavMenu/DropDownMenu";
 import Footer from "./Footer";
 import Navbar from "./NavMenu/Navbar";
 import Head from "next/head";
+import config from "../config/style.json";
 
 function Layout({ children, title, icon }) {
+  const { fontFamily } = config.font;
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -36,7 +38,7 @@ function Layout({ children, title, icon }) {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Oswald&display=swap"
+          href={`https://fonts.googleapis.com/css2?family=${fontFamily.secoundary}:ital@0;1&family=${fontFamily.primary}&display=swap`}
           rel="stylesheet"
         />
         <link

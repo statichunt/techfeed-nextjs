@@ -5,7 +5,7 @@ export default function Author({ data }) {
   return (
     <div className="mt-24 PostContainer">
       <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
-        <div className="welcomeContent">
+        <div className="bannerContent">
           <Image
             className="welcomeImage"
             alt=""

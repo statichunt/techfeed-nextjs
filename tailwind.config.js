@@ -45,8 +45,14 @@ module.exports = {
         socialIcon: themeStyle.font.fontSize.socialMedia,
       },
       fontFamily: {
-        oswald: ['"Oswald"', "sans-serif"],
-        lora: ['"Lora"', "serif"],
+        oswald: [
+          `${themeStyle.font.fontFamily.primary}`,
+          themeStyle.font.fontFamily.primaryType,
+        ],
+        lora: [
+          themeStyle.font.fontFamily.secoundary,
+          themeStyle.font.fontFamily.secoundaryType,
+        ],
       },
 
       borderColor: {

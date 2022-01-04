@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 // import { NavElement } from '../../config/Menu'
 // import { AppContext } from '../AppContext'
-import NavMenu from "../../config/config.json";
+import NavMenu from "../../config/menu.json";
 
 const DropDownMenu = ({ isOpen, toggle }) => {
   const [isDropdown, setDropDown] = useState(false);

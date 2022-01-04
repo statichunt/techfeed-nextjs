@@ -8,7 +8,7 @@ import Pagination from "../Pagination";
 const BlogPage = ({ posts, page }) => {
   const [isBlog] = useState(true);
 
-  const { postsPerPage } = config;
+  const { postsPerPage } = config.perameter;
 
   const indexOfLastPost = page * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;

@@ -1,82 +1,58 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import formType from "../../config/config.json";
+import config from "../../config/config.json";
+import style from "../../config/style.json";
 
 import { useRouter } from "next/router";
 
 const Contact = () => {
-  const [redirect, setRedirect] = useState(false);
+  console.log(
+    style.font.fontFamily.primary.replace(
+      /:[ital,][ital@][wght@]*[0-9,;]+/g,
+      " "
+    )
+  );
+  // const [redirect, setRedirect] = useState(false);
   const router = useRouter();
-  const { contactForm } = formType;
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data, e) => {
-    setRedirect(!redirect);
-
-  e.target.reset()
-  
-
-  }
-
+  const { action } = config.contactForm;
+  const handleSubmit = (e) => {
+    e.target.reset();
+    router.push("/contact");
+  };
   return (
     <>
       <div className=" PostContainer flex justify-center items-center my-8 px-4 ">
         <div className="w-full md:w-4/6 mx-auto text-textColor">
-        <h1 className="pageTitle">Get In Touch</h1>
-          
-          
-            <form
-              action="https://airform.io/faruk.themefisher@gmail.com"
-              method="post"
-              className="mx-auto"
-            >
-              <div className="flex justify-between flex-wrap">
-                <input
-                  className="inputField"
-                  {...register("firstName", { required: true })}
-                  placeholder="First Name"
-                />
-                <input
-                  className="inputField"
-                  {...register("lastName", { required: true })}
-                  placeholder="Last Name"
-                />
+          <h1 className="pageTitle">Get In Touch</h1>
 
-                <input
-                  className="inputField"
-                  {...register("email", { required: true })}
-                  placeholder="Email"
-                />
-                {errors.exampleRequired && <span>This field is required</span>}
-                <input
-                  className="inputField"
-                  {...register("subject", { required: true })}
-                  placeholder="Subject"
-                />
-                {errors.exampleRequired && <span>This field is required</span>}
-              </div>
+          <form
+            action={action}
+            method="post"
+            className="mx-auto "
+            onSubmit={handleSubmit}
+          >
+            <div className="flex justify-between flex-wrap">
+              <input className="inputField" placeholder="First Name" required />
+              <input className="inputField" placeholder="Last Name" required />
 
-              <textarea
-                className="inputField sm:w-full"
-                rows="7"
-                {...register("message", { required: true })}
-                placeholder="Message"
-              ></textarea>
+              <input className="inputField" placeholder="Email" required />
 
-              <div className="flex justify-center items-center  ">
-                <a target="_blank" rel="noflow">
-                  <input
-                    type="submit"
-                    target="_blank"
-                    className="submit mx-4"
-                  />
-                </a>
-              </div>
-            </form>
-         
+              <input className="inputField" placeholder="Subject" required />
+            </div>
+
+            <textarea
+              className="inputField sm:w-full"
+              rows="7"
+              placeholder="Message"
+              required
+            ></textarea>
+
+            <div className="flex justify-center items-center  ">
+              <a target="_blank" rel="noflow">
+                <input type="submit" target="_blank" className="submit mx-4" />
+              </a>
+            </div>
+          </form>
         </div>
       </div>
     </>

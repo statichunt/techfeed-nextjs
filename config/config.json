@@ -1,66 +1,10 @@
 {
-    "header":{
-     "navMenu":  [ {
-  "menu": "Home",
-  "link": "/",
-  "submenu":[{
-      "page":"",
-      "pagelink":""
-  }]
-},
- {
-  "menu": "About",
-  "link": "/about",
-  "submenu":[{
-      "page":"",
-      "pagelink":""
-  }]
-}, 
-
- {
-  "menu": "Category",
-  "link": "/categories",
-  "submenu":[{
-      "page":"",
-      "pagelink":""
-  }]
-},
-{
-  "menu": "Blog",
-  "link": "/blog",
-  "submenu":[{
-      "page":"",
-      "pagelink":""
-  }]
-},
-{
-  "menu": "Pages",
-  "link": "#",
-  "submenu":[{
-      "page":"Privacy & Policy",
-      "pagelink":"privacy"
-  },
-  {
-    "page":"Terms & Condition",
-    "pagelink":"terms"
-}
-]
-
-}, {
-  "menu": "Contact",
-  "link": "/contact",
-  "submenu":[{
-      "page":"",
-      "pagelink":""
-  }]
-
-}]
-    },
 
     "perameter":{
         
             "title":"LifeStyle",
-            "icon":"/image/icon.png"
+            "icon":"/image/icon.png",
+            "postsPerPage":"4"
         
     },
 
@@ -72,11 +16,12 @@
     "link": "https://statichunt.com/"
 },
 "contactForm":{
-    "type":"airform"
+    "type":"airform",
+    "action":"https://airform.io/faruk.themefisher@gmail.com"
 },
-"postsPerPage":"4",  
+  
 
-"welcomeContent":{
+"bannerContent":{
     "heading":"WELCOME TO MY BLOG",
    "image":"/image/author.jpg",
     "details":"My name is Mark Dinn. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples."

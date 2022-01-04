@@ -68,7 +68,7 @@
     @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-lora rounded-md;
   }
 
-  .welcomeContent {
+  .bannerContent {
     @apply w-40 h-40 relative;
   }
 

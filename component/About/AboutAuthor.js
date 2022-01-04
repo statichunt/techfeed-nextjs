@@ -2,7 +2,7 @@ import Link from "next/dist/client/link";
 import Image from "next/image";
 import socialIcon from "../../config/config.json";
 
-function AboutAuthor({ data, author }) {
+const AboutAuthor = ({ data, author }) => {
   const { socialMedia } = socialIcon;
   return (
     <div className="my-10 ">
@@ -45,6 +45,6 @@ function AboutAuthor({ data, author }) {
       </div>
     </div>
   );
-}
+};
 
 export default AboutAuthor;

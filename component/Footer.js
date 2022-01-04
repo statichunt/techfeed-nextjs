@@ -2,7 +2,7 @@ import socialIcon from "../config/config.json";
 import footerData from "../config/config.json";
 import Link from "next/link";
 
-function Footer() {
+const Footer = () => {
   const year = new Date().getFullYear();
   const { socialMedia } = socialIcon;
   const { footer } = footerData;
@@ -39,6 +39,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

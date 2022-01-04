@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import config from "../../config/config.json";
 import style from "../../config/style.json";
 
@@ -7,10 +5,7 @@ import { useRouter } from "next/router";
 
 const Contact = () => {
   console.log(
-    style.font.fontFamily.primary.replace(
-      /:[ital,][ital@][wght@]*[0-9,;]+/g,
-      " "
-    )
+    "Oswald:wght@400".replace(/[*[0-9]+/g, " ").replace(/ [*[a-z]]+/g)
   );
   // const [redirect, setRedirect] = useState(false);
   const router = useRouter();

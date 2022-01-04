@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next//image";
 
-export default function Author({ data }) {
+const Author = ({ data }) => {
   return (
     <div className="mt-24 PostContainer">
       <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
@@ -24,4 +24,5 @@ export default function Author({ data }) {
       </div>
     </div>
   );
-}
+};
+export default Author;

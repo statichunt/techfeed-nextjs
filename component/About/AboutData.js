@@ -3,7 +3,7 @@ import Image from "next/image";
 import { marked } from "marked";
 import Header from "next/head";
 
-function AboutData({ data }) {
+const AboutData = ({ data }) => {
   return (
     <div className="PostContainer my-16">
       <div className="xl:w-about-content lg:w-3/4 md:w-4/5 sm:w-11/12 ">
@@ -28,6 +28,6 @@ function AboutData({ data }) {
       </div>
     </div>
   );
-}
+};
 
 export default AboutData;

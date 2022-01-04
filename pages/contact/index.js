@@ -2,12 +2,12 @@ import React from "react";
 import Contact from "@/component/ContactPage/Contact";
 import Layout from "@/component/Layout";
 
-function index() {
+const Contacts = () => {
   return (
     <Layout title="Get In Touch">
       <Contact></Contact>
     </Layout>
   );
-}
+};
 
-export default index;
+export default Contacts;

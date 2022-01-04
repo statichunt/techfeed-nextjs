@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/dist/client/link";
 import Layout from "./Layout";
 
-function Category({ value }) {
+const Category = ({ value }) => {
   const catagories = value.map((category) => category.frontmatter.category);
   // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
   const filterCategory = [...new Set(catagories)];
@@ -46,6 +46,6 @@ function Category({ value }) {
       </div>
     </Layout>
   );
-}
+};
 
 export default Category;

@@ -2,7 +2,7 @@ import AboutData from "@/component/About/AboutData";
 import { getAboutData } from "@/lib/post";
 import Layout from "@/component/Layout";
 
-function About({ posts }) {
+const About = ({ posts }) => {
   return (
     <Layout title={posts.frontmatter.about}>
       <div>
@@ -10,7 +10,7 @@ function About({ posts }) {
       </div>
     </Layout>
   );
-}
+};
 
 export async function getStaticProps() {
   const postsdata = getAboutData();

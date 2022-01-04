@@ -6,7 +6,7 @@ import Navbar from "./NavMenu/Navbar";
 import Head from "next/head";
 import config from "../config/style.json";
 
-function Layout({ children, title, icon }) {
+const Layout = ({ children, title }) => {
   const { fontFamily } = config.font;
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -54,6 +54,6 @@ function Layout({ children, title, icon }) {
       <Footer></Footer>
     </>
   );
-}
+};
 
 export default Layout;

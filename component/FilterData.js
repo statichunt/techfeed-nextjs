@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/dist/client/link";
 
-export default function FilterData({ value }) {
+const FilterData = ({ value }) => {
   return (
     <>
       <div className="sm:my-20 my-10">
@@ -36,4 +36,5 @@ export default function FilterData({ value }) {
       </div>
     </>
   );
-}
+};
+export default FilterData;

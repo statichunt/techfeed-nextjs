@@ -2,7 +2,7 @@ import Category from "@/component/Category";
 
 import { getPost } from "@/lib/post";
 
-function CategoryData({ category, posts }) {
+const CategoryData = ({ category, posts }) => {
   const filterByCategory = posts.filter((data) => data.category == category);
 
   return (
@@ -10,7 +10,7 @@ function CategoryData({ category, posts }) {
       <Category value={filterByCategory}></Category>
     </div>
   );
-}
+};
 
 export const getStaticPaths = async () => {
   const posts = getPost();

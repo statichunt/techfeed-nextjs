@@ -4,7 +4,7 @@ import { CgMenuGridR } from "react-icons/cg";
 import NavMenu from "../../config/menu.json";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-function Navbar({ toggle, isOpen }) {
+const Navbar = ({ toggle, isOpen }) => {
   const { header } = NavMenu;
   const NavElement = header.navMenu;
 
@@ -74,7 +74,7 @@ function Navbar({ toggle, isOpen }) {
       </nav>
     </div>
   );
-}
+};
 
 export default Navbar;
 

@@ -12,7 +12,7 @@ const Post = ({ value, page }) => {
     "en-US",
     options
   );
-  console.log(x);
+
   const currentDate = new Date();
 
   const indexOfLastPost = page * postsPerPage;
@@ -24,7 +24,6 @@ const Post = ({ value, page }) => {
   const y = currentPosts.map((d) =>
     new Date(d.frontmatter.date).toLocaleDateString("en-US", options)
   );
-  console.log("day", y);
 
   useEffect(() => {
     if (page > pageNumber) {

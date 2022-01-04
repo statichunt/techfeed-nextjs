@@ -3,177 +3,162 @@
 @tailwind utilities;
 
 @layer components {
+  /* common class */
+  .heading {
+    @apply md:text-mdHeading sm:text-smHeading text-heading font-oswald text-headingColor my-3 font-medium uppercase;
+  }
 
-    /* common class */
-    .heading {
-        @apply md:text-mdHeading sm:text-smHeading text-heading font-oswald text-headingColor my-3 font-medium uppercase;
-    }
+  .PostContainer {
+    @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-lora;
+  }
 
-    .PostContainer {
-        @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-lora;
-    }
+  .hover {
+    @apply text-primaryColor hover:opacity-80;
+  }
 
+  .flex-order {
+    @apply flex justify-center items-center;
+  }
 
+  /* nav menu start */
+  .navItem {
+    @apply text-nav mx-3 hover:text-primaryColor font-lora relative font-normal p-4 tracking-primary uppercase;
+  }
 
-    .hover {
-        @apply text-primaryColor hover:opacity-80;
-    }
+  .nav {
+    @apply flex-order h-navBarHeight md:px-6 border-b border-borderColor box-border;
+  }
 
-    .flex-order {
-        @apply flex justify-center items-center;
-    }
+  .menuButton {
+    @apply flex-order text-3xl text-headingColor cursor-pointer hover:text-primaryColor;
+  }
 
-    /* nav menu start */
-    .navItem {
-        @apply text-nav mx-3 hover:text-primaryColor font-lora relative font-normal p-4 tracking-primary uppercase
-    }
+  /* post start */
 
-    .nav {
-        @apply flex-order h-navBarHeight md:px-6 border-b border-borderColor box-border;
-    }
+  .authorDetails {
+    @apply font-lora italic text-authorText text-center lg:w-about-content w-full mb-4 leading-8;
+  }
 
-    .menuButton {
-        @apply flex-order text-3xl text-headingColor cursor-pointer hover:text-primaryColor
-    }
+  .title {
+    @apply font-oswald text-title relative border-b-4 border-primary-color cursor-pointer tracking-secoundary font-normal uppercase;
+  }
 
-    /* post start */
+  .subMenu {
+    @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-lora z-10 -left-5 rounded-md;
+  }
 
-    .authorDetails {
-        @apply font-lora italic text-authorText text-center lg:w-about-content w-full mb-4 leading-8
-    }
+  .buttonClass {
+    @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm;
+  }
 
-    .title {
-        @apply font-oswald text-title relative border-b-4 border-primary-color cursor-pointer tracking-secoundary font-normal uppercase;
-    }
+  .buttonDisable {
+    @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default;
+  }
 
-    .subMenu {
-        @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-lora z-10 -left-5 rounded-md;
-    }
+  .pagination-list {
+    @apply h-8 w-8 rounded-full flex justify-center items-center mx-2 cursor-pointer text-xl;
+  }
 
+  /* form  */
+  .submit {
+    @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-lora text-xl rounded-full;
+  }
 
-    .buttonClass {
-        @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm
-    }
+  .inputField {
+    @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-lora rounded-md;
+  }
 
-    .buttonDisable {
-        @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default
-    }
+  .welcomeContent {
+    @apply w-40 h-40 relative;
+  }
 
+  .welcomeImage {
+    @apply rounded-full;
+  }
 
-    .pagination-list {
-        @apply h-8 w-8 rounded-full flex justify-center items-center mx-2 cursor-pointer text-xl
-    }
+  .pageTitle {
+    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-oswald text-headingColor;
+  }
 
-    /* form  */
-    .submit {
-        @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-lora text-xl rounded-full;
-    }
+  .categoryContainer {
+    @apply text-headingColor md:flex md:justify-around md:items-center container block mx-auto text-center;
+  }
 
-    .inputField {
-        @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-lora;
-    }
+  .categoryTitle {
+    @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-oswald text-2xl;
+  }
 
-    .welcomeContent {
-        @apply w-40 h-40 relative;
-    }
+  .blog {
+    @apply w-full md:w-1/2 lg:w-blog-width md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor;
+  }
 
-    .welcomeImage {
-        @apply rounded-full;
-    }
+  .blogImage {
+    @apply w-full md:h-h200 h-h300 relative;
+  }
 
-    .pageTitle {
-        @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-oswald text-headingColor;
-    }
+  .socialMedia {
+    @apply w-14 h-14 rounded-full mx-2 text-socialIcon bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor;
+  }
 
-    .categoryContainer {
-        @apply text-headingColor md:flex md:justify-around md:items-center container block mx-auto text-center;
-    }
+  .facebook {
+    @apply hover:bg-facebook;
+  }
 
-    .categoryTitle {
-        @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-oswald text-2xl;
-    }
+  .twitter {
+    @apply hover:bg-twitter;
+  }
 
-
-    .blog {
-        @apply w-full md:w-1/2 lg:w-blog-width md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor
-    }
-
-    .blogImage {
-        @apply w-full md:h-h200 h-h300 relative
-    }
-
-    .socialMedia {
-        @apply w-14 h-14 rounded-full mx-2 text-socialIcon bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor
-    }
-
-    .facebook {
-        @apply hover:bg-facebook
-    }
-
-    .twitter {
-        @apply hover:bg-twitter
-    }
-
-    .pinterest {
-        @apply hover:bg-pinterest
-    }
-
+  .pinterest {
+    @apply hover:bg-pinterest;
+  }
 }
-
 
 /* markdown style */
 .content {
+  color: #333;
+  background-color: #fff;
 
-    color: #333;
-    background-color: #fff;
-
-    font-weight: 400;
-    font-size: 20px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .content p {
-
-    margin-bottom: 30px;
-    line-height: 30px;
+  margin-bottom: 30px;
+  line-height: 30px;
 }
 
 .content li {
-    list-style: disc;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .content blockquote {
-    border-left: 5px solid #ddd;
-    font-size: 22px;
+  border-left: 5px solid #ddd;
+  font-size: 22px;
 }
 
 .content blockquote p {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .content h2 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .content h3 {
-    font-size: 30px;
-    margin: 20px 0px;
+  font-size: 30px;
+  margin: 20px 0px;
 }
 
 /* .headinngs{
       font-size:calc(48px/theme(3));
   } */
 @layer base {
-    h1 {
-        @apply text-mdHeading
-    }
-   
-
-
+  h1 {
+    @apply text-mdHeading;
+  }
 }

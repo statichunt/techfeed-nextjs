@@ -2,9 +2,9 @@
 id: 3
 category: "Love & Romance"
 heading: "A SHORT TRIP TO NEBRASKA"
-date: "Fri Dec 31 2021 12:04:21 GMT+0600"
+date: "November 24, 2021"
 author: "Mark Dinn"
-image: "/image/image1.jpg"
+image: "/image/post/02.jpg"
 content: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame ."
 ---
 
@@ -26,6 +26,6 @@ We would walk through downtown Raleigh holding hands talking and laughing like w
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
 
-![Markdown Logo](image/travel-photography-career-sahara-morocco-camels-hillary-fox.jpg)
+![Markdown Logo](/image/travel-photography-career-sahara-morocco-camels-hillary-fox.jpg)
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!

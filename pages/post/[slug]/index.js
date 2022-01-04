@@ -59,7 +59,7 @@ export const getStaticProps = async ({ params }) => {
   const { slug } = params;
 
   const singleMetaDataWithFrontMatter = fs.readFileSync(
-    path.join("posts", slug.replace(/-/g, " ") + ".md"),
+    path.join("content/posts", slug.replace(/-/g, " ") + ".md"),
     "utf-8"
   );
   const { data: frontmatter, content } = matter(singleMetaDataWithFrontMatter);

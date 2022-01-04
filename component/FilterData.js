@@ -25,7 +25,7 @@ export default function FilterData({ value }) {
 
               <div className="heading text-center text-heading hover:opacity-70">
                 <h2>
-                  <Link href={`/${blog.slug}`}>
+                  <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.heading}</a>
                   </Link>
                 </h2>

@@ -47,14 +47,14 @@ module.exports = {
       fontFamily: {
         oswald: [
           `${themeStyle.font.fontFamily.primary.replace(
-            /:[ital][ital@]+[0-9;]+|:[wght@]+[0-9]\w\w/gi,
+            /:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi,
             ""
           )}`,
           themeStyle.font.fontFamily.primaryType,
         ],
         lora: [
           themeStyle.font.fontFamily.secoundary.replace(
-            /:[ital][ital@]+[0-9;]+|:[wght@]+[0-9]\w\w/gi,
+            /:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi,
             ""
           ),
           themeStyle.font.fontFamily.secoundaryType,
@@ -90,6 +90,7 @@ module.exports = {
         "input-field": "48%",
         "about-content": "60%",
         "blog-width": "33.33%",
+        width500: "500px",
       },
       maxWidth: {
         "small-device-container": "600px",

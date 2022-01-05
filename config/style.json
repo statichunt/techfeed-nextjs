@@ -34,15 +34,20 @@
         "icon": "Font Awesome 5 Free"
       },
       "fontSize":{
+
         "default": "14px",
         "largeHeading": "48px",
         "smallHeading":"30px",
         "heading":"24px",
         "text-font":"18px",
         "socialMedia":"20px",
-        "title":"20px"
-
-       
+        "title":"20px",
+        "h1":"32px",
+        "h2":"24px",
+        "h3":"18.72px",
+        "h4":"16px",
+        "h5":"14px",
+        "h6":"10px" 
       }
     }
   }

@@ -46,11 +46,17 @@ module.exports = {
       },
       fontFamily: {
         oswald: [
-          `${themeStyle.font.fontFamily.primary}`,
+          `${themeStyle.font.fontFamily.primary.replace(
+            /:[ital][ital@]+[0-9;]+|:[wght@]+[0-9]\w\w/gi,
+            ""
+          )}`,
           themeStyle.font.fontFamily.primaryType,
         ],
         lora: [
-          themeStyle.font.fontFamily.secoundary,
+          themeStyle.font.fontFamily.secoundary.replace(
+            /:[ital][ital@]+[0-9;]+|:[wght@]+[0-9]\w\w/gi,
+            ""
+          ),
           themeStyle.font.fontFamily.secoundaryType,
         ],
       },

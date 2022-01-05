@@ -27,9 +27,9 @@
     },
     "font":{
       "fontFamily": {
-        "primary": "Oswald",
+        "primary": "Oswald:wght@400",
         "primaryType": "sans-serif",
-        "secoundary": "Lora",
+        "secoundary": "Lora:ital@0;1",
         "secoundaryType": "serif",
         "icon": "Font Awesome 5 Free"
       },

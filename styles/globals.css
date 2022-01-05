@@ -5,11 +5,11 @@
 @layer components {
   /* common class */
   .heading {
-    @apply md:text-mdHeading sm:text-smHeading text-heading font-oswald text-headingColor my-3 font-medium uppercase;
+    @apply md:text-h1  text-h4 font-primary text-headingColor my-3 font-medium uppercase;
   }
 
   .PostContainer {
-    @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-lora;
+    @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-secoundary;
   }
 
   .hover {
@@ -20,9 +20,9 @@
     @apply flex justify-center items-center;
   }
 
-  /* nav menu start */
+  /* base menu start */
   .navItem {
-    @apply text-nav mx-3 hover:text-primaryColor font-lora relative font-normal p-4 tracking-primary uppercase;
+    @apply text-base mx-3 hover:text-primaryColor font-secoundary relative font-normal p-4 tracking-primary uppercase;
   }
 
   .nav {
@@ -36,23 +36,23 @@
   /* post start */
 
   .authorDetails {
-    @apply font-lora italic text-authorText text-center lg:w-about-content w-full mb-4 leading-8;
+    @apply font-secoundary italic text-extraLarge text-center lg:w-about-content w-full mb-4 leading-8;
   }
 
   .title {
-    @apply font-oswald text-title relative border-b-4 border-primary-color cursor-pointer tracking-secoundary font-normal uppercase;
+    @apply font-primary text-h5 relative border-b-4 border-primary-color cursor-pointer tracking-secoundary font-normal uppercase;
   }
 
   .subMenu {
-    @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-lora z-10 -left-5 rounded-md;
+    @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-secoundary z-10 -left-5 rounded-md;
   }
 
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm;
+    @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full font-secoundary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm;
   }
 
   .buttonDisable {
-    @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default;
+    @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default capitalize font-primary;
   }
 
   .pagination-list {
@@ -61,11 +61,11 @@
 
   /* form  */
   .submit {
-    @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-lora text-xl rounded-full;
+    @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-secoundary text-xl rounded-full;
   }
 
   .inputField {
-    @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-lora rounded-md;
+    @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-secoundary rounded-md;
   }
 
   .bannerContent {
@@ -77,7 +77,7 @@
   }
 
   .pageTitle {
-    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-oswald text-headingColor;
+    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-primary text-headingColor;
   }
 
   .categoryContainer {
@@ -85,7 +85,7 @@
   }
 
   .categoryTitle {
-    @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-oswald text-2xl;
+    @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-primary text-2xl;
   }
 
   .blog {
@@ -97,7 +97,7 @@
   }
 
   .socialMedia {
-    @apply w-14 h-14 rounded-full mx-2 text-socialIcon bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor;
+    @apply w-14 h-14 rounded-full mx-2 text-large bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor;
   }
 
   .facebook {
@@ -159,6 +159,6 @@
   } */
 @layer base {
   h1 {
-    @apply text-mdHeading;
+    @apply text-h1;
   }
 }

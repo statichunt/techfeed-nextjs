@@ -39,7 +39,7 @@ const BlogPage = ({ posts, page }) => {
             </div>
 
             <div className="h-auto my-4 sm:h-60 py-4">
-              <div className="heading  text-heading text-center  mb-4 font-thin hover:opacity-70">
+              <div className="heading  text-h4 text-center  mb-4 font-thin hover:opacity-70">
                 <h2>
                   <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.heading}</a>

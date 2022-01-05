@@ -1,5 +1,10 @@
 const { callbackPromise } = require("nodemailer/lib/shared");
 const themeStyle = require("./config/style.json");
+const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
+const secoundaryFont = themeStyle.font.fontFamily.secoundary.replace(
+  /\+/g,
+  " "
+);
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
 
@@ -36,27 +41,26 @@ module.exports = {
       },
       fontSize: {
         "30px": "30px",
-        nav: "17px",
+        default: themeStyle.font.fontSize.default,
+        large: themeStyle.font.fontSize.large,
+        small: themeStyle.font.fontSize.small,
+        extraLarge: themeStyle.font.fontSize.extraLarge,
         authorText: "20px",
-        heading: themeStyle.font.fontSize.heading,
-        mdHeading: themeStyle.font.fontSize.largeHeading,
-        smHeading: themeStyle.font.fontSize.smallHeading,
-        title: themeStyle.font.fontSize.title,
-        socialIcon: themeStyle.font.fontSize.socialMedia,
+
+        h1: themeStyle.font.fontSize.h1,
+        h2: themeStyle.font.fontSize.h2,
+        h3: themeStyle.font.fontSize.h3,
+        h4: themeStyle.font.fontSize.h4,
+        h5: themeStyle.font.fontSize.h5,
+        h6: themeStyle.font.fontSize.h6,
       },
       fontFamily: {
-        oswald: [
-          `${themeStyle.font.fontFamily.primary.replace(
-            /:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi,
-            ""
-          )}`,
+        primary: [
+          primaryFont.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, ""),
           themeStyle.font.fontFamily.primaryType,
         ],
-        lora: [
-          themeStyle.font.fontFamily.secoundary.replace(
-            /:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi,
-            ""
-          ),
+        secoundary: [
+          secoundaryFont.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, ""),
           themeStyle.font.fontFamily.secoundaryType,
         ],
       },

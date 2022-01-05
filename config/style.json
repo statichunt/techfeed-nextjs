@@ -34,20 +34,17 @@
         "icon": "Font Awesome 5 Free"
       },
       "fontSize":{
-
-        "default": "14px",
-        "largeHeading": "48px",
-        "smallHeading":"30px",
-        "heading":"24px",
-        "text-font":"18px",
-        "socialMedia":"20px",
-        "title":"20px",
-        "h1":"32px",
-        "h2":"24px",
-        "h3":"18.72px",
-        "h4":"16px",
-        "h5":"14px",
-        "h6":"10px" 
+        "default": "16px",
+        "large":"18px",
+        "extraLarge":"20px",
+        "small":"12px",
+        "h1":"48px",
+        "h2":"39px",
+        "h3":"31px",
+        "h4":"25px",
+        "h5":"20px",
+        "h6":"16px"
+      
       }
     }
   }

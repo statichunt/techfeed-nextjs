@@ -1,49 +1,46 @@
-
-
 {
-    "color":{
-      "themeColor":{
-        "primary":"#c8ab77",
-        "body": "white",
-        "border": "#ddd"
-      },
-      "textColor":{
-        "default": "#333",
-        "dark": "#333",
-        "light": "#bababa"
-      },
-      "basicColor":{
-        "black": "black",
-        "white": "white",
-        "gray": "#gray",
-        "dark": "#333",
-        "light": "#ddd"
-      },
-      "socialColor":{
-        "facebook": "#3b5999",
-        "twitter": "#55acee",
-        "pinterest": "#bd081c"
-      }
+  "color": {
+    "themeColor": {
+      "primary": "#c8ab77",
+      "body": "white",
+      "border": "#ddd"
     },
-    "font":{
-      "fontFamily": {
-        "primary": "Oswald:wght@400",
-        "primaryType": "sans-serif",
-        "secoundary": "Lora:ital@0;1",
-        "secoundaryType": "serif",
-        "icon": "Font Awesome 5 Free"
-      },
-      "fontSize":{
-        "default": "16px",
-        "large":"18px",
-        "small":"12px",
-        "h1":"48px",
-        "h2":"39px",
-        "h3":"31px",
-        "h4":"25px",
-        "h5":"20px",
-        "h6":"16px"
-      
-      }
+    "textColor": {
+      "default": "#333",
+      "dark": "#333",
+      "light": "#bababa"
+    },
+    "basicColor": {
+      "black": "black",
+      "white": "white",
+      "gray": "#gray",
+      "dark": "#333",
+      "light": "#ddd"
+    },
+    "socialColor": {
+      "facebook": "#3b5999",
+      "twitter": "#55acee",
+      "pinterest": "#bd081c"
+    }
+  },
+  "font": {
+    "fontFamily": {
+      "primary": "Oswald:wght@400",
+      "primaryType": "sans-serif",
+      "secondary": "Lora:ital@0;1",
+      "secondaryType": "serif",
+      "icon": "Font Awesome 5 Free"
+    },
+    "fontSize": {
+      "default": "16px",
+      "large": "18px",
+      "small": "12px",
+      "h1": "48px",
+      "h2": "39px",
+      "h3": "31px",
+      "h4": "25px",
+      "h5": "20px",
+      "h6": "16px"
     }
   }
+}

@@ -7,7 +7,7 @@ const Default = ({ filterPost }) => {
   const { slug, frontmatter, content } = filterPost[0];
   return (
     <Layout title={slug}>
-      <div className="container px-4 sm:px-10  my-10 font-secoundary mx-auto">
+      <div className="container px-4 sm:px-10  my-10 font-secondary mx-auto">
         <h1 className="my-8  text-h1 text-center">{frontmatter.title}</h1>
         <div
           className="markdown"

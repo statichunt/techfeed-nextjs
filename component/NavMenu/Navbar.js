@@ -36,7 +36,7 @@ const Navbar = ({ toggle, isOpen }) => {
                       <i
                         className={
                           data.menu == "Pages"
-                            ? "block text-headingColor text-2xl"
+                            ? "block text-textDark text-2xl"
                             : "hidden"
                         }
                       >

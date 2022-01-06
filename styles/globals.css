@@ -5,11 +5,11 @@
 @layer components {
   /* common class */
   .heading {
-    @apply md:text-h1  text-h4 font-primary text-headingColor my-3 font-medium uppercase;
+    @apply md:text-h1  text-h4 font-primary text-textDark my-3 font-medium uppercase;
   }
 
   .postContents {
-    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secoundary;
+    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secondary;
   }
 
   .hover {
@@ -22,7 +22,7 @@
 
   /* base menu start */
   .navItem {
-    @apply text-base mx-3 hover:text-primaryColor font-secoundary relative font-normal p-4 tracking-primary uppercase;
+    @apply text-base mx-3 hover:text-primaryColor font-secondary relative font-normal p-4 tracking-primary uppercase;
   }
 
   .nav {
@@ -30,25 +30,25 @@
   }
 
   .menuButton {
-    @apply flex-order text-3xl text-headingColor cursor-pointer hover:text-primaryColor;
+    @apply flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
   }
 
   /* post start */
 
   .authorDetails {
-    @apply font-secoundary italic text-large text-center lg:w-2/3 w-full mb-4 leading-8;
+    @apply font-secondary italic text-large text-center lg:w-2/3 w-full mb-4 leading-8;
   }
 
   .title {
-    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-secoundary font-normal uppercase;
+    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-secondary font-normal uppercase;
   }
 
   .subMenu {
-    @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-secoundary z-10 -left-5 rounded-md;
+    @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-secondary z-10 -left-5 rounded-md;
   }
 
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secoundary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
+    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
 
   .buttonDisable {
@@ -61,11 +61,11 @@
 
   /* form  */
   .submit {
-    @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-secoundary text-xl rounded-full;
+    @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-secondary text-xl rounded-full;
   }
 
   .inputField {
-    @apply border-2 p-4 border-borderColor outline-none my-4 block font-secoundary rounded-md;
+    @apply border-2 p-4 border-borderColor outline-none my-4 block font-secondary rounded-md;
   }
 
   .bannerContent {
@@ -77,11 +77,11 @@
   }
 
   .pageTitle {
-    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-primary text-headingColor;
+    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-primary text-textDark;
   }
 
   .categoryContainer {
-    @apply text-headingColor md:flex md:justify-around md:items-center container block mx-auto text-center;
+    @apply text-textDark md:flex md:justify-around md:items-center container block mx-auto text-center;
   }
 
   .categoryTitle {
@@ -115,8 +115,8 @@
   /* markdown */
 
   .markdown {
-    @apply prose mx-auto sm:prose-2xl prose-p:text-default sm:prose-li:text-default  prose-li:text-small prose-headings:font-primary prose-p:font-secoundary
-    prose-li:font-secoundary
+    @apply prose mx-auto sm:prose-2xl prose-p:text-default sm:prose-li:text-default  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
+    prose-li:font-secondary
     prose-h1:text-h1
     prose-h2:text-h2
     prose-h3:text-h3
@@ -124,13 +124,7 @@
   }
 }
 
-/* markdown style */
-
-/* .headinngs{
-      font-size:calc(48px/theme(3));
-  } */
-/* @layer base {
-  h1 {
-    @apply text-h1;
-  }
-} */
+@layer base{
+  h5{@apply text-h5 font-primary}
+  h6{@apply text-h6 font-primary}
+}

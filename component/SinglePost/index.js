@@ -91,11 +91,11 @@ const SinglePosts = ({
                       className={`  socialMedia
                                   ${
                                     i.class == "facebook"
-                                      ? "hover:bg-blue-600 hover:text-text-secoundary"
+                                      ? "hover:bg-blue-600 hover:text-text-secondary"
                                       : i.class == "twitter"
-                                      ? "hover:bg-blue-400 hover:text-text-secoundary"
+                                      ? "hover:bg-blue-400 hover:text-text-secondary"
                                       : i.class == "pinterest"
-                                      ? "hover:bg-red-800 hover:text-text-secoundary"
+                                      ? "hover:bg-red-800 hover:text-text-secondary"
                                       : undefined
                                   }`}
                     >

@@ -1,14 +1,8 @@
 const themeStyle = require("./config/style.json");
 const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
-const secoundaryFont = themeStyle.font.fontFamily.secoundary.replace(
-  /\+/g,
-  " "
-);
+const secondaryFont = themeStyle.font.fontFamily.secondary.replace(/\+/g, " ");
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
-
-  darkMode: "media",
-
   variants: {
     extend: {
       variantOrder: [
@@ -51,24 +45,24 @@ module.exports = {
           primaryFont.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, ""),
           themeStyle.font.fontFamily.primaryType,
         ],
-        secoundary: [
-          secoundaryFont.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, ""),
-          themeStyle.font.fontFamily.secoundaryType,
+        secondary: [
+          secondaryFont.replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, ""),
+          themeStyle.font.fontFamily.secondaryType,
         ],
       },
       height: {
-        37: "300px",
+        37: "18.75rem",
       },
       letterSpacing: {
         primary: "2px",
-        secoundary: "3px",
+        secondary: "3px",
       },
 
       colors: {
         primaryColor: themeStyle.color.themeColor.primary,
         light: themeStyle.color.basicColor.light,
         dark: themeStyle.color.basicColor.dark,
-        headingColor: themeStyle.color.textColor.dark,
+        textDark: themeStyle.color.textColor.dark,
         textColor: themeStyle.color.textColor.default,
         textLight: themeStyle.color.textColor.light,
         borderColor: themeStyle.color.themeColor.border,

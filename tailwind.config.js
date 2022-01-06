@@ -1,4 +1,3 @@
-const { callbackPromise } = require("nodemailer/lib/shared");
 const themeStyle = require("./config/style.json");
 const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
 const secoundaryFont = themeStyle.font.fontFamily.secoundary.replace(

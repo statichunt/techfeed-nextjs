@@ -5,9 +5,9 @@ import Header from "next/head";
 
 const AboutData = ({ data }) => {
   return (
-    <div className="PostContainer my-16">
-      <div className="xl:w-about-content lg:w-3/4 md:w-4/5 sm:w-11/12 ">
-        <div className="w-full  md:h-h300 h-60  relative mx-auto">
+    <div className="container postContents my-16">
+      <div className="xl:w-2/3 lg:w-3/4 md:w-4/5 sm:w-11/12 ">
+        <div className="w-full  md:h-37 h-60  relative mx-auto">
           <Image
             className="rounded-sm"
             alt=""

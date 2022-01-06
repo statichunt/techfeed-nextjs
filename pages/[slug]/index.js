@@ -7,10 +7,10 @@ const Default = ({ filterPost }) => {
   const { slug, frontmatter, content } = filterPost[0];
   return (
     <Layout title={slug}>
-      <div className="PostContainer">
-        <h1 className="my-8">{frontmatter.title}</h1>
+      <div className="container px-4 sm:px-10  my-10 font-secoundary mx-auto">
+        <h1 className="my-8  text-h1 text-center">{frontmatter.title}</h1>
         <div
-          className="content"
+          className="markdown"
           dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
         ></div>
       </div>

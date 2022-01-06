@@ -26,7 +26,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
           : "hidden h-0 "
       }
     >
-      <header className=" flex justify-center items-center h-navBarHeight">
+      <header className=" flex justify-center items-center py-8">
         <div className="text-center ">
           <h1 className="menuButton text-textColor" onClick={handleDropdown}>
             <AiOutlineClose /> Close

@@ -25,7 +25,7 @@ const BlogPage = ({ posts, page }) => {
   return (
     <>
       <h1 className="pageTitle">All Blogs</h1>
-      <div className="PostContainer mx-auto">
+      <div className="container postContents mx-auto">
         {currentPosts.map((blog) => (
           <div className=" blog" key={blog.slug}>
             <div className=" blogImage">

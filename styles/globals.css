@@ -8,8 +8,8 @@
     @apply md:text-h1  text-h4 font-primary text-headingColor my-3 font-medium uppercase;
   }
 
-  .PostContainer {
-    @apply px-4 sm:px-10 max-w-full md:max-w-medium-device-container lg:max-w-large-device-container sm:max-w-small-device-container xl:max-w-extralarge-device-container flex-order flex-wrap mx-auto my-10 font-secoundary;
+  .postContents {
+    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secoundary;
   }
 
   .hover {
@@ -26,7 +26,7 @@
   }
 
   .nav {
-    @apply flex-order h-navBarHeight md:px-6 border-b border-borderColor box-border;
+    @apply flex-order py-8 md:px-6 border-b border-borderColor box-border;
   }
 
   .menuButton {
@@ -36,11 +36,11 @@
   /* post start */
 
   .authorDetails {
-    @apply font-secoundary italic text-extraLarge text-center lg:w-about-content w-full mb-4 leading-8;
+    @apply font-secoundary italic text-large text-center lg:w-2/3 w-full mb-4 leading-8;
   }
 
   .title {
-    @apply font-primary text-h5 relative border-b-4 border-primary-color cursor-pointer tracking-secoundary font-normal uppercase;
+    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-secoundary font-normal uppercase;
   }
 
   .subMenu {
@@ -48,11 +48,11 @@
   }
 
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-h12 rounded-full font-secoundary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm;
+    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secoundary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm;
   }
 
   .buttonDisable {
-    @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default capitalize font-primary;
+    @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default;
   }
 
   .pagination-list {
@@ -65,7 +65,7 @@
   }
 
   .inputField {
-    @apply md:w-input-field w-full border-2 p-4 border-borderColor outline-none my-4 block font-secoundary rounded-md;
+    @apply border-2 p-4 border-borderColor outline-none my-4 block font-secoundary rounded-md;
   }
 
   .bannerContent {
@@ -89,11 +89,11 @@
   }
 
   .blog {
-    @apply w-full md:w-1/2 lg:w-blog-width md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor;
+    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor;
   }
 
   .blogImage {
-    @apply w-full md:h-h200 h-h300 relative;
+    @apply w-full md:h-52 h-37 relative;
   }
 
   .socialMedia {
@@ -111,54 +111,26 @@
   .pinterest {
     @apply hover:bg-pinterest;
   }
+
+  /* markdown */
+
+  .markdown {
+    @apply prose mx-auto sm:prose-2xl prose-p:text-default sm:prose-li:text-default  prose-li:text-small prose-headings:font-primary prose-p:font-secoundary
+    prose-li:font-secoundary
+    prose-h1:text-h1
+    prose-h2:text-h2
+    prose-h3:text-h3
+    prose-h4:text-h4;
+  }
 }
 
 /* markdown style */
-.content {
-  color: #333;
-  background-color: #fff;
-
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.content p {
-  margin-bottom: 30px;
-  line-height: 30px;
-}
-
-.content li {
-  list-style: disc;
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.content blockquote {
-  border-left: 5px solid #ddd;
-  font-size: 22px;
-}
-
-.content blockquote p {
-  margin-left: 20px;
-}
-
-.content h2 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.content h3 {
-  font-size: 30px;
-  margin: 20px 0px;
-}
 
 /* .headinngs{
       font-size:calc(48px/theme(3));
   } */
-@layer base {
+/* @layer base {
   h1 {
     @apply text-h1;
   }
-}
+} */

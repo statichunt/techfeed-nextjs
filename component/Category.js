@@ -15,7 +15,7 @@ const Category = ({ value }) => {
         <span className="text-primaryColor">{filterCategory[0]}</span>
       </h1>
 
-      <div className="PostContainer">
+      <div className="container postContents">
         {value.map((blog) => (
           <React.Fragment key={blog.slug}>
             <div className="blog h-h600">

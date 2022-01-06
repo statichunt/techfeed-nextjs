@@ -36,17 +36,10 @@ module.exports = {
 
   theme: {
     extend: {
-      colors: {
-        buttonColor: "#c8ab77",
-      },
       fontSize: {
-        "30px": "30px",
         default: themeStyle.font.fontSize.default,
         large: themeStyle.font.fontSize.large,
         small: themeStyle.font.fontSize.small,
-        extraLarge: themeStyle.font.fontSize.extraLarge,
-        authorText: "20px",
-
         h1: themeStyle.font.fontSize.h1,
         h2: themeStyle.font.fontSize.h2,
         h3: themeStyle.font.fontSize.h3,
@@ -64,25 +57,8 @@ module.exports = {
           themeStyle.font.fontFamily.secoundaryType,
         ],
       },
-
-      borderColor: {
-        "primary-color": "#c8ab77",
-        bannerIconBorder: "#ddd",
-        footerBorder: "#f6f6f6",
-      },
       height: {
-        h1: "0.25rem",
-        bannerHeight: "600px",
-        h12: "3rem",
-        h16: "4rem",
-        h32: "8rem",
-        logoHeight: "160px",
-        authorImage: "13rem",
-        h200: "200px",
-        h300: "300px",
-        h400: "400px",
-        h500: "500px",
-        navBarHeight: "100px",
+        37: "300px",
       },
       letterSpacing: {
         primary: "2px",
@@ -91,28 +67,11 @@ module.exports = {
 
       // custom width
       width: {
-        "input-field": "48%",
-        "about-content": "60%",
-        "blog-width": "33.33%",
-        width500: "500px",
-      },
-      maxWidth: {
-        "small-device-container": "600px",
-        "medium-device-container": "720px",
-        "large-device-container": "980px",
-        "extralarge-device-container": "1200px",
+        120: "500px",
       },
 
       colors: {
         primaryColor: themeStyle.color.themeColor.primary,
-        // 'primary-color': themeStyle.color..primary,
-        // 'primary-colorHover': themeStyle.color.linkHover.secoundary,
-        // 'nameColor': '#aaa',
-        // 'secoundary-color':themeStyle.color.backgroundColor.primary,
-        // 'facebook':themeStyle.color.socialMedia.facebookHover,
-        // 'twitter':themeStyle.color.socialMedia.twitterHover,
-        // 'pinterest':themeStyle.color.socialMedia.pinterestHover,
-        // 'text-secoundary':themeStyle.color.text.secoundary
         light: themeStyle.color.basicColor.light,
         dark: themeStyle.color.basicColor.dark,
         headingColor: themeStyle.color.textColor.dark,
@@ -123,11 +82,6 @@ module.exports = {
         twitter: themeStyle.color.socialColor.twitter,
         pinterest: themeStyle.color.socialColor.pinterest,
       },
-      // opacity: {
-      //   headingOpecity: themeStyle.color.heeading.opecity,
-      // },
     },
-
-    // transition
   },
 };

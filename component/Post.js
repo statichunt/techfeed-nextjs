@@ -8,11 +8,7 @@ import Pagination from "./Pagination";
 const Post = ({ value, page }) => {
   const { socialMedia } = config;
   const { postsPerPage } = config.perameter;
-  var options = { year: "numeric", month: "long", day: "numeric" };
-  const x = new Date("Fri Dec 31 2021 12:04:21 GMT+0600").toLocaleDateString(
-    "en-US",
-    options
-  );
+  let options = { year: "numeric", month: "long", day: "numeric" };
 
   const currentDate = new Date();
 
@@ -34,7 +30,7 @@ const Post = ({ value, page }) => {
 
   return (
     <>
-      <div className="PostContainer">
+      <div className="container postContents">
         {currentPosts.map((data) => (
           <div key={data.slug} className="w-full my-10 block">
             <div className="block">

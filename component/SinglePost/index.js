@@ -2,9 +2,18 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/dist/client/link";
 import { marked } from "marked";
+import AboutAuthor from "../About/AboutAuthor";
 
-const SinglePosts = ({ frontmatter, content, socialMedia, slug }) => {
+const SinglePosts = ({
+  frontmatter,
+  content,
+  socialMedia,
+  slug,
+  data,
+  author,
+}) => {
   const currentDate = new Date();
+  let options = { year: "numeric", month: "long", day: "numeric" };
   return (
     <>
       <div key={slug} className=" w-full mt-20">
@@ -29,15 +38,18 @@ const SinglePosts = ({ frontmatter, content, socialMedia, slug }) => {
             {frontmatter.heading}
           </h1>
 
-          <div className=" my-4">
-            <p className="italic font-secondary text-lg font-normal text-nameColor">
+          <div className="">
+            <p
+              className="  italic  font-secondary 
+                                            md:text-lg text-sm font-normal text-textLight"
+            >
               Posted on{" "}
               {currentDate.getFullYear() >
               new Date(frontmatter.date).getFullYear() ? (
-                frontmatter.date
+                new Date(frontmatter.date).toLocaleDateString("en-US", options)
               ) : currentDate.getMonth() >
                 new Date(frontmatter.date).getMonth() ? (
-                frontmatter.date
+                new Date(frontmatter.date).toLocaleDateString("en-US", options)
               ) : currentDate.getDate() ==
                 new Date(frontmatter.date).getDate() ? (
                 <span>Today</span>
@@ -49,7 +61,7 @@ const SinglePosts = ({ frontmatter, content, socialMedia, slug }) => {
                   day ago{" "}
                 </span>
               ) : (
-                frontmatter.date
+                new Date(frontmatter.date).toLocaleDateString("en-US", options)
               )}{" "}
               by{" "}
               <Link href="/about">
@@ -62,7 +74,7 @@ const SinglePosts = ({ frontmatter, content, socialMedia, slug }) => {
 
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-            className="font-secondary text-xl content"
+            className="markdown mt-8"
             //
           ></div>
 
@@ -94,6 +106,7 @@ const SinglePosts = ({ frontmatter, content, socialMedia, slug }) => {
               ))}
             </div>
           </div>
+          <AboutAuthor data={data} author={author}></AboutAuthor>
         </div>
       </div>
     </>

@@ -24,14 +24,16 @@ const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
 
   return (
     <Layout title={slug}>
-      <div className="flex justify-center items-center PostContainer">
+      <div className="flex justify-center items-center container postContents">
         <SinglePosts
           frontmatter={frontmatter}
           content={content}
           socialMedia={socialMedia}
           slug={slug}
+          data={aboutData}
+          author={frontmatter.author}
         ></SinglePosts>
-        <AboutAuthor data={aboutData} author={frontmatter.author}></AboutAuthor>
+
         <FilterData value={sortBySlug.slice(0, 3)}></FilterData>
       </div>
     </Layout>

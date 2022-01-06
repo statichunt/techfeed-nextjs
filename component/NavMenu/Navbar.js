@@ -25,7 +25,7 @@ const Navbar = ({ toggle, isOpen }) => {
                   className={
                     data.menu == "Home"
                       ? "hidden"
-                      : "w-2 rounded-full h-h1 bg-light"
+                      : "w-2 rounded-full h-1 bg-light"
                   }
                 ></div>
 

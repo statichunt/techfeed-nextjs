@@ -5,12 +5,12 @@ import socialIcon from "../../config/config.json";
 const AboutAuthor = ({ data, author }) => {
   const { socialMedia } = socialIcon;
   return (
-    <div className="my-10 ">
+    <div className="my-10 w-full ">
       <p className="text-lg font-oswald my-5">
         PUBLISHED BY <strong className="text-primaryColor">{author}</strong>
       </p>
       <div className="flex flex-col text-center  sm:text-left lg:flex-row  ">
-        <div className="w-32 h-h32  rounded-full relative mx-auto">
+        <div className="w-32 h-32  rounded-full relative mx-auto">
           <Image
             className="rounded-full"
             alt=""

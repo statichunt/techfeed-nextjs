@@ -3,7 +3,7 @@ import Image from "next//image";
 
 const Author = ({ data }) => {
   return (
-    <div className="mt-24 PostContainer">
+    <div className="mt-24 container postContents">
       <div className="flex justify-center  items-center flex-col mx-auto lg:max-w-full">
         <div className="bannerContent">
           <Image
@@ -15,7 +15,7 @@ const Author = ({ data }) => {
           ></Image>
         </div>
 
-        <div className="heading sm:text-30px font-medium leading-5 my-12 ">
+        <div className="heading sm:text-h3 font-medium leading-5 my-12 ">
           <h3>{data.frontmatter.greetings}</h3>
         </div>
         <div className="authorDetails text-textColor">

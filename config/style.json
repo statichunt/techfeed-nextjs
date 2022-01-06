@@ -36,7 +36,6 @@
       "fontSize":{
         "default": "16px",
         "large":"18px",
-        "extraLarge":"20px",
         "small":"12px",
         "h1":"48px",
         "h2":"39px",

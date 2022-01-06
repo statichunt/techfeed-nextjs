@@ -65,11 +65,6 @@ module.exports = {
         secoundary: "3px",
       },
 
-      // custom width
-      width: {
-        120: "500px",
-      },
-
       colors: {
         primaryColor: themeStyle.color.themeColor.primary,
         light: themeStyle.color.basicColor.light,

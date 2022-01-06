@@ -48,7 +48,7 @@
   }
 
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secoundary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-sm;
+    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secoundary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
 
   .buttonDisable {

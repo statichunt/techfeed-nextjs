@@ -20,7 +20,8 @@ const Default = ({ filterPost }) => {
 
 export async function getStaticPaths() {
   const posts = getDefaultPage();
-  const paths = posts.map((d) => ({
+  const posdtWdraft = posts.filter((d) => d.frontmatter.draft != true);
+  const paths = posdtWdraft.map((d) => ({
     params: {
       slug: d.slug,
     },

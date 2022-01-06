@@ -102,7 +102,7 @@ const Post = ({ value, page }) => {
                 </div>
               </div>
 
-              <div className="font-secondary text-xl font-normal leading-8 text-textColor">
+              <div className="font-secondary text-large text-center font-normal leading-8 text-textColor">
                 <p>{data.frontmatter.content}</p>
               </div>
 

@@ -3,7 +3,7 @@ import path from "path";
 import FilterData from "@/component/FilterData";
 import matter from "gray-matter";
 import socialIcon from "../../../config/config.json";
-import { getAboutData, getDefaultPage, getPost } from "@/lib/post";
+import { getAboutData, getPost } from "@/lib/post";
 import SinglePosts from "@/component/SinglePost";
 import Layout from "@/component/Layout";
 
@@ -43,8 +43,9 @@ export default SinglePost;
 
 export const getStaticPaths = async () => {
   const slugPost = getPost();
+  const post = slugPost.filter((p) => p.frontmatter.draft != true);
 
-  const paths = slugPost.map((path) => ({
+  const paths = post.map((path) => ({
     params: {
       slug: path.slug,
     },
@@ -66,6 +67,7 @@ export const getStaticProps = async ({ params }) => {
   const { data: frontmatter, content } = matter(singleMetaDataWithFrontMatter);
 
   const posts = getPost();
+
   const aboutData = getAboutData();
 
   return {

@@ -40,7 +40,8 @@ export const getStaticPaths = () => {
 
 export const getStaticProps = ({ params }) => {
   const page = parseInt((params && params.slug) || 1);
-  const posts = getPost();
+  const getPosts = getPost();
+  const posts = getPosts.filter((p) => p.frontmatter.draft != true);
   const data = getAboutData();
   return {
     props: {

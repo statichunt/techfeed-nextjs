@@ -6,6 +6,7 @@ date: "March 17, 2021"
 author: "Mark Dinn"
 image: "/image/post/travel2.jpg"
 content: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame "
+draft: false
 ---
 
 My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame and

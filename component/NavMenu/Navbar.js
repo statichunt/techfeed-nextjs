@@ -55,7 +55,7 @@ const Navbar = ({ toggle, isOpen }) => {
                     {data.submenu[0].page != "" &&
                       data.submenu.map((p) => (
                         <Link href={`/${p.pagelink}`} key={p.page}>
-                          <a className="text-primaryColor hover:text-textColor hover:font-extralight z-10  ">
+                          <a className="hover:text-primaryColor text-textColor hover:font-extralight z-10  ">
                             <li
                               className="rounded-sm 
                      hover:bg-light px-2 py-1 capitalize"

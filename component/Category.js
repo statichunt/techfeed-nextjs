@@ -36,7 +36,7 @@ const Category = ({ value }) => {
                     </Link>
                   </h2>
                 </div>
-                <div className=" font-secondary text-xl text-center">
+                <div className="postsData">
                   <p>{blog.frontmatter.content.slice(0, 200)}</p>
                 </div>
               </div>

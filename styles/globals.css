@@ -11,7 +11,9 @@
   .postContents {
     @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secondary;
   }
-
+  .postsData {
+    @apply font-secondary text-large text-center font-normal leading-8 text-textColor;
+  }
   .hover {
     @apply text-primaryColor hover:opacity-80;
   }
@@ -22,7 +24,7 @@
 
   /* base menu start */
   .navItem {
-    @apply text-base mx-3 hover:text-primaryColor font-secondary relative font-normal p-4 tracking-primary uppercase;
+    @apply text-base mx-3 hover:text-primaryColor font-secondary relative font-normal p-4 tracking-widest uppercase;
   }
 
   .nav {
@@ -40,11 +42,11 @@
   }
 
   .title {
-    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-secondary font-normal uppercase;
+    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
   }
 
   .subMenu {
-    @apply uppercase py-2 px-3 absolute w-60 bg-dark opacity-80 font-secondary z-10 -left-5 rounded-md;
+    @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-white shadow-dark/80 shadow-md font-secondary z-10 -left-5;
   }
 
   .buttonClass {
@@ -124,7 +126,11 @@
   }
 }
 
-@layer base{
-  h5{@apply text-h5 font-primary}
-  h6{@apply text-h6 font-primary}
+@layer base {
+  h5 {
+    @apply text-h5 font-primary;
+  }
+  h6 {
+    @apply text-h6 font-primary;
+  }
 }

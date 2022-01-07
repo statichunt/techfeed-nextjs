@@ -46,7 +46,7 @@ const BlogPage = ({ posts, page }) => {
                   </Link>
                 </h2>
               </div>
-              <div className=" font-secondary text-center text-sm sm:text-xl leading-7 text-textColor">
+              <div className="postData">
                 <p>{blog.frontmatter.content.slice(0, 200)}</p>
               </div>
             </div>

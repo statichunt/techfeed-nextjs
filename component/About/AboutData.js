@@ -1,7 +1,5 @@
 import Image from "next/image";
-
 import { marked } from "marked";
-import Header from "next/head";
 
 const AboutData = ({ data }) => {
   return (

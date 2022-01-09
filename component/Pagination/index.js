@@ -4,7 +4,6 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
   const router = useRouter();
   const hasNextPage = pageNumber > page;
   const hasPreviousPage = page > 1;
-
   const pageList = [];
   for (let i = 1; i <= pageNumber; i++) {
     pageList.push(i);

@@ -1,5 +1,4 @@
 import React from "react";
-
 import Link from "next/dist/client/link";
 import Layout from "@/component/Layout";
 import { getPost } from "@/lib/post";

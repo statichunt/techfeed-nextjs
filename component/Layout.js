@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Banner from './Banner'
 import DropDownMenu from "./NavMenu/DropDownMenu";
 import Footer from "./Footer";
 import Navbar from "./NavMenu/Navbar";

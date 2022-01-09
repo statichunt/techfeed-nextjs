@@ -5,7 +5,6 @@ import Layout from "./Layout";
 
 const Category = ({ value }) => {
   const catagories = value.map((category) => category.frontmatter.category);
-  // const filtered = posts.filter(({category}, index) => !ids.includes(category.frontmatter.category, index + 1))
   const filterCategory = [...new Set(catagories)];
 
   return (

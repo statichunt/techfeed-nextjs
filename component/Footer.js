@@ -21,7 +21,6 @@ const Footer = () => {
           ))}
         </div>
         <div className="text-center mt-8 font-secondary text-lg sm:text-xl">
-          {/* <p >{footer.coppy.replace("year",year)}</p> */}
           <p>
             {footer.activity}
 

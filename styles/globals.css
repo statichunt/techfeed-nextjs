@@ -7,22 +7,27 @@
   .heading {
     @apply md:text-h1  text-h4 font-primary text-textDark my-3 font-medium uppercase;
   }
-
+  .title {
+    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
+  }
+  .flex-order {
+    @apply flex justify-center items-center;
+  }
+  .hover {
+    @apply text-primaryColor hover:text-primaryColor hover:opacity-70;
+  }
+  .pageTitle {
+    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-primary text-textDark;
+  }
+  /*home page section */
   .postContents {
     @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secondary;
   }
   .postsData {
     @apply font-secondary text-large text-center font-normal leading-8 text-textColor;
   }
-  .hover {
-    @apply text-primaryColor hover:text-primaryColor hover:opacity-70;
-  }
 
-  .flex-order {
-    @apply flex justify-center items-center;
-  }
-
-  /* base menu start */
+  /* nav and menubar section */
   .navItem {
     @apply text-base mx-3 hover:text-primaryColor font-secondary relative font-normal p-4 tracking-widest uppercase;
   }
@@ -35,20 +40,21 @@
     @apply flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
   }
 
-  /* post start */
-
-  .authorDetails {
-    @apply font-secondary italic text-large text-center lg:w-2/3 w-full mb-4 leading-8;
-  }
-
-  .title {
-    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
-  }
-
   .subMenu {
     @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-white shadow-dark/80 shadow-md font-secondary z-10 -left-5;
   }
+  /* about section */
+  .authorDetails {
+    @apply font-secondary italic text-large text-center lg:w-2/3 w-full mb-4 leading-8;
+  }
+  .bannerContent {
+    @apply w-40 h-40 relative;
+  }
 
+  .welcomeImage {
+    @apply rounded-full;
+  }
+  /* pagination */
   .buttonClass {
     @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
@@ -69,19 +75,7 @@
   .inputField {
     @apply border-2 p-4 border-borderColor outline-none my-4 block font-secondary rounded-md;
   }
-
-  .bannerContent {
-    @apply w-40 h-40 relative;
-  }
-
-  .welcomeImage {
-    @apply rounded-full;
-  }
-
-  .pageTitle {
-    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-primary text-textDark;
-  }
-
+  /* category section */
   .categoryContainer {
     @apply text-textDark md:flex md:justify-around md:items-center container block mx-auto text-center;
   }
@@ -89,7 +83,7 @@
   .categoryTitle {
     @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-primary text-2xl;
   }
-
+  /* both blog and category card */
   .blog {
     @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor;
   }
@@ -97,7 +91,7 @@
   .blogImage {
     @apply w-full md:h-52 h-37 relative;
   }
-
+  /* social icon */
   .socialMedia {
     @apply w-14 h-14 rounded-full mx-2 text-large bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor;
   }

@@ -1,15 +1,15 @@
 {
   "perameter": {
-    "title": "LifeStyle",
-    "favIcon": "/image/icon.png",
+    "title": "Techfeed",
+    "favicon": "/image/icon.png",
     "pagination": "4",
-    "isIcon": true,
+    "sharePost": true,
     "contactFormAction": "https://airform.io/faruk.themefisher@gmail.com"
   },
 
   "footer": {
-    "activity": "Copyright by your company | Theme by ",
-    "isStatichunt": true
+    "copyright": "Copyright by your company",
+    "theme_copyright": true
   },
 
   "socialMedia": [

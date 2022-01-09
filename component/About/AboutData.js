@@ -1,7 +1,16 @@
 import Image from "next/image";
+
 import { marked } from "marked";
+import router, { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const AboutData = ({ data }) => {
+  const router = useRouter();
+  useEffect(() => {
+    if (data.frontmatter.draft == true) {
+      router.push("/404");
+    }
+  });
   return (
     <div className="container postContents my-16">
       <div className="xl:w-2/3 lg:w-3/4 md:w-4/5 sm:w-11/12 ">

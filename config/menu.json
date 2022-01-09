@@ -1,59 +1,69 @@
 {
-    "header":{
-        "navMenu":  [ {
-     "menu": "Home",
-     "link": "/",
-     "submenu":[{
-         "page":"",
-         "pagelink":""
-     }]
-   },
+  "header": [
     {
-     "menu": "About",
-     "link": "/about",
-     "submenu":[{
-         "page":"",
-         "pagelink":""
-     }]
-   }, 
-   
+      "menu": "Home",
+      "link": "/",
+      "submenu": [
+        {
+          "page": "",
+          "pagelink": ""
+        }
+      ]
+    },
     {
-     "menu": "Category",
-     "link": "/categories",
-     "submenu":[{
-         "page":"",
-         "pagelink":""
-     }]
-   },
-   {
-     "menu": "Blog",
-     "link": "/blog",
-     "submenu":[{
-         "page":"",
-         "pagelink":""
-     }]
-   },
-   {
-     "menu": "Pages",
-     "link": "#",
-     "submenu":[{
-         "page":"Privacy & Policy",
-         "pagelink":"privacy"
-     },
-     {
-       "page":"Terms & Condition",
-       "pagelink":"terms"
-   }
-   ]
-   
-   }, {
-     "menu": "Contact",
-     "link": "/contact",
-     "submenu":[{
-         "page":"",
-         "pagelink":""
-     }]
-   
-   }]
-       }
+      "menu": "About",
+      "link": "/about",
+      "submenu": [
+        {
+          "page": "",
+          "pagelink": ""
+        }
+      ]
+    },
+
+    {
+      "menu": "Category",
+      "link": "/categories",
+      "submenu": [
+        {
+          "page": "",
+          "pagelink": ""
+        }
+      ]
+    },
+    {
+      "menu": "Blog",
+      "link": "/blog",
+      "submenu": [
+        {
+          "page": "",
+          "pagelink": ""
+        }
+      ]
+    },
+    {
+      "menu": "Pages",
+      "link": "#",
+      "submenu": [
+        {
+          "page": "Privacy & Policy",
+          "pagelink": "privacy"
+        },
+        {
+          "page": "Terms & Condition",
+          "pagelink": "terms"
+        }
+      ]
+    },
+    {
+      "menu": "Contact",
+      "link": "/contact",
+      "submenu": [
+        {
+          "page": "",
+          "pagelink": ""
+        }
+      ]
+    }
+  ]
 }

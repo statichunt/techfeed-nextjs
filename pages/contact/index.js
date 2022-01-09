@@ -1,15 +1,25 @@
 import React from "react";
 import Contact from "@/component/ContactPage/Contact";
 import Layout from "@/component/Layout";
+import config from "../../config/config.json";
+import { getContactData } from "@/lib/post";
 
-const Contacts = () => {
-  const text = "Lora:ital@0;1";
-  console.log(text.replace(/:[ital][ital@]+[0-9;]+|:[wght@]+[0-9]\w\w/gi, ""));
+const Contacts = ({ contactData }) => {
+  const { contactFormAction } = config.perameter;
   return (
     <Layout title="Get In Touch">
-      <Contact></Contact>
+      <Contact action={contactFormAction} data={contactData}></Contact>
     </Layout>
   );
+};
+
+export const getStaticProps = () => {
+  const contactData = getContactData();
+  return {
+    props: {
+      contactData,
+    },
+  };
 };
 
 export default Contacts;

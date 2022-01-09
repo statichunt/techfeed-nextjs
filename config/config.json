@@ -1,57 +1,37 @@
 {
+  "perameter": {
+    "title": "LifeStyle",
+    "icon": "/image/icon.png",
+    "pagination": "4",
+    "isIcon": true,
+    "contactFormAction": "https://airform.io/faruk.themefisher@gmail.com"
+  },
 
-    "perameter":{
-        
-            "title":"LifeStyle",
-            "icon":"/image/icon.png",
-            "postsPerPage":"4"
-        
-    },
-
-"footer":{
-    
-    "coppy": "© year , All rights reserved.",
+  "footer": {
     "activity": "Copyright by your company | Theme by ",
-    "name": "Statichunt",
-    "link": "https://statichunt.com/"
-},
-"contactForm":{
-    "type":"airform",
-    "action":"https://airform.io/faruk.themefisher@gmail.com"
-},
-  
+    "isStatichunt": true
+  },
 
-"bannerContent":{
-    "heading":"WELCOME TO MY BLOG",
-   "image":"/image/author.jpg",
-    "details":"My name is Mark Dinn. I am a writer, I like to travel and I love to photograph beautiful nature places and happy peoples."
-},
-
-  "socialMedia":  [
+  "socialMedia": [
     {
-        "icon":"fab fa-facebook-f",
-       "class":"facebook",
-        "shareLink":"https://www.facebook.com/sharer/sharer.php?u=",
-        "profileLink":"https://www.facebook.com/userId"  
+      "icon": "fab fa-facebook-f",
+      "name": "facebook",
+      "profileLink": "https://www.facebook.com/userId"
     },
     {
-        "icon":"fab fa-twitter",
-       "class":"twitter",
-        "shareLink":"https://twitter.com/intent/tweet/?text=What%20else%20do%20we%20need%20to%20make%20this%20a%20success%3f&url=",
-        "profileLink":"https://twitter.com/?lang=en"   
+      "icon": "fab fa-twitter",
+      "name": "twitter",
+      "profileLink": "https://twitter.com/?lang=en"
     },
     {
-        "icon":"fab fa-pinterest",
-       "class":"pinterest",
-        "shareLink":"https://www.pinterest.com/pin/?text=What%20else%20do%20we%20need%20to%20make%20this%20a%20success%3f&url=",
-        "profileLink":"https://www.pinterest.com/usierId/_saved/"  
+      "icon": "fab fa-pinterest",
+      "name": "pinterest",
+      "profileLink": "https://www.pinterest.com/usierId/_saved/"
     },
     {
-        "icon":"fab fa-instagram",
-       "class":"instgram",
-        "shareLink":"https://www.facebook.com/sharer/sharer.php?u=",
-        "profileLink":"https://www.instagram.com/userId"  
+      "icon": "fab fa-instagram",
+      "name": "instgram",
+      "profileLink": "https://www.instagram.com/userId"
     }
-   
-  ] 
+  ]
 }

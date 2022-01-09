@@ -1,8 +1,7 @@
-import config from "../../config/config.json";
 import { useRouter } from "next/router";
-const Contact = () => {
+
+const Contact = ({ action, data }) => {
   const router = useRouter();
-  const { action } = config.contactForm;
   const handleSubmit = (e) => {
     e.target.reset();
     router.push("/contact");
@@ -11,7 +10,7 @@ const Contact = () => {
     <>
       <div className=" container postContents my-8 px-4 ">
         <div className="w-full md:w-4/6 mx-auto text-textColor">
-          <h1 className="pageTitle">Get In Touch</h1>
+          <h1 className="pageTitle">{data.frontmatter.title}</h1>
 
           <form
             action={action}

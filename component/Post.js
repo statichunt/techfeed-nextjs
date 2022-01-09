@@ -7,15 +7,15 @@ import config from "../config/config.json";
 import Pagination from "./Pagination";
 const Post = ({ value, page }) => {
   const { socialMedia } = config;
-  const { postsPerPage } = config.perameter;
+  const { pagination } = config.perameter;
   let options = { year: "numeric", month: "long", day: "numeric" };
 
   const currentDate = new Date();
 
-  const indexOfLastPost = page * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const indexOfLastPost = page * pagination;
+  const indexOfFirstPost = indexOfLastPost - pagination;
   const currentPosts = value.slice(indexOfFirstPost, indexOfLastPost);
-  const pageNumber = Math.ceil(value.length / postsPerPage);
+  const pageNumber = Math.ceil(value.length / pagination);
   const router = useRouter();
 
   const y = currentPosts.map((d) =>
@@ -119,9 +119,18 @@ const Post = ({ value, page }) => {
                 </div>
                 <div className="flex justify-center">
                   {socialMedia.slice(0, 3).map((i) => (
-                    <div key={i.shareLink} className="">
+                    <div key={i.name} className="">
                       <Link
-                        href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}
+                        // href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}
+                        href={
+                          i.name == "facebook"
+                            ? `https://www.facebook.com/sharer/sharer.php?u=+https://lifistyle-blog.vercel.app/${data.slug}`
+                            : i.name == "twitter"
+                            ? `https://twitter.com/intent/tweet/?text=${data.frontmatter.heading}&url=${data.slug}`
+                            : i.name == "pinterest"
+                            ? `https://www.pinterest.com/pin/?text=${data.frontmatter.heading}&url=${data.slug}`
+                            : "#"
+                        }
                       >
                         <a
                           target="_blank"
@@ -129,7 +138,7 @@ const Post = ({ value, page }) => {
                           className={`
                                           socialMedia
                                            cursor-pointer
-                                           ${i.class}
+                                           ${i.name}
                                            `}
                         >
                           <i className={`${i.icon} not-italic`}></i>

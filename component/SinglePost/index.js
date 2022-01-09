@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/dist/client/link";
 import { marked } from "marked";
 import AboutAuthor from "../About/AboutAuthor";
+import config from "../../config/config.json";
 
 const SinglePosts = ({
   frontmatter,
@@ -12,6 +13,8 @@ const SinglePosts = ({
   data,
   author,
 }) => {
+  const { isIcon } = config.perameter;
+
   const currentDate = new Date();
   let options = { year: "numeric", month: "long", day: "numeric" };
   return (
@@ -29,9 +32,6 @@ const SinglePosts = ({
         </div>
         <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto ">
           <div className="my-10">
-            {/* <Link href={`/category/${frontmatter.category}`}>
-              <a className="title">{frontmatter.category}</a>
-            </Link> */}
             <h2 className="title cursor-default">{frontmatter.category}</h2>
           </div>
           <h1 className="heading font-oswald text-center">
@@ -78,34 +78,39 @@ const SinglePosts = ({
             //
           ></div>
 
-          <div className="my-10">
-            <div className="flex justify-start">
-              {socialMedia.slice(0, 3).map((i) => (
-                <div key={i.class} className="">
-                  <Link
-                    href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${slug}`}
-                  >
-                    <a
-                      target="_blank"
-                      rel="noflow"
-                      className={`  socialMedia
-                                  ${
-                                    i.class == "facebook"
-                                      ? "hover:bg-blue-600 hover:text-text-secondary"
-                                      : i.class == "twitter"
-                                      ? "hover:bg-blue-400 hover:text-text-secondary"
-                                      : i.class == "pinterest"
-                                      ? "hover:bg-red-800 hover:text-text-secondary"
-                                      : undefined
-                                  }`}
+          {isIcon == true && (
+            <div className="my-10">
+              <div className="flex justify-start">
+                {socialMedia.slice(0, 3).map((i) => (
+                  <div key={i.name} className="">
+                    <Link
+                      href={
+                        i.name == "facebook"
+                          ? `https://www.facebook.com/sharer/sharer.php?u=+https://lifistyle-blog.vercel.app/${slug}`
+                          : i.name == "twitter"
+                          ? `https://twitter.com/intent/tweet/?text=${frontmatter.heading}&url=${slug}`
+                          : i.name == "pinterest"
+                          ? `https://www.pinterest.com/pin/?text=${frontmatter.heading}&url=${slug}`
+                          : "#"
+                      }
                     >
-                      <i className={`${i.icon} not-italic`}></i>
-                    </a>
-                  </Link>
-                </div>
-              ))}
+                      <a
+                        target="_blank"
+                        rel="noflow"
+                        className={`
+                                          socialMedia
+                                           cursor-pointer
+                                           ${i.name}
+                                           `}
+                      >
+                        <i className={`${i.icon} not-italic`}></i>
+                      </a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
           <AboutAuthor data={data} author={author}></AboutAuthor>
         </div>
       </div>

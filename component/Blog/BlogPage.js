@@ -7,11 +7,11 @@ import Pagination from "../Pagination";
 
 const BlogPage = ({ posts, page }) => {
   const [isBlog] = useState(true);
-  const { postsPerPage } = config.perameter;
-  const indexOfLastPost = page * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const { pagination } = config.perameter;
+  const indexOfLastPost = page * pagination;
+  const indexOfFirstPost = indexOfLastPost - pagination;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-  const pageNumber = Math.ceil(posts.length / postsPerPage);
+  const pageNumber = Math.ceil(posts.length / pagination);
   const router = useRouter();
 
   useEffect(() => {

@@ -36,6 +36,7 @@ export async function getStaticProps({ params }) {
   const { slug } = params;
 
   const post = getDefaultPage();
+
   const filterPost = post.filter((data) => data.slug === slug);
 
   return {

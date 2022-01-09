@@ -9,7 +9,7 @@ const Author = ({ data }) => {
           <Image
             className="welcomeImage"
             alt=""
-            src={data.frontmatter.aboutImage}
+            src={data.frontmatter.image}
             layout="fill"
             objectFit="cover"
           ></Image>

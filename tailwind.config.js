@@ -69,6 +69,7 @@ module.exports = {
         facebook: themeStyle.color.socialColor.facebook,
         twitter: themeStyle.color.socialColor.twitter,
         pinterest: themeStyle.color.socialColor.pinterest,
+        body: themeStyle.color.themeColor.body,
       },
     },
   },

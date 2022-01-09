@@ -2,7 +2,7 @@
   "color": {
     "themeColor": {
       "primary": "#c8ab77",
-      "body": "white",
+      "body": "#ffff",
       "border": "#ddd"
     },
     "textColor": {
@@ -11,9 +11,8 @@
       "light": "#bababa"
     },
     "basicColor": {
-      "black": "black",
-      "white": "white",
-      "gray": "#gray",
+      "black": "#000",
+      "white": "#ffff",
       "dark": "#333",
       "light": "#ddd"
     },

@@ -1,5 +1,5 @@
 import React from "react";
-import { getAboutData, getPost } from "@/lib/post";
+import { getBannerData, getPost } from "@/lib/post";
 import config from "config/config.json";
 import Layout from "@/component/Layout";
 import Author from "@/component/About/Author";
@@ -22,9 +22,9 @@ export default Posts;
 
 export const getStaticPaths = () => {
   const posts = getPost();
-  const { postsPerPage } = config.perameter;
+  const { pagination } = config.perameter;
   let paths = [];
-  const numOfPage = Math.ceil(posts.length / postsPerPage);
+  const numOfPage = Math.ceil(posts.length / pagination);
   for (let i = 0; i <= numOfPage; i++) {
     paths.push({
       params: {
@@ -42,7 +42,8 @@ export const getStaticProps = ({ params }) => {
   const page = parseInt((params && params.slug) || 1);
   const getPosts = getPost();
   const posts = getPosts.filter((p) => p.frontmatter.draft != true);
-  const data = getAboutData();
+  const data = getBannerData();
+
   return {
     props: {
       posts,

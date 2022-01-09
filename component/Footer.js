@@ -3,7 +3,6 @@ import footerData from "../config/config.json";
 import Link from "next/link";
 
 const Footer = () => {
-  const year = new Date().getFullYear();
   const { socialMedia } = socialIcon;
   const { footer } = footerData;
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
         <div className="flex ">
           {socialMedia.map((data) => (
-            <Link href={data.profileLink} key={data.class}>
+            <Link href={data.profileLink} key={data.name}>
               <a className="" target="_blank" rel="noflow">
                 <div className="socialMedia hover:bg-black">
                   <i className={`${data.icon} not-italic`}></i>
@@ -24,15 +23,17 @@ const Footer = () => {
           <p>
             {footer.activity}
 
-            <Link href={footer.link}>
-              <a
-                className="text-primaryColor hover:opacity-80"
-                target="_blank"
-                rel="noflow"
-              >
-                {footer.name}
-              </a>
-            </Link>
+            {footer.isStatichunt && (
+              <Link href="https://statichunt.com/">
+                <a
+                  className="text-primaryColor hover:opacity-80"
+                  target="_blank"
+                  rel="noflow"
+                >
+                  Statichunt
+                </a>
+              </Link>
+            )}
           </p>
         </div>
       </div>

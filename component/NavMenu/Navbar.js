@@ -6,7 +6,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = ({ toggle, isOpen }) => {
   const { header } = NavMenu;
-  const NavElement = header.navMenu;
+  const NavElement = header;
   return (
     <div className={isOpen ? "hidden" : "block"}>
       <nav className="nav text-textColor">

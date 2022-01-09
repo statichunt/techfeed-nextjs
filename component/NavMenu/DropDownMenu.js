@@ -6,7 +6,7 @@ import NavMenu from "../../config/menu.json";
 const DropDownMenu = ({ isOpen, toggle }) => {
   const [isDropdown, setDropDown] = useState(false);
   const { header } = NavMenu;
-  const NavElement = header.navMenu;
+  const NavElement = header;
   const handleDropdown = () => {
     toggle();
     if (isDropdown) {

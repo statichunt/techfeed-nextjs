@@ -24,7 +24,7 @@ const Layout = ({ children, title }) => {
     };
   });
   return (
-    <>
+    <div className="bg-body">
       <Head>
         <title>{title}</title>
 
@@ -51,7 +51,7 @@ const Layout = ({ children, title }) => {
       <DropDownMenu isOpen={isOpen} toggle={toggle}></DropDownMenu>
       <main>{children}</main>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ function Error() {
   const { title, image } = NotFound;
   return (
     <Layout title={title}>
-      <div className="container text-center font-primary">
+      <div className="container text-center font-primary mx-auto">
         <div className="py-32">
           <h1 className="text-h1">404</h1>
           <h4 className="text-h4 ">Page Not Found</h4>

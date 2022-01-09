@@ -15,7 +15,7 @@
     @apply font-secondary text-large text-center font-normal leading-8 text-textColor;
   }
   .hover {
-    @apply text-primaryColor hover:opacity-80;
+    @apply hover:text-primaryColor;
   }
 
   .flex-order {

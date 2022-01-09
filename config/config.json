@@ -1,7 +1,7 @@
 {
   "perameter": {
     "title": "LifeStyle",
-    "icon": "/image/icon.png",
+    "favIcon": "/image/icon.png",
     "pagination": "4",
     "isIcon": true,
     "contactFormAction": "https://airform.io/faruk.themefisher@gmail.com"

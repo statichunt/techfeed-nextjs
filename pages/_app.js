@@ -7,7 +7,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href={perameter.favIcon}></link>
+        <link rel="icon" href={perameter.favicon}></link>
       </Head>
 
       <Component {...pageProps} />

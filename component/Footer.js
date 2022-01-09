@@ -21,18 +21,21 @@ const Footer = () => {
         </div>
         <div className="text-center mt-8 font-secondary text-lg sm:text-xl">
           <p>
-            {footer.activity}
+            {footer.copyright}
 
-            {footer.isStatichunt && (
-              <Link href="https://statichunt.com/">
-                <a
-                  className="text-primaryColor hover:opacity-80"
-                  target="_blank"
-                  rel="noflow"
-                >
-                  Statichunt
-                </a>
-              </Link>
+            {footer.theme_copyright && (
+              <>
+                &nbsp;| Theme by&nbsp;
+                <Link href="https://statichunt.com/">
+                  <a
+                    className="text-primaryColor hover:opacity-80"
+                    target="_blank"
+                    rel="noflow"
+                  >
+                    Statichunt
+                  </a>
+                </Link>
+              </>
             )}
           </p>
         </div>

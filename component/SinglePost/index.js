@@ -13,7 +13,7 @@ const SinglePosts = ({
   data,
   author,
 }) => {
-  const { isIcon } = config.perameter;
+  const { sharePost } = config.perameter;
 
   const currentDate = new Date();
   let options = { year: "numeric", month: "long", day: "numeric" };
@@ -78,7 +78,7 @@ const SinglePosts = ({
             //
           ></div>
 
-          {isIcon == true && (
+          {sharePost == true && (
             <div className="my-10">
               <div className="flex justify-start">
                 {socialMedia.slice(0, 3).map((i) => (

@@ -5,7 +5,7 @@
 @layer components {
   /* common class */
   .heading {
-    @apply md:text-h1  text-h4 font-primary text-textDark my-3 font-medium uppercase;
+    @apply md:text-h1 text-h4 font-primary text-textDark my-3 font-medium uppercase;
   }
   .title {
     @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
@@ -121,6 +121,9 @@
 }
 
 @layer base {
+  h1 {
+    @apply text-h1;
+  }
   h5 {
     @apply text-h5 font-primary;
   }

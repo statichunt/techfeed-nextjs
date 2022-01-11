@@ -9,9 +9,7 @@ const Post = ({ value, page }) => {
   const { socialMedia } = config;
   const { pagination } = config.perameter;
   let options = { year: "numeric", month: "long", day: "numeric" };
-
   const currentDate = new Date();
-
   const indexOfLastPost = page * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const currentPosts = value.slice(indexOfFirstPost, indexOfLastPost);
@@ -51,11 +49,11 @@ const Post = ({ value, page }) => {
                     <a className="title">{data.frontmatter.category}</a>
                   </Link>
                 </div>
-                <h1 className="heading transition hover:opacity-70 my-8 leading-normal ">
+                <h2 className="heading transition hover:opacity-70 my-8 leading-normal ">
                   <Link href={`/post/${data.slug}`}>
                     <a>{data.frontmatter.heading}</a>
                   </Link>
-                </h1>
+                </h2>
 
                 <div className="">
                   <p

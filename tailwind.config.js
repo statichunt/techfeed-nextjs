@@ -53,10 +53,6 @@ module.exports = {
       height: {
         37: "18.75rem",
       },
-      letterSpacing: {
-        primary: "2px",
-        secondary: "3px",
-      },
 
       colors: {
         primaryColor: themeStyle.color.themeColor.primary,

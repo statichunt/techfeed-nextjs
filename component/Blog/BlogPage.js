@@ -4,8 +4,9 @@ import Link from "next/dist/client/link";
 import { useRouter } from "next/router";
 import config from "../../config/config.json";
 import Pagination from "../Pagination";
+import { marked } from "marked";
 
-const BlogPage = ({ posts, page }) => {
+const BlogPage = ({ posts, page, blogData }) => {
   const [isBlog] = useState(true);
   const { pagination } = config.perameter;
   const indexOfLastPost = page * pagination;
@@ -21,7 +22,13 @@ const BlogPage = ({ posts, page }) => {
   });
   return (
     <>
-      <h1 className="pageTitle">All Blogs</h1>
+      <h1 className="pageTitle">{blogData.frontmatter.title}</h1>
+      <div
+        dangerouslySetInnerHTML={{ __html: marked.parse(blogData.content) }}
+        className="markdown mt-8"
+        //
+      ></div>
+
       <div className="container postContents mx-auto">
         {currentPosts.map((blog) => (
           <div className=" blog" key={blog.slug}>

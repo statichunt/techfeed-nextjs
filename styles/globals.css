@@ -127,4 +127,7 @@
   h6 {
     @apply text-h6 font-primary;
   }
+  body {
+    @apply bg-body;
+  }
 }

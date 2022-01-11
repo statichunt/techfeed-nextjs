@@ -1,7 +1,7 @@
 import React from "react";
-import NotFound from "config/404.json";
 import Layout from "@/component/Layout";
 import { get404Page } from "@/lib/post";
+import { marked } from "marked";
 
 const Error = ({ notFoundData }) => {
   return (
@@ -11,6 +11,13 @@ const Error = ({ notFoundData }) => {
           <h1 className="text-h1">{notFoundData.frontmatter.title}</h1>
           <h4 className="text-h4 ">{notFoundData.frontmatter.subTitle}</h4>
         </div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: marked.parse(notFoundData.content),
+          }}
+          className="markdown mt-8"
+          //
+        ></div>
       </div>
     </Layout>
   );

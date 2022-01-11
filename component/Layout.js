@@ -24,7 +24,7 @@ const Layout = ({ children, title }) => {
     };
   });
   return (
-    <div className="bg-body">
+    <div>
       <Head>
         <title>{title}</title>
 

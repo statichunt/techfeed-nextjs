@@ -13,7 +13,8 @@ const CategoryData = ({ category, posts }) => {
 };
 
 export const getStaticPaths = async () => {
-  const posts = getPost();
+  const getPosts = getPost();
+  const posts = getPosts.filter((data) => data.frontmatter.draft == false);
   const paths = posts.map((category) => ({
     params: {
       category: category.frontmatter.category.replace(/ /g, "-"),
@@ -29,7 +30,8 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { category } = params;
 
-  const posts = getPost();
+  const getPosts = getPost();
+  const posts = getPosts.filter((data) => data.frontmatter.draft == false);
   return {
     props: {
       category,

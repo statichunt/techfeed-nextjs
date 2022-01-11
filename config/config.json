@@ -16,22 +16,22 @@
     {
       "icon": "fab fa-facebook-f",
       "name": "facebook",
-      "profileLink": "https://www.facebook.com/userId"
+      "link": "https://www.facebook.com/#"
     },
     {
       "icon": "fab fa-twitter",
       "name": "twitter",
-      "profileLink": "https://twitter.com/?lang=en"
+      "link": "https://twitter.com/?lang=en"
     },
     {
       "icon": "fab fa-pinterest",
       "name": "pinterest",
-      "profileLink": "https://www.pinterest.com/usierId/_saved/"
+      "link": "https://www.pinterest.com/#/_saved/"
     },
     {
       "icon": "fab fa-instagram",
       "name": "instgram",
-      "profileLink": "https://www.instagram.com/userId"
+      "link": "https://www.instagram.com/#"
     }
   ]
 }

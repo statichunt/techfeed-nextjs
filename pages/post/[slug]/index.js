@@ -22,7 +22,7 @@ const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
   const sortBySlug = [...filterDataById, ...remainData];
 
   return (
-    <Layout title={slug}>
+    <Layout title={slug.replace(/-/g, " ")}>
       <div className="flex justify-center items-center container postContents">
         <SinglePosts
           frontmatter={frontmatter}

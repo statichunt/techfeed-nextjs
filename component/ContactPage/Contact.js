@@ -1,3 +1,4 @@
+import { marked } from "marked";
 import { useRouter } from "next/router";
 
 const Contact = ({ action, data }) => {
@@ -11,6 +12,11 @@ const Contact = ({ action, data }) => {
       <div className=" container postContents my-8 px-4 ">
         <div className="w-full md:w-4/6 mx-auto text-textColor">
           <h1 className="pageTitle">{data.frontmatter.title}</h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}
+            className="markdown mt-8"
+            //
+          ></div>
 
           <form
             action={action}

@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
         <div className="flex ">
           {socialMedia.map((data) => (
-            <Link href={data.profileLink} key={data.name}>
+            <Link href={data.link} key={data.name}>
               <a className="" target="_blank" rel="noflow">
                 <div className="socialMedia hover:bg-black">
                   <i className={`${data.icon} not-italic`}></i>
@@ -22,7 +22,6 @@ const Footer = () => {
         <div className="text-center mt-8 font-secondary text-lg sm:text-xl">
           <p>
             {footer.copyright}
-
             {footer.theme_copyright && (
               <>
                 &nbsp;| Theme by&nbsp;

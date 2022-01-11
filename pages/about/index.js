@@ -4,7 +4,7 @@ import Layout from "@/component/Layout";
 
 const About = ({ posts }) => {
   return (
-    <Layout title={posts.frontmatter.about}>
+    <Layout title="About">
       <div>
         <AboutData data={posts}></AboutData>
       </div>

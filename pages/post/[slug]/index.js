@@ -20,6 +20,11 @@ const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
   );
 
   const sortBySlug = [...filterDataById, ...remainData];
+  let array = [1, 2, 3];
+  for (let i = 1; i < array.length - 1; i++) {
+    array[i] = array[i - 1] * 2;
+    console.log(array);
+  }
 
   return (
     <Layout title={slug.replace(/-/g, " ")}>

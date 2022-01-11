@@ -34,7 +34,8 @@
       "default": "16px",
       "large": "18px",
       "small": "12px",
-      "base": "16px"
+      "base": "16px",
+      "font_scale": 1.25
     }
   }
 }

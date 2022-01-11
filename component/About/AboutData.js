@@ -1,7 +1,6 @@
 import Image from "next/image";
-
 import { marked } from "marked";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const AboutData = ({ data }) => {

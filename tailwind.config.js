@@ -1,7 +1,12 @@
 const themeStyle = require("./config/style.json");
 const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
 const secondaryFont = themeStyle.font.fontFamily.secondary.replace(/\+/g, " ");
-const heading = themeStyle.font.fontSize.h3 / 2;
+const h6 = themeStyle.font.fontSize.base;
+const h5 = h6 * 1.25;
+const h4 = h5 * 1.25;
+const h3 = h4 * 1.25;
+const h2 = h3 * 1.25;
+const h1 = h2 * 1.25;
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
   variants: {
@@ -34,13 +39,19 @@ module.exports = {
         default: themeStyle.font.fontSize.default,
         large: themeStyle.font.fontSize.large,
         small: themeStyle.font.fontSize.small,
-        h1: themeStyle.font.fontSize.h1,
-        h2: themeStyle.font.fontSize.h2,
-        h3: themeStyle.font.fontSize.h3,
-        h4: themeStyle.font.fontSize.h4,
-        h5: themeStyle.font.fontSize.h5,
-        h6: themeStyle.font.fontSize.h6,
-        heading: heading + "px",
+        // h1: themeStyle.font.fontSize.h1,
+        // h2: themeStyle.font.fontSize.h2,
+        // h3: themeStyle.font.fontSize.h3,
+        // h4: themeStyle.font.fontSize.h4,
+        // h5: themeStyle.font.fontSize.h5,
+        // h6: themeStyle.font.fontSize.h6,
+        // heading: heading + "px",
+        h1: h1 + "px",
+        h2: h2 + "px",
+        h3: h3 + "px",
+        h4: h4 + "px",
+        h5: h5 + "px",
+        h6: h6 + "px",
       },
       fontFamily: {
         primary: [

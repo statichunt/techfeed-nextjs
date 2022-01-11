@@ -34,7 +34,7 @@
       "default": "16px",
       "large": "18px",
       "small": "12px",
-      "base": 16
+      "base": "16px"
     }
   }
 }

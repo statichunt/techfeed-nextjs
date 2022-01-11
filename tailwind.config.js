@@ -1,7 +1,8 @@
 const themeStyle = require("./config/style.json");
 const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
 const secondaryFont = themeStyle.font.fontFamily.secondary.replace(/\+/g, " ");
-const h6 = themeStyle.font.fontSize.base;
+const base = Number(themeStyle.font.fontSize.base.replace("px", ""));
+const h6 = base;
 const h5 = h6 * 1.25;
 const h4 = h5 * 1.25;
 const h3 = h4 * 1.25;

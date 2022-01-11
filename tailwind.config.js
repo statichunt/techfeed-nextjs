@@ -1,6 +1,7 @@
 const themeStyle = require("./config/style.json");
 const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
 const secondaryFont = themeStyle.font.fontFamily.secondary.replace(/\+/g, " ");
+const heading = themeStyle.font.fontSize.h3 / 2;
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
   variants: {
@@ -39,6 +40,7 @@ module.exports = {
         h4: themeStyle.font.fontSize.h4,
         h5: themeStyle.font.fontSize.h5,
         h6: themeStyle.font.fontSize.h6,
+        heading: heading + "px",
       },
       fontFamily: {
         primary: [

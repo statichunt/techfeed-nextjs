@@ -18,7 +18,6 @@ const Error = ({ notFoundData }) => {
 
 export const getStaticProps = () => {
   const notFoundData = get404Page();
-  console.log(notFoundData);
   return {
     props: {
       notFoundData,

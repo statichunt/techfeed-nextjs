@@ -8,7 +8,7 @@
     @apply text-h2_sm md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
   }
   .title {
-    @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
+    @apply font-primary text-large relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
   }
   .flex-order {
     @apply flex justify-center items-center;
@@ -24,7 +24,7 @@
     @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secondary;
   }
   .postsData {
-    @apply font-secondary text-large text-center font-normal leading-8 text-textColor;
+    @apply font-secondary text-large  font-normal leading-8 text-textColor;
   }
 
   /* nav and menubar section */
@@ -85,11 +85,14 @@
   }
   /* both blog and category card */
   .blog {
-    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor;
+    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor text-left;
   }
 
   .blogImage {
     @apply w-full md:h-52 h-37 relative;
+  }
+  .blogTitle {
+    @apply md:text-h3 text-h3_sm font-primary mb-4 font-thin hover:opacity-70 transition;
   }
   /* social icon */
   .socialMedia {
@@ -111,7 +114,7 @@
   /* markdown */
 
   .markdown {
-    @apply prose mx-auto sm:prose-2xl prose-p:text-base prose-p:text-center prose-blockquote:text-left sm:prose-li:text-base  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
+    @apply prose mx-auto sm:prose-2xl prose-p:text-base  sm:prose-li:text-base  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
     prose-li:font-secondary
     prose-h1:text-h1
     prose-h2:text-h2
@@ -121,9 +124,6 @@
 }
 
 @layer base {
-  h1 {
-    @apply text-h1;
-  }
   h5 {
     @apply text-h5 font-primary;
   }

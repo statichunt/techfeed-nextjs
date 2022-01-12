@@ -23,11 +23,11 @@ const AboutData = ({ data }) => {
           ></Image>
         </div>
         <div className="text-center ">
-          <div className="font-secondary text-4xl my-8 leading-normal ">
-            <h1>{data.frontmatter.about}</h1>
+          <div>
+            <h1 className="pageTitle ">{data.frontmatter.about}</h1>
           </div>
           <div
-            className="font-secondary text-xl text-textColor"
+            className="markdown"
             dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}
           ></div>
         </div>

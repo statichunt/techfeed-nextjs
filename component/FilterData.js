@@ -20,7 +20,7 @@ const FilterData = ({ value }) => {
                 ></Image>
               </div>
 
-              <div className="heading text-center text-h4 hover:opacity-70">
+              <div className="blogTitle text-center  hover:opacity-70">
                 <h2>
                   <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.heading}</a>

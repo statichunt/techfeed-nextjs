@@ -11,6 +11,7 @@ const h2 = h3 * font_scale;
 const h1 = h2 * font_scale;
 const h1_sm = h1 * 0.625;
 const h2_sm = h2 * 0.625;
+const h3_sm = h3 * 0.8;
 const large = base + base * 0.125;
 const small = base - base * 0.125;
 
@@ -54,6 +55,7 @@ module.exports = {
         h6: h6 + "px",
         h1_sm: h1_sm + "px",
         h2_sm: h2_sm + "px",
+        h3_sm: h3_sm + "px",
       },
       fontFamily: {
         primary: [

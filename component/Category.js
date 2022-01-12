@@ -28,12 +28,12 @@ const Category = ({ value }) => {
               </div>
 
               <div className="py-4 md:h-60">
-                <div className="heading  text-h4 text-center  mb-4 font-thin hover:opacity-70 transition ">
-                  <h2>
+                <div className="blogTitle ">
+                  <h3>
                     <Link href={`/post/${blog.slug}`}>
                       <a>{blog.frontmatter.heading}</a>
                     </Link>
-                  </h2>
+                  </h3>
                 </div>
                 <div className="postsData">
                   <p>{blog.frontmatter.content.slice(0, 200)}</p>

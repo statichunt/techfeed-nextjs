@@ -1,6 +1,7 @@
 import socialIcon from "../config/config.json";
 import footerData from "../config/config.json";
 import Link from "next/link";
+import { marked } from "marked";
 
 const Footer = () => {
   const { socialMedia } = socialIcon;
@@ -20,8 +21,13 @@ const Footer = () => {
           ))}
         </div>
         <div className="text-center mt-8 font-secondary text-lg sm:text-xl">
-          <p>
-            {footer.copyright}
+          <p className="flex">
+            <div
+              href="#"
+              dangerouslySetInnerHTML={{
+                __html: marked(footer.copyright),
+              }}
+            ></div>
             {footer.theme_copyright && (
               <>
                 &nbsp;| Theme by&nbsp;

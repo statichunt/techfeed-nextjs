@@ -43,14 +43,14 @@ const BlogPage = ({ posts, page, blogData }) => {
             </div>
 
             <div className="h-auto my-4 sm:h-60 py-4">
-              <div className="heading  text-h4 text-center  mb-4 font-thin hover:opacity-70">
-                <h2>
+              <div className="blogTitle">
+                <h3>
                   <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.heading}</a>
                   </Link>
-                </h2>
+                </h3>
               </div>
-              <div className="postData">
+              <div className="postsData">
                 <p>{blog.frontmatter.content.slice(0, 200)}</p>
               </div>
             </div>

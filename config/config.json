@@ -8,7 +8,7 @@
   },
 
   "footer": {
-    "copyright": "Copyright by your company",
+    "copyright": "Copyright by your [company](#)",
     "theme_copyright": true
   },
 

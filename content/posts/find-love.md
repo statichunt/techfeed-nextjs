@@ -1,7 +1,6 @@
 ---
-id: 3
 category: "Love & Romance"
-heading: "A SHORT TRIP TO NEBRASKA"
+title: "A SHORT TRIP TO NEBRASKA"
 date: "November 24, 2021"
 author: "Mark Dinn"
 image: "/image/post/02.jpg"

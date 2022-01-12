@@ -52,6 +52,10 @@
         {
           "page": "Terms & Condition",
           "pagelink": "terms"
+        },
+        {
+          "page": "Elements",
+          "pagelink": "elements"
         }
       ]
     },

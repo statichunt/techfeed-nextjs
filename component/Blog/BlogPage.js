@@ -46,7 +46,7 @@ const BlogPage = ({ posts, page, blogData }) => {
               <div className="blogTitle">
                 <h3>
                   <Link href={`/post/${blog.slug}`}>
-                    <a>{blog.frontmatter.heading}</a>
+                    <a>{blog.frontmatter.title}</a>
                   </Link>
                 </h3>
               </div>

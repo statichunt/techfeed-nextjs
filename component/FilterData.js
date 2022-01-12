@@ -23,7 +23,7 @@ const FilterData = ({ value }) => {
               <div className="blogTitle text-center  hover:opacity-70">
                 <h2>
                   <Link href={`/post/${blog.slug}`}>
-                    <a>{blog.frontmatter.heading}</a>
+                    <a>{blog.frontmatter.title}</a>
                   </Link>
                 </h2>
               </div>

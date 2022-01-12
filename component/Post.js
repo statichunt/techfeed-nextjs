@@ -51,7 +51,7 @@ const Post = ({ value, page }) => {
                 </div>
                 <h2 className="heading transition hover:opacity-70 my-8 leading-normal ">
                   <Link href={`/post/${data.slug}`}>
-                    <a>{data.frontmatter.heading}</a>
+                    <a>{data.frontmatter.title}</a>
                   </Link>
                 </h2>
 
@@ -100,14 +100,14 @@ const Post = ({ value, page }) => {
                 </div>
               </div>
 
-              <div className="postsData">
+              <div className="postsData text-center">
                 <p>{data.frontmatter.content}</p>
               </div>
 
               <div className="my-10">
                 <div className="hover  flex-order my-10">
                   <Link href={`/post/${data.slug}`}>
-                    <a className="flex-order text-xl  capitalize">
+                    <a className="flex-order text-large  capitalize">
                       continue reading
                       <span className="mx-1">
                         <BsArrowRight />
@@ -124,9 +124,9 @@ const Post = ({ value, page }) => {
                           i.name == "facebook"
                             ? `https://www.facebook.com/sharer/sharer.php?u=+https://lifistyle-blog.vercel.app/${data.slug}`
                             : i.name == "twitter"
-                            ? `https://twitter.com/intent/tweet/?text=${data.frontmatter.heading}&url=${data.slug}`
+                            ? `https://twitter.com/intent/tweet/?text=${data.frontmatter.title}&url=${data.slug}`
                             : i.name == "pinterest"
-                            ? `https://www.pinterest.com/pin/?text=${data.frontmatter.heading}&url=${data.slug}`
+                            ? `https://www.pinterest.com/pin/?text=${data.frontmatter.title}&url=${data.slug}`
                             : "#"
                         }
                       >

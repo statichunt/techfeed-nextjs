@@ -1,7 +1,6 @@
 ---
-id: 7
 category: "Travels and Tours"
-heading: "Natural beauty takes at least two hours in front of a mirror."
+title: "Natural beauty takes at least two hours in front of a mirror."
 date: "June 17, 2021"
 author: "Mark Dinn"
 image: "/image/post/tezos.jpg"

@@ -42,6 +42,7 @@ export const getStaticProps = ({ params }) => {
   const page = parseInt((params && params.slug) || 1);
   const getPosts = getPost();
   const posts = getPosts.filter((p) => p.frontmatter.draft != true);
+
   const data = getBannerData();
 
   return {

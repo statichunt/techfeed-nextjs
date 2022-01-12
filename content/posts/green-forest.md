@@ -1,7 +1,6 @@
 ---
-id: 4
 category: "Natural Beauty"
-heading: "Well, to be frank I like natural beauty. Not artificial."
+title: "Well, to be frank I like natural beauty. Not artificial."
 date: "November 22, 2021"
 author: "Mark Dinn"
 image: "/image/post/nature.jpg"

@@ -1,7 +1,6 @@
 ---
-id: 9
 category: "Travels & Tour"
-heading: "We take photos as a return ticket to a moment otherwise gone"
+title: "We take photos as a return ticket to a moment otherwise gone"
 date: "March 22, 2020"
 author: "Mark Dinn"
 image: "/image/post/travel4.jpg"

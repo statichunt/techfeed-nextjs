@@ -1,7 +1,6 @@
 ---
-id: 1
 category: "Love & Romance"
-heading: "FINDING LOVE AND ROMANCE ON THE ROAD"
+title: "FINDING LOVE AND ROMANCE ON THE ROAD"
 date: "November 20, 2021"
 author: "Mark Dinn"
 image: "/image/post/love.jpg"

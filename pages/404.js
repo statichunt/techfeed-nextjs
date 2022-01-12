@@ -9,7 +9,7 @@ const Error = ({ notFoundData }) => {
       <div className="container text-center font-primary mx-auto">
         <div className="py-32">
           <h1 className="text-h1">{notFoundData.frontmatter.title}</h1>
-          <h4 className="text-h4 ">{notFoundData.frontmatter.subTitle}</h4>
+          <h4 className="text-h4 ">{notFoundData.frontmatter.subtitle}</h4>
         </div>
         <div
           dangerouslySetInnerHTML={{

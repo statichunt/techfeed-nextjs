@@ -85,7 +85,7 @@
   }
   /* both blog and category card */
   .blog {
-    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mt-20 md:mb-12 clear-both sm:px-2 mt-16 text-textColor text-left;
+    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mb-16 clear-both sm:px-2  text-textColor text-left;
   }
 
   .blogImage {
@@ -119,7 +119,9 @@
     prose-h1:text-h1
     prose-h2:text-h2
     prose-h3:text-h3
-    prose-h4:text-h4;
+    prose-h4:text-h4
+    prose-a:hover
+    prose-a:no-underline;
   }
 }
 

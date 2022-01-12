@@ -2,6 +2,7 @@ import Link from "next/dist/client/link";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import NavMenu from "../../config/menu.json";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const DropDownMenu = ({ isOpen, toggle }) => {
   const [isDropdown, setDropDown] = useState(false);
@@ -39,19 +40,28 @@ const DropDownMenu = ({ isOpen, toggle }) => {
           >
             <Link href={data.link}>
               <a
-                className=" block"
+                className="relative"
                 onClick={() => {
                   data.submenu[0].page != "" && setDropDown(!isDropdown);
                 }}
               >
                 {data.menu}
+                <i
+                  className={
+                    data.menu == "Pages"
+                      ? "block text-textDark text-h4 absolute top-0 left-14"
+                      : "hidden"
+                  }
+                >
+                  <RiArrowDropDownLine />
+                </i>
               </a>
             </Link>
 
             <ul
               className={
                 data.submenu[0].page != "" && isDropdown
-                  ? " block  subMenu  static bg-gray-300 w-full "
+                  ? " block  subMenu  static  w-full "
                   : "  hidden "
               }
             >
@@ -65,7 +75,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
                     >
                       <li
                         key={p.page}
-                        className="rounded-sm  hover:bg-gray-100 px-2 py-1 capitalize"
+                        className="rounded-sm  px-2 py-1 capitalize hover:text-primaryColor text-textColor hover:font-extralight z-10 "
                       >
                         {p.page}
                       </li>

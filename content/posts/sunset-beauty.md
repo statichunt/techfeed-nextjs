@@ -1,7 +1,6 @@
 ---
-id: 8
 category: "Travels and Tours"
-heading: "It feels good to be lost in the right direction"
+title: "It feels good to be lost in the right direction"
 date: "March 17, 2021"
 author: "Mark Dinn"
 image: "/image/post/travel2.jpg"

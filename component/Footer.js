@@ -20,9 +20,10 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="text-center mt-8 font-secondary text-lg sm:text-xl">
-          <p className="flex">
+        <div className="text-center mt-8 font-secondary text-large ">
+          <p>
             <div
+              className="inline-block markdown text-large"
               href="#"
               dangerouslySetInnerHTML={{
                 __html: marked(footer.copyright),

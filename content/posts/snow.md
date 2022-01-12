@@ -1,7 +1,6 @@
 ---
-id: 5
 category: "Travels and Tours"
-heading: "Natural beauty takes at least two hours in front of a mirror."
+title: "Natural beauty takes at least two hours in front of a mirror."
 date: "March 17, 2021"
 author: "Mark Dinn"
 image: "/image/post/nature2.jpg"
@@ -35,4 +34,4 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur
 - Nam ut rutrum ex venenatis sollicitudin;
 - Nam ut rutrum ex venenatis sollicitudin;
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!---

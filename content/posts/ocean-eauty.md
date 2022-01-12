@@ -1,7 +1,6 @@
 ---
-id: 6
 category: "Natural Beauty"
-heading: "The cure for anything is salt water: sweat, tears or the sea."
+title: "The cure for anything is salt water: sweat, tears or the sea."
 date: "March 10, 2021"
 author: "Mark Dinn"
 image: "/image/post/nature3.jpg"

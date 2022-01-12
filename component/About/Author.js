@@ -15,7 +15,7 @@ const Author = ({ data }) => {
           ></Image>
         </div>
 
-        <div className="heading sm:text-h3 font-medium leading-5 my-12 ">
+        <div className="pageTitle  font-medium leading-5 my-12 ">
           <h3>{data.frontmatter.greetings}</h3>
         </div>
         <div className="authorDetails text-textColor">

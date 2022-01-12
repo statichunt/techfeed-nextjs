@@ -34,9 +34,7 @@ const SinglePosts = ({
           <div className="my-10">
             <h2 className="title cursor-default">{frontmatter.category}</h2>
           </div>
-          <h1 className="heading font-oswald text-center">
-            {frontmatter.heading}
-          </h1>
+          <h1 className="pageTitle  text-center">{frontmatter.heading}</h1>
 
           <div className="">
             <p

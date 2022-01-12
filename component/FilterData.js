@@ -5,7 +5,7 @@ const FilterData = ({ value }) => {
   return (
     <>
       <div className="sm:my-20 my-10 w-full">
-        <div className="heading text-center text-4xl tracking-tight my-5 font-normal cursor-default">
+        <div className="pageTitle text-center  tracking-tight my-5 font-normal cursor-default">
           <h1>SIMILAR POST</h1>
         </div>
         <div className="grid lg:grid-cols-3 gap-x-8 md:grid-cols-2 ">

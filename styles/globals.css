@@ -5,7 +5,7 @@
 @layer components {
   /* common class */
   .heading {
-    @apply md:text-h1 font-primary text-textDark my-3 font-medium uppercase;
+    @apply text-h2_sm md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
   }
   .title {
     @apply font-primary text-h5 relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
@@ -17,7 +17,7 @@
     @apply text-primaryColor hover:text-primaryColor hover:opacity-70;
   }
   .pageTitle {
-    @apply lg:text-5xl sm:text-3xl text-2xl uppercase text-center my-8 font-medium font-primary text-textDark;
+    @apply md:text-h1 text-h1_sm uppercase text-center my-8 font-medium font-primary text-textDark;
   }
   /*home page section */
   .postContents {
@@ -111,7 +111,7 @@
   /* markdown */
 
   .markdown {
-    @apply prose mx-auto sm:prose-2xl prose-p:text-base sm:prose-li:text-base  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
+    @apply prose mx-auto sm:prose-2xl prose-p:text-base prose-p:text-center prose-blockquote:text-left sm:prose-li:text-base  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
     prose-li:font-secondary
     prose-h1:text-h1
     prose-h2:text-h2

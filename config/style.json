@@ -31,7 +31,6 @@
       "icon": "Font Awesome 5 Free"
     },
     "fontSize": {
-      "default": "16px",
       "large": "18px",
       "small": "12px",
       "base": "16px",

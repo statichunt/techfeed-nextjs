@@ -9,8 +9,8 @@ const h4 = h5 * font_scale;
 const h3 = h4 * font_scale;
 const h2 = h3 * font_scale;
 const h1 = h2 * font_scale;
-const large = base + base * 12.5;
-const small = base - base * 12.5;
+const large = base + base * 0.125;
+const small = base - base * 0.125;
 
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
@@ -41,7 +41,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        default: themeStyle.font.fontSize.default,
+        base: themeStyle.font.fontSize.base,
         large: large + "px",
         small: small + "px",
         h1: h1 + "px",

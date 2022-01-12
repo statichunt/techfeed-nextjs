@@ -111,7 +111,7 @@
   /* markdown */
 
   .markdown {
-    @apply prose mx-auto sm:prose-2xl prose-p:text-default sm:prose-li:text-default  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
+    @apply prose mx-auto sm:prose-2xl prose-p:text-base sm:prose-li:text-base  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
     prose-li:font-secondary
     prose-h1:text-h1
     prose-h2:text-h2

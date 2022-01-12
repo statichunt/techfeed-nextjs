@@ -51,7 +51,7 @@ const BlogPage = ({ posts, page, blogData }) => {
                 </h3>
               </div>
               <div className="postsData">
-                <p>{blog.frontmatter.content.slice(0, 200)}</p>
+                <p>{blog.frontmatter.excerpt.slice(0, 200)}</p>
               </div>
             </div>
           </div>

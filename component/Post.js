@@ -101,7 +101,11 @@ const Post = ({ value, page }) => {
               </div>
 
               <div className="postsData text-center">
-                <p>{data.frontmatter.content}</p>
+                {data.frontmatter.excerpt ? (
+                  <p>{data.frontmatter.excerpt}</p>
+                ) : (
+                  <p>{data.content.slice(0, 300).replace(/[!@#$%^&*]/g, "")}</p>
+                )}
               </div>
 
               <div className="my-10">
@@ -119,7 +123,6 @@ const Post = ({ value, page }) => {
                   {socialMedia.slice(0, 3).map((i) => (
                     <div key={i.name} className="">
                       <Link
-                        // href={`${i.shareLink}+https://lifistyle-blog.vercel.app/${data.slug}`}
                         href={
                           i.name == "facebook"
                             ? `https://www.facebook.com/sharer/sharer.php?u=+https://lifistyle-blog.vercel.app/${data.slug}`

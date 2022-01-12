@@ -4,7 +4,7 @@ title: "We take photos as a return ticket to a moment otherwise gone"
 date: "March 22, 2020"
 author: "Mark Dinn"
 image: "/image/post/travel4.jpg"
-content: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame "
+excerpt: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame "
 draft: false
 ---
 

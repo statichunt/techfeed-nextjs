@@ -34,8 +34,8 @@ const AboutAuthor = ({ data, author }) => {
           </div>
           <div className="flex  justify-center lg:justify-start">
             {socialMedia.map((icon) => (
-              <div key={icon.class} className="mr-2">
-                <Link href={icon.name}>
+              <div key={icon.name} className="mr-2">
+                <Link href={icon.link}>
                   <a
                     className="hover text-black pr-8"
                     target="_blank"

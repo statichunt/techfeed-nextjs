@@ -46,7 +46,7 @@ const Post = ({ value, page }) => {
               <div className="text-center my-14">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
-                    <a className="title">{data.frontmatter.category}</a>
+                    {<a className="title">{data.frontmatter.category}</a>}
                   </Link>
                 </div>
                 <h2 className="heading transition hover:opacity-70 my-8 leading-normal ">

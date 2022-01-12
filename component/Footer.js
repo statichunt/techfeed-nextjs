@@ -22,13 +22,13 @@ const Footer = () => {
         </div>
         <div className="text-center mt-8 font-secondary text-large ">
           <p>
-            <div
+            <p
               className="inline-block markdown text-large"
               href="#"
               dangerouslySetInnerHTML={{
                 __html: marked(footer.copyright),
               }}
-            ></div>
+            ></p>
             {footer.theme_copyright && (
               <>
                 &nbsp;| Theme by&nbsp;

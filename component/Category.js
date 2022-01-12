@@ -36,7 +36,13 @@ const Category = ({ value }) => {
                   </h3>
                 </div>
                 <div className="postsData">
-                  <p>{blog.frontmatter.excerpt.slice(0, 200)}</p>
+                  {blog.frontmatter.excerpt ? (
+                    <p>{blog.frontmatter.excerpt.slice(0, 200)}</p>
+                  ) : (
+                    <p>
+                      {blog.content.slice(0, 200).replace(/[!@#$%^&*]/g, "")}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

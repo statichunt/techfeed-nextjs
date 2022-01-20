@@ -16,10 +16,6 @@ const Post = ({ value, page }) => {
   const pageNumber = Math.ceil(value.length / pagination);
   const router = useRouter();
 
-  const y = currentPosts.map((d) =>
-    new Date(d.frontmatter.date).toLocaleDateString("en-US", options)
-  );
-
   useEffect(() => {
     if (page > pageNumber) {
       router.push("/");
@@ -43,13 +39,13 @@ const Post = ({ value, page }) => {
               />
             </div>
             <div className=" lg:w-4/6 leading-8 w-full mx-auto">
-              <div className="text-center my-14">
+              <div className="text-center my-10">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
                     {<a className="title">{data.frontmatter.category}</a>}
                   </Link>
                 </div>
-                <h2 className="heading transition hover:opacity-70 my-8 leading-normal ">
+                <h2 className="heading transition hover:opacity-70 my-6 leading-normal ">
                   <Link href={`/post/${data.slug}`}>
                     <a>{data.frontmatter.title}</a>
                   </Link>

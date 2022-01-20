@@ -47,9 +47,9 @@ export const getStaticProps = ({ params }) => {
 
   return {
     props: {
-      posts,
-      page,
-      data,
+      posts: posts,
+      page: +page,
+      data: data,
     },
   };
 };

@@ -32,10 +32,11 @@ export const getStaticProps = async ({ params }) => {
 
   const getPosts = getPost();
   const posts = getPosts.filter((data) => data.frontmatter.draft == false);
+
   return {
     props: {
-      category,
-      posts,
+      category: category,
+      posts: posts,
     },
   };
 };

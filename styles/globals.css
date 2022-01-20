@@ -56,11 +56,11 @@
   }
   /* pagination */
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-black hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
+    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
 
   .buttonDisable {
-    @apply bg-black opacity-30 hover:bg-black hover:opacity-30 cursor-default;
+    @apply bg-dark opacity-30 hover:bg-dark hover:opacity-30 cursor-default;
   }
 
   .pagination-list {
@@ -121,6 +121,7 @@
     prose-h3:text-h3
     prose-h4:text-h4
     prose-a:hover
+    prose-p:my-4
     prose-a:no-underline;
   }
 }

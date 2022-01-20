@@ -6,8 +6,18 @@ import socialIcon from "../../../config/config.json";
 import { getAboutData, getPost } from "@/lib/post";
 import SinglePosts from "@/component/SinglePost";
 import Layout from "@/component/Layout";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
+  const router = useRouter();
+  const latePosts = posts.map((f) => f.slug);
+
+  // useEffect(() => {
+  //   if (latePosts.includes(slug) == false) {
+  //     router.push("/404");
+  //   }
+  // });
   const { socialMedia } = socialIcon;
 
   const filter = posts.filter(
@@ -65,15 +75,19 @@ export const getStaticProps = async ({ params }) => {
   );
   const { data: frontmatter, content } = matter(singleMetaDataWithFrontMatter);
   const posts = getPost();
+  // const currentDate = new Date();
+  // const filterByDate = posts.filter(
+  //   (post) => new Date(post.frontmatter.date) <= currentDate
+  // );
   const aboutData = getAboutData();
 
   return {
     props: {
-      posts,
-      frontmatter,
-      content,
-      aboutData,
-      slug,
+      posts: posts,
+      frontmatter: frontmatter,
+      content: content,
+      aboutData: aboutData,
+      slug: slug,
     },
   };
 };

@@ -24,7 +24,7 @@
   },
   "font": {
     "fontFamily": {
-      "primary": "Oswald:wght@400",
+      "primary": "Open+sans:wght@400",
       "primaryType": "sans-serif",
       "secondary": "Lora:ital@0;1",
       "secondaryType": "serif",

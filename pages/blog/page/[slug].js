@@ -36,13 +36,14 @@ export const getStaticProps = ({ params }) => {
   const page = parseInt((params && params.slug) || 1);
   const getPosts = getPost();
   const posts = getPosts.filter((data) => data.frontmatter.draft == false);
+
   const blogData = getBlogData();
 
   return {
     props: {
-      posts,
-      page,
-      blogData,
+      posts: posts,
+      page: page,
+      blogData: blogData,
     },
   };
 };

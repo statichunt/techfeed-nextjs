@@ -10,6 +10,7 @@ const Posts = ({ posts, data, page }) => {
   const post = posts.sort(
     (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   );
+  console.log(posts);
   return (
     <Layout title={perameter.title} icon={perameter.icon}>
       <Author data={data}></Author>

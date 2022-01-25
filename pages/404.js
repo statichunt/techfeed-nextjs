@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@/component/Layout";
-import { get404Page } from "@/lib/post";
+import { getAllSingleBlog } from "@/lib/post";
 import { marked } from "marked";
 
 const Error = ({ notFoundData }) => {
@@ -24,7 +24,7 @@ const Error = ({ notFoundData }) => {
 };
 
 export const getStaticProps = () => {
-  const notFoundData = get404Page();
+  const notFoundData = getAllSingleBlog("content/404");
   return {
     props: {
       notFoundData,

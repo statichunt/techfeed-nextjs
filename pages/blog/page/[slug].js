@@ -1,6 +1,6 @@
 import BlogPage from "@/component/Blog/BlogPage";
 import Layout from "@/component/Layout";
-import { getBlogData, getPost } from "@/lib/post";
+import { getIndexData, getPost } from "@/lib/post";
 import React from "react";
 import config from "../../../config/config.json";
 
@@ -37,7 +37,7 @@ export const getStaticProps = ({ params }) => {
   const getPosts = getPost();
   const posts = getPosts.filter((data) => data.frontmatter.draft == false);
 
-  const blogData = getBlogData();
+  const blogData = getIndexData("content/posts");
 
   return {
     props: {

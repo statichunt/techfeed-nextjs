@@ -1,5 +1,5 @@
 import React from "react";
-import { getBannerData, getPost } from "@/lib/post";
+import { getIndexData, getPost } from "@/lib/post";
 import config from "config/config.json";
 import Layout from "@/component/Layout";
 import Author from "@/component/About/Author";
@@ -44,7 +44,8 @@ export const getStaticProps = ({ params }) => {
   const getPosts = getPost();
   const posts = getPosts.filter((p) => p.frontmatter.draft != true);
 
-  const data = getBannerData();
+  const data = getIndexData("content");
+  console.log(getPosts);
 
   return {
     props: {

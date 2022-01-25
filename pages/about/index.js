@@ -1,5 +1,5 @@
 import AboutData from "@/component/About/AboutData";
-import { getAboutData } from "@/lib/post";
+import { getAllSingleBlog } from "@/lib/post";
 import Layout from "@/component/Layout";
 
 const About = ({ posts }) => {
@@ -13,7 +13,7 @@ const About = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  const postsdata = getAboutData();
+  const postsdata = getAllSingleBlog("content/about");
 
   return {
     props: {

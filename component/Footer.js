@@ -24,7 +24,6 @@ const Footer = () => {
           <p>
             <p
               className="inline-block markdown text-large"
-              href="#"
               dangerouslySetInnerHTML={{
                 __html: marked(footer.copyright),
               }}

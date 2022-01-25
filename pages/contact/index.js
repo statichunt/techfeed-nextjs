@@ -2,7 +2,7 @@ import React from "react";
 import Contact from "@/component/ContactPage/Contact";
 import Layout from "@/component/Layout";
 import config from "../../config/config.json";
-import { getContactData } from "@/lib/post";
+import { getAllSingleBlog } from "@/lib/post";
 
 const Contacts = ({ contactData }) => {
   const { contactFormAction } = config.perameter;
@@ -14,7 +14,7 @@ const Contacts = ({ contactData }) => {
 };
 
 export const getStaticProps = () => {
-  const contactData = getContactData();
+  const contactData = getAllSingleBlog("content/contact");
   return {
     props: {
       contactData,

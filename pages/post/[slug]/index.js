@@ -79,7 +79,7 @@ export const getStaticProps = async ({ params }) => {
   // const filterByDate = posts.filter(
   //   (post) => new Date(post.frontmatter.date) <= currentDate
   // );
-  const aboutData = getAboutData();
+  const aboutData = getAllSingleBlog("content/about");
 
   return {
     props: {

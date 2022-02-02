@@ -10,7 +10,7 @@ const Posts = ({ posts, data, page }) => {
   const post = posts.sort(
     (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
   );
-  console.log(posts);
+
   return (
     <Layout title={perameter.title} icon={perameter.icon}>
       <Author data={data}></Author>
@@ -45,7 +45,6 @@ export const getStaticProps = ({ params }) => {
   const posts = getPosts.filter((p) => p.frontmatter.draft != true);
 
   const data = getIndexData("content");
-  console.log(getPosts);
 
   return {
     props: {

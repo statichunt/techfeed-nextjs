@@ -26,7 +26,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
       ) : (
         <a>
           <button
-            className=" buttonClass  buttonDisable"
+            className=" buttonClass"
             disabled
             onClick={() =>
               router.push(
@@ -69,7 +69,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
       ) : (
         <a>
           <button
-            className=" buttonClass  buttonDisable"
+            className=" buttonClass "
             disabled
             onClick={() =>
               router.push(

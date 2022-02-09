@@ -21,11 +21,12 @@ const FilterData = ({ value }) => {
               </div>
 
               <div className="blogTitle text-center  hover:opacity-70">
-                <h2>
+                <h2 className="mt-9">
                   <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.title}</a>
                   </Link>
                 </h2>
+                
               </div>
             </div>
           ))}

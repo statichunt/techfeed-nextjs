@@ -5,16 +5,16 @@
 @layer components {
   /* common class */
   .heading {
-    @apply text-h2_sm md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
+    @apply text-h1 md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
   }
   .title {
-    @apply font-primary text-large relative border-b-4 border-primaryColor cursor-pointer tracking-widest font-normal uppercase;
+    @apply font-primary text-base leading-7 pb-2 relative border-b-4 border-primaryColor cursor-pointer text-dark tracking-widest font-normal uppercase;
   }
   .flex-order {
     @apply flex justify-center items-center;
   }
   .hover {
-    @apply text-primaryColor hover:text-primaryColor hover:opacity-70;
+    @apply text-primaryColor transition duration-150 ease-in-out hover:text-primaryColor hover:opacity-70;
   }
   .pageTitle {
     @apply md:text-h1 text-h1_sm uppercase text-center my-8 font-medium font-primary text-textDark;
@@ -24,12 +24,12 @@
     @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secondary;
   }
   .postsData {
-    @apply font-secondary text-large  font-normal leading-8 text-textColor;
+    @apply font-secondary text-xl font-normal leading-7 text-center text-textColor;
   }
 
   /* nav and menubar section */
   .navItem {
-    @apply text-base mx-3 hover:text-primaryColor font-secondary relative font-normal p-4 tracking-widest uppercase;
+    @apply transition duration-700 ease-in-out text-base mx-3 hover:text-primaryColor font-secondary relative font-normal py-4 lg:px-4 tracking-widest uppercase;
   }
 
   .nav {
@@ -37,11 +37,11 @@
   }
 
   .menuButton {
-    @apply flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
+    @apply transition duration-700 ease-in-out flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
   }
 
   .subMenu {
-    @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-white shadow-dark/80 shadow-md font-secondary z-10 -left-5;
+    @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-borderColor  font-secondary z-10 -left-5 transition-all duration-700 ease-in-out translate-y-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0;
   }
   /* about section */
   .authorDetails {
@@ -56,7 +56,7 @@
   }
   /* pagination */
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
+    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-700 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
 
   .buttonDisable {
@@ -64,16 +64,16 @@
   }
 
   .pagination-list {
-    @apply h-8 w-8 rounded-full flex justify-center items-center mx-2 cursor-pointer text-xl;
+    @apply transition duration-700 ease-in-out h-8 w-8 rounded-full flex justify-center items-center mx-2 cursor-pointer text-xl;
   }
 
   /* form  */
   .submit {
-    @apply px-8 py-4 bg-primaryColor hover:bg-black text-white font-secondary text-xl rounded-full;
+    @apply transition duration-700 ease-in-out cursor-pointer px-8 py-4 bg-primaryColor hover:bg-black text-white font-secondary text-xl rounded-full;
   }
 
   .inputField {
-    @apply border-2 p-4 border-borderColor outline-none my-4 block font-secondary rounded-md;
+    @apply border-2 p-4 border-borderColor outline-none my-2 block font-secondary text-small;
   }
   /* category section */
   .categoryContainer {
@@ -81,22 +81,22 @@
   }
 
   .categoryTitle {
-    @apply md:my-24 my-12 hover:shadow-sm hover:shadow-gray-400 p-4 rounded-sm font-primary text-2xl;
+    @apply md:mt-24 md:mb-32 my-12 text-dark transition duration-150 ease-in-out hover:opacity-70 p-4 rounded-sm font-primary text-2xl;
   }
   /* both blog and category card */
   .blog {
-    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mb-16 clear-both sm:px-2  text-textColor text-left;
+    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mb-20 clear-both sm:px-2  text-textColor text-left;
   }
 
   .blogImage {
     @apply w-full md:h-52 h-37 relative;
   }
   .blogTitle {
-    @apply md:text-h3 text-h3_sm font-primary mb-4 font-thin hover:opacity-70 transition;
+    @apply text-h5 font-primary mb-4 font-medium leading-6 uppercase text-center hover:opacity-70 transition duration-500 ease-in-out;
   }
   /* social icon */
   .socialMedia {
-    @apply w-14 h-14 rounded-full mx-2 text-large bg-light flex justify-center items-center cursor-pointer hover:text-white text-textColor;
+    @apply w-14 h-14 rounded-full mx-1 text-large bg-light flex justify-center items-center cursor-pointer transition duration-500 ease-in-out hover:text-white text-textColor;
   }
 
   .facebook {
@@ -114,15 +114,23 @@
   /* markdown */
 
   .markdown {
-    @apply prose mx-auto sm:prose-2xl prose-p:text-base  sm:prose-li:text-base  prose-li:text-small prose-headings:font-primary prose-p:font-secondary
+    @apply prose mx-auto 
+    sm:prose-2xl   
+    sm:prose-li:text-xl  
+    prose-headings:font-primary 
+    prose-p:font-secondary
     prose-li:font-secondary
     prose-h1:text-h1
-    prose-h2:text-h2
+    prose-h2:text-h3
     prose-h3:text-h3
     prose-h4:text-h4
     prose-a:hover
     prose-p:my-4
+    prose-p:text-h5
+    prose-p:text-textDark
+    prose-p:leading-8
     prose-a:no-underline;
+    @apply prose-li:leading-9 marker:text-dark;
   }
 }
 

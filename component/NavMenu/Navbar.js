@@ -28,14 +28,14 @@ const Navbar = ({ toggle, isOpen }) => {
                   }
                 ></div>
 
-                <li className="group relative ">
+                <li className="group relative transition duration-700 ease-in-out">
                   <Link href={`${data.link}`}>
-                    <a className="navItem relative flex w-full">
+                    <a className="navItem relative flex w-full  transition duration-700 ease-in-out">
                       {data.menu}
                       <i
                         className={
                           data.menu == "Pages"
-                            ? "block text-textDark text-2xl"
+                            ? "block text-textDark text-2xl transition duration-700 ease-in-out" 
                             : "hidden"
                         }
                       >
@@ -44,20 +44,19 @@ const Navbar = ({ toggle, isOpen }) => {
                     </a>
                   </Link>
                   {/* dropDown */}
-                  <ul
-                    className={
+                  <ul className={
                       data.submenu[0].page != ""
-                        ? "  hidden group-hover:block subMenu"
+                        ? "  subMenu"
                         : "hidden"
                     }
                   >
                     {data.submenu[0].page != "" &&
                       data.submenu.map((p) => (
                         <Link href={`/${p.pagelink}`} key={p.page}>
-                          <a className="hover:text-primaryColor text-textColor hover:font-extralight z-10  ">
+                          <a className=" uppercase hover:text-primaryColor text-textColor hover:font-extralight z-10 ">
                             <li
-                              className="rounded-sm 
-                     hover:bg-light px-2 py-1 capitalize"
+                              className=" rounded-sm transition duration-700 ease-in-out
+                     hover:bg-borderLight px-2 py-1 uppercase "
                             >
                               {p.page}
                             </li>

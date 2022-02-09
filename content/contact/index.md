@@ -1,3 +1,3 @@
 ---
-title: "GET IN TOUCH"
+title: "Get In Touch"
 ---

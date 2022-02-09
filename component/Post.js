@@ -26,9 +26,9 @@ const Post = ({ value, page }) => {
     <>
       <div className="container postContents">
         {currentPosts.map((data) => (
-          <div key={data.slug} className="w-full my-10 block">
+          <div key={data.slug} className="w-full mt-10 mb-2 px-12 block">
             <div className="block">
-              <Image
+              <a href="#"> <Image
                 alt="abc"
                 src={data.frontmatter.image}
                 width={1200}
@@ -36,16 +36,16 @@ const Post = ({ value, page }) => {
                 layout="responsive"
                 objectFit="cover"
                 priority
-              />
+              /></a>
             </div>
             <div className=" lg:w-4/6 leading-8 w-full mx-auto">
-              <div className="text-center my-10">
+              <div className="text-center mt-16 mb-14">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
                     {<a className="title">{data.frontmatter.category}</a>}
                   </Link>
                 </div>
-                <h2 className="heading transition hover:opacity-70 my-6 leading-normal ">
+                <h2 className="heading transition text-h2 hover:opacity-70 my-6 leading-normal ">
                   <Link href={`/post/${data.slug}`}>
                     <a>{data.frontmatter.title}</a>
                   </Link>
@@ -53,8 +53,7 @@ const Post = ({ value, page }) => {
 
                 <div className="">
                   <p
-                    className="  italic  font-secondary 
-                                            md:text-lg text-sm font-normal text-textLight"
+                    className="  italic font-secondary md:text-lg text-sm font-normal text-textGray"
                   >
                     Posted on{" "}
                     {currentDate.getFullYear() >
@@ -88,8 +87,8 @@ const Post = ({ value, page }) => {
                     )}{" "}
                     by{" "}
                     <Link href="/about">
-                      <a>
-                        <span className="hover">{data.frontmatter.author}</span>
+                      <a >
+                        <span className=" hover">{data.frontmatter.author}</span>
                       </a>
                     </Link>
                   </p>
@@ -104,10 +103,10 @@ const Post = ({ value, page }) => {
                 )}
               </div>
 
-              <div className="my-10">
-                <div className="hover  flex-order my-10">
+              <div className="mt-6">
+                <div className="hover  flex-order mb-10">
                   <Link href={`/post/${data.slug}`}>
-                    <a className="flex-order text-large  capitalize">
+                    <a className="flex-order text-large  capitalize ">
                       continue reading
                       <span className="mx-1">
                         <BsArrowRight />
@@ -132,9 +131,7 @@ const Post = ({ value, page }) => {
                         <a
                           target="_blank"
                           rel="noflow"
-                          className={`
-                                          socialMedia
-                                           cursor-pointer
+                          className={`transition duration-700 ease-in-out socialMedia cursor-pointer
                                            ${i.name}
                                            `}
                         >
@@ -150,7 +147,7 @@ const Post = ({ value, page }) => {
         ))}
 
         {/* pagination  */}
-        <div className="w-full lg:w-4/6 mx-auto flex justify-between">
+        <div className="w-full lg:w-4/6 mx-auto flex justify-between mb-10">
           <Pagination pageNumber={pageNumber} page={page}></Pagination>
         </div>
       </div>

@@ -25,7 +25,7 @@ const BlogPage = ({ posts, page, blogData }) => {
       <h1 className="pageTitle">{blogData.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: marked.parse(blogData.content) }}
-        className="markdown mt-8"
+        className="markdown mt-12"
         //
       ></div>
 
@@ -42,7 +42,7 @@ const BlogPage = ({ posts, page, blogData }) => {
               ></Image>
             </div>
 
-            <div className="h-auto my-4 sm:h-60 py-4">
+            <div className="h-auto my-6 sm:h-60 py-4">
               <div className="blogTitle">
                 <h3>
                   <Link href={`/post/${blog.slug}`}>
@@ -50,7 +50,7 @@ const BlogPage = ({ posts, page, blogData }) => {
                   </Link>
                 </h3>
               </div>
-              <div className="postsData">
+              <div className="postsData leading-8">
                 {blog.frontmatter.excerpt ? (
                   <p>{blog.frontmatter.excerpt.slice(0, 200)}</p>
                 ) : (

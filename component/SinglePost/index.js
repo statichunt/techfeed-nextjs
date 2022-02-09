@@ -19,7 +19,7 @@ const SinglePosts = ({
   let options = { year: "numeric", month: "long", day: "numeric" };
   return (
     <>
-      <div key={slug} className=" w-full mt-20">
+      <div key={slug} className=" w-full mt-14">
         <div className="block">
           <Image
             alt="abc"
@@ -31,16 +31,19 @@ const SinglePosts = ({
           />
         </div>
         <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto ">
-          <div className="my-10">
-            <h2 className="title cursor-default">{frontmatter.category}</h2>
+          <div className="mt-14">
+            <Link href={`/category/${frontmatter.category.replace(/ /g, "-")}`}>
+              <a>
+                <h2 className="title ">{frontmatter.category}</h2>
+              </a>
+            </Link>
           </div>
-          <h1 className="pageTitle  text-center">{frontmatter.title}</h1>
+          <h1 className="pageTitle  text-center mt-6 text-5xl mb-5">
+            {frontmatter.title}
+          </h1>
 
           <div className="">
-            <p
-              className="  italic  font-secondary 
-                                            md:text-lg text-sm font-normal text-textLight"
-            >
+            <p className="  italic  font-secondary md:text-lg mb-5 text-sm font-normal text-textLight">
               Posted on{" "}
               {currentDate.getFullYear() >
               new Date(frontmatter.date).getFullYear() ? (

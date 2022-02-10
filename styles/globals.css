@@ -85,7 +85,7 @@
   }
 
   .categoryTitle {
-    @apply md:mt-24 md:mb-24  text-dark transition duration-150 ease-in-out hover:opacity-70 p-2 md:p-4 rounded-sm font-primary text-2xl;
+    @apply md:mt-8 md:mb-24 text-dark transition duration-150 ease-in-out hover:opacity-70 p-2 lg:p-4 rounded-sm font-primary text-2xl;
   }
   /* both blog and category card */
   .blog {

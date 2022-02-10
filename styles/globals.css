@@ -32,7 +32,7 @@
     @apply transition duration-300 ease-in-out text-base mx-3 hover:text-primaryColor font-secondary relative font-normal py-4 lg:px-4 tracking-widest uppercase;
   }
   .navItem i {
-    margin: -3px;
+    @apply -mt-1 sm:-mt-0;
   }
   .nav {
     @apply flex-order py-8 md:px-6 border-b border-borderColor box-border;

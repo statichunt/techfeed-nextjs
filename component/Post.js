@@ -28,7 +28,7 @@ const Post = ({ value, page }) => {
         {currentPosts.map((data) => (
           <div key={data.slug} className="w-full mt-10 mb-2 px-12 block">
             <div className="block">
-              <a href="#"> <Image
+              <Image
                 alt="abc"
                 src={data.frontmatter.image}
                 width={1200}
@@ -36,7 +36,7 @@ const Post = ({ value, page }) => {
                 layout="responsive"
                 objectFit="cover"
                 priority
-              /></a>
+              />
             </div>
             <div className=" lg:w-4/6 leading-8 w-full mx-auto">
               <div className="text-center mt-16 mb-14">
@@ -52,9 +52,7 @@ const Post = ({ value, page }) => {
                 </h2>
 
                 <div className="">
-                  <p
-                    className="  italic font-secondary md:text-lg text-sm font-normal text-textGray"
-                  >
+                  <p className="  italic font-secondary md:text-lg text-sm font-normal text-textGray">
                     Posted on{" "}
                     {currentDate.getFullYear() >
                     new Date(data.frontmatter.date).getFullYear() ? (
@@ -87,8 +85,10 @@ const Post = ({ value, page }) => {
                     )}{" "}
                     by{" "}
                     <Link href="/about">
-                      <a >
-                        <span className=" hover">{data.frontmatter.author}</span>
+                      <a>
+                        <span className=" hover">
+                          {data.frontmatter.author}
+                        </span>
                       </a>
                     </Link>
                   </p>

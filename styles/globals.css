@@ -17,14 +17,14 @@
     @apply text-primaryColor transition duration-150 ease-in-out hover:text-primaryColor hover:opacity-70;
   }
   .pageTitle {
-    @apply md:text-h1 text-h1_sm uppercase text-center my-6 sm:my-8 font-medium font-primary text-textDark;
+    @apply md:text-h1 text-h1_sm uppercase text-center my-8 md:my-12 font-medium font-primary text-textDark;
   }
   /*home page section */
   .postContents {
     @apply px-4 sm:px-10 flex-order flex-wrap mx-auto md:my-10 font-secondary;
   }
   .postsData {
-    @apply font-secondary text-xl font-normal leading-7 text-center text-textColor;
+    @apply font-secondary text-xl font-normal leading-8 text-center text-textColor;
   }
 
   /* nav and menubar section */
@@ -43,11 +43,11 @@
   }
 
   .subMenu {
-    @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-borderColor  font-secondary z-10 -left-5 transition-all duration-500 ease-in-out translate-y-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0;
+    @apply uppercase py-2 px-2 absolute w-60 border-dark  bg-borderColor  font-secondary z-10 -left-5 transition-all duration-500 ease-in-out translate-y-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0;
   }
   /* about section */
   .authorDetails {
-    @apply font-secondary italic text-large text-center lg:w-2/3 w-full mb-4 leading-8;
+    @apply font-secondary italic text-large text-center lg:w-2/3 w-full mb-0 leading-8;
   }
   .bannerContent {
     @apply w-40 h-40 relative;
@@ -60,13 +60,15 @@
   .buttonClass {
     @apply sm:w-24 w-20 h-12 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
-
+  .buttonClass[disabled] {
+    @apply cursor-not-allowed hover:bg-dark opacity-50;
+  }
   .buttonDisable {
-    @apply bg-dark opacity-30 hover:bg-dark hover:opacity-30 cursor-pointer;
+    @apply bg-dark opacity-30 hover:bg-dark hover:opacity-30 cursor-not-allowed;
   }
 
   .pagination-list {
-    @apply transition duration-300 ease-in-out h-10 w-10 sm:h-12 sm:w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
+    @apply transition duration-300 ease-in-out h-10 w-10 rounded-full sm:h-12 sm:w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
   }
 
   /* form  */

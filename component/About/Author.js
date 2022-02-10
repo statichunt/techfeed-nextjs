@@ -3,7 +3,7 @@ import Image from "next//image";
 
 const Author = ({ data }) => {
   return (
-    <div className=" mt-8 md:mt-28  container postContents">
+    <div className=" mt-14 md:mt-28  container postContents">
       <div className="mb-6 flex justify-center items-center flex-col mx-auto lg:max-w-full">
         <div className="bannerContent">
           <Image

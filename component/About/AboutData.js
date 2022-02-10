@@ -11,9 +11,9 @@ const AboutData = ({ data }) => {
     }
   });
   return (
-    <div className="container postContents my-8 md:mt-24 md:mb-24">
+    <div className="container postContents mb-8 mt-14 md:mt-24 md:mb-24">
       <div className="xl:w-2/3 lg:w-3/4 md:w-4/5 sm:w-11/12 ">
-        <div className="w-full  md:h-37 h-60  relative mx-auto mb-10">
+        <div className="w-full  md:h-37 h-60  relative mx-auto mb-10 md:mb-18">
           <Image
             className="rounded-sm"
             alt=""

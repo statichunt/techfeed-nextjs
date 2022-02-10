@@ -56,7 +56,7 @@ const Navbar = ({ toggle, isOpen }) => {
                           <a className=" uppercase text-textColor hover:font-extralight z-10 ">
                             <li
                               className=" rounded-sm transition duration-300 ease-in-out
-                     hover:bg-borderLight px-2 py-3 uppercase "
+                     hover:bg-borderLight pr-3 pl-4 py-3 uppercase "
                             >
                               {p.page}
                             </li>

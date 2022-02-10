@@ -26,7 +26,7 @@ const Post = ({ value, page }) => {
     <>
       <div className="container postContents">
         {currentPosts.map((data) => (
-          <div key={data.slug} className="w-full mt-6 md:mt-10 mb-2 px-12 block">
+          <div key={data.slug} className="w-full mt-6 md:mt-10 mb-8 px-12 block">
             <div className="block">
               <Image
                 alt="abc"

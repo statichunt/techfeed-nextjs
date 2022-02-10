@@ -61,7 +61,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
             <ul
               className={
                 data.submenu[0].page != "" && isDropdown
-                  ? " visible opacity-100 subMenu  static  w-full mb-4"
+                  ? " visible opacity-100 subMenu  static  w-full mb-5"
                   : " invisible opacity-0 hidden "
               }
             >

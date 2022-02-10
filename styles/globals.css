@@ -5,7 +5,7 @@
 @layer components {
   /* common class */
   .heading {
-    @apply text-h4 md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
+    @apply text-h5 md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
   }
   .title {
     @apply font-primary text-base leading-7 pb-2 relative border-b-4 border-primaryColor cursor-pointer text-dark tracking-widest font-normal uppercase;
@@ -21,10 +21,10 @@
   }
   /*home page section */
   .postContents {
-    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto md:my-10 font-secondary;
+    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto font-secondary;
   }
   .postsData {
-    @apply font-secondary text-xl font-normal leading-8 text-center text-textColor;
+    @apply font-secondary sm:text-xl font-normal leading-7 sm:leading-8 text-center text-textColor pb-6;
   }
 
   /* nav and menubar section */
@@ -58,7 +58,7 @@
   }
   /* pagination */
   .buttonClass {
-    @apply sm:w-24 w-20 h-12 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
+    @apply sm:w-24 w-20 h-12 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block sm:text-base text-xs;
   }
   .buttonClass[disabled] {
     @apply cursor-not-allowed hover:bg-dark opacity-50;
@@ -85,11 +85,11 @@
   }
 
   .categoryTitle {
-    @apply md:mt-8 md:mb-24 text-dark transition duration-150 ease-in-out hover:opacity-70 p-2 lg:p-4 rounded-sm font-primary text-2xl;
+    @apply mb-6 md:mb-24 text-dark transition duration-150 ease-in-out hover:opacity-70  md:p-4 rounded-sm font-primary text-2xl;
   }
   /* both blog and category card */
   .blog {
-    @apply w-full md:w-1/2 lg:w-1/3 md:pr-5 sm:box-border md:mb-20 clear-both sm:px-2  text-textColor text-left;
+    @apply w-full md:w-1/2 lg:w-1/3  sm:box-border mb-8 md:mb-24 lg:mb-32 clear-both sm:px-2  text-textColor text-left block;
   }
 
   .blogImage {
@@ -130,7 +130,8 @@
     prose-h4:text-h4
     prose-a:hover
     prose-p:my-4
-    prose-p:text-h5
+    prose-p:sm:text-h5
+    prose-p:text-large
     prose-p:text-textDark
     prose-p:leading-8
     prose-a:no-underline;

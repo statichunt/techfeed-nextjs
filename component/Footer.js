@@ -7,9 +7,9 @@ const Footer = () => {
   const { socialMedia } = socialIcon;
   const { footer } = footerData;
   return (
-    <div className="md:pb-16 md:pt-16 py-10 border-t border-borderDark">
+    <div className="md:py-16 py-10 border-t border-borderDark">
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
-        <div className="flex ">
+        <div className="flex mb-4 sm:mb-8">
           {socialMedia.map((data) => (
             <Link href={data.link} key={data.name}>
               <a className="" target="_blank" rel="noflow">
@@ -20,7 +20,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="text-center mt-6 font-secondary text-large ">
+        <div className="text-center font-secondary text-large ">
           <p>
             <p
               className="inline-block markdown text-large"

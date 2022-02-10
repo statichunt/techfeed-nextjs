@@ -28,9 +28,9 @@ const Post = ({ value, page }) => {
         {currentPosts.map((data) => (
           <div
             key={data.slug}
-            className="w-full mt-6 md:mt-12 mb-8 md:px-12 block"
+            className="w-full mb-16 sm:mb-24 block"
           >
-            <div className="block">
+            <div className="block mb-10">
               <Image
                 alt="abc"
                 src={data.frontmatter.image}
@@ -41,8 +41,8 @@ const Post = ({ value, page }) => {
                 priority
               />
             </div>
-            <div className=" xl:w-4/6 lg:w-5/6 leading-8 w-full mx-auto">
-              <div className="text-center mt-6 mb-7 md:mt-10">
+            <div className="w-full mx-auto lg:w-4/6">
+              <div className="text-center mb-7">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
                     {
@@ -52,14 +52,13 @@ const Post = ({ value, page }) => {
                     }
                   </Link>
                 </div>
-                <h2 className="heading transition hover:opacity-70 my-6 leading-normal ">
+                <h2 className="heading mt-7 mb-6 transition hover:opacity-70">
                   <Link href={`/post/${data.slug}`}>
                     <a>{data.frontmatter.title}</a>
                   </Link>
                 </h2>
-
                 <div className="">
-                  <p className="  italic font-secondary md:text-lg text-sm font-normal text-textGray">
+                  <p className=" italic font-secondary md:text-lg text-sm font-normal text-textGray">
                     Posted on{" "}
                     {currentDate.getFullYear() >
                     new Date(data.frontmatter.date).getFullYear() ? (
@@ -101,7 +100,6 @@ const Post = ({ value, page }) => {
                   </p>
                 </div>
               </div>
-
               <div className="postsData text-center">
                 {data.frontmatter.excerpt ? (
                   <p>{data.frontmatter.excerpt}</p>
@@ -109,11 +107,10 @@ const Post = ({ value, page }) => {
                   <p>{data.content.slice(0, 300).replace(/[!@#$%^&*]/g, "")}</p>
                 )}
               </div>
-
-              <div className="mt-6">
-                <div className="hover  flex-order mb-10">
+              <div className="">
+                <div className="hover flex-order mb-8">
                   <Link href={`/post/${data.slug}`}>
-                    <a className="flex-order text-large  capitalize ">
+                    <a className="flex-order sm:text-large text-base capitalize ">
                       continue reading
                       <span className="mx-1">
                         <BsArrowRight />
@@ -154,7 +151,7 @@ const Post = ({ value, page }) => {
         ))}
 
         {/* pagination  */}
-        <div className="w-full lg:w-4/6 mx-auto flex justify-between mb-8">
+        <div className="w-full mx-auto flex justify-between mb-16 sm:mb-24">
           <Pagination pageNumber={pageNumber} page={page}></Pagination>
         </div>
       </div>

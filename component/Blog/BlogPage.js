@@ -22,17 +22,17 @@ const BlogPage = ({ posts, page, blogData }) => {
   });
   return (
     <>
-      <h1 className="pageTitle">{blogData.frontmatter.title}</h1>
+      <h1 className="pageTitle mt-16 md:mt-24">{blogData.frontmatter.title}</h1>
       <div
         dangerouslySetInnerHTML={{ __html: marked.parse(blogData.content) }}
         className="markdown mt-12"
         //
       ></div>
 
-      <div className="container postContents mx-auto">
+      <div className="container postContents mx-auto mb-16 md:mb-24">
         {currentPosts.map((blog) => (
           <div className=" blog" key={blog.slug}>
-            <div className=" blogImage">
+            <div className=" blogImage mb-8">
               <Link href={`/post/${blog.slug}`}>
                 <a>
                   <Image
@@ -48,15 +48,15 @@ const BlogPage = ({ posts, page, blogData }) => {
               </Link>
             </div>
 
-            <div className="h-auto my-6 sm:h-60 py-4">
-              <div className="blogTitle">
+            <div className="h-auto md:h-60 ">
+              <div className="blogTitle text-2xl md:text-xl">
                 <h3>
                   <Link href={`/post/${blog.slug}`}>
                     <a>{blog.frontmatter.title}</a>
                   </Link>
                 </h3>
               </div>
-              <div className="postsData leading-8">
+              <div className="postsData">
                 {blog.frontmatter.excerpt ? (
                   <p>{blog.frontmatter.excerpt.slice(0, 200)}</p>
                 ) : (
@@ -66,7 +66,7 @@ const BlogPage = ({ posts, page, blogData }) => {
             </div>
           </div>
         ))}
-        <div className="w-full sm:px-16 mx-auto flex justify-between  my-8 md:mt-12 transition">
+        <div className="w-full sm:px-16 mx-auto flex justify-between transition">
           <Pagination
             pageNumber={pageNumber}
             page={page}

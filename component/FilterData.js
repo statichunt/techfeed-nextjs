@@ -4,7 +4,7 @@ import Link from "next/dist/client/link";
 const FilterData = ({ value }) => {
   return (
     <>
-      <div className="sm:my-20 my-10 w-full">
+      <div className=" my-10 w-full">
         <div className="pageTitle text-center  tracking-tight my-5 font-normal cursor-default">
           <h1>SIMILAR POST</h1>
         </div>
@@ -12,12 +12,14 @@ const FilterData = ({ value }) => {
           {value.map((blog) => (
             <div className="md:px-3 box-border mt-8  " key={blog.slug}>
               <div className="w-full h-52 relative">
-                <Image
+                 <Link href={`/post/${blog.slug}`}>
+                    <a> <Image
                   alt="abc"
                   src={blog.frontmatter.image}
                   layout="fill"
                   objectFit="cover"
-                ></Image>
+                ></Image></a>
+                  </Link>
               </div>
 
               <div className="blogTitle text-center  hover:opacity-70">

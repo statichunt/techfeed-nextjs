@@ -44,7 +44,7 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
             key={num}
             className={
               page == num
-                ? "text-white  bg-primaryColor   pagination-list"
+                ? "text-white  bg-primaryColor pagination-list"
                 : "  hover:bg-primaryColor hover:text-white pagination-list"
             }
             onClick={() => router.push(`/blog/page/${num}`)}

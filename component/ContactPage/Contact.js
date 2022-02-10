@@ -40,7 +40,7 @@ const Contact = ({ action, data }) => {
               required
             ></textarea>
 
-            <div className="flex justify-center items-center mb-14 ">
+            <div className="flex justify-center items-center mb-12 mt-10">
               <a target="_blank" rel="noflow">
                 <input type="submit" target="_blank" className="submit mx-4" />
               </a>

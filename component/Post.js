@@ -42,7 +42,7 @@ const Post = ({ value, page }) => {
               <div className="text-center mt-16 mb-14">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
-                    {<a className="title">{data.frontmatter.category}</a>}
+                    {<a className="title hover:text-primaryColor transition-all">{data.frontmatter.category}</a>}
                   </Link>
                 </div>
                 <h2 className="heading transition text-h2 hover:opacity-70 my-6 leading-normal ">
@@ -131,7 +131,7 @@ const Post = ({ value, page }) => {
                         <a
                           target="_blank"
                           rel="noflow"
-                          className={`transition duration-700 ease-in-out socialMedia cursor-pointer
+                          className={`transition duration-300 ease-in-out socialMedia cursor-pointer
                                            ${i.name}
                                            `}
                         >
@@ -147,7 +147,7 @@ const Post = ({ value, page }) => {
         ))}
 
         {/* pagination  */}
-        <div className="w-full lg:w-4/6 mx-auto flex justify-between mb-10">
+        <div className="w-full lg:w-4/6 mx-auto flex justify-between mb-8">
           <Pagination pageNumber={pageNumber} page={page}></Pagination>
         </div>
       </div>

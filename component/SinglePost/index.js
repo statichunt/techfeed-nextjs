@@ -34,7 +34,7 @@ const SinglePosts = ({
           <div className="mt-14">
             <Link href={`/category/${frontmatter.category.replace(/ /g, "-")}`}>
               <a>
-                <h2 className="title ">{frontmatter.category}</h2>
+                <h2 className="title hover:text-primaryColor transition-all">{frontmatter.category}</h2>
               </a>
             </Link>
           </div>

@@ -7,7 +7,7 @@ const Footer = () => {
   const { socialMedia } = socialIcon;
   const { footer } = footerData;
   return (
-    <div className="pb-20 pt-24 border-t border-borderDark">
+    <div className="pb-20 pt-16 border-t border-borderDark">
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
         <div className="flex ">
           {socialMedia.map((data) => (

@@ -33,13 +33,16 @@ const BlogPage = ({ posts, page, blogData }) => {
         {currentPosts.map((blog) => (
           <div className=" blog" key={blog.slug}>
             <div className=" blogImage">
-              <Image
+            <Link href={`/post/${blog.slug}`}>
+                    <a><Image
                 alt="abc"
                 src={blog.frontmatter.image}
                 layout="fill"
                 objectFit="cover"
                 fit="crop"
-              ></Image>
+              ></Image></a>
+                  </Link>
+              
             </div>
 
             <div className="h-auto my-6 sm:h-60 py-4">
@@ -60,7 +63,7 @@ const BlogPage = ({ posts, page, blogData }) => {
             </div>
           </div>
         ))}
-        <div className="w-full sm:px-16 mx-auto flex justify-between mt-10 md:mt-20 transition">
+        <div className="w-full sm:px-16 mx-auto flex justify-between mt-10 md:mt-12 transition">
           <Pagination
             pageNumber={pageNumber}
             page={page}

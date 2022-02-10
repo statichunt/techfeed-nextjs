@@ -28,14 +28,14 @@ const Navbar = ({ toggle, isOpen }) => {
                   }
                 ></div>
 
-                <li className="group relative transition duration-700 ease-in-out">
+                <li className="group relative transition duration-300 ease-in-out">
                   <Link href={`${data.link}`}>
-                    <a className="navItem relative flex w-full  transition duration-700 ease-in-out">
+                    <a className="navItem relative flex w-full  transition duration-300 ease-in-out">
                       {data.menu}
                       <i
                         className={
                           data.menu == "Pages"
-                            ? "block text-textDark text-2xl transition duration-700 ease-in-out" 
+                            ? "block text-textDark text-2xl transition duration-300 ease-in-out" 
                             : "hidden"
                         }
                       >
@@ -55,7 +55,7 @@ const Navbar = ({ toggle, isOpen }) => {
                         <Link href={`/${p.pagelink}`} key={p.page}>
                           <a className=" uppercase hover:text-primaryColor text-textColor hover:font-extralight z-10 ">
                             <li
-                              className=" rounded-sm transition duration-700 ease-in-out
+                              className=" rounded-sm transition duration-300 ease-in-out
                      hover:bg-borderLight px-2 py-1 uppercase "
                             >
                               {p.page}

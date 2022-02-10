@@ -29,7 +29,7 @@
 
   /* nav and menubar section */
   .navItem {
-    @apply transition duration-700 ease-in-out text-base mx-3 hover:text-primaryColor font-secondary relative font-normal py-4 lg:px-4 tracking-widest uppercase;
+    @apply transition duration-300 ease-in-out text-base mx-3 hover:text-primaryColor font-secondary relative font-normal py-4 lg:px-4 tracking-widest uppercase;
   }
 
   .nav {
@@ -37,11 +37,11 @@
   }
 
   .menuButton {
-    @apply transition duration-700 ease-in-out flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
+    @apply transition duration-300 ease-in-out flex-order text-3xl text-textDark cursor-pointer hover:text-primaryColor;
   }
 
   .subMenu {
-    @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-borderColor  font-secondary z-10 -left-5 transition-all duration-700 ease-in-out translate-y-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0;
+    @apply uppercase py-2 px-3 absolute w-60 border-dark  bg-borderColor  font-secondary z-10 -left-5 transition-all duration-500 ease-in-out translate-y-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0;
   }
   /* about section */
   .authorDetails {
@@ -56,20 +56,20 @@
   }
   /* pagination */
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-700 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
+    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
 
   .buttonDisable {
-    @apply bg-dark opacity-30 hover:bg-dark hover:opacity-30 cursor-default;
+    @apply bg-dark opacity-30 hover:bg-dark hover:opacity-30 cursor-pointer;
   }
 
   .pagination-list {
-    @apply transition duration-700 ease-in-out h-8 w-8 rounded-full flex justify-center items-center mx-2 cursor-pointer text-xl;
+    @apply transition duration-300 ease-in-out h-12 w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
   }
 
   /* form  */
   .submit {
-    @apply transition duration-700 ease-in-out cursor-pointer px-8 py-4 bg-primaryColor hover:bg-black text-white font-secondary text-xl rounded-full;
+    @apply transition duration-300 ease-in-out cursor-pointer px-8 py-4 bg-primaryColor hover:bg-black text-white font-secondary text-xl rounded-full;
   }
 
   .inputField {
@@ -81,7 +81,7 @@
   }
 
   .categoryTitle {
-    @apply md:mt-24 md:mb-32 my-12 text-dark transition duration-150 ease-in-out hover:opacity-70 p-4 rounded-sm font-primary text-2xl;
+    @apply md:mt-24 md:mb-24 my-12 text-dark transition duration-150 ease-in-out hover:opacity-70 p-4 rounded-sm font-primary text-2xl;
   }
   /* both blog and category card */
   .blog {

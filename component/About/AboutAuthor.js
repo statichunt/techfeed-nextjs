@@ -8,7 +8,7 @@ const AboutAuthor = ({ data, author }) => {
     <div className="my-10 w-full ">
       <div className="flex flex-col text-center  sm:text-left lg:flex-row  ">
         <div className="flex-order">
-          <div className="w-32 h-32 rounded-full relative mx-auto">
+          <div className="w-60 h-60 rounded-full relative mx-auto">
             <Image
               className="rounded-full"
               alt=""
@@ -37,7 +37,7 @@ const AboutAuthor = ({ data, author }) => {
               <div key={icon.name} className="mr-2">
                 <Link href={icon.link}>
                   <a
-                    className="hover text-black pr-8"
+                    className="hover text-black pr-8 transition-all duration-300 ease-in-out"
                     target="_blank"
                     rel="noflow"
                   >

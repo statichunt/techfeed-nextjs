@@ -19,11 +19,11 @@ const DropDownMenu = ({ isOpen, toggle }) => {
     <div
       className={
         isOpen
-          ? "transition-all duration-700 ease-in-out text-center block  border-b h-auto border-borderColor text-textColor"
+          ? "transition-all duration-300 ease-in-out text-center block  border-b h-auto border-borderColor text-textColor"
           : "hidden h-0 "
       }
     >
-      <header className=" transition-all duration-700 ease-in-out flex justify-center items-center py-8">
+      <header className=" transition-all duration-300 ease-in-out flex justify-center items-center py-8">
         <div className="text-center ">
           <h1 className="menuButton text-textColor" onClick={handleDropdown}>
             <AiOutlineClose /> Close
@@ -31,7 +31,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
         </div>
       </header>
 
-      <ul className="block transition duration-700 ease-in-out py-4 animate-nav-animate">
+      <ul className="block transition duration-300 ease-in-out py-4 animate-nav-animate">
         {NavElement.map((data) => (
           <li
             key={data.menu}
@@ -69,13 +69,13 @@ const DropDownMenu = ({ isOpen, toggle }) => {
                 data.submenu.map((p) => (
                   <Link href={`/${p.pagelink}`} key={p.page}>
                     <a
-                      className="text-black  transition-all duration-700 ease-in-out"
+                      className="text-black  transition-all duration-300 ease-in-out"
                       onClick={handleDropdown}
                       key={p.page}
                     >
                       <li
                         key={p.page}
-                        className="rounded-sm  px-2 py-1 uppercase transition-all duration-700 ease-in-out hover:text-primaryColor text-textColor hover:font-extralight z-10 "
+                        className="rounded-sm  px-2 py-1 uppercase transition-all duration-300 ease-in-out hover:text-primaryColor text-textColor hover:font-extralight z-10 "
                       >
                         {p.page}
                       </li>

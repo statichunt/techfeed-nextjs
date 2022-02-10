@@ -4,7 +4,7 @@ import Link from "next/dist/client/link";
 const FilterData = ({ value }) => {
   return (
     <>
-      <div className=" my-10 w-full">
+      <div className="mb-8 lg:my-10 w-full">
         <div className="pageTitle text-center  tracking-tight my-5 font-normal cursor-default">
           <h1>SIMILAR POST</h1>
         </div>

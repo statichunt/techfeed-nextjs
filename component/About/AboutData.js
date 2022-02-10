@@ -11,7 +11,7 @@ const AboutData = ({ data }) => {
     }
   });
   return (
-    <div className="container postContents mt-24 mb-24">
+    <div className="container postContents my-8 md:mt-24 md:mb-24">
       <div className="xl:w-2/3 lg:w-3/4 md:w-4/5 sm:w-11/12 ">
         <div className="w-full  md:h-37 h-60  relative mx-auto mb-10">
           <Image
@@ -26,7 +26,7 @@ const AboutData = ({ data }) => {
         </div>
         <div className="text-center ">
           <div>
-            <h1 className="pageTitle text-h2 leading-snug capitalize font-secondary ">
+            <h1 className="pageTitle md:text-h2 leading-snug capitalize font-secondary ">
               {data.frontmatter.about}
             </h1>
           </div>

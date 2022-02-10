@@ -5,7 +5,7 @@
 @layer components {
   /* common class */
   .heading {
-    @apply text-h1 md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
+    @apply text-h4 md:text-h2 font-primary text-textDark my-3 font-medium uppercase;
   }
   .title {
     @apply font-primary text-base leading-7 pb-2 relative border-b-4 border-primaryColor cursor-pointer text-dark tracking-widest font-normal uppercase;
@@ -17,11 +17,11 @@
     @apply text-primaryColor transition duration-150 ease-in-out hover:text-primaryColor hover:opacity-70;
   }
   .pageTitle {
-    @apply md:text-h1 text-h1_sm uppercase text-center my-8 font-medium font-primary text-textDark;
+    @apply md:text-h1 text-h1_sm uppercase text-center my-6 sm:my-8 font-medium font-primary text-textDark;
   }
   /*home page section */
   .postContents {
-    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto my-10 font-secondary;
+    @apply px-4 sm:px-10 flex-order flex-wrap mx-auto md:my-10 font-secondary;
   }
   .postsData {
     @apply font-secondary text-xl font-normal leading-7 text-center text-textColor;
@@ -31,7 +31,9 @@
   .navItem {
     @apply transition duration-300 ease-in-out text-base mx-3 hover:text-primaryColor font-secondary relative font-normal py-4 lg:px-4 tracking-widest uppercase;
   }
-
+  .navItem i {
+    margin: -3px;
+  }
   .nav {
     @apply flex-order py-8 md:px-6 border-b border-borderColor box-border;
   }
@@ -56,7 +58,7 @@
   }
   /* pagination */
   .buttonClass {
-    @apply sm:w-24 w-12 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
+    @apply sm:w-24 w-20 h-12 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block my-5 sm:text-base text-xs;
   }
 
   .buttonDisable {
@@ -64,7 +66,7 @@
   }
 
   .pagination-list {
-    @apply transition duration-300 ease-in-out h-12 w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
+    @apply transition duration-300 ease-in-out h-10 w-10 sm:h-12 sm:w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
   }
 
   /* form  */
@@ -81,7 +83,7 @@
   }
 
   .categoryTitle {
-    @apply md:mt-24 md:mb-24 my-12 text-dark transition duration-150 ease-in-out hover:opacity-70 p-4 rounded-sm font-primary text-2xl;
+    @apply md:mt-24 md:mb-24  text-dark transition duration-150 ease-in-out hover:opacity-70 p-2 md:p-4 rounded-sm font-primary text-2xl;
   }
   /* both blog and category card */
   .blog {

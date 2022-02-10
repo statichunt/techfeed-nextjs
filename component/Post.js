@@ -26,7 +26,7 @@ const Post = ({ value, page }) => {
     <>
       <div className="container postContents">
         {currentPosts.map((data) => (
-          <div key={data.slug} className="w-full mt-10 mb-2 px-12 block">
+          <div key={data.slug} className="w-full mt-6 md:mt-10 mb-2 px-12 block">
             <div className="block">
               <Image
                 alt="abc"
@@ -39,13 +39,13 @@ const Post = ({ value, page }) => {
               />
             </div>
             <div className=" lg:w-4/6 leading-8 w-full mx-auto">
-              <div className="text-center mt-16 mb-14">
+              <div className="text-center my-8 md:mt-16 md:mb-14">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
                     {<a className="title hover:text-primaryColor transition-all">{data.frontmatter.category}</a>}
                   </Link>
                 </div>
-                <h2 className="heading transition text-h2 hover:opacity-70 my-6 leading-normal ">
+                <h2 className="heading transition hover:opacity-70 my-6 leading-normal ">
                   <Link href={`/post/${data.slug}`}>
                     <a>{data.frontmatter.title}</a>
                   </Link>

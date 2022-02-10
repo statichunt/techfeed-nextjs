@@ -5,10 +5,10 @@ import socialIcon from "../../config/config.json";
 const AboutAuthor = ({ data, author }) => {
   const { socialMedia } = socialIcon;
   return (
-    <div className="my-10 w-full ">
+    <div className="lg:my-10 mt-10 w-full ">
       <div className="flex flex-col text-center  sm:text-left lg:flex-row  ">
         <div className="flex-order">
-          <div className="w-60 h-60 rounded-full relative mx-auto">
+          <div className="w-40 h-40 md:w-60 md:h-60 rounded-full relative mx-auto">
             <Image
               className="rounded-full"
               alt=""

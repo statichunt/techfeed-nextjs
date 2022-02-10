@@ -61,7 +61,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
             <ul
               className={
                 data.submenu[0].page != "" && isDropdown
-                  ? " visible opacity-100 subMenu  static  w-full "
+                  ? " visible opacity-100 subMenu  static  w-full mb-4"
                   : " invisible opacity-0 hidden "
               }
             >
@@ -75,7 +75,7 @@ const DropDownMenu = ({ isOpen, toggle }) => {
                     >
                       <li
                         key={p.page}
-                        className="rounded-sm  px-2 py-1 uppercase transition-all duration-300 ease-in-out hover:text-primaryColor text-textColor hover:font-extralight z-10 "
+                        className="rounded-sm  px-2 py-1 uppercase transition-all duration-300 ease-in-out text-textColor hover:font-extralight z-10 "
                       >
                         {p.page}
                       </li>

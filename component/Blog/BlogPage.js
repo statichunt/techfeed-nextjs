@@ -63,7 +63,7 @@ const BlogPage = ({ posts, page, blogData }) => {
             </div>
           </div>
         ))}
-        <div className="w-full sm:px-16 mx-auto flex justify-between mt-10 md:mt-12 transition">
+        <div className="w-full sm:px-16 mx-auto flex justify-between  my-8 md:mt-12 transition">
           <Pagination
             pageNumber={pageNumber}
             page={page}

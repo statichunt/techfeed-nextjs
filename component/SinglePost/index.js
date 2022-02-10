@@ -38,7 +38,7 @@ const SinglePosts = ({
               </a>
             </Link>
           </div>
-          <h1 className="pageTitle  text-center mt-6 text-5xl mb-5">
+          <h1 className="pageTitle  text-center mt-6  mb-5">
             {frontmatter.title}
           </h1>
 

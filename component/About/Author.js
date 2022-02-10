@@ -3,8 +3,8 @@ import Image from "next//image";
 
 const Author = ({ data }) => {
   return (
-    <div className=" mt-28  container postContents">
-      <div className=" mb-6 flex justify-center items-center flex-col mx-auto lg:max-w-full">
+    <div className=" mt-8 md:mt-28  container postContents">
+      <div className="mb-6 flex justify-center items-center flex-col mx-auto lg:max-w-full">
         <div className="bannerContent">
           <Image
             className="welcomeImage"
@@ -15,7 +15,7 @@ const Author = ({ data }) => {
           ></Image>
         </div>
 
-        <div className="pageTitle  font-medium leading-5 mt-12 mb-6 ">
+        <div className="pageTitle font-medium leading-5 mt-12 mb-6 ">
           <h3 className="text-3xl">{data.frontmatter.greetings}</h3>
         </div>
         <div className="authorDetails text-textColor">

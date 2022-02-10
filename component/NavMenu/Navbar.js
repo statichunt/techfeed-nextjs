@@ -53,10 +53,10 @@ const Navbar = ({ toggle, isOpen }) => {
                     {data.submenu[0].page != "" &&
                       data.submenu.map((p) => (
                         <Link href={`/${p.pagelink}`} key={p.page}>
-                          <a className=" uppercase hover:text-primaryColor text-textColor hover:font-extralight z-10 ">
+                          <a className=" uppercase text-textColor hover:font-extralight z-10 ">
                             <li
                               className=" rounded-sm transition duration-300 ease-in-out
-                     hover:bg-borderLight px-2 py-1 uppercase "
+                     hover:bg-borderLight px-2 py-3 uppercase "
                             >
                               {p.page}
                             </li>

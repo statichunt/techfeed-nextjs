@@ -11,7 +11,7 @@ const Contact = ({ action, data }) => {
     <>
       <div className=" container postContents px-4 ">
         <div className="w-full md:w-4/6 mx-auto text-textColor">
-          <h1 className="pageTitle font-secondary text-5xl mb-5">{data.frontmatter.title}</h1>
+          <h1 className="pageTitle font-secondary mb-5">{data.frontmatter.title}</h1>
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}
             className="markdown mt-0"

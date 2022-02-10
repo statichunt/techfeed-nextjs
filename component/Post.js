@@ -26,7 +26,10 @@ const Post = ({ value, page }) => {
     <>
       <div className="container postContents">
         {currentPosts.map((data) => (
-          <div key={data.slug} className="w-full mt-6 md:mt-10 mb-8 px-12 block">
+          <div
+            key={data.slug}
+            className="w-full mt-6 md:mt-12 mb-8 md:px-12 block"
+          >
             <div className="block">
               <Image
                 alt="abc"
@@ -38,11 +41,15 @@ const Post = ({ value, page }) => {
                 priority
               />
             </div>
-            <div className=" lg:w-4/6 leading-8 w-full mx-auto">
-              <div className="text-center my-8 md:mt-16 md:mb-14">
+            <div className=" xl:w-4/6 lg:w-5/6 leading-8 w-full mx-auto">
+              <div className="text-center mt-6 mb-7 md:mt-10">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
-                    {<a className="title hover:text-primaryColor transition-all">{data.frontmatter.category}</a>}
+                    {
+                      <a className="title hover:text-primaryColor transition-all">
+                        {data.frontmatter.category}
+                      </a>
+                    }
                   </Link>
                 </div>
                 <h2 className="heading transition hover:opacity-70 my-6 leading-normal ">

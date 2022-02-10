@@ -94,7 +94,7 @@
     @apply w-full md:h-52 h-37 relative;
   }
   .blogTitle {
-    @apply text-h5 font-primary mb-4 font-medium leading-6 uppercase text-center hover:opacity-70 transition duration-500 ease-in-out;
+    @apply text-h5 font-primary mb-4 font-medium leading-8 uppercase text-center hover:opacity-70 transition duration-500 ease-in-out;
   }
   /* social icon */
   .socialMedia {

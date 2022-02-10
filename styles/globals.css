@@ -100,7 +100,7 @@
   }
   /* social icon */
   .socialMedia {
-    @apply w-14 h-14 rounded-full mx-1 text-large bg-light flex justify-center items-center cursor-pointer transition duration-500 ease-in-out hover:text-white text-textColor;
+    @apply w-14 h-14 rounded-full mx-1 text-large bg-gray-100 flex justify-center items-center cursor-pointer transition duration-500 ease-in-out hover:text-white text-textColor;
   }
 
   .facebook {

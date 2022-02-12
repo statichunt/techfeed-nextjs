@@ -12,7 +12,8 @@
       "dark": "#333",
       "light": "#bababa",
       "gray": "#aaa",
-      "grayLight": "#9b7a3e"
+      "grayLight": "#9b7a3e",
+      "grayDark": "#777"
     },
     "basicColor": {
       "black": "#000",

@@ -13,7 +13,7 @@ const AboutData = ({ data }) => {
   return (
     <div className="container postContents my-16 md:my-24">
       <div className="">
-        <div className="w-full md:h-37 h-60 relative mx-auto mb-10 md:mb-18">
+        <div className="w-full md:h-37 h-60 relative mx-auto">
           <Image
             className="rounded-sm"
             alt=""

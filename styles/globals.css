@@ -89,7 +89,7 @@
   }
   /* both blog and category card */
   .blog {
-    @apply w-full md:w-1/2 lg:w-1/3  sm:box-border mb-8 md:mb-24 lg:mb-32 clear-both sm:px-2  text-textColor text-left block;
+    @apply w-full md:w-1/2 lg:w-1/3  sm:box-border mb-10 md:mb-24 lg:mb-32 xl:mb-24  clear-both sm:px-2  text-textColor text-left block;
   }
 
   .blogImage {
@@ -132,7 +132,7 @@
     prose-p:my-4
     prose-p:sm:text-h5
     prose-p:text-large
-    prose-p:text-textLight
+    prose-p:text-grayDark
     prose-p:leading-8
     prose-a:no-underline;
     @apply prose-li:leading-9 marker:text-dark prose-h2:lg:text-3xl prose-h3:lg:text-3xl prose-h2:text-2xl prose-h3:text-2xl;

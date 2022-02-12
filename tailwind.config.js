@@ -80,6 +80,7 @@ module.exports = {
         textLight: themeStyle.color.textColor.light,
         textGray: themeStyle.color.textColor.gray,
         grayLight: themeStyle.color.textColor.grayLight,
+        grayDark: themeStyle.color.textColor.grayDark,
         borderColor: themeStyle.color.themeColor.border,
         borderDark: themeStyle.color.themeColor.borderDark,
         borderLight: themeStyle.color.themeColor.borderLight,

@@ -33,7 +33,7 @@ const SinglePost = ({ posts, frontmatter, content, slug, aboutData }) => {
 
   return (
     <Layout title={slug.replace(/-/g, " ")}>
-      <div className="flex justify-center items-center container postContents">
+      <div className="flex justify-center items-center container postContents mt-16 mb-2 sm:my-16 md:my-24">
         <SinglePosts
           frontmatter={frontmatter}
           content={content}

@@ -9,9 +9,9 @@ const Contact = ({ action, data }) => {
   };
   return (
     <>
-      <div className=" container postContents px-4 ">
+      <div className=" container postContents px-4 mb-16 md:mb-24">
         <div className="w-full md:w-4/6 mx-auto text-textColor">
-          <h1 className="pageTitle font-secondary mb-5">{data.frontmatter.title}</h1>
+          <h1 className="pageTitle font-secondary mt-16 md:mt-24">{data.frontmatter.title}</h1>
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(data.content) }}
             className="markdown mt-0"
@@ -40,7 +40,7 @@ const Contact = ({ action, data }) => {
               required
             ></textarea>
 
-            <div className="flex justify-center items-center mb-12 mt-10">
+            <div className="flex justify-center items-center mt-10">
               <a target="_blank" rel="noflow">
                 <input type="submit" target="_blank" className="submit mx-4" />
               </a>

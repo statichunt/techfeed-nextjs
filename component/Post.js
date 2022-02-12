@@ -42,7 +42,7 @@ const Post = ({ value, page }) => {
               />
             </div>
             <div className="w-full mx-auto lg:w-4/6">
-              <div className="text-center mb-7">
+              <div className="text-center mb-4">
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
                     {

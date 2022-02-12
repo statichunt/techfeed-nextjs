@@ -11,7 +11,7 @@ const Categories = ({ posts }) => {
     <Layout title="Category">
       <h1 className="pageTitle mt-16 md:mt-24">All Categories </h1>
 
-      <div className="categoryContainer postContents">
+      <div className="categoryContainer postContents mb-16 md:mb-24">
         {filterCategory.map((data) => (
           <Link key={data} href={`/category/${data.replace(/ /g, "-")}`}>
             <a className="capitalize ">

@@ -32,7 +32,7 @@
     @apply transition duration-300 ease-in-out text-base mx-3 hover:text-primaryColor font-secondary relative font-normal py-4 lg:px-4 tracking-widest uppercase;
   }
   .navItem i {
-    @apply -mt-1 sm:-mt-0;
+    @apply -mt-1 md:-mt-0;
   }
   .nav {
     @apply flex-order py-8 md:px-6 border-b border-borderColor box-border;
@@ -58,7 +58,7 @@
   }
   /* pagination */
   .buttonClass {
-    @apply sm:w-24 w-20 h-12 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block sm:text-base text-xs;
+    @apply sm:w-24 w-14 h-8 sm:h-12 rounded-full font-secondary uppercase bg-dark transition duration-300 ease-in-out hover:bg-primaryColor text-white block sm:text-base text-xs;
   }
   .buttonClass[disabled] {
     @apply cursor-not-allowed hover:bg-dark opacity-50;
@@ -68,7 +68,7 @@
   }
 
   .pagination-list {
-    @apply transition duration-300 ease-in-out h-10 w-10 rounded-full sm:h-12 sm:w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
+    @apply transition duration-300 ease-in-out h-8 w-8 rounded-full sm:h-12 sm:w-12 flex justify-center items-center mx-2 cursor-pointer text-xl;
   }
 
   /* form  */
@@ -77,7 +77,7 @@
   }
 
   .inputField {
-    @apply border-2 p-4 border-borderColor outline-none my-2 block font-secondary text-small;
+    @apply border-2 p-4 border-borderColor outline-none mb-4 block font-secondary text-small;
   }
   /* category section */
   .categoryContainer {
@@ -85,7 +85,7 @@
   }
 
   .categoryTitle {
-    @apply mb-6 md:mb-24 text-dark transition duration-150 ease-in-out hover:opacity-70  md:p-4 rounded-sm font-primary text-2xl;
+    @apply mb-6 md:mb-0 text-dark transition duration-150 ease-in-out hover:opacity-70  md:p-4 rounded-sm font-primary text-2xl;
   }
   /* both blog and category card */
   .blog {
@@ -132,10 +132,10 @@
     prose-p:my-4
     prose-p:sm:text-h5
     prose-p:text-large
-    prose-p:text-textDark
+    prose-p:text-textLight
     prose-p:leading-8
     prose-a:no-underline;
-    @apply prose-li:leading-9 marker:text-dark;
+    @apply prose-li:leading-9 marker:text-dark prose-h2:lg:text-3xl prose-h3:lg:text-3xl prose-h2:text-2xl prose-h3:text-2xl;
   }
 }
 

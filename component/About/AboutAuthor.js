@@ -5,7 +5,7 @@ import socialIcon from "../../config/config.json";
 const AboutAuthor = ({ data, author }) => {
   const { socialMedia } = socialIcon;
   return (
-    <div className="lg:my-10 mt-10 w-full ">
+    <div className="w-full lg:mb-24">
       <div className="flex flex-col text-center  sm:text-left lg:flex-row  ">
         <div className="flex-order">
           <div className="w-40 h-40 md:w-60 md:h-60 rounded-full relative mx-auto">
@@ -19,14 +19,14 @@ const AboutAuthor = ({ data, author }) => {
           </div>
         </div>
 
-        <div className="sm:ml-10 w-full sm:w-4/5 lg:my-0 my-8 text-center text-textColor lg:text-left">
-          <p className="text-lg font-primary my-5">
+        <div className="md:ml-10 w-full md:w-4/5 lg:my-0 my-8 text-center text-textColor lg:text-left">
+          <p className="text-lg font-primary mb-5">
             PUBLISHED BY <strong className="text-primaryColor">{author}</strong>
           </p>
           <p>{data.frontmatter.details}</p>
-          <div className="hover my-5 cursor-pointer">
+          <div className="hover my-5 inline-block">
             <Link href="/about">
-              <a className=" text-lg font-secondary  capitalize">
+              <a className=" text-lg font-secondary capitalize ">
                 {" "}
                 know more..
               </a>

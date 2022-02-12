@@ -9,12 +9,12 @@ const Category = ({ value }) => {
 
   return (
     <Layout title={filterCategory[0]}>
-      <h1 className="pageTitle">
+      <h1 className="pageTitle mt-16 md:mt-24">
         Showing Blog From{" "}
         <span className="text-primaryColor">{filterCategory[0]}</span>
       </h1>
 
-      <div className="container postContents">
+      <div className="container postContents md:mb-4 lg:mb-20">
         {value.map((blog) => (
           <React.Fragment key={blog.slug}>
             <div className="blog h-h600">

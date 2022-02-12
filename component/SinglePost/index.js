@@ -19,8 +19,8 @@ const SinglePosts = ({
   let options = { year: "numeric", month: "long", day: "numeric" };
   return (
     <>
-      <div key={slug} className=" w-full mt-14">
-        <div className="block">
+      <div key={slug} className=" w-full ">
+        <div className="block mb-10">
           <Image
             alt="abc"
             src={frontmatter.image}
@@ -30,19 +30,19 @@ const SinglePosts = ({
             objectFit="cover"
           />
         </div>
-        <div className="flex flex-col w-full sm:w-4/5 justify-center items-center mx-auto ">
-          <div className="mt-14">
+        <div className="flex flex-col w-full sm:w-11/12 lg:w-4/5 justify-center items-center mx-auto ">
+          <div className="">
             <Link href={`/category/${frontmatter.category.replace(/ /g, "-")}`}>
               <a>
                 <h2 className="title hover:text-primaryColor transition-all">{frontmatter.category}</h2>
               </a>
             </Link>
           </div>
-          <h1 className="pageTitle  text-center mt-6  mb-5">
+          <h1 className="pageTitle text-h3 lg:text-h1 mt-7 mb-6">
             {frontmatter.title}
           </h1>
 
-          <div className="">
+          <div className="mb-4">
             <p className="  italic  font-secondary md:text-lg mb-5 text-sm font-normal text-textLight">
               Posted on{" "}
               {currentDate.getFullYear() >
@@ -75,12 +75,12 @@ const SinglePosts = ({
 
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-            className="markdown mt-8"
+            className="markdown"
             //
           ></div>
 
           {sharePost == true && (
-            <div className="my-10">
+            <div className="mt-8 sm:mt-14 mb-20">
               <div className="flex justify-start">
                 {socialMedia.slice(0, 3).map((i) => (
                   <div key={i.name} className="">

@@ -38,12 +38,12 @@ const SinglePosts = ({
               </a>
             </Link>
           </div>
-          <h1 className="pageTitle text-h3 lg:text-h1 mt-7 mb-6">
+          <h1 className="pageTitle text-h3 xl:text-h1 mt-7 mb-6">
             {frontmatter.title}
           </h1>
 
           <div className="mb-4">
-            <p className="  italic  font-secondary md:text-lg mb-5 text-sm font-normal text-textLight">
+            <p className="mb-0 italic  font-secondary md:text-lg mb-5 text-sm font-normal text-gray-400">
               Posted on{" "}
               {currentDate.getFullYear() >
               new Date(frontmatter.date).getFullYear() ? (
@@ -64,7 +64,7 @@ const SinglePosts = ({
               ) : (
                 new Date(frontmatter.date).toLocaleDateString("en-US", options)
               )}{" "}
-              by{" "}
+               - by{" "}
               <Link href="/about">
                 <a>
                   <span className="hover">{frontmatter.author}</span>

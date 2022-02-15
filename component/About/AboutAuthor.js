@@ -20,10 +20,10 @@ const AboutAuthor = ({ data, author }) => {
         </div>
 
         <div className="md:ml-10 w-full md:w-4/5 lg:my-0 my-8 text-center text-textColor lg:text-left">
-          <p className="text-lg font-primary mb-5">
-            PUBLISHED BY <strong className="text-primaryColor">{author}</strong>
+          <p className="text-lg font-primary mb-5 text-gray-400">
+            PUBLISHED - BY <strong className="text-primaryColor">{author}</strong>
           </p>
-          <p>{data.frontmatter.details}</p>
+          <p className="text-lg">{data.frontmatter.details}</p>
           <div className="hover my-5 inline-block">
             <Link href="/about">
               <a className=" text-lg font-secondary capitalize ">

@@ -46,19 +46,19 @@ const Post = ({ value, page }) => {
                 <div className="mb-1.5">
                   <Link href={`/category/${data.category}`}>
                     {
-                      <a className="title hover:text-primaryColor transition-all">
+                      <a className="title hover:text-primaryColor transition-all ">
                         {data.frontmatter.category}
                       </a>
                     }
                   </Link>
                 </div>
-                <h2 className="heading mt-7 mb-6 transition hover:opacity-70">
+                <h2 className="heading mt-7 mb-6">
                   <Link href={`/post/${data.slug}`}>
-                    <a>{data.frontmatter.title}</a>
+                    <a className=" transition hover:opacity-70">{data.frontmatter.title}</a>
                   </Link>
                 </h2>
                 <div className="">
-                  <p className=" italic font-secondary md:text-lg text-sm font-normal text-textGray">
+                  <p className=" italic font-secondary md:text-lg text-sm font-normal text-gray-400">
                     Posted on{" "}
                     {currentDate.getFullYear() >
                     new Date(data.frontmatter.date).getFullYear() ? (
@@ -89,7 +89,7 @@ const Post = ({ value, page }) => {
                         options
                       )
                     )}{" "}
-                    by{" "}
+                     - by{" "}
                     <Link href="/about">
                       <a>
                         <span className=" hover">

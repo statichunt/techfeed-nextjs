@@ -31,7 +31,7 @@ const BlogPage = ({ posts, page, blogData }) => {
 
       <div className="container postContents mx-auto mb-16 md:mb-24">
         {currentPosts.map((blog) => (
-          <div className=" blog" key={blog.slug}>
+          <div className=" blog px-4" key={blog.slug}>
             <div className=" blogImage mb-8">
               <Link href={`/post/${blog.slug}`}>
                 <a>
@@ -49,10 +49,10 @@ const BlogPage = ({ posts, page, blogData }) => {
             </div>
 
             <div className="h-auto md:h-60 ">
-              <div className="blogTitle ">
+              <div className="text-center mb-4">
                 <h3>
                   <Link href={`/post/${blog.slug}`}>
-                    <a>{blog.frontmatter.title}</a>
+                    <a className="blogTitle">{blog.frontmatter.title}</a>
                   </Link>
                 </h3>
               </div>

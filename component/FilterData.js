@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/dist/client/link";
+import { myLoader } from "@/lib/utils/loader";
 
 const FilterData = ({ value }) => {
   return (
@@ -12,14 +14,18 @@ const FilterData = ({ value }) => {
           {value.map((blog) => (
             <div className="md:px-3 box-border mb-10 md:mb-0" key={blog.slug}>
               <div className="w-full h-52 relative">
-                 <Link href={`/post/${blog.slug}`}>
-                    <a> <Image
-                  alt="abc"
-                  src={blog.frontmatter.image}
-                  layout="fill"
-                  objectFit="cover"
-                ></Image></a>
-                  </Link>
+                <Link href={`/post/${blog.slug}`}>
+                  <a>
+                    {" "}
+                    <Image
+                      alt="abc"
+                      src={blog.frontmatter.image}
+                      layout="fill"
+                      objectFit="cover"
+                    ></Image>
+                    {/* <img alt="abc" src={blog.frontmatter.image} /> */}
+                  </a>
+                </Link>
               </div>
 
               <div className="blogTitle text-center  hover:opacity-70">
@@ -28,7 +34,6 @@ const FilterData = ({ value }) => {
                     <a>{blog.frontmatter.title}</a>
                   </Link>
                 </h2>
-                
               </div>
             </div>
           ))}

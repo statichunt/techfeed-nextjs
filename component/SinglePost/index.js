@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 import Link from "next/dist/client/link";
@@ -29,12 +30,15 @@ const SinglePosts = ({
             layout="responsive"
             objectFit="cover"
           />
+          {/* <img alt="abc" src={frontmatter.image} width={1200} height={700} /> */}
         </div>
         <div className="flex flex-col w-full sm:w-11/12 lg:w-4/5 justify-center items-center mx-auto ">
           <div className="">
             <Link href={`/category/${frontmatter.category.replace(/ /g, "-")}`}>
               <a>
-                <h2 className="title hover:text-primaryColor transition-all">{frontmatter.category}</h2>
+                <h2 className="title hover:text-primaryColor transition-all">
+                  {frontmatter.category}
+                </h2>
               </a>
             </Link>
           </div>
@@ -64,7 +68,7 @@ const SinglePosts = ({
               ) : (
                 new Date(frontmatter.date).toLocaleDateString("en-US", options)
               )}{" "}
-               - by{" "}
+              - by{" "}
               <Link href="/about">
                 <a>
                   <span className="hover">{frontmatter.author}</span>

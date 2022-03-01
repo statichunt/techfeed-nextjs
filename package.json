@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build  ",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,6 +12,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "dayjs": "^1.10.7",
     "gray-matter": "^4.0.3",
+    "image-to-base64": "^2.2.0",
     "marked": "^4.0.4",
     "next": "12.0.4",
     "next-mdx-remote": "^3.0.8",
@@ -27,12 +28,13 @@
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.1.1",
     "autoprefixer": "^10.4.0",
-    "eslint": "^8.6.0",
+    "eslint": "<8.0.0",
     "eslint-config-next": "12.0.4",
     "install": "^0.13.0",
     "netlify-plugin-cache-nextjs": "^1.6.1",
     "npm": "^8.1.4",
     "postcss": "^8.4.4",
+    "replace-in-files-cli": "^2.0.0",
     "tailwindcss": "^3.0.1"
   },
   "browser": {

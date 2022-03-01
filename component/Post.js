@@ -1,10 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import Image from "next/image";
+
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/dist/client/link";
 import { useEffect } from "react";
 import config from "../config/config.json";
 import Pagination from "./Pagination";
+
 const Post = ({ value, page }) => {
   const { socialMedia } = config;
   const { pagination } = config.perameter;
@@ -26,20 +29,18 @@ const Post = ({ value, page }) => {
     <>
       <div className="container postContents">
         {currentPosts.map((data) => (
-          <div
-            key={data.slug}
-            className="w-full mb-16 sm:mb-24 block"
-          >
+          <div key={data.slug} className="w-full mb-16 sm:mb-24 block">
             <div className="block mb-10">
               <Image
                 alt="abc"
-                src={data.frontmatter.image}
+                src={`${data.frontmatter.image}`}
                 width={1200}
                 height={700}
                 layout="responsive"
                 objectFit="cover"
                 priority
               />
+              {/* <img src={data.frontmatter.image} alt="abc" /> */}
             </div>
             <div className="w-full mx-auto lg:w-4/6">
               <div className="text-center mb-4">
@@ -54,7 +55,9 @@ const Post = ({ value, page }) => {
                 </div>
                 <h2 className="heading mt-7 mb-6">
                   <Link href={`/post/${data.slug}`}>
-                    <a className=" transition hover:opacity-70">{data.frontmatter.title}</a>
+                    <a className=" transition hover:opacity-70">
+                      {data.frontmatter.title}
+                    </a>
                   </Link>
                 </h2>
                 <div className="">
@@ -89,7 +92,7 @@ const Post = ({ value, page }) => {
                         options
                       )
                     )}{" "}
-                     - by{" "}
+                    - by{" "}
                     <Link href="/about">
                       <a>
                         <span className=" hover">

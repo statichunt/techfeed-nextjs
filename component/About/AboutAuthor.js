@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/dist/client/link";
 import Image from "next/image";
 import socialIcon from "../../config/config.json";
@@ -16,12 +17,18 @@ const AboutAuthor = ({ data, author }) => {
               layout="fill"
               objectFit="cover"
             ></Image>
+            {/* <img
+              className="rounded-full"
+              alt=""
+              src={data.frontmatter.aboutImage}
+            ></img> */}
           </div>
         </div>
 
         <div className="md:ml-10 w-full md:w-4/5 lg:my-0 my-8 text-center text-textColor lg:text-left">
           <p className="text-lg font-primary mb-5 text-gray-400">
-            PUBLISHED - BY <strong className="text-primaryColor">{author}</strong>
+            PUBLISHED - BY{" "}
+            <strong className="text-primaryColor">{author}</strong>
           </p>
           <p className="text-lg">{data.frontmatter.details}</p>
           <div className="hover my-5 inline-block">

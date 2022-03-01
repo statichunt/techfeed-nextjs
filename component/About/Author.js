@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next//image";
 
@@ -13,6 +14,11 @@ const Author = ({ data }) => {
             layout="fill"
             objectFit="cover"
           ></Image>
+          {/* <img
+            className="welcomeImage"
+            alt=""
+            src={data.frontmatter.image}
+          ></img> */}
         </div>
 
         <div className="pageTitle font-medium">

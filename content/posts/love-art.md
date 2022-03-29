@@ -2,7 +2,7 @@
 category: "Love & Romance"
 title: "FINDING LOVE AND ROMANCE ON THE ROAD"
 date: "November 20, 2021"
-author: "Mark Dinn"
+author: "Julia Mario"
 image: "/image/post/love.jpg"
 excerpt: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame ."
 draft: false

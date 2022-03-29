@@ -2,7 +2,7 @@
 category: "Travels and Tours"
 title: "It feels good to be lost in the right direction"
 date: "March 17, 2021"
-author: "Mark Dinn"
+author: "Julia Mario"
 image: "/image/post/travel2.jpg"
 excerpt: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame "
 draft: false

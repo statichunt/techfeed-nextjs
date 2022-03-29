@@ -2,7 +2,7 @@
 category: "Natural Beauty"
 title: "Well, to be frank I like natural beauty. Not artificial."
 date: "November 22, 2021"
-author: "Mark Dinn"
+author: "Julia Mario"
 image: "/image/post/nature.jpg"
 excerpt: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame ."
 draft: false

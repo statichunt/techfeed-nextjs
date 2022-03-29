@@ -2,7 +2,7 @@
 category: "Love & Romance"
 title: "A SHORT TRIP TO NEBRASKA"
 date: "Fri Dec 31 2021 12:04:21 GMT+0600"
-author: "Mark Dinn"
+author: "Julia Mario"
 image: "/image/post/image1.jpg"
 excerpt: "My first true love happened when I was a student at Shaw University in Raleigh NC and I must say it was a wonderful experience. She was a freshman, and she was so beautiful with caramel skin and soft dark eyes. She had a sweet slim frame ."
 draft: true

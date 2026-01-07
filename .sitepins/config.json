@@ -10,7 +10,9 @@
     "root": "component"
   },
   "themeConfig": [
-    "config"
+    "config/config.json",
+    "config/menu.json",
+    "config/style.json"
   ],
   "arrangement": []
 }

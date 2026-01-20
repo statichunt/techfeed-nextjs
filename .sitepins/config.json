@@ -1,18 +1,12 @@
 {
-  "media": {
-    "root": "public/image",
-    "public": "public"
-  },
-  "content": {
-    "root": "content"
-  },
-  "code": {
-    "root": "component"
-  },
-  "themeConfig": [
+  "media": "public/image",
+  "content": "content",
+  "code": "component",
+  "arrangement": [],
+  "public": "public",
+  "configs": [
     "config/config.json",
     "config/menu.json",
     "config/style.json"
-  ],
-  "arrangement": []
+  ]
 }

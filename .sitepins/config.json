@@ -1,8 +1,12 @@
 {
   "media": "public/image",
-  "content": "content",
-  "code": "component",
+  "content": "src/content",
+  "code": "src/components",
   "arrangement": [],
   "public": "public",
-  "configs": ["config/config.json", "config/menu.json", "config/theme.json"]
+  "configs": [
+    "src/config/config.json",
+    "src/config/menu.json",
+    "src/config/theme.json"
+  ]
 }

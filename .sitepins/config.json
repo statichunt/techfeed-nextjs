@@ -4,9 +4,5 @@
   "code": "component",
   "arrangement": [],
   "public": "public",
-  "configs": [
-    "config/config.json",
-    "config/menu.json",
-    "config/style.json"
-  ]
+  "configs": ["config/config.json", "config/menu.json", "config/theme.json"]
 }

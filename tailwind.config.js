@@ -1,4 +1,6 @@
-const themeStyle = require("./config/style.json");
+import typographyPlugin from "@tailwindcss/typography";
+import themeStyle from "./src/config/theme.json";
+
 const primaryFont = themeStyle.font.fontFamily.primary.replace(/\+/g, " ");
 const secondaryFont = themeStyle.font.fontFamily.secondary.replace(/\+/g, " ");
 const base = Number(themeStyle.font.fontSize.base.replace("px", ""));
@@ -15,8 +17,8 @@ const h3_sm = h3 * 0.8;
 const large = base + base * 0.125;
 const small = base - base * 0.125;
 
-module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./component/**/*.{js,ts,jsx,tsx}"],
+const tailwindConfig = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   variants: {
     extend: {
       variantOrder: [
@@ -39,7 +41,7 @@ module.exports = {
       display: ["group-hover"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [typographyPlugin],
 
   theme: {
     extend: {
@@ -92,3 +94,5 @@ module.exports = {
     },
   },
 };
+
+export default tailwindConfig;

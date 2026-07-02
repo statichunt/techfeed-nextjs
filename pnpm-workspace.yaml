@@ -1,0 +1,23 @@
+packages:
+  - "*"
+
+allowBuilds:
+  '@netlify/esbuild': true
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - '@next/env@16.2.10'
+  - '@next/swc-darwin-arm64@16.2.10'
+  - '@next/swc-darwin-x64@16.2.10'
+  - '@next/swc-linux-arm64-gnu@16.2.10'
+  - '@next/swc-linux-arm64-musl@16.2.10'
+  - '@next/swc-linux-x64-gnu@16.2.10'
+  - '@next/swc-linux-x64-musl@16.2.10'
+  - '@next/swc-win32-arm64-msvc@16.2.10'
+  - '@next/swc-win32-x64-msvc@16.2.10'
+  - next@16.2.10
+  - '@next/eslint-plugin-next@16.2.10'
+  - eslint-config-next@16.2.10

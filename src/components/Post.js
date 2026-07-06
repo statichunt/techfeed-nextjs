@@ -23,7 +23,7 @@ const Post = ({ value, page }) => {
     if (page > pageNumber) {
       router.push("/");
     }
-  }, [page, pageNumber]);
+  }, [page, pageNumber, router]);
 
   return (
     <>
@@ -32,25 +32,19 @@ const Post = ({ value, page }) => {
           <div key={data.slug} className="w-full mb-16 sm:mb-24 block">
             <div className="block mb-10">
               <Image
+                className="object-cover w-full"
                 alt="abc"
-                src={`${data.frontmatter.image}`}
+                src={data.frontmatter.image}
                 width={1200}
                 height={700}
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  objectFit: "cover"
-                }} />
-              {/* <img src={data.frontmatter.image} alt="abc" /> */}
+              />
             </div>
             <div className="w-full mx-auto lg:w-4/6">
               <div className="text-center mb-4">
                 <div className="mb-1.5">
                   <Link
                     href={`/category/${data.category}`}
-                    className="title hover:text-primaryColor transition-all "
+                    className="title hover:text-primary transition-all "
                   >
                     {data.frontmatter.category}
                   </Link>
@@ -110,9 +104,9 @@ const Post = ({ value, page }) => {
                 )}
               </div>
               <div className="">
-                <div className="hover flex-order mb-8">
+                <div className="hover flex justify-center items-center mb-8">
                   <Link
-                    className="flex-order sm:text-large text-base capitalize "
+                    className="flex justify-center items-center sm:text-large text-base capitalize "
                     href={`/post/${data.slug}`}
                   >
                     continue reading
@@ -121,7 +115,7 @@ const Post = ({ value, page }) => {
                     </span>
                   </Link>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center items-center">
                   {socialMedia.slice(0, 3).map((i) => (
                     <div key={i.name} className="">
                       <Link
@@ -149,7 +143,7 @@ const Post = ({ value, page }) => {
         ))}
 
         {/* pagination  */}
-        <div className="w-full mx-auto flex justify-between mb-16 sm:mb-24">
+        <div className="w-full mx-auto flex items-center justify-between mb-16 sm:mb-24">
           <Pagination pageNumber={pageNumber} page={page}></Pagination>
         </div>
       </div>

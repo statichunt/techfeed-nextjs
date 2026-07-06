@@ -21,22 +21,18 @@ const SinglePosts = ({
       <div key={slug} className=" w-full ">
         <div className="block mb-10">
           <Image
+            className="object-cover w-full"
             alt="abc"
             src={frontmatter.image}
             width={1200}
             height={700}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{
-              width: "100%",
-              height: "auto",
-              objectFit: "cover"
-            }} />
+          />
           {/* <img alt="abc" src={frontmatter.image} width={1200} height={700} /> */}
         </div>
         <div className="flex flex-col w-full sm:w-11/12 lg:w-4/5 justify-center items-center mx-auto ">
           <div className="">
             <Link href={`/category/${frontmatter.category.replace(/ /g, "-")}`}>
-              <h2 className="title hover:text-primaryColor transition-all">
+              <h2 className="title hover:text-primary transition-all">
                 {frontmatter.category}
               </h2>
             </Link>
@@ -82,7 +78,7 @@ const SinglePosts = ({
 
           {sharePost == true && (
             <div className="mt-8 sm:mt-14 mb-20">
-              <div className="flex justify-start">
+              <div className="flex justify-start items-center">
                 {socialMedia.slice(0, 3).map((i) => (
                   <div key={i.name} className="">
                     <Link

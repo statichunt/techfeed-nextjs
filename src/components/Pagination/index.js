@@ -38,14 +38,14 @@ const Pagination = ({ page, pageNumber, isBlog }) => {
           </button>
         </a>
       )}
-      <ul className={isBlog ? "flex items-center " : "hidden"}>
+      <ul className={isBlog ? "flex items-center justify-center" : "hidden"}>
         {pageList.map((num) => (
           <li
             key={num}
             className={
               page == num
-                ? "text-white  bg-primaryColor pagination-list"
-                : "  hover:bg-primaryColor hover:text-white pagination-list"
+                ? "text-white  bg-primary pagination-list"
+                : "  hover:bg-primary hover:text-white pagination-list"
             }
             onClick={() => router.push(`/blog/page/${num}`)}
           >

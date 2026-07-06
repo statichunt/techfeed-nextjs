@@ -12,7 +12,7 @@ const Contact = ({ action, data }) => {
   return (
     <>
       <div className=" container postContents px-4 mb-16 md:mb-24">
-        <div className="w-full md:w-4/6 mx-auto text-textColor">
+        <div className="w-full md:w-4/6 mx-auto text-text">
           <h1 className="pageTitle font-primary mt-16 md:mt-24">
             {data.frontmatter.title}
           </h1>

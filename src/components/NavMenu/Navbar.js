@@ -9,14 +9,14 @@ const Navbar = ({ toggle, isOpen }) => {
   const NavElement = header;
   return (
     <div className={isOpen ? "hidden" : "block"}>
-      <nav className="nav text-textColor">
+      <nav className="nav text-text">
         <div className="md:hidden ">
           <h1 className="menuButton" onClick={toggle}>
             <CgMenuGridR /> Menu
           </h1>
         </div>
         <div className="md:block hidden">
-          <ul className="flex justify-between items-center  ">
+          <ul className="flex justify-between items-center">
             {NavElement.map((data) => (
               <React.Fragment key={data.menu}>
                 <div
@@ -29,17 +29,20 @@ const Navbar = ({ toggle, isOpen }) => {
                 ></div>
 
                 <li className="group relative transition duration-300 ease-in-out">
-                  <Link href={`${data.link}`} className="navItem relative flex w-full  transition duration-300 ease-in-out">
-                      {data.menu}
-                      <i
-                        className={
-                          data.menu == "Pages"
-                            ? "block text-textDark text-2xl transition duration-300 ease-in-out"
-                            : "hidden"
-                        }
-                      >
-                        <RiArrowDropDownLine />
-                      </i>
+                  <Link
+                    href={`${data.link}`}
+                    className="navItem relative flex justify-center items-center w-full  transition duration-300 ease-in-out"
+                  >
+                    {data.menu}
+                    <i
+                      className={
+                        data.menu == "Pages"
+                          ? "block text-text-dark text-2xl transition duration-300 ease-in-out"
+                          : "hidden"
+                      }
+                    >
+                      <RiArrowDropDownLine />
+                    </i>
                   </Link>
                   {/* dropDown */}
                   <ul
@@ -49,13 +52,17 @@ const Navbar = ({ toggle, isOpen }) => {
                   >
                     {data.submenu[0].page != "" &&
                       data.submenu.map((p) => (
-                        <Link href={`/${p.pagelink}`} key={p.page} className=" uppercase text-textColor hover:font-extralight z-10 ">
-                            <li
-                              className=" rounded-sm transition duration-300 ease-in-out
-                     hover:bg-borderLight pr-3 pl-4 py-3 uppercase "
-                            >
-                              {p.page}
-                            </li>
+                        <Link
+                          href={`/${p.pagelink}`}
+                          key={p.page}
+                          className=" uppercase text-text hover:font-extralight z-10 "
+                        >
+                          <li
+                            className=" rounded-sm transition duration-300 ease-in-out
+                     hover:bg-border-light pr-3 pl-4 py-3 uppercase "
+                          >
+                            {p.page}
+                          </li>
                         </Link>
                       ))}
                   </ul>

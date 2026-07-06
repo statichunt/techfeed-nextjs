@@ -5,7 +5,7 @@ import config from "@/config/theme.json";
 import "@/styles/globals.css";
 
 const { site } = perameters;
-const { fontFamily } = config.font;
+const { font_family } = config.fonts;
 
 export const metadata = {
   title: site.title,
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           crossOrigin="true"
         />
         <link
-          href={`https://fonts.googleapis.com/css2?family=${fontFamily.secondary}&family=${fontFamily.primary}&display=swap`}
+          href={`https://fonts.googleapis.com/css2?family=${font_family.secondary}&family=${font_family.primary}&display=swap`}
           rel="stylesheet"
         />
         <link

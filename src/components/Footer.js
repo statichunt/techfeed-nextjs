@@ -5,9 +5,9 @@ import Link from "next/link";
 const Footer = () => {
   const { footer, socialMedia } = footerData;
   return (
-    <div className="md:py-16 py-10 border-t border-borderDark">
+    <div className="md:py-16 py-10 border-t border-border-dark">
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
-        <div className="flex mb-4 sm:mb-8">
+        <div className="flex justify-center items-center mb-4 sm:mb-8">
           {socialMedia.map((data) => (
             <Link href={data.link} key={data.name} target="_blank" rel="noflow">
               <div className="socialMedia hover:bg-black">
@@ -28,7 +28,7 @@ const Footer = () => {
               &nbsp;| Theme by&nbsp;
               <Link
                 href="https://statichunt.com/"
-                className="text-primaryColor hover:opacity-80"
+                className="text-primary hover:opacity-80"
                 target="_blank"
                 rel="noflow"
               >

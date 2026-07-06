@@ -6,26 +6,21 @@ const AboutAuthor = ({ data, author }) => {
   const { socialMedia } = socialIcon;
   return (
     <div className="w-full lg:mb-24">
-      <div className="flex flex-col text-center  sm:text-left lg:flex-row  ">
-        <div className="flex-order">
+      <div className="flex justify-center items-center flex-col text-center  sm:text-left lg:flex-row  ">
+        <div className="flex justify-center items-center">
           <div className="w-40 h-40 md:w-60 md:h-60 rounded-full relative mx-auto">
             <Image
-              className="rounded-full"
+              className="rounded-full object-cover"
               alt=""
               src={data.frontmatter.aboutImage}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              style={{
-                objectFit: "cover",
-              }}
             />
           </div>
         </div>
 
-        <div className="md:ml-10 w-full md:w-4/5 lg:my-0 my-8 text-center text-textColor lg:text-left">
+        <div className="md:ml-10 w-full md:w-4/5 lg:my-0 my-8 text-center text-text lg:text-left">
           <p className="text-lg font-primary mb-5 text-gray-400">
-            PUBLISHED - BY{" "}
-            <strong className="text-primaryColor">{author}</strong>
+            PUBLISHED - BY <strong className="text-primary">{author}</strong>
           </p>
           <p className="text-lg">{data.frontmatter.details}</p>
           <div className="hover my-5 inline-block">
@@ -33,7 +28,7 @@ const AboutAuthor = ({ data, author }) => {
               know more..
             </Link>
           </div>
-          <div className="flex  justify-center lg:justify-start">
+          <div className="flex items-center justify-center lg:justify-start">
             {socialMedia.map((icon) => (
               <div key={icon.name} className="mr-2">
                 <Link

@@ -3,43 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build  ",
+    "dev": "concurrently \"node scripts/themeGenerator.mjs --watch\" \" next dev\"",
+    "build": "node scripts/themeGenerator.mjs && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.0",
-    "dayjs": "^1.10.7",
+    "@tailwindcss/typography": "^0.5.20",
+    "dayjs": "^1.11.21",
+    "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "image-to-base64": "^2.2.0",
-    "marked": "^4.0.4",
-    "next": "12.0.4",
-    "next-mdx-remote": "^3.0.8",
-    "nodemailer": "^6.7.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-hook-form": "7.21.0",
-    "react-icons": "^4.3.1",
-    "remark": "^14.0.2",
+    "marked": "^18.0.5",
+    "next": "16.2.10",
+    "next-mdx-remote": "^6.0.0",
+    "nodemailer": "^9.0.3",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-hook-form": "7.81.0",
+    "react-icons": "^5.7.0",
+    "remark": "^15.0.1",
     "remark-excerpt": "^1.0.0-beta.1",
-    "sanitize-html": "^2.5.2"
+    "sanitize-html": "^2.17.5"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.1.1",
-    "autoprefixer": "^10.4.0",
-    "eslint": "<8.0.0",
-    "eslint-config-next": "12.0.4",
-    "install": "^0.13.0",
-    "netlify-plugin-cache-nextjs": "^1.6.1",
-    "npm": "^8.1.4",
-    "postcss": "^8.4.4",
-    "replace-in-files-cli": "^2.0.0",
-    "tailwindcss": "^3.0.1"
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
+    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/react": "19.2.17",
+    "concurrently": "^10.0.3",
+    "eslint": "^10",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4.3.2"
   }
 }

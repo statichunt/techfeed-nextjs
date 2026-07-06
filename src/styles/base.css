@@ -1,0 +1,13 @@
+h5 {
+  @apply text-h5 font-primary;
+}
+h6 {
+  @apply text-h6 font-primary;
+}
+body {
+  @apply bg-body;
+}
+
+button {
+  @apply cursor-pointer;
+}

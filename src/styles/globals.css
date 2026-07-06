@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@import "./base.css" layer(base);
+@import "./components.css" layer(components);
+@import "./utilities.css";
+
+/* Auto-generated theme from "theme.json"*/
+@import "./generated-theme.css";

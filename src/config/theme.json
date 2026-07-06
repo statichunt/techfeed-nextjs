@@ -1,0 +1,39 @@
+{
+  "colors": {
+    "default": {
+      "theme_color": {
+        "primary": "#c8ab77",
+        "body": "#ffff",
+        "border": "#f6f6f6",
+        "dark": "#333",
+        "light": "#3333",
+        "border-dark": "#e9e9e9",
+        "border-light": "#e9e9e9",
+        "facebook": "#3b5999",
+        "twitter": "#55acee",
+        "pinterest": "#bd081c"
+      },
+      "text_color": {
+        "text": "#888",
+        "text-dark": "#333",
+        "text-light": "#bababa",
+        "gray": "#aaa",
+        "gray-light": "#9b7a3e",
+        "gray-dark": "#777"
+      }
+    }
+  },
+  "fonts": {
+    "font_family": {
+      "primary": "Oswald:wght@400",
+      "primary_type": "sans-serif",
+      "secondary": "Lora:ital@0;1",
+      "secondary_type": "serif",
+      "icon": "Font Awesome 5 Free"
+    },
+    "font_size": {
+      "base": "16",
+      "scale": 1.2
+    }
+  }
+}

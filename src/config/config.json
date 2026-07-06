@@ -1,0 +1,40 @@
+{
+  "site": {
+    "title": "Techfeed",
+    "favicon": "/image/icon.png",
+    "pagination": "4",
+    "sharePost": true,
+    "contactFormAction": "https://airform.io/faruk.themefisher@gmail.com"
+  },
+  "metadata": {
+    "meta_author": "StaticHunt",
+    "meta_image": "",
+    "meta_description": "StaticHunt products"
+  },
+  "footer": {
+    "copyright": "Copyright by your [company](google.com)",
+    "theme_copyright": true
+  },
+  "socialMedia": [
+    {
+      "icon": "fab fa-facebook-f",
+      "name": "facebook",
+      "link": "https://www.facebook.com/#"
+    },
+    {
+      "icon": "fab fa-x-twitter",
+      "name": "twitter",
+      "link": "https://x.com/?lang=en"
+    },
+    {
+      "icon": "fab fa-pinterest",
+      "name": "pinterest",
+      "link": "https://www.pinterest.com/#/_saved/"
+    },
+    {
+      "icon": "fab fa-instagram",
+      "name": "instgram",
+      "link": "https://www.instagram.com/#"
+    }
+  ]
+}

@@ -127,6 +127,6 @@
     prose-p:text-large
     prose-p:text-text
     prose-p:leading-7
-    prose-a:no-underline;
+    prose-a:no-underline prose-a:text-primary;
   @apply prose-li:leading-7 md:prose-li:leading-9 marker:text-dark prose-h2:lg:text-3xl prose-h3:lg:text-3xl prose-h2:text-2xl prose-h3:text-2xl;
 }

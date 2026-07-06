@@ -7,3 +7,7 @@ h6 {
 body {
   @apply bg-body;
 }
+
+button {
+  @apply cursor-pointer;
+}
